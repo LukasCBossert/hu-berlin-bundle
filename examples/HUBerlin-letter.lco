@@ -33,6 +33,7 @@
 \setkomavar{institute.head.position}{Geschäftsführende Direktorin}%
 \setkomavar{institute.head.mail}{claudia.tiersch@hu-berlin.de}%
 \setkomavar{institute.logo}{%
+\includegraphics[width=\useplength{locwidth}]{ABAZ-logo.png}
 }%
 \setkomavar{fromname.position}{Wissenschaftlicher Koordinator}
 \setkomavar{local}{%

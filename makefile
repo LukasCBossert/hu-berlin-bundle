@@ -92,6 +92,7 @@ install: uninstall
 	@mkdir -p $(LOCAL)/{tex,source,doc}/latex/$(PROJECT)
 	@cp $(PROJECT).{dtx,ins} $(LOCAL)/source/latex/$(PROJECT)
 	@cp cls/HUBerlin-letter.cls $(LOCAL)/tex/latex/$(PROJECT)
+	@cp img/* $(LOCAL)/tex/latex/$(PROJECT)
 	@cp $(PROJECT).pdf $(LOCAL)/doc/latex/$(PROJECT)
 	mktexlsr
 	$(echoPROJECT) "* all files installed * $(NC)"

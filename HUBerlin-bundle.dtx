@@ -390,7 +390,7 @@ you get all these various files described above.
 \setkomavar{institute.head.position}{Geschäftsführende Direktorin}%
 \setkomavar{institute.head.mail}{claudia.tiersch@hu-berlin.de}%
 \setkomavar{institute.logo}{%
-%\includegraphics[width=5cm]{img/abaz-logo.png}
+\includegraphics[width=\useplength{locwidth}]{ABAZ-logo.png}
 }%
 \setkomavar{fromname.position}{Wissenschaftlicher Koordinator}
 \setkomavar{local}{%
@@ -571,10 +571,14 @@ backaddress=plain,
 % ============================
 \setkomavar{firsthead}{%
   \parbox{\linewidth}{%
-  HU BERLIN
-  % \includegraphics[width=.8\linewidth]{img/hu-logo.png}
+ \includegraphics[width=.8\linewidth]{HUBerlin-logo.png}
   }%
 }
+
+ % \@setplength{locheight}{length } 
+ % \@setplength{lochpos}{length } 
+ % \@setplength{locvpos}{length } 
+ % \@setplength{locwidth}{length }
 
 \setkomavar{title}{}
 \setkomavar{date}{\today}
@@ -745,7 +749,10 @@ backaddress=plain,
 \RequirePackage{graphicx}
 \graphicspath{{img/}}
 %    \end{macrocode}
-%
+% The \pkg{luaimageembed} is to embed the image based out of code.
+%    \begin{macrocode}
+\RequirePackage{luaimageembed}
+%    \end{macrocode}
 %    \begin{macrocode}
 \RequirePackage{etoolbox}
 %https://tex.stackexchange.com/a/235881/98739
