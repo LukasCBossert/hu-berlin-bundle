@@ -1,0 +1,62 @@
+%%
+%% This is file `examples/HUBerlin-letter.tex',
+%% generated with the docstrip utility.
+%%
+%% The original source files were:
+%%
+%% HUBerlin-bundle.dtx  (with options: `example,letter')
+%% ----------------------------------------------------------------
+%% HUBerlin-bundle
+%% Author:  Lukas C. Bossert
+%% E-mail:  lukas@texografie.de
+%% License: Released under the LaTeX Project Public License v1.3c or later
+%% See:     http://www.latex-project.org/lppl.txt
+%% Various parts my have a different licence,
+%% please consider and respect them carefully.
+%% ----------------------------------------------------------------
+%% 
+\documentclass{HUBerlin-letter}
+\LoadLetterOption{HUBerlin-letter}
+\setmainfont[%
+  BoldFont=ScalaSans-BoldLF,
+  Numbers=OldStyle]{ScalaSans-RegularLF}
+\setkomavar{yourref}{}  % Ihr Zeichen
+\setkomavar{yourmail}{}         % Ihr Schreiben vom
+\setkomavar{myref}{}            % Unser Zeichen
+\setkomavar{customer}{}         % Kundennummer
+\setkomavar{invoice}{}          % Rechnungsnummer
+\setkomavar{place}{Berlin} % Ort
+
+\setkomavar{subject}{Betreff}
+\begin{document}
+
+\begin{letter}{%
+  Erika Musterfrau\\
+  Musterweg 43\\
+  56789 Musterhausen%
+}
+
+\opening{Sehr geehrte Frau Musterfrau,}
+
+hier kommt der Text hin.
+
+\closing{Mit freundlichen Grüßen,}
+
+\ps PS: \dots
+
+\encl{%
+  Anlage 1\\
+  Anlage 2%
+}
+
+\cc{%
+  Verteiler 1\\
+  Verteiler 2%
+}
+
+\end{letter}
+\end{document}
+%% 
+%% Copyright (C) 2019
+%%
+%% End of file `examples/HUBerlin-letter.tex'.

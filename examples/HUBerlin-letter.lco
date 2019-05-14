@@ -1,0 +1,52 @@
+%%
+%% This is file `examples/HUBerlin-letter.lco',
+%% generated with the docstrip utility.
+%%
+%% The original source files were:
+%%
+%% HUBerlin-bundle.dtx  (with options: `example,lco')
+%% ----------------------------------------------------------------
+%% HUBerlin-bundle
+%% Author:  Lukas C. Bossert
+%% E-mail:  lukas@texografie.de
+%% License: Released under the LaTeX Project Public License v1.3c or later
+%% See:     http://www.latex-project.org/lppl.txt
+%% Various parts my have a different licence,
+%% please consider and respect them carefully.
+%% ----------------------------------------------------------------
+%% 
+\ProvidesFile{HUBerlin-letter.lco}
+
+\setkomavar{fromname}{Dr. Lukas C. Bossert} % Name
+\setkomavar{fromaddress}{%
+  Humboldt-Universität zu Berlin\\
+  Unter den Linden 6\\
+  10099 Berlin}
+\setkomavar{fromemail}{bosserlu@hu-berlin.de} % Email-Adresse
+\setkomavar{fromphone}{49 [030] 2093-70440} % Telefonnummer
+\setkomavar{fromurl}{www.antikezentrum.hu-berlin.de} % Website
+
+\setkomavar{backaddress}{HU Berlin\\August-Boeckh-Antikezentrum\\D-10099 Berlin}
+
+\setkomavar{institute}{}%
+\setkomavar{institute.head}[Prof. Dr.]{Claudia Tiersch}%
+\setkomavar{institute.head.position}{Geschäftsführende Direktorin}%
+\setkomavar{institute.head.mail}{claudia.tiersch@hu-berlin.de}%
+\setkomavar{institute.logo}{%
+}%
+\setkomavar{fromname.position}{Wissenschaftlicher Koordinator}
+\setkomavar{local}{%
+  %\def\\{\usekomavar{backaddressseparator}\@ogobble}
+  Mohrenstraße 40/41\\
+  Raum 14\\
+  10117 Berlin}
+\setkomavar{connections}{U2 Haltestelle Hausvogteiplatz}
+
+\setkomavar{signature}{%
+  \usekomavar{institute.head}\\
+}
+\renewcommand*{\raggedsignature}{\raggedright}
+%% 
+%% Copyright (C) 2019
+%%
+%% End of file `examples/HUBerlin-letter.lco'.
