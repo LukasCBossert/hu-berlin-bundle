@@ -228,6 +228,7 @@ Documents and Documentations for \LaTeX\ at the Humboldt-Universität zu Berlin}
 \openoutputfile{\jobname.pkglist}{pkglist}
 \pdfbookmark[section]{\contentsname}{toc}
 \tableofcontents
+\clearpage
 \chapter{Introduction}
 \begin{markdown*}{hybrid=true}
 %</driver>
@@ -319,9 +320,11 @@ When you run the |makefile|
 you get all these various files described above.
 
 
-
+ 
 
 \DocInput{\jobname.dtx}
+
+\printbibliography
 
 
 \part{Example files}
@@ -331,7 +334,7 @@ you get all these various files described above.
   pagecommand={\pagestyle{scrheadings}}
  ,link
  ,pages=-
- ,scale=.9
+ ,scale=.8
  % ,nup=1x2
  ,frame]{examples/HUBerlin-letter.pdf}}
  {|examples/HUBerlin-letter.pdf| missing!}

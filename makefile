@@ -22,13 +22,7 @@ echoPROJECT = @echo -e "$(CYAN) <$(PROJECT)>$(RED)"
 
 .PHONY: test
 
-all:
-	$(MAKE) getCTAN
-	$(MAKE) install
-	$(MAKE) examples
-	$(MAKE) doc
-	$(echoPROJECT) "* all up to date * $(NC)"
-	@exit 0
+all: doc
 
 
 examples: files
@@ -52,19 +46,26 @@ else
 	done
 endif
 
-$(CTANBIB):
+$(CTANBIB): $(PROJECT).pdf
 	lualatex $(PROJECT).dtx
-	@rm -f $(PROJECT).pdf
+	# @rm -f $(PROJECT).pdf
 
 files: $(PROJECT).ins
 	latex $(PROJECT).ins
 	$(echoPROJECT) "* source files created * $(NC)"
 
 $(PROJECT).ins:
-	lualatex $(PROJECT).dtx
+	latex $(PROJECT).dtx
 
+doc: 
+	$(MAKE) $(PROJECT).pdf
+	$(MAKE) install
+	$(MAKE) examples
+	latexmk -lualatex -f --shell-escape  $(PROJECT).dtx
+	$(echoPROJECT) "* $(PROJECT).pdf created * $(NC)"
+	@exit 0
 
-doc:
+$(PROJECT).pdf: getCTAN files
 	$(echoPROJECT) "* creating $(PROJECT).pdf * $(NC)"
 	latexmk -lualatex -f --shell-escape  $(PROJECT).dtx
 	open $(PROJECT).pdf
