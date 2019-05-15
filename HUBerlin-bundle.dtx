@@ -369,43 +369,97 @@ you get all these various files described above.
 %    \begin{macrocode}
 %<*lco>
 %    \end{macrocode}
+% This is the file you load into your |.tex| letter. 
+% The information you provide here do normally not change from letter to letter.
+% That’s why we put it in a separate file.
+%
+% The first line should provide this information.
 %    \begin{macrocode}
 \ProvidesFile{HUBerlin-letter.lco}
-
-  
-
-\setkomavar{fromname}[Wissenschaftlicher Koordinator]{Dr. Heinz Hermann} % Name
-\setkomavar{fromemail}{Heinz.Hermann@hu-berlin.de} % Email-Adresse
-\setkomavar{fromphone}{70550} % Telefonnummer
-\setkomavar{fromfax}{} % Telefonnummer
-\setkomavar{fromurl}{www.antikezentrum.hu-berlin.de} % Website
-
-
+%    \end{macrocode}
+% Now we set up the personal data.
+%
+% We start with the name of the sender.
+%    \begin{macrocode}
+\setkomavar{fromname}
+%    \end{macrocode}
+% you can also write the position of this person in brackets, this is optional; 
+% \oarg{position}
+%    \begin{macrocode}
+[Wissenschaftlicher Mitarbeiter]
+%    \end{macrocode}
+% But you need to give a name:
+%    \begin{macrocode}
+{Dr. Heinz Hermann} 
+%    \end{macrocode}
+% The mail address
+%    \begin{macrocode}
+\setkomavar{fromemail}{heinz.hermann@hu-berlin.de}
+%    \end{macrocode}
+% For phone and fax number you only need to type the last digits.
+%    \begin{macrocode}
+\setkomavar{fromphone}{70550}
+%    \end{macrocode}
+% If you don’t have a fax (or a phone),
+% leave it empty. Do \emph{not} delete it.
+%    \begin{macrocode}
+\setkomavar{fromfax}{}
+%    \end{macrocode}
+% And finally the URL.
+%    \begin{macrocode}
+\setkomavar{fromurl}{www.antikezentrum.hu-berlin.de}
+%    \end{macrocode}
+% If your backaddress is to long 
+% – it will be set up automatically – 
+% you can redefine it.
+%    \begin{macrocode}
 \setkomavar{backaddress}{HU Berlin\\
 August-Boeckh-Antikezentrum\\
 D-10099 Berlin} 
-
+%    \end{macrocode}
+% Selfexplaining: the faculty.
+%    \begin{macrocode}
 \setkomavar{faculty}{%
 Philosophische Fakultät I
 }
+%    \end{macrocode}
+%
+%    \begin{macrocode}
 \setkomavar{institute}{%
   \mbox{August-Boeckh-Antikezentrum}
+%    \end{macrocode}
+% You could even put a figure/logo of the institute here.
+%    \begin{macrocode}
   % \includegraphics[width=\useplength{locwidth}]{ABAZ-logo.png}
-}%
-\setkomavar{institute.head}[chef]{Prof. Dr. Max Mustermann}%
-\setkomavar{institute.head.mail}{max.mustermann@hu-berlin.de}%
+%    \end{macrocode}
+%    \begin{macrocode}
+}
+%    \end{macrocode}
+%    \begin{macrocode}
 \setkomavar{institute.additional}{Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text }
-
+%    \end{macrocode}
+%    \begin{macrocode}
+\setkomavar{institute.head}[chef]{Prof. Dr. Max Mustermann}
+%    \end{macrocode}
+%    \begin{macrocode}
+\setkomavar{institute.head.mail}{max.mustermann@hu-berlin.de}
+%    \end{macrocode}
+%    \begin{macrocode}
 \setkomavar{local}{%
   Mohrenstraße 40/41\\
   Zimmer 14\\
   D-10117 Berlin}
+%    \end{macrocode}
+%    \begin{macrocode}
 \setkomavar{connections}{U Bahnhof Hausvogteiplatz (U2)}
-
+%    \end{macrocode}
+%    \begin{macrocode}
 \setkomavar{accessibility}{Hausvogteiplatz}
-% ===== Signatur =====
+%    \end{macrocode}
+%    \begin{macrocode}
 \setkomavar{signature}{%
-  \usekomavar{institute.head}\\
+  \usekomavar{institute.head}
+  \usekomavar{fromname}
 }
 %    \end{macrocode}
 %    \begin{macrocode}
@@ -414,7 +468,7 @@ Philosophische Fakultät I
 
 % \HUBerlinlisting%
 %  [listing options = {%
-%	,linerange={18-53}
+%	,linerange={18-48}
 %   ,numbers     = left
 %   ,numbersep   = 10pt
 %   ,numberstyle =\footnotesize\ttfamily\color{HUBerlin-grey}
@@ -439,67 +493,85 @@ Philosophische Fakultät I
 %   BoldFont=ScalaSans-BoldLF,
 %   Numbers=OldStyle]{ScalaSans-RegularLF}
 %    \end{macrocode}
+% Now following the reference information
 %    \begin{macrocode}
-\setkomavar{myref}{111}            % Geschäftszeichen
-
-\setkomavar{yourref}{X}          % Ihr Zeichen
-\setkomavar{yourmail}{C}         % Ihr Schreiben vom
-\setkomavar{customer}{234}         % Kundennummer
-\setkomavar{invoice}{444}          % Rechnungsnummer
-
-
-
+\setkomavar{myref}{111}
+%    \end{macrocode}
+%    \begin{macrocode}
+\setkomavar{yourref}{X} 
+%    \end{macrocode}
+%    \begin{macrocode}
+\setkomavar{yourmail}{3.5.2019}
+%    \end{macrocode}
+%    \begin{macrocode}
+\setkomavar{customer}{234}
+%    \end{macrocode}
+%    \begin{macrocode}
+\setkomavar{invoice}{444}
+%    \end{macrocode}
+%    \begin{macrocode}
 \setkomavar{subject}{Betreff}
+%    \end{macrocode}
+%    \begin{macrocode}
 \usepackage{blindtext}
-% =====================================
+%    \end{macrocode}
+% We close the preamble and start the letter
+%    \begin{macrocode}
 \begin{document}
-
+%    \end{macrocode}
+% The address is written as \marg{address} 
+%    \begin{macrocode}
 \begin{letter}{%
-% ===== Zielanschrift =====
+%    \end{macrocode}
+%    \begin{macrocode}
   Erika Musterfrau\\
   Musterweg 43\\
   56789 Musterhausen%
-% =======================
+%    \end{macrocode}
+% Closing now again.
+%    \begin{macrocode}
 }
-
-
+%    \end{macrocode}
+%    \begin{macrocode}
 \opening{Sehr geehrte Frau Musterfrau,}
-\blindtext
-\footnote{Test}
+%    \end{macrocode}
+% This is just some blindtext.
+%    \begin{macrocode}
+\blindtext[2]
 \clearpage
 \blindtext
-\footnote{Test}
-hier kommt der Text hin.
-
-\closing{Mit freundlichen Grüßen,}
-
-% ===== Postskriptum =====
+%    \end{macrocode}
+% Closing letter 
+%    \begin{macrocode}
+\closing{Mit freundlichen Grüßen}
+%    \end{macrocode}
+% If you still have something to say/write.
+%    \begin{macrocode}
 \ps PS: \dots
-% ========================
-
-% ===== Anlage(n) =====
-% \setkomavar*{enclseparator}{Anlage}
+%    \end{macrocode}
+% Any amendment.
+%    \begin{macrocode}
 \encl{%
   Anlage 1\\
   Anlage 2%
 }
-% ===================
-
-% ===== Verteiler =====
-% \setkomavar*{ccseparator}{Kopie an}
+%    \end{macrocode}
+% This is the distribution
+%    \begin{macrocode}
 \cc{%
   Verteiler 1\\
   Verteiler 2%
 }
-% =====================
-
+%    \end{macrocode}
+% That’s it. Done.
+%    \begin{macrocode}
 \end{letter}
 \end{document}
 %    \end{macrocode}
 % And how does a example letter looks like?
 % \HUBerlinlisting%
 %  [listing options = {%
-%	,linerange={18-53}
+%	,linerange={19-49}
 %   ,numbers     = left
 %   ,numbersep   = 10pt
 %   ,numberstyle =\footnotesize\ttfamily\color{HUBerlin-grey}
@@ -550,10 +622,40 @@ hier kommt der Text hin.
 % The ones we need are loaded now.
 %    \begin{macrocode}
 \RequirePackage[english,ngerman]{babel}
+%    \end{macrocode}
+% Common package for handling figures is \pkg{graphicx}.
+%    \begin{macrocode}
 \RequirePackage{graphicx}
+%    \end{macrocode}
+% For loading fonts.
+%    \begin{macrocode}
 \RequirePackage{fontspec}
+%    \end{macrocode}
+% Verdana font as main font.
+%    \begin{macrocode}
 \setmainfont{Verdana}
+%    \end{macrocode}
+% For the wheelchair symbol we load \pkg{marvosym}
+%    \begin{macrocode}
 \RequirePackage{marvosym}
+%    \end{macrocode}
+% To get the HU logo on the second and following pages we load \pkg{scrlayer-scrpage}.
+%    \begin{macrocode}
+\RequirePackage{scrlayer-scrpage}
+\DeclareNewLayer[
+  foreground,
+  textarea,
+  voffset=\useplength{firstheadvpos},
+  hoffset=\useplength{firstheadhpos},
+  width=\useplength{firstheadwidth},
+  mode=picture,
+  contents=\putUL{\raisebox{\dimexpr-\height}{\usekomavar{firsthead}}\hfill\thepage}
+]{likefirstpage.head}
+\AddLayersToPageStyle{scrheadings}{likefirstpage.head}
+\clearpairofpagestyles
+%    \end{macrocode}
+% For better adjustments of the layout we load \pkg{geometry}.
+%    \begin{macrocode}
 \RequirePackage{geometry}
 \geometry{%
    a4paper
@@ -567,17 +669,10 @@ hier kommt der Text hin.
   ,marginparwidth =0mm
 }
 %    \end{macrocode}
-% To fulfill the Corporate Design rules we adjust a few things.
+% Main Text and signature should be raggedright.
 %    \begin{macrocode}
-\setkomavar{backaddressseparator}{~\textbar~}
-\KOMAoptions{%
-   numericaldate =true
-  ,refline       =nodate
-  ,backaddress   =plain
-  ,parskip       =half-
-}
+\renewcommand*{\raggedsignature}{\raggedright}
 \raggedright
-% \renewcommand*{\raggedsignature}{\raggedright}
 %    \end{macrocode}
 % We define new |komavar|s.
 %
@@ -806,34 +901,22 @@ hier kommt der Text hin.
 %    \begin{macrocode}
 }
 %    \end{macrocode}
+% To fulfill the Corporate Design rules we adjust a few things.
 %    \begin{macrocode}
-\setkomavar{firsthead}{%
- \includegraphics[width=148mm]{HUBerlin-logo.png}%
+\KOMAoptions{%
+   numericaldate =true
+  ,refline       =nodate
+  ,backaddress   =plain
+  ,parskip       =half-
 }
-%    \end{macrocode}
-% Set second page right
-%    \begin{macrocode}
-\RequirePackage{scrlayer-scrpage}
-\DeclareNewLayer[
-  foreground,
-  textarea,
-  voffset=\useplength{firstheadvpos},
-  hoffset=\useplength{firstheadhpos},
-  width=\useplength{firstheadwidth},
-  mode=picture,
-  contents=\putUL{\raisebox{\dimexpr-\height}{\usekomavar{firsthead}}\hfill\thepage}
-]{likefirstpage.head}
-\AddLayersToPageStyle{scrheadings}{likefirstpage.head}
-\clearpairofpagestyles
-%    \end{macrocode}
-%    \begin{macrocode}
-\AtBeginDocument{
 %    \end{macrocode}
 % Getting rid of the reference field
 %    \begin{macrocode}
 \removereffields
 %    \end{macrocode}
+% Redefining length, which we ship to the end of the preamble.
 %    \begin{macrocode}
+\AtBeginDocument{
 \@setplength{refvpos}{110mm}
 \@setplength{refaftervskip}{0pt}
 \@setplength{toaddrhpos}{25mm}
@@ -844,20 +927,74 @@ hier kommt der Text hin.
 \@setplength{locwidth}{45mm}
 \@setplength{locheight}{232mm}
 }
-
+%    \end{macrocode}
+% Now resetting or pre-defining some variables.
+%
+% First we set the head of the first page.\\
+%\begin{warning}You need to have the logo of the HU stored on your computer!\end{warning}
+%    \begin{macrocode}
+\setkomavar{firsthead}{%
+ \includegraphics[width=148mm]{HUBerlin-logo.png}%
+}
+%    \end{macrocode}
+%
+%    \begin{macrocode}
+\setkomavar{backaddressseparator}{~\textbar~}
+%    \end{macrocode}
+%
+%    \begin{macrocode}
 \setkomavar{fromphone}{0000}
 \setkomavar*{fromphone}{Telefon +49 [30] 2093–}
+%    \end{macrocode}
+%
+%    \begin{macrocode}
 \setkomavar{fromfax}{0000}
 \setkomavar*{fromfax}{Telefax +49 [30] 2093–}
+%    \end{macrocode}
+%
+%    \begin{macrocode}
 \setkomavar*{fromaddress}{Postanschrift:}
 \setkomavar{fromaddress}{%
   Humboldt-Universität zu Berlin\\
   Unter den Linden 6\\
   D-10099 Berlin}
-
+%    \end{macrocode}
+%
+%    \begin{macrocode}
 \setkomavar*{date}{Datum:}
+%    \end{macrocode}
+%
+%    \begin{macrocode}
 \setkomavar*{fromname}{Bearbeiter:}
+%    \end{macrocode}
+%
+%    \begin{macrocode}
 \setkomavar*{myref}{Geschäftszeichen:}
+%    \end{macrocode}
+%    \begin{macrocode}
+\setkomavar*{enclseparator}{Anlage}
+%    \end{macrocode}
+%    \begin{macrocode}
+\setkomavar*{ccseparator}{Kopie an}
+%    \end{macrocode}
+%    \begin{macrocode}
+% \RequirePackage{hyperref}
+% \AtBeginDocument{{
+%   \usekomavar[\def\author]{fromname}
+%   \usekomavar[\def\subject]{subject}
+%   \hypersetup{%
+%     pdftitle           = {\subject},
+%     pdfauthor          = {\author},
+%     pdfsubject         = {\subject},
+%     pdfkeywords        = {\author, \subject},
+%     pdflang            = de,
+%     pdfdisplaydoctitle = true,
+%     colorlinks         = true,
+%     plainpages         = false,
+%     hypertexnames      = false,
+%     unicode,
+%   }
+% }}
 %    \end{macrocode}
 %    \begin{macrocode}
 %</letter>
@@ -886,7 +1023,7 @@ hier kommt der Text hin.
 %     }
 \makeatother
 \AtBeginDocument{\normalmarginpar}
-\setlength\MacrocodeTopsep{\baselineskip}
+\setlength\MacrocodeTopsep{.5\baselineskip}
 \setlength\MacroIndent{6mm}
 
 
@@ -1198,6 +1335,7 @@ hier kommt der Text hin.
   linktoc        = page,
   pdfborder      = {0 0 0},
   breaklinks     = true,  %allow line break inside links
+  final
 }
 \RequirePackage{bookmark}
 
@@ -1507,7 +1645,7 @@ codecomment/.style={%
 %    \end{macrocode}
 % For a common layout of the parameter style to identify code
 % of the different documents, files and packages we use
-% \cmd{\param}\marg{name of the parameter}.
+% \cmd{param}\marg{name of the parameter}.
 %    \begin{macrocode}
 \newcommand\param[1]{%
   \begingroup%

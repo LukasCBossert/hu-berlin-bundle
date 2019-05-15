@@ -16,37 +16,35 @@
 %% ----------------------------------------------------------------
 %% 
 \ProvidesFile{HUBerlin-letter.lco}
-
-\setkomavar{fromname}[Wissenschaftlicher Koordinator]{Dr. Heinz Hermann} % Name
-\setkomavar{fromemail}{Heinz.Hermann@hu-berlin.de} % Email-Adresse
-\setkomavar{fromphone}{70550} % Telefonnummer
-\setkomavar{fromfax}{} % Telefonnummer
-\setkomavar{fromurl}{www.antikezentrum.hu-berlin.de} % Website
-
+\setkomavar{fromname}
+[Wissenschaftlicher Mitarbeiter]
+{Dr. Heinz Hermann}
+\setkomavar{fromemail}{heinz.hermann@hu-berlin.de}
+\setkomavar{fromphone}{70550}
+\setkomavar{fromfax}{}
+\setkomavar{fromurl}{www.antikezentrum.hu-berlin.de}
 \setkomavar{backaddress}{HU Berlin\\
 August-Boeckh-Antikezentrum\\
 D-10099 Berlin}
-
 \setkomavar{faculty}{%
 Philosophische Fakultät I
 }
 \setkomavar{institute}{%
   \mbox{August-Boeckh-Antikezentrum}
   % \includegraphics[width=\useplength{locwidth}]{ABAZ-logo.png}
-}%
-\setkomavar{institute.head}[chef]{Prof. Dr. Max Mustermann}%
-\setkomavar{institute.head.mail}{max.mustermann@hu-berlin.de}%
+}
 \setkomavar{institute.additional}{Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text }
-
+\setkomavar{institute.head}[chef]{Prof. Dr. Max Mustermann}
+\setkomavar{institute.head.mail}{max.mustermann@hu-berlin.de}
 \setkomavar{local}{%
   Mohrenstraße 40/41\\
   Zimmer 14\\
   D-10117 Berlin}
 \setkomavar{connections}{U Bahnhof Hausvogteiplatz (U2)}
-
 \setkomavar{accessibility}{Hausvogteiplatz}
 \setkomavar{signature}{%
-  \usekomavar{institute.head}\\
+  \usekomavar{institute.head}
+  \usekomavar{fromname}
 }
 
 %% 

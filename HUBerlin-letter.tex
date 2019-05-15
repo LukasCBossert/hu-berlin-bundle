@@ -18,45 +18,33 @@
 
 \documentclass{HUBerlin-letter}
 \LoadLetterOption{HUBerlin-letter}
-\setkomavar{myref}{111}            % Geschäftszeichen
-
-\setkomavar{yourref}{X}          % Ihr Zeichen
-\setkomavar{yourmail}{C}         % Ihr Schreiben vom
-\setkomavar{customer}{234}         % Kundennummer
-\setkomavar{invoice}{444}          % Rechnungsnummer
-
+\setkomavar{myref}{111}
+\setkomavar{yourref}{X}
+\setkomavar{yourmail}{3.5.2019}
+\setkomavar{customer}{234}
+\setkomavar{invoice}{444}
 \setkomavar{subject}{Betreff}
 \usepackage{blindtext}
 \begin{document}
-
 \begin{letter}{%
   Erika Musterfrau\\
   Musterweg 43\\
   56789 Musterhausen%
 }
-
 \opening{Sehr geehrte Frau Musterfrau,}
-\blindtext
-\footnote{Test}
+\blindtext[2]
 \clearpage
 \blindtext
-\footnote{Test}
-hier kommt der Text hin.
-
-\closing{Mit freundlichen Grüßen,}
-
+\closing{Mit freundlichen Grüßen}
 \ps PS: \dots
-
 \encl{%
   Anlage 1\\
   Anlage 2%
 }
-
 \cc{%
   Verteiler 1\\
   Verteiler 2%
 }
-
 \end{letter}
 \end{document}
 %% 

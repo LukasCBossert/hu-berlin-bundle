@@ -30,7 +30,7 @@
 \let\PrintDescribeEnv=\@gobble
 \makeatother
 \AtBeginDocument{\normalmarginpar}
-\setlength\MacrocodeTopsep{\baselineskip}
+\setlength\MacrocodeTopsep{.5\baselineskip}
 \setlength\MacroIndent{6mm}
 
 \RequirePackage{luatexbase}
@@ -290,6 +290,7 @@ captions   = tableheading,
   linktoc        = page,
   pdfborder      = {0 0 0},
   breaklinks     = true,  %allow line break inside links
+  final
 }
 \RequirePackage{bookmark}
 

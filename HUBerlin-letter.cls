@@ -37,6 +37,18 @@
 \RequirePackage{fontspec}
 \setmainfont{Verdana}
 \RequirePackage{marvosym}
+\RequirePackage{scrlayer-scrpage}
+\DeclareNewLayer[
+  foreground,
+  textarea,
+  voffset=\useplength{firstheadvpos},
+  hoffset=\useplength{firstheadhpos},
+  width=\useplength{firstheadwidth},
+  mode=picture,
+  contents=\putUL{\raisebox{\dimexpr-\height}{\usekomavar{firsthead}}\hfill\thepage}
+]{likefirstpage.head}
+\AddLayersToPageStyle{scrheadings}{likefirstpage.head}
+\clearpairofpagestyles
 \RequirePackage{geometry}
 \geometry{%
    a4paper
@@ -49,13 +61,7 @@
   ,marginparsep   =0mm
   ,marginparwidth =0mm
 }
-\setkomavar{backaddressseparator}{~\textbar~}
-\KOMAoptions{%
-   numericaldate =true
-  ,refline       =nodate
-  ,backaddress   =plain
-  ,parskip       =half-
-}
+\renewcommand*{\raggedsignature}{\raggedright}
 \raggedright
 \newkomavar{faculty}
 \newkomafont{faculty}{\bfseries\fontsize{8.5}{10}\selectfont}
@@ -175,23 +181,14 @@
   \usekomavar{BIC}
   }
 }
-\setkomavar{firsthead}{%
- \includegraphics[width=148mm]{HUBerlin-logo.png}%
+\KOMAoptions{%
+   numericaldate =true
+  ,refline       =nodate
+  ,backaddress   =plain
+  ,parskip       =half-
 }
-\RequirePackage{scrlayer-scrpage}
-\DeclareNewLayer[
-  foreground,
-  textarea,
-  voffset=\useplength{firstheadvpos},
-  hoffset=\useplength{firstheadhpos},
-  width=\useplength{firstheadwidth},
-  mode=picture,
-  contents=\putUL{\raisebox{\dimexpr-\height}{\usekomavar{firsthead}}\hfill\thepage}
-]{likefirstpage.head}
-\AddLayersToPageStyle{scrheadings}{likefirstpage.head}
-\clearpairofpagestyles
-\AtBeginDocument{
 \removereffields
+\AtBeginDocument{
 \@setplength{refvpos}{110mm}
 \@setplength{refaftervskip}{0pt}
 \@setplength{toaddrhpos}{25mm}
@@ -202,7 +199,10 @@
 \@setplength{locwidth}{45mm}
 \@setplength{locheight}{232mm}
 }
-
+\setkomavar{firsthead}{%
+ \includegraphics[width=148mm]{HUBerlin-logo.png}%
+}
+\setkomavar{backaddressseparator}{~\textbar~}
 \setkomavar{fromphone}{0000}
 \setkomavar*{fromphone}{Telefon +49 [30] 2093–}
 \setkomavar{fromfax}{0000}
@@ -212,10 +212,11 @@
   Humboldt-Universität zu Berlin\\
   Unter den Linden 6\\
   D-10099 Berlin}
-
 \setkomavar*{date}{Datum:}
 \setkomavar*{fromname}{Bearbeiter:}
 \setkomavar*{myref}{Geschäftszeichen:}
+\setkomavar*{enclseparator}{Anlage}
+\setkomavar*{ccseparator}{Kopie an}
 %% 
 %% Copyright (C) 2019
 %%
