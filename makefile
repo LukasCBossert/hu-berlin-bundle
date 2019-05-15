@@ -25,11 +25,13 @@ echoPROJECT = @echo -e "$(CYAN) <$(PROJECT)>$(RED)"
 all: doc
 
 
+
 examples: files
 	$(MAKE) letter
 
 letter:
-	cd examples && latexmk -lualatex HUBerlin-letter.tex
+	# cd examples && 
+	latexmk -lualatex HUBerlin-letter.tex
 
 
 # How to get information from CTAN
@@ -59,7 +61,7 @@ $(PROJECT).ins:
 
 doc: 
 	$(MAKE) $(PROJECT).pdf
-	$(MAKE) install
+	# $(MAKE) install
 	$(MAKE) examples
 	latexmk -lualatex -f --shell-escape  $(PROJECT).dtx
 	$(echoPROJECT) "* $(PROJECT).pdf created * $(NC)"

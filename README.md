@@ -9,9 +9,10 @@ This bundle provides following files:
   * `README.md`
   * `makefile`
 
-Furthermore there are two folders.
- * `bundle`
- * `projects`
+Furthermore there are a couple of folders.
+ * `examples`
+ * `img`
+ * `cls`
 
 This work has the LPPL maintenance status _maintained_.
 The current maintainer of this work is [Lukas C. Bossert](https://github.com/lukascbossert).
@@ -22,11 +23,11 @@ Following documents or documentclasses are available:
 * letter (`HUBerlin-letter.cls`)
 
 ## Installation of the bundle
-`archaeologie` is part of the distributions [MiKTeX](http://www.miktex.org)
+`HUBerlin` is part of the distributions [MiKTeX](http://www.miktex.org)
 and [TeXLive](http://www.tug.org/texlive) -- thus, you
 can easily install it using the respective package manager.
 If you would like to
-install `archaeologie` into your local folder  manually, do the following:
+install `HUBerlin-bundle` into your local folder  manually, do the following:
 Go to your terminal, browse to the folder of this bundle and run
 
 ```

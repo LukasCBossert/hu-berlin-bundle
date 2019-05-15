@@ -140,7 +140,7 @@ The current maintainer of this work is [Lukas C. Bossert](https://github.com/luk
 \generate{
   \file{README.md}{\from{\jobname.dtx}{readme,main}}
   \file{HUBerlin-bundle-bibliography.bib}{\from{\jobname.dtx}{bib}}
-  \file{examples/HUBerlin-letter.tex}{\from{\jobname.dtx}{example,letter}}
+  \file{HUBerlin-letter.tex}{\from{\jobname.dtx}{example,letter}}
 }
 
 \preamble
@@ -162,9 +162,9 @@ Copyright (C) 2019
 
 \usedir{tex/latex/\jobname}
 \generate{
-  \file{examples/HUBerlin-letter.tex}{\from{\jobname.dtx}{example,letter}}
-  \file{examples/HUBerlin-letter.lco}{\from{\jobname.dtx}{example,lco}}
-  \file{cls/HUBerlin-letter.cls}{\from{\jobname.dtx}{cls,letter}}
+  \file{HUBerlin-letter.tex}{\from{\jobname.dtx}{example,letter}}
+  \file{HUBerlin-letter.lco}{\from{\jobname.dtx}{example,lco}}
+  \file{HUBerlin-letter.cls}{\from{\jobname.dtx}{cls,letter}}
   %
   \file{HUBerlin-bundle-style.sty}{\from{\jobname.dtx}{sty,style}}
 }
@@ -330,15 +330,15 @@ you get all these various files described above.
 
 \part{Example files}
 \chapter{Letter}
-\IfFileExists{examples/HUBerlin-letter.pdf}
+\IfFileExists{HUBerlin-letter.pdf}
   {\includepdf[%
   pagecommand={\pagestyle{scrheadings}}
  ,link
  ,pages=-
  ,scale=.8
  % ,nup=1x2
- ,frame]{examples/HUBerlin-letter.pdf}}
- {|examples/HUBerlin-letter.pdf| missing!}
+ ,frame]{HUBerlin-letter.pdf}}
+ {|HUBerlin-letter.pdf| missing!}
 
 \end{document}
 %</driver>
@@ -374,22 +374,25 @@ you get all these various files described above.
 
   
 
-\setkomavar{fromname}{Dr. Lukas C. Bossert} % Name
+\setkomavar{fromname}{Dr. Heinz Hermann} % Name
 \setkomavar{fromaddress}{%
   Humboldt-Universität zu Berlin\\
   Unter den Linden 6\\
   10099 Berlin}
-\setkomavar{fromemail}{bosserlu@hu-berlin.de} % Email-Adresse
+\setkomavar{fromemail}{Heinz.Hermann@hu-berlin.de} % Email-Adresse
 \setkomavar{fromphone}{49 [030] 2093-70440} % Telefonnummer
 \setkomavar{fromurl}{www.antikezentrum.hu-berlin.de} % Website
 
 
-\setkomavar{backaddress}{HU Berlin\\August-Boeckh-Antikezentrum\\D-10099 Berlin} 
+\setkomavar{backaddress}{HU Berlin\\
+August-Boeckh-Antikezentrum\\
+D-10099 Berlin} 
 
+\setkomavar{faculty}{Philosophische Fakultät I}
 \setkomavar{institute}{}%
-\setkomavar{institute.head}[Prof. Dr.]{Claudia Tiersch}%
-\setkomavar{institute.head.position}{Geschäftsführende Direktorin}%
-\setkomavar{institute.head.mail}{claudia.tiersch@hu-berlin.de}%
+\setkomavar{institute.head}[Prof. Dr.]{Max Mustermann}%
+\setkomavar{institute.head.position}{Geschäftsführender Direktor}%
+\setkomavar{institute.head.mail}{max.mustermann@hu-berlin.de}%
 \setkomavar{institute.logo}{%
 \includegraphics[width=\useplength{locwidth}]{ABAZ-logo.png}
 }%
@@ -410,6 +413,16 @@ you get all these various files described above.
 %    \begin{macrocode}
 %</lco>
 %    \end{macrocode}
+
+% \HUBerlinlisting%
+%  [listing options = {%
+%	,linerange={18-53}
+%   ,numbers     = left
+%   ,numbersep   = 10pt
+%   ,numberstyle =\footnotesize\ttfamily\color{HUBerlin-grey}
+%   }]%
+%  {HUBerlin-letter.lco}
+%
 % \section{\texttt{.tex}-file}
 %    \begin{macrocode}
 %<*letter>
@@ -429,14 +442,10 @@ you get all these various files described above.
   Numbers=OldStyle]{ScalaSans-RegularLF}
 %    \end{macrocode}
 %    \begin{macrocode}
-\setkomavar{yourref}{}  % Ihr Zeichen
-\setkomavar{yourmail}{}         % Ihr Schreiben vom
-\setkomavar{myref}{}            % Unser Zeichen
-\setkomavar{customer}{}         % Kundennummer
-\setkomavar{invoice}{}          % Rechnungsnummer
-\setkomavar{place}{Berlin} % Ort
+\setkomavar{myref}{111}            % Geschäftszeichen
 
 \setkomavar{subject}{Betreff}
+\usepackage{blindtext}
 % =====================================
 \begin{document}
 
@@ -451,7 +460,11 @@ you get all these various files described above.
 
 
 \opening{Sehr geehrte Frau Musterfrau,}
-
+\blindtext
+\footnote{Test}
+\clearpage
+\blindtext
+\footnote{Test}
 hier kommt der Text hin.
 
 \closing{Mit freundlichen Grüßen,}
@@ -487,7 +500,7 @@ hier kommt der Text hin.
 %   ,numbersep   = 10pt
 %   ,numberstyle =\footnotesize\ttfamily\color{HUBerlin-grey}
 %   }]%
-%  {examples/HUBerlin-letter.tex}
+%  {HUBerlin-letter.tex}
 %    \begin{macrocode}
 %</letter>
 %</example>
@@ -508,10 +521,13 @@ hier kommt der Text hin.
 \DeclareOptionX*{\OptionNotUsed}
 \ProcessOptionsX\relax
 \LoadClass[%
-  fontsize=11pt,
+  fontsize=10pt,
   version=last,
-  DIN,
+  visualize
 ]{scrlttr2}
+% \showfields{head,address,location,refline,foot}
+
+% \LoadLetterOption{DIN}
 %    \end{macrocode}
 %    \begin{macrocode}
 \RequirePackage{ifluatex,luatex85}
@@ -527,73 +543,129 @@ hier kommt der Text hin.
 \RequirePackage{graphicx}
 \RequirePackage{xcolor}
 \RequirePackage{fontspec}
+\RequirePackage{geometry}
+\geometry{%
+   a4paper
+  ,left=25mm
+  % ,right=15mm
+  ,bottom=16mm
+  ,foot=4mm
+  ,top=77mm
+  ,nohead
+  ,textwidth=117mm
+  ,marginparsep=0mm
+  ,marginparwidth=0mm
+}
 %    \end{macrocode}
 %
 %    \begin{macrocode}
 % HU DESIGN %
 \setkomavar{backaddressseparator}{~\textbar~}
 \KOMAoptions{%
-locfield=wide,          % Breite Absenderergänzung (location)
-fromalign=left,         % Ausrichtung des Briefkopfes
-numericaldate=false,
+numericaldate=true,
 refline=nodate,
 backaddress=plain,
+parskip=half-
 }
-
-
-\setkomavar{location}{%
-  \raggedright
-  \footnotesize{%
-  \begingroup
-  \color{black!50}
-   \ifkomavarempty{institute.logo}
-    {\usekomavar{institute}}
-    {\usekomavar{institute.logo}}\\%
-  \usekomavar{institute.head.position}\\%
-  \usekomavar*{institute.head}\space\usekomavar{institute.head}\\%
-  \endgroup
-  \vspace*{.5cm}
-  {\bfseries%
-  \usekomavar{fromname.position}\\
-  \usekomavar{fromname}}\\
-  \vspace*{.5\baselineskip}
-  \usekomavar{fromaddress}
-  \vspace*{.5\baselineskip}\\
-  \usekomavar*{local}\space\usekomavar{local}\\
-  \usekomavar*{fromphone}\usekomavar{fromphone}
-  \ifkomavarempty{fromfax}{}{\usekomavar*{fromfax}\usekomavar{fromfax}}
-  \vspace*{.5\baselineskip}\\
-  \ifkomavarempty{institute.head.mail}{}{\usekomavar{institute.head.mail}}
-  \usekomavar{fromemail}
-  \usekomavar{fromurl}\\
-  \vspace*{.5\baselineskip}
-  \usekomavar{date}}%
-}
-% ============================
-\setkomavar{firsthead}{%
-  \parbox{\linewidth}{%
- \includegraphics[width=.8\linewidth]{HUBerlin-logo.png}
-  }%
-}
-
- % \@setplength{locheight}{length } 
- % \@setplength{lochpos}{length } 
- % \@setplength{locvpos}{length } 
- % \@setplength{locwidth}{length }
-
-\setkomavar{title}{}
-\setkomavar{date}{\today}
 %    \end{macrocode}
 % We define new |komavar|s.
 %    \begin{macrocode}
+\newkomavar{faculty}%
 \newkomavar{institute}%
 \newkomavar{institute.head}%
 \newkomavar{institute.head.position}%
 \newkomavar{institute.head.mail}%
 \newkomavar{institute.logo}%
 \newkomavar{fromname.position}
-\newkomavar[Sitz:]{local}
-\newkomavar[Verkehrsverbindungen]{connections}
+\newkomavar[\textbf{Sitz:}]{local}
+\newkomavar[\textbf{Verkehrsverbindungen:}]{connections}
+%    \end{macrocode}
+% Now the location field with additional information
+%    \begin{macrocode}
+\setkomavar{location}{%
+  \raggedright
+  \fontsize{8.5}{10}\selectfont%
+\ifkomavarempty{faculty}
+ {}
+ {{\bfseries%
+   \usekomavar{faculty}}\par}
+ \ifkomavarempty{institute.logo}
+    {\usekomavar{institute}}
+    {\usekomavar{institute.logo}}\par%
+  {\bfseries%
+   \usekomavar*{institute.head}\space\usekomavar{institute.head}}\\%
+  \usekomavar{institute.head.position}\\
+  \fontsize{7}{8.5}\selectfont
+  \vspace*{4\baselineskip}
+  \usekomavar*{date}\space\usekomavar{date}\par
+%
+%
+  \textbf{\usekomavar{fromname}}\\
+  \usekomavar{fromname.position}\par
+\ifkomavarempty{myref}
+ {}
+ {{\bfseries%
+   \usekomavar*{myref}:}\\\usekomavar{myref}\par}
+  %%
+  %%
+  \usekomavar[\textbf{Postanschrift:}\\]{fromaddress}
+  \vspace*{.5\baselineskip}\\
+  \usekomavar*{local}\\
+  \usekomavar{local}\par
+  \usekomavar*{fromphone}\usekomavar{fromphone}
+  \ifkomavarempty{fromfax}{}{\usekomavar*{fromfax}\usekomavar{fromfax}}
+  \vspace*{.5\baselineskip}\\
+\ifkomavarempty{institute.head.mail}
+  {}
+  {\usekomavar{institute.head.mail}}
+  \usekomavar{fromemail}
+  \usekomavar{fromurl}\\
+\vfill
+  \textbf{\usekomavar*{connections}}\\
+  \usekomavar{connections}
+}
+% ============================
+
+\setkomavar{firsthead}{%
+ \includegraphics[width=148mm]{HUBerlin-logo.png}%
+}
+%    \end{macrocode}
+% Set second page right
+%    \begin{macrocode}
+\RequirePackage{scrlayer-scrpage}
+\DeclareNewLayer[
+  foreground,
+  textarea,
+  voffset=\useplength{firstheadvpos},
+  hoffset=\useplength{firstheadhpos},
+  width=\useplength{firstheadwidth},
+  mode=picture,
+  contents=\putUL{\raisebox{\dimexpr-\height}{\usekomavar{firsthead}}\hfill\thepage}
+]{likefirstpage.head}
+\AddLayersToPageStyle{scrheadings}{likefirstpage.head}
+\clearpairofpagestyles
+%    \end{macrocode}
+%    \begin{macrocode}
+\AtBeginDocument{
+%    \end{macrocode}
+% Getting rid of the reference field
+%    \begin{macrocode}
+\removereffields
+%    \end{macrocode}
+%    \begin{macrocode}
+\@setplength{refvpos}{113mm}
+\@setplength{refaftervskip}{0pt}
+\@setplength{toaddrhpos}{25mm}
+\@setplength{firstheadhpos}{\useplength{toaddrhpos}}
+\@setplength{lochpos}{15mm}
+\@setplength{locvpos}{\useplength{toaddrvpos}}
+\@addtoplength{locvpos}{.75\baselineskip}
+\@setplength{locwidth}{45mm}
+\@setplength{locheight}{232mm}
+}
+\setkomavar{date}{\today}
+\setkomavar{place}{Berlin} % Ort
+\renewcaptionname{ngerman}{\myrefname}{Geschäftszeichen}
 %    \end{macrocode}
 %    \begin{macrocode}
 %</letter>

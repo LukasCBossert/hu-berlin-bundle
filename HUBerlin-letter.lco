@@ -1,5 +1,5 @@
 %%
-%% This is file `examples/HUBerlin-letter.lco',
+%% This is file `HUBerlin-letter.lco',
 %% generated with the docstrip utility.
 %%
 %% The original source files were:
@@ -17,21 +17,24 @@
 %% 
 \ProvidesFile{HUBerlin-letter.lco}
 
-\setkomavar{fromname}{Dr. Lukas C. Bossert} % Name
+\setkomavar{fromname}{Dr. Heinz Hermann} % Name
 \setkomavar{fromaddress}{%
   Humboldt-Universität zu Berlin\\
   Unter den Linden 6\\
   10099 Berlin}
-\setkomavar{fromemail}{bosserlu@hu-berlin.de} % Email-Adresse
+\setkomavar{fromemail}{Heinz.Hermann@hu-berlin.de} % Email-Adresse
 \setkomavar{fromphone}{49 [030] 2093-70440} % Telefonnummer
 \setkomavar{fromurl}{www.antikezentrum.hu-berlin.de} % Website
 
-\setkomavar{backaddress}{HU Berlin\\August-Boeckh-Antikezentrum\\D-10099 Berlin}
+\setkomavar{backaddress}{HU Berlin\\
+August-Boeckh-Antikezentrum\\
+D-10099 Berlin}
 
+\setkomavar{faculty}{Philosophische Fakultät I}
 \setkomavar{institute}{}%
-\setkomavar{institute.head}[Prof. Dr.]{Claudia Tiersch}%
-\setkomavar{institute.head.position}{Geschäftsführende Direktorin}%
-\setkomavar{institute.head.mail}{claudia.tiersch@hu-berlin.de}%
+\setkomavar{institute.head}[Prof. Dr.]{Max Mustermann}%
+\setkomavar{institute.head.position}{Geschäftsführender Direktor}%
+\setkomavar{institute.head.mail}{max.mustermann@hu-berlin.de}%
 \setkomavar{institute.logo}{%
 \includegraphics[width=\useplength{locwidth}]{ABAZ-logo.png}
 }%
@@ -47,7 +50,8 @@
   \usekomavar{institute.head}\\
 }
 \renewcommand*{\raggedsignature}{\raggedright}
+
 %% 
 %% Copyright (C) 2019
 %%
-%% End of file `examples/HUBerlin-letter.lco'.
+%% End of file `HUBerlin-letter.lco'.

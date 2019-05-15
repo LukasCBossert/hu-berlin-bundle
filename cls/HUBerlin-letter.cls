@@ -78,14 +78,14 @@ backaddress=plain,
 }
 \setkomavar{firsthead}{%
   \parbox{\linewidth}{%
- \includegraphics[width=.8\linewidth]{HUBerlin-logo.png}
+ \includegraphics[width=.85\linewidth]{HUBerlin-logo.png}
   }%
 }
 
- \@setplength{locheight}{length }
- \@setplength{lochpos}{length }
- \@setplength{locvpos}{length }
- \@setplength{locwidth}{length }
+ % \@setplength{locheight}{length }
+ % \@setplength{lochpos}{length }
+ % \@setplength{locvpos}{length }
+ % \@setplength{locwidth}{length }
 
 \setkomavar{title}{}
 \setkomavar{date}{\today}

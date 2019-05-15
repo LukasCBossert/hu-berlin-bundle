@@ -1,5 +1,5 @@
 %%
-%% This is file `examples/HUBerlin-letter.tex',
+%% This is file `HUBerlin-letter.tex',
 %% generated with the docstrip utility.
 %%
 %% The original source files were:
@@ -15,19 +15,16 @@
 %% please consider and respect them carefully.
 %% ----------------------------------------------------------------
 %% 
+
 \documentclass{HUBerlin-letter}
 \LoadLetterOption{HUBerlin-letter}
 \setmainfont[%
   BoldFont=ScalaSans-BoldLF,
   Numbers=OldStyle]{ScalaSans-RegularLF}
-\setkomavar{yourref}{}  % Ihr Zeichen
-\setkomavar{yourmail}{}         % Ihr Schreiben vom
-\setkomavar{myref}{}            % Unser Zeichen
-\setkomavar{customer}{}         % Kundennummer
-\setkomavar{invoice}{}          % Rechnungsnummer
-\setkomavar{place}{Berlin} % Ort
+\setkomavar{myref}{111}            % Geschäftszeichen
 
 \setkomavar{subject}{Betreff}
+\usepackage{blindtext}
 \begin{document}
 
 \begin{letter}{%
@@ -37,7 +34,11 @@
 }
 
 \opening{Sehr geehrte Frau Musterfrau,}
-
+\blindtext
+\footnote{Test}
+\clearpage
+\blindtext
+\footnote{Test}
 hier kommt der Text hin.
 
 \closing{Mit freundlichen Grüßen,}
@@ -59,4 +60,4 @@ hier kommt der Text hin.
 %% 
 %% Copyright (C) 2019
 %%
-%% End of file `examples/HUBerlin-letter.tex'.
+%% End of file `HUBerlin-letter.tex'.
