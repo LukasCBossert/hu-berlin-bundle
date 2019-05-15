@@ -376,7 +376,8 @@ you get all these various files described above.
 
 \setkomavar{fromname}[Wissenschaftlicher Koordinator]{Dr. Heinz Hermann} % Name
 \setkomavar{fromemail}{Heinz.Hermann@hu-berlin.de} % Email-Adresse
-\setkomavar{fromphone}{49 [030] 2093-70440} % Telefonnummer
+\setkomavar{fromphone}{70550} % Telefonnummer
+\setkomavar{fromfax}{} % Telefonnummer
 \setkomavar{fromurl}{www.antikezentrum.hu-berlin.de} % Website
 
 
@@ -397,10 +398,11 @@ Philosophische Fakultät I
 
 \setkomavar{local}{%
   Mohrenstraße 40/41\\
-  Raum 14\\
-  10117 Berlin}
-\setkomavar{connections}{U2 Haltestelle Hausvogteiplatz}
+  Zimmer 14\\
+  D-10117 Berlin}
+\setkomavar{connections}{U Bahnhof Hausvogteiplatz (U2)}
 
+\setkomavar{accessibility}{Hausvogteiplatz}
 % ===== Signatur =====
 \setkomavar{signature}{%
   \usekomavar{institute.head}\\
@@ -525,14 +527,14 @@ hier kommt der Text hin.
 %    \end{macrocode}
 % If there is anything to debug, you can enable |visualize|
 %    \begin{macrocode}
-  visualize
+  % visualize
 %    \end{macrocode}
 %    \begin{macrocode}
 ]{scrlttr2}
 %    \end{macrocode}
 % For debugging also uncomment the \cs{showfields}\marg{fields} commanand.
 %    \begin{macrocode}
-\showfields{head,address,location,refline,foot}
+% \showfields{head,address,location,refline,foot}
 %    \end{macrocode}
 % Since we do want to compile with \lualatex, 
 % we make sure that it will be compilable only with that.
@@ -551,6 +553,7 @@ hier kommt der Text hin.
 \RequirePackage{graphicx}
 \RequirePackage{fontspec}
 \setmainfont{Verdana}
+\RequirePackage{marvosym}
 \RequirePackage{geometry}
 \geometry{%
    a4paper
@@ -573,7 +576,8 @@ hier kommt der Text hin.
   ,backaddress   =plain
   ,parskip       =half-
 }
-\renewcommand*{\raggedsignature}{\raggedright}
+\raggedright
+% \renewcommand*{\raggedsignature}{\raggedright}
 %    \end{macrocode}
 % We define new |komavar|s.
 %
@@ -611,6 +615,25 @@ hier kommt der Text hin.
 %    \begin{macrocode}
 \newkomavar{connections}
 \setkomavar*{connections}{Verkehrsverbindungen:}
+%    \end{macrocode}
+% Furthermore we inform about office hours
+%    \begin{macrocode}
+\newkomavar{officehours}
+\setkomavar*{officehours}{Sprechzeiten:}
+%    \end{macrocode}
+% and if there is accessibility for wheelchairs etc.
+%    \begin{macrocode}
+\newkomavar{accessibility}
+\setkomavar*{accessibility}{{\large\reflectbox{\Wheelchair}} Eingang:}
+%    \end{macrocode}
+%    \begin{macrocode}
+\newkomavar{bank}
+\setkomavar*{bank}{Bankverbindung:}
+\setkomavar{bank}{Deutsche Bank PGK AG}
+\newkomavar{IBAN}
+\setkomavar{IBAN}{\mbox{IBAN DE95 1007 0848 0512 6206 01}}
+\newkomavar{BIC}
+\setkomavar{BIC}{BIC DEUTDEDB110}
 %    \end{macrocode}
 % Now we set the location field,
 % which is the section on the right with additional information:
@@ -701,33 +724,89 @@ hier kommt der Text hin.
 %    \end{macrocode}
 %    \begin{macrocode}
   \textbf{\usekomavar*{fromaddress}}\\
-  \usekomavar{fromaddress}\\
+  \usekomavar{fromaddress}
   \ifkomavarempty{fromphone}
-    {}
-    {\usekomavar*{fromphone}\usekomavar{fromphone}}\\
+    {\par}
+    {\\\usekomavar*{fromphone}\usekomavar{fromphone}
+     \ifkomavarempty{fromfax}
+    {\par}
+    {\\}}
   \ifkomavarempty{fromfax}
     {}
-    {\usekomavar*{fromfax}\usekomavar{fromfax}}\par
+    {\usekomavar*{fromfax}\usekomavar{fromfax}\par}
 %    \end{macrocode}
-%    \begin{macrocode}
-  \textbf{\usekomavar*{local}}\\
-  \usekomavar{local}\par
-%    \end{macrocode}
+% Next, emails and url:
 %    \begin{macrocode}
 \ifkomavarempty{institute.head.mail}
   {}
-  {\usekomavar{institute.head.mail}}
-  \usekomavar{fromemail}
-  \usekomavar{fromurl}\\
-\vfill
+  {\usekomavar{institute.head.mail}
+  \ifkomavarempty{fromemail}
+  {\ifkomavarempty{fromurl}
+   {\par}
+   {\\}}
+  {\\}}
+%    \end{macrocode}
+%
 %    \begin{macrocode}
-  \textbf{\usekomavar*{connections}}\\
-  \usekomavar{connections}\par
+\ifkomavarempty{fromemail}
+  {}
+  {\usekomavar{fromemail}
+  \ifkomavarempty{fromurl}
+  {\par}
+  {\\}}
+%    \end{macrocode}
+%
+%    \begin{macrocode}
+\ifkomavarempty{fromurl}
+  {}
+  {\usekomavar{fromurl}\par}
+%    \end{macrocode}
+% Now the actual location of the sender
+%    \begin{macrocode}
+\ifkomavarempty{local}
+  {}
+  {\textbf{\usekomavar*{local}}\\
+  \usekomavar{local}\par}
+%    \end{macrocode}
+% The last information section should be pinned to the bottom.
+%    \begin{macrocode}
+\vfill
+%    \end{macrocode}
+% Inform your addressee about the connection possibilities.
+%    \begin{macrocode}
+\ifkomavarempty{connections}
+  {}
+  {\textbf{\usekomavar*{connections}}\\
+  \usekomavar{connections}\par}
 %    \end{macrocode}
 %    \begin{macrocode}
+\ifkomavarempty{officehours}
+  {}
+  {\textbf{\usekomavar*{officehours}}\\
+  \usekomavar{officehours}\par}
+%    \end{macrocode}
+% If there is a barrier free entrance, tell it.
+%    \begin{macrocode}
+\ifkomavarempty{accessibility}
+  {}
+  {\textbf{\usekomavar*{accessibility}}\\
+  \usekomavar{accessibility}\par}
+%    \end{macrocode}
+% And last the bank connection
+%    \begin{macrocode}
+\ifkomavarempty{bank}
+  {}
+  {\textbf{\usekomavar*{bank}}\\
+  \usekomavar{bank}\\
+  \usekomavar{IBAN}\\
+  \usekomavar{BIC}
+  }
+%    \end{macrocode}
+% Finally we close \cs{setkomavar}\marg{location}
+%    \begin{macrocode}
 }
-% ============================
-
+%    \end{macrocode}
+%    \begin{macrocode}
 \setkomavar{firsthead}{%
  \includegraphics[width=148mm]{HUBerlin-logo.png}%
 }
@@ -767,9 +846,9 @@ hier kommt der Text hin.
 }
 
 \setkomavar{fromphone}{0000}
-\setkomavar*{fromphone}{+49 [30] 2093–}
+\setkomavar*{fromphone}{Telefon +49 [30] 2093–}
 \setkomavar{fromfax}{0000}
-\setkomavar*{fromfax}{+49 [30] 2093–}
+\setkomavar*{fromfax}{Telefax +49 [30] 2093–}
 \setkomavar*{fromaddress}{Postanschrift:}
 \setkomavar{fromaddress}{%
   Humboldt-Universität zu Berlin\\

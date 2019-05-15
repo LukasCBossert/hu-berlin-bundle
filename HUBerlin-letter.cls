@@ -24,9 +24,8 @@
 \LoadClass[%
   fontsize=10pt,
   version=last,
-  visualize
+  % visualize
 ]{scrlttr2}
-\showfields{head,address,location,refline,foot}
 \RequirePackage{ifluatex,luatex85}
 \ifluatex
 \else
@@ -37,6 +36,7 @@
 \RequirePackage{graphicx}
 \RequirePackage{fontspec}
 \setmainfont{Verdana}
+\RequirePackage{marvosym}
 \RequirePackage{geometry}
 \geometry{%
    a4paper
@@ -56,7 +56,7 @@
   ,backaddress   =plain
   ,parskip       =half-
 }
-\renewcommand*{\raggedsignature}{\raggedright}
+\raggedright
 \newkomavar{faculty}
 \newkomafont{faculty}{\bfseries\fontsize{8.5}{10}\selectfont}
 \newkomavar{institute}
@@ -69,6 +69,17 @@
 \setkomavar*{local}{Sitz:}
 \newkomavar{connections}
 \setkomavar*{connections}{Verkehrsverbindungen:}
+\newkomavar{officehours}
+\setkomavar*{officehours}{Sprechzeiten:}
+\newkomavar{accessibility}
+\setkomavar*{accessibility}{{\large\reflectbox{\Wheelchair}} Eingang:}
+\newkomavar{bank}
+\setkomavar*{bank}{Bankverbindung:}
+\setkomavar{bank}{Deutsche Bank PGK AG}
+\newkomavar{IBAN}
+\setkomavar{IBAN}{\mbox{IBAN DE95 1007 0848 0512 6206 01}}
+\newkomavar{BIC}
+\setkomavar{BIC}{BIC DEUTDEDB110}
 \setkomavar{location}{%
   \raggedright
   \fontsize{7}{8.5}\selectfont
@@ -112,25 +123,58 @@
  {\textbf{\usekomavar*{invoice}}\\
   \usekomavar{invoice}\par}
   \textbf{\usekomavar*{fromaddress}}\\
-  \usekomavar{fromaddress}\\
+  \usekomavar{fromaddress}
   \ifkomavarempty{fromphone}
-    {}
-    {\usekomavar*{fromphone}\usekomavar{fromphone}}\\
+    {\par}
+    {\\\usekomavar*{fromphone}\usekomavar{fromphone}
+     \ifkomavarempty{fromfax}
+    {\par}
+    {\\}}
   \ifkomavarempty{fromfax}
     {}
-    {\usekomavar*{fromfax}\usekomavar{fromfax}}\par
-  \textbf{\usekomavar*{local}}\\
-  \usekomavar{local}\par
+    {\usekomavar*{fromfax}\usekomavar{fromfax}\par}
 \ifkomavarempty{institute.head.mail}
   {}
-  {\usekomavar{institute.head.mail}}
-  \usekomavar{fromemail}
-  \usekomavar{fromurl}\\
+  {\usekomavar{institute.head.mail}
+  \ifkomavarempty{fromemail}
+  {\ifkomavarempty{fromurl}
+   {\par}
+   {\\}}
+  {\\}}
+\ifkomavarempty{fromemail}
+  {}
+  {\usekomavar{fromemail}
+  \ifkomavarempty{fromurl}
+  {\par}
+  {\\}}
+\ifkomavarempty{fromurl}
+  {}
+  {\usekomavar{fromurl}\par}
+\ifkomavarempty{local}
+  {}
+  {\textbf{\usekomavar*{local}}\\
+  \usekomavar{local}\par}
 \vfill
-  \textbf{\usekomavar*{connections}}\\
-  \usekomavar{connections}\par
+\ifkomavarempty{connections}
+  {}
+  {\textbf{\usekomavar*{connections}}\\
+  \usekomavar{connections}\par}
+\ifkomavarempty{officehours}
+  {}
+  {\textbf{\usekomavar*{officehours}}\\
+  \usekomavar{officehours}\par}
+\ifkomavarempty{accessibility}
+  {}
+  {\textbf{\usekomavar*{accessibility}}\\
+  \usekomavar{accessibility}\par}
+\ifkomavarempty{bank}
+  {}
+  {\textbf{\usekomavar*{bank}}\\
+  \usekomavar{bank}\\
+  \usekomavar{IBAN}\\
+  \usekomavar{BIC}
+  }
 }
-
 \setkomavar{firsthead}{%
  \includegraphics[width=148mm]{HUBerlin-logo.png}%
 }
@@ -160,9 +204,9 @@
 }
 
 \setkomavar{fromphone}{0000}
-\setkomavar*{fromphone}{+49 [30] 2093–}
+\setkomavar*{fromphone}{Telefon +49 [30] 2093–}
 \setkomavar{fromfax}{0000}
-\setkomavar*{fromfax}{+49 [30] 2093–}
+\setkomavar*{fromfax}{Telefax +49 [30] 2093–}
 \setkomavar*{fromaddress}{Postanschrift:}
 \setkomavar{fromaddress}{%
   Humboldt-Universität zu Berlin\\

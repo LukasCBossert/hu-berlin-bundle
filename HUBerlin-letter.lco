@@ -19,7 +19,8 @@
 
 \setkomavar{fromname}[Wissenschaftlicher Koordinator]{Dr. Heinz Hermann} % Name
 \setkomavar{fromemail}{Heinz.Hermann@hu-berlin.de} % Email-Adresse
-\setkomavar{fromphone}{49 [030] 2093-70440} % Telefonnummer
+\setkomavar{fromphone}{70550} % Telefonnummer
+\setkomavar{fromfax}{} % Telefonnummer
 \setkomavar{fromurl}{www.antikezentrum.hu-berlin.de} % Website
 
 \setkomavar{backaddress}{HU Berlin\\
@@ -39,10 +40,11 @@ Philosophische Fakultät I
 
 \setkomavar{local}{%
   Mohrenstraße 40/41\\
-  Raum 14\\
-  10117 Berlin}
-\setkomavar{connections}{U2 Haltestelle Hausvogteiplatz}
+  Zimmer 14\\
+  D-10117 Berlin}
+\setkomavar{connections}{U Bahnhof Hausvogteiplatz (U2)}
 
+\setkomavar{accessibility}{Hausvogteiplatz}
 \setkomavar{signature}{%
   \usekomavar{institute.head}\\
 }
