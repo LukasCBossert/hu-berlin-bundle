@@ -86,7 +86,7 @@ ctan:
 	@-mkdir archive
 	@rm -f archive/$(PROJECT)-$(DATE)*.zip
 	@mkdir $(TDIR)
-	@cp $(PROJECT).{dtx,pdf} README.md makefile HUBerlin-letter.{lco,pdf,tex,cls} $(TDIR)
+	@cp $(PROJECT).{dtx,pdf} README.md img/HUBerlin-logo.png makefile HUBerlin-letter.{lco,pdf,tex,cls} $(TDIR)
 	@cd $(TEMP); \
    zip -Drq $(PWD)/archive/$(PROJECT)-$(VERS).zip $(PROJECT)
 	$(echoPROJECT) "* files zipped * $(NC)"
