@@ -17,11 +17,7 @@
 %% 
 \ProvidesFile{HUBerlin-letter.lco}
 
-\setkomavar{fromname}{Dr. Heinz Hermann} % Name
-\setkomavar{fromaddress}{%
-  Humboldt-Universität zu Berlin\\
-  Unter den Linden 6\\
-  10099 Berlin}
+\setkomavar{fromname}[Wissenschaftlicher Koordinator]{Dr. Heinz Hermann} % Name
 \setkomavar{fromemail}{Heinz.Hermann@hu-berlin.de} % Email-Adresse
 \setkomavar{fromphone}{49 [030] 2093-70440} % Telefonnummer
 \setkomavar{fromurl}{www.antikezentrum.hu-berlin.de} % Website
@@ -30,17 +26,18 @@
 August-Boeckh-Antikezentrum\\
 D-10099 Berlin}
 
-\setkomavar{faculty}{Philosophische Fakultät I}
-\setkomavar{institute}{}%
-\setkomavar{institute.head}[Prof. Dr.]{Max Mustermann}%
-\setkomavar{institute.head.position}{Geschäftsführender Direktor}%
-\setkomavar{institute.head.mail}{max.mustermann@hu-berlin.de}%
-\setkomavar{institute.logo}{%
-\includegraphics[width=\useplength{locwidth}]{ABAZ-logo.png}
+\setkomavar{faculty}{%
+Philosophische Fakultät I
+}
+\setkomavar{institute}{%
+  \mbox{August-Boeckh-Antikezentrum}
+  % \includegraphics[width=\useplength{locwidth}]{ABAZ-logo.png}
 }%
-\setkomavar{fromname.position}{Wissenschaftlicher Koordinator}
+\setkomavar{institute.head}[chef]{Prof. Dr. Max Mustermann}%
+\setkomavar{institute.head.mail}{max.mustermann@hu-berlin.de}%
+\setkomavar{institute.additional}{Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text }
+
 \setkomavar{local}{%
-  %\def\\{\usekomavar{backaddressseparator}\@ogobble}
   Mohrenstraße 40/41\\
   Raum 14\\
   10117 Berlin}
@@ -49,7 +46,6 @@ D-10099 Berlin}
 \setkomavar{signature}{%
   \usekomavar{institute.head}\\
 }
-\renewcommand*{\raggedsignature}{\raggedright}
 
 %% 
 %% Copyright (C) 2019

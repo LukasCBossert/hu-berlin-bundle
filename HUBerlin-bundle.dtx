@@ -374,11 +374,7 @@ you get all these various files described above.
 
   
 
-\setkomavar{fromname}{Dr. Heinz Hermann} % Name
-\setkomavar{fromaddress}{%
-  Humboldt-Universität zu Berlin\\
-  Unter den Linden 6\\
-  10099 Berlin}
+\setkomavar{fromname}[Wissenschaftlicher Koordinator]{Dr. Heinz Hermann} % Name
 \setkomavar{fromemail}{Heinz.Hermann@hu-berlin.de} % Email-Adresse
 \setkomavar{fromphone}{49 [030] 2093-70440} % Telefonnummer
 \setkomavar{fromurl}{www.antikezentrum.hu-berlin.de} % Website
@@ -388,17 +384,18 @@ you get all these various files described above.
 August-Boeckh-Antikezentrum\\
 D-10099 Berlin} 
 
-\setkomavar{faculty}{Philosophische Fakultät I}
-\setkomavar{institute}{}%
-\setkomavar{institute.head}[Prof. Dr.]{Max Mustermann}%
-\setkomavar{institute.head.position}{Geschäftsführender Direktor}%
-\setkomavar{institute.head.mail}{max.mustermann@hu-berlin.de}%
-\setkomavar{institute.logo}{%
-\includegraphics[width=\useplength{locwidth}]{ABAZ-logo.png}
+\setkomavar{faculty}{%
+Philosophische Fakultät I
+}
+\setkomavar{institute}{%
+  \mbox{August-Boeckh-Antikezentrum}
+  % \includegraphics[width=\useplength{locwidth}]{ABAZ-logo.png}
 }%
-\setkomavar{fromname.position}{Wissenschaftlicher Koordinator}
+\setkomavar{institute.head}[chef]{Prof. Dr. Max Mustermann}%
+\setkomavar{institute.head.mail}{max.mustermann@hu-berlin.de}%
+\setkomavar{institute.additional}{Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text }
+
 \setkomavar{local}{%
-  %\def\\{\usekomavar{backaddressseparator}\@ogobble}
   Mohrenstraße 40/41\\
   Raum 14\\
   10117 Berlin}
@@ -408,7 +405,6 @@ D-10099 Berlin}
 \setkomavar{signature}{%
   \usekomavar{institute.head}\\
 }
-\renewcommand*{\raggedsignature}{\raggedright}
 %    \end{macrocode}
 %    \begin{macrocode}
 %</lco>
@@ -435,14 +431,21 @@ D-10099 Berlin}
 \LoadLetterOption{HUBerlin-letter}
 %    \end{macrocode}
 % If you have the HU font installed on your computer, 
-% you can load it:
+% you can load it, too:
 %    \begin{macrocode}
-\setmainfont[%
-  BoldFont=ScalaSans-BoldLF,
-  Numbers=OldStyle]{ScalaSans-RegularLF}
+% \setmainfont[%
+%   BoldFont=ScalaSans-BoldLF,
+%   Numbers=OldStyle]{ScalaSans-RegularLF}
 %    \end{macrocode}
 %    \begin{macrocode}
 \setkomavar{myref}{111}            % Geschäftszeichen
+
+\setkomavar{yourref}{X}          % Ihr Zeichen
+\setkomavar{yourmail}{C}         % Ihr Schreiben vom
+\setkomavar{customer}{234}         % Kundennummer
+\setkomavar{invoice}{444}          % Rechnungsnummer
+
+
 
 \setkomavar{subject}{Betreff}
 \usepackage{blindtext}
@@ -456,7 +459,6 @@ D-10099 Berlin}
   56789 Musterhausen%
 % =======================
 }
-
 
 
 \opening{Sehr geehrte Frau Musterfrau,}
@@ -514,21 +516,26 @@ hier kommt der Text hin.
 %    \begin{macrocode}
 %<*letter>
 %    \end{macrocode}
+% We load \pkg{scrlttr2} which is the documentclass for letters.
+% Furthermore we set up some options.
 %    \begin{macrocode}
-\RequirePackage{xkeyval}
-%    \end{macrocode}
-%    \begin{macrocode}
-\DeclareOptionX*{\OptionNotUsed}
-\ProcessOptionsX\relax
 \LoadClass[%
   fontsize=10pt,
   version=last,
-  visualize
-]{scrlttr2}
-% \showfields{head,address,location,refline,foot}
-
-% \LoadLetterOption{DIN}
 %    \end{macrocode}
+% If there is anything to debug, you can enable |visualize|
+%    \begin{macrocode}
+  visualize
+%    \end{macrocode}
+%    \begin{macrocode}
+]{scrlttr2}
+%    \end{macrocode}
+% For debugging also uncomment the \cs{showfields}\marg{fields} commanand.
+%    \begin{macrocode}
+\showfields{head,address,location,refline,foot}
+%    \end{macrocode}
+% Since we do want to compile with \lualatex, 
+% we make sure that it will be compilable only with that.
 %    \begin{macrocode}
 \RequirePackage{ifluatex,luatex85}
 \ifluatex
@@ -537,92 +544,187 @@ hier kommt der Text hin.
  {Please use `LuaLaTeX' as Compiler.^^J I abort here.}
 \fi
 %    \end{macrocode}
-%
+% We do not need many packages. 
+% The ones we need are loaded now.
 %    \begin{macrocode}
-\RequirePackage[ngerman]{babel}
+\RequirePackage[english,ngerman]{babel}
 \RequirePackage{graphicx}
-\RequirePackage{xcolor}
 \RequirePackage{fontspec}
+\setmainfont{Verdana}
 \RequirePackage{geometry}
 \geometry{%
    a4paper
-  ,left=25mm
-  % ,right=15mm
-  ,bottom=16mm
-  ,foot=4mm
-  ,top=77mm
+  ,left           =25mm
+  ,bottom         =16mm
+  ,foot           =4mm
+  ,top            =77mm
   ,nohead
-  ,textwidth=117mm
-  ,marginparsep=0mm
-  ,marginparwidth=0mm
+  ,textwidth      =117mm
+  ,marginparsep   =0mm
+  ,marginparwidth =0mm
 }
 %    \end{macrocode}
-%
+% To fulfill the Corporate Design rules we adjust a few things.
 %    \begin{macrocode}
-% HU DESIGN %
 \setkomavar{backaddressseparator}{~\textbar~}
 \KOMAoptions{%
-numericaldate=true,
-refline=nodate,
-backaddress=plain,
-parskip=half-
+   numericaldate =true
+  ,refline       =nodate
+  ,backaddress   =plain
+  ,parskip       =half-
 }
+\renewcommand*{\raggedsignature}{\raggedright}
 %    \end{macrocode}
 % We define new |komavar|s.
+%
+% First the possibility to name the faculty,
 %    \begin{macrocode}
-\newkomavar{faculty}%
-\newkomavar{institute}%
-\newkomavar{institute.head}%
-\newkomavar{institute.head.position}%
-\newkomavar{institute.head.mail}%
-\newkomavar{institute.logo}%
-\newkomavar{fromname.position}
-\newkomavar[\textbf{Sitz:}]{local}
-\newkomavar[\textbf{Verkehrsverbindungen:}]{connections}
+\newkomavar{faculty}
+\newkomafont{faculty}{\bfseries\fontsize{8.5}{10}\selectfont}
 %    \end{macrocode}
-% Now the location field with additional information
+% then the institute
+%    \begin{macrocode}
+\newkomavar{institute}
+\newkomafont{institute}{\fontsize{8.5}{10}\selectfont}
+%    \end{macrocode}
+% and further fields for information.
+%    \begin{macrocode}
+\newkomavar{institute.additional}
+%    \end{macrocode}
+% We pass the name of the head of the institute.
+%    \begin{macrocode}
+\newkomafont{institute.head}{\bfseries}
+\newkomavar{institute.head}%
+%    \end{macrocode}
+% Its position will be written as the optional argument.
+%
+% There is even the possibility to print the email-address onto the letter.
+%    \begin{macrocode}
+\newkomavar{institute.head.mail}%
+%    \end{macrocode}
+% Since there are many buildings with offices we tell where to find the sender
+%    \begin{macrocode}
+\newkomavar{local}
+\setkomavar*{local}{Sitz:}
+%    \end{macrocode}
+% and how to get there.
+%    \begin{macrocode}
+\newkomavar{connections}
+\setkomavar*{connections}{Verkehrsverbindungen:}
+%    \end{macrocode}
+% Now we set the location field,
+% which is the section on the right with additional information:
 %    \begin{macrocode}
 \setkomavar{location}{%
+%    \end{macrocode}
+% First anything regarding the font
+%    \begin{macrocode}
   \raggedright
-  \fontsize{8.5}{10}\selectfont%
-\ifkomavarempty{faculty}
- {}
- {{\bfseries%
-   \usekomavar{faculty}}\par}
- \ifkomavarempty{institute.logo}
-    {\usekomavar{institute}}
-    {\usekomavar{institute.logo}}\par%
-  {\bfseries%
-   \usekomavar*{institute.head}\space\usekomavar{institute.head}}\\%
-  \usekomavar{institute.head.position}\\
   \fontsize{7}{8.5}\selectfont
-  \vspace*{4\baselineskip}
-  \usekomavar*{date}\space\usekomavar{date}\par
+%    \begin{macrocode}
+% and for the section of faculty, institute etc. we use \env{minipage}
+%    \begin{macrocode}
+\begin{minipage}[t][64mm]{\useplength{locwidth}}
+%    \end{macrocode}
+% then the faculty
+%    \begin{macrocode}
+  {\usekomafont{faculty}%
+   \usekomavar{faculty}\\[1\baselineskip]}
+%    \end{macrocode}
+% and the institute.
+%    \begin{macrocode}
+  {\usekomafont{institute}\usekomavar{institute}\\[1\baselineskip]}
+%    \end{macrocode}
+% Now anything else regarding the institute.
+%    \begin{macrocode}
+\ifkomavarempty{institute.additional}
+  {}
+  {\usekomavar{institute.additional}\\[1\baselineskip]}
+%    \end{macrocode}
+% What follows is the head of institute and its position name.
+%    \begin{macrocode}
+\ifkomavarempty{institute.head}
+ {}
+ {{\usekomafont{institute.head}%
+  \usekomavar{institute.head}}\\%
+ \usekomavar*{institute.head}}
+%    \end{macrocode}
+% We close this section and the minipage.
+%    \begin{macrocode}
+ \end{minipage}
+%    \end{macrocode}
+% Let’s turn to further information.
 %
-%
-  \textbf{\usekomavar{fromname}}\\
-  \usekomavar{fromname.position}\par
+% For example date:
+%    \begin{macrocode}
+  \textbf{\usekomavar*{date}}\\
+  \usekomavar{date}\par
+%    \end{macrocode}
+% and the sender of the letter.
+%    \begin{macrocode}
+\ifkomavarempty{fromname}
+ {}
+ {\textbf{\usekomavar*{fromname}}\\
+  \usekomavar{fromname}\par}
+%    \end{macrocode}
+% And the reference of correspondence.
+%    \begin{macrocode}
 \ifkomavarempty{myref}
  {}
- {{\bfseries%
-   \usekomavar*{myref}:}\\\usekomavar{myref}\par}
-  %%
-  %%
-  \usekomavar[\textbf{Postanschrift:}\\]{fromaddress}
-  \vspace*{.5\baselineskip}\\
-  \usekomavar*{local}\\
+ {\textbf{\usekomavar*{myref}}\\
+  \usekomavar{myref}\par}
+%    \end{macrocode}
+% To complete this template we provide the possibility to name further reference fields.
+%    \begin{macrocode}
+\ifkomavarempty{yourref}
+ {}
+ {\textbf{\usekomavar*{yourref}}\\
+  \usekomavar{yourref}\par}
+%    \end{macrocode}
+%    \begin{macrocode}
+\ifkomavarempty{yourmail}
+ {}
+ {\textbf{\usekomavar*{yourmail}}\\
+  \usekomavar{yourmail}\par}
+%    \end{macrocode}
+%    \begin{macrocode}
+\ifkomavarempty{customer}
+ {}
+ {\textbf{\usekomavar*{customer}}\\
+  \usekomavar{customer}\par}
+%    \end{macrocode}
+%    \begin{macrocode}
+\ifkomavarempty{invoice}
+ {}
+ {\textbf{\usekomavar*{invoice}}\\
+  \usekomavar{invoice}\par}
+%    \end{macrocode}
+%    \begin{macrocode}
+  \textbf{\usekomavar*{fromaddress}}\\
+  \usekomavar{fromaddress}\\
+  \ifkomavarempty{fromphone}
+    {}
+    {\usekomavar*{fromphone}\usekomavar{fromphone}}\\
+  \ifkomavarempty{fromfax}
+    {}
+    {\usekomavar*{fromfax}\usekomavar{fromfax}}\par
+%    \end{macrocode}
+%    \begin{macrocode}
+  \textbf{\usekomavar*{local}}\\
   \usekomavar{local}\par
-  \usekomavar*{fromphone}\usekomavar{fromphone}
-  \ifkomavarempty{fromfax}{}{\usekomavar*{fromfax}\usekomavar{fromfax}}
-  \vspace*{.5\baselineskip}\\
+%    \end{macrocode}
+%    \begin{macrocode}
 \ifkomavarempty{institute.head.mail}
   {}
   {\usekomavar{institute.head.mail}}
   \usekomavar{fromemail}
   \usekomavar{fromurl}\\
 \vfill
+%    \begin{macrocode}
   \textbf{\usekomavar*{connections}}\\
-  \usekomavar{connections}
+  \usekomavar{connections}\par
+%    \end{macrocode}
+%    \begin{macrocode}
 }
 % ============================
 
@@ -653,7 +755,7 @@ parskip=half-
 \removereffields
 %    \end{macrocode}
 %    \begin{macrocode}
-\@setplength{refvpos}{113mm}
+\@setplength{refvpos}{110mm}
 \@setplength{refaftervskip}{0pt}
 \@setplength{toaddrhpos}{25mm}
 \@setplength{firstheadhpos}{\useplength{toaddrhpos}}
@@ -663,9 +765,20 @@ parskip=half-
 \@setplength{locwidth}{45mm}
 \@setplength{locheight}{232mm}
 }
-\setkomavar{date}{\today}
-\setkomavar{place}{Berlin} % Ort
-\renewcaptionname{ngerman}{\myrefname}{Geschäftszeichen}
+
+\setkomavar{fromphone}{0000}
+\setkomavar*{fromphone}{+49 [30] 2093–}
+\setkomavar{fromfax}{0000}
+\setkomavar*{fromfax}{+49 [30] 2093–}
+\setkomavar*{fromaddress}{Postanschrift:}
+\setkomavar{fromaddress}{%
+  Humboldt-Universität zu Berlin\\
+  Unter den Linden 6\\
+  D-10099 Berlin}
+
+\setkomavar*{date}{Datum:}
+\setkomavar*{fromname}{Bearbeiter:}
+\setkomavar*{myref}{Geschäftszeichen:}
 %    \end{macrocode}
 %    \begin{macrocode}
 %</letter>
