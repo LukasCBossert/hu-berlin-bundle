@@ -28,6 +28,10 @@ all: doc
 
 examples: files
 	$(MAKE) letter
+	$(MAKE) md2pdf-letter
+
+md2pdf-letter: files
+	pandoc --pdf-engine=lualatex --template HUBerlin-letter-template.latex -o HUBerlin-letter-markdown.pdf HUBerlin-letter.md
 
 letter:
 	# cd examples && 
@@ -86,7 +90,8 @@ ctan:
 	@-mkdir archive
 	@rm -f archive/$(PROJECT)-$(DATE)*.zip
 	@mkdir $(TDIR)
-	@cp $(PROJECT).{dtx,pdf} README.md img/HUBerlin-logo.png makefile HUBerlin-letter.{lco,pdf,tex,cls} $(TDIR)
+	@cp $(PROJECT).{dtx,pdf,ins} README.md makefile HUBerlin-*.{lco,pdf,tex,cls,latex,md} $(TDIR)
+	@cp -R img $(TDIR)
 	@cd $(TEMP); \
    zip -Drq $(PWD)/archive/$(PROJECT)-$(VERS).zip $(PROJECT)
 	$(echoPROJECT) "* files zipped * $(NC)"
@@ -95,18 +100,17 @@ ctan:
 # clean all files
 cleanbundle: clean
 	rm -f *.{{b,c,d,l}bx,ins,pdf,zip,bib,sty,cls}
-	rm -f examples/*
-	rm -f cls/*
 	$(echoPROJECT) "* cleaned all files * $(NC)"
 
 
 install: uninstall
 	@mkdir -p $(LOCAL)/{tex,source,doc}/latex/$(PROJECT)
 	@cp $(PROJECT).{dtx,ins} $(LOCAL)/source/latex/$(PROJECT)
-	@cp cls/HUBerlin-letter.cls $(LOCAL)/tex/latex/$(PROJECT)
+	@cp HUBerlin-*.cls $(LOCAL)/tex/latex/$(PROJECT)
 	@cp img/* $(LOCAL)/tex/latex/$(PROJECT)
 	@cp $(PROJECT).pdf $(LOCAL)/doc/latex/$(PROJECT)
 	mktexlsr
+	@cp HUBerlin-*-template.* ~/.pandoc/templates/
 	$(echoPROJECT) "* all files installed * $(NC)"
 
 

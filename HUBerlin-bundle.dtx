@@ -9,7 +9,7 @@
 %<cls|sty>\NeedsTeXFormat{LaTeX2e}[2005/12/01]
 %<*cls&letter>
 \ProvidesClass{HUBerlin-letter}
-  [\Version\space Humboldt-Universität zu Berlin - letter documentclass]
+  [\Version\space Humboldt-Universit"at zu Berlin - letter documentclass]
 \ClassInfo{HUBerlin}{* * * HUBerlin * * *\MessageBreak
     Part of the HUBerlin Bundle }
 %</cls&letter>
@@ -141,6 +141,7 @@ The current maintainer of this work is [Lukas C. Bossert](https://github.com/luk
   \file{README.md}{\from{\jobname.dtx}{readme,main}}
   \file{HUBerlin-bundle-bibliography.bib}{\from{\jobname.dtx}{bib}}
   \file{HUBerlin-letter.tex}{\from{\jobname.dtx}{example,letter}}
+  \file{HUBerlin-letter.md}{\from{\jobname.dtx}{example,letter-md}}
 }
 
 \preamble
@@ -167,6 +168,7 @@ Copyright (C) 2019
   \file{HUBerlin-letter.cls}{\from{\jobname.dtx}{cls,letter}}
   %
   \file{HUBerlin-bundle-style.sty}{\from{\jobname.dtx}{sty,style}}
+  \file{HUBerlin-letter-template.latex}{\from{\jobname.dtx}{template,letter-md}}
 }
 %</install>
 %<install>\endbatchfile
@@ -282,6 +284,40 @@ This bundle is constantly updated. For hints, errors or suggestions use the GitH
 All notable changes to this project will be documented in the [README.md](https://github.com/LukasCBossert/HUBerlin-bundle/blob/master/README.md).
 This project **does not** adhere to [Semantic Versioning](http://semver.org/).
 The markdown syntax is inspired by the conventions proposed by [keepachangelog.com](http://keepachangelog.com/).
+
+## Copyright
+Various parts of this bundle have different copyrights.
+
+
+### Boilerplate / markdown-template
+This template, forked from the pandoc-templates and <https://github.com/JensErat/pandoc-scrlttr2> is dual-licensed, under both the GPL (v2 or higher, same as pandoc) and the BSD 3-clause license (included below).
+
+----
+
+Copyright (c) 2014, John MacFarlane\\  
+Copyright (c) 2014, Jens Erat\\  
+All rights reserved.  
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met:
+
+*  Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+
+* Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+
+* Neither the name of John MacFarlane nor the names of other contributors may be used to endorse or promote products derived from this software without specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+"AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 %</driver|readme&main>
 % /*
 %     ██ ██████  ███████  █████  ██████  ███    ███ ███████
@@ -304,10 +340,12 @@ You can easily pick up the basic file structure from \cref{HUBerlin:bundle-struc
 \dirtree{%
 .1 \HUBerlinFolder HUBerlin-bundle.
 .2 HUBerlin-bundle.dtx\DTcomment{code and documentation}.
-.2 \HUBerlinFolder examples\DTcomment{folder for examplary files}.
-.3 HUBerlin-letter.tex \DTcomment{letter}.
-.3 HUBerlin-letter.lco \DTcomment{datafile for letter}.
-.3 HUBerlin-letter.pdf \DTcomment{letter}.
+.2 HUBerlin-letter.tex \DTcomment{letter}.
+.2 HUBerlin-letter.lco \DTcomment{datafile for letter}.
+.2 HUBerlin-letter.pdf \DTcomment{letter}.
+.2 HUBerlin-letter-template.latex \DTcomment{template for conversion}.
+.2 HUBerlin-letter-markdown.pdf \DTcomment{converted letter from markdown}.
+.2 HUBerlin-letter.md \DTcomment{example markdown file }.
 .2 \HUBerlinFolder img\DTcomment{folder for images}.
 .3 texografie-logo.png\DTcomment{logo of \TeXografie}.
 .2 makefile\DTcomment{makefile to generate all required files}.
@@ -321,7 +359,7 @@ When you run the |makefile|
 you get all these various files described above.
 
 
- 
+
 
 \DocInput{\jobname.dtx}
 
@@ -330,6 +368,7 @@ you get all these various files described above.
 
 \part{Example files}
 \chapter{Letter}
+\section{From \texttt{.tex}}
 \IfFileExists{HUBerlin-letter.pdf}
   {\includepdf[%
   pagecommand={\pagestyle{scrheadings}}
@@ -339,6 +378,18 @@ you get all these various files described above.
  % ,nup=1x2
  ,frame]{HUBerlin-letter.pdf}}
  {|HUBerlin-letter.pdf| missing!}
+
+\section{From \texttt{.md}}
+\IfFileExists{HUBerlin-letter-markdown.pdf}
+  {\includepdf[%
+  pagecommand={\pagestyle{scrheadings}}
+ ,link
+ ,pages=-
+ ,scale=.8
+ % ,nup=1x2
+ ,frame]{HUBerlin-letter-markdown.pdf}}
+ {|HUBerlin-letter-markdown.pdf| missing!}
+
 
 \end{document}
 %</driver>
@@ -458,14 +509,13 @@ Philosophische Fakultät I
 %    \end{macrocode}
 %    \begin{macrocode}
 \setkomavar{signature}{%
-  \usekomavar{institute.head}
+  \usekomavar{institute.head} -- 
   \usekomavar{fromname}
 }
 %    \end{macrocode}
 %    \begin{macrocode}
 %</lco>
 %    \end{macrocode}
-
 % \HUBerlinlisting%
 %  [listing options = {%
 %	,linerange={18-48}
@@ -579,9 +629,63 @@ Philosophische Fakultät I
 %  {HUBerlin-letter.tex}
 %    \begin{macrocode}
 %</letter>
-%</example>
+%    \end{macrocode}
+% \section{Letter from markdown}
+%    \begin{macrocode}
+%<*letter-md>
+%    \end{macrocode}
+% You need to have |pandoc| installed on your computer.
+% To create letters via markdown and |pandoc| run from the command line:
+% \begin{code}{pandoc}pandoc --pdf-engine=lualatex --template HUBerlin-letter-template.latex -o (*@\meta{YOUR-FILE}@*).pdf (*@\meta{YOUR-FILE}@*).md\end{code}
+% The |.md| file needs a section with metadata.
+%
+% It starts and ends with three |---|.
+% All necessary metadata information are listed inbetween.
+%    \begin{macrocode}
+---
+documentclass: HUBerlin-letter
+%    \end{macrocode}
+% The following will load the |.lco|-file, you replace that with the name of your |.lco|-file.
+%    \begin{macrocode}
+senderdetails: HUBerlin-letter
 %    \end{macrocode}
 %
+%    \begin{macrocode}
+opening: Sehr geehrte Damen und Herren
+closing: Mit freundlichen Grüßen
+date: 10. Mai 2010
+%    \end{macrocode}
+% The information for the sender has to be written like this:
+%    \begin{macrocode}
+addressee:
+	- Alexander von Humboldt
+	- Unter den Linden 6
+	- 10099 Berlin
+%    \end{macrocode}
+%    \begin{macrocode}
+---
+%    \end{macrocode}
+% You find a list with possible options for this metadata information header below.
+%
+% Now the content of your letter
+%    \begin{macrocode}
+Thank you very much for your letter.
+%    \end{macrocode}
+% Let’s see how this example file looks like:
+% \HUBerlinlisting%
+%  [listing options = {%
+%   ,numbers     = left
+%   ,numbersep   = 10pt
+%   ,numberstyle =\footnotesize\ttfamily\color{HUBerlin-grey}
+%   }]%
+%  {HUBerlin-letter.md}
+%    \begin{macrocode}
+%</letter-md>
+%    \end{macrocode}
+% Here we close the example files.
+%    \begin{macrocode}
+%</example>
+%    \end{macrocode}
 %\part{Guide for Coders}
 %    \begin{macrocode}
 %<*cls>
@@ -1001,6 +1105,90 @@ Philosophische Fakultät I
 %    \end{macrocode}
 %    \begin{macrocode}
 %</cls>
+%    \end{macrocode}
+%    \begin{macrocode}
+%<*template>
+%    \end{macrocode}
+% \chapter{Boilerplate / Template for letters }
+%    \begin{macrocode}
+%<*letter-md>
+%    \end{macrocode}
+%    \begin{macrocode}
+\documentclass{HUBerlin-letter}
+%    \end{macrocode}
+% We define two new variables.
+%    \begin{macrocode}
+\newkomavar{opening}
+\newkomavar{closing}
+%    \end{macrocode}
+%    \begin{macrocode}
+$for(letteroption)$
+\LoadLetterOption{$letteroption$}
+$endfor$
+$if(senderdetails)$\LoadLetterOption{$senderdetails$}$endif$
+$if(addresseeimage)$\setkomavar{addresseeimage}{$addresseeimage$}$endif$
+$if(backaddress)$\setkomavar{backaddress}{$backaddress$}\KOMAoptions{backaddress=true}$endif$
+$if(fromalign)$\KOMAoptions{fromalign=$fromalign$}$endif$
+$if(customer)$\setkomavar{customer}{$customer$}$endif$
+$if(date)$\setkomavar{date}{$date$}$endif$
+$if(fromaddress)$\setkomavar{fromaddress}{$fromaddress$}$endif$
+$if(frombank)$\setkomavar{frombank}{$frombank$}$endif$
+$if(fromemail)$\setkomavar{fromemail}{$fromemail$}\KOMAoptions{fromemail=true}$endif$
+$if(fromfax)$\setkomavar{fromfax}{$fromfax$}\KOMAoptions{fromfax=true}$endif$
+$if(fromlogo)$\setkomavar{fromlogo}{$fromlogo$}\KOMAoptions{fromlogo=true}$endif$
+$if(frommobilephone)$\setkomavar{frommobilephone}{$frommobilephone$}\KOMAoptions{frommobilephone=true}$endif$
+$if(fromname)$\setkomavar{fromname}{$fromname$}$endif$
+$if(fromphone)$\setkomavar{fromphone}{$fromphone$}\KOMAoptions{fromphone=true}$endif$
+$if(fromurl)$\setkomavar{fromurl}{$fromurl$}\KOMAoptions{fromurl=true}$endif$
+$if(fromzipcode)$\setkomavar{fromzipcode}{$fromzipcode$}$endif$
+$if(invoice)$\setkomavar{invoice}{$invoice$}$endif$
+$if(location)$\setkomavar{location}{$location$}$endif$
+$if(myref)$\setkomavar{myref}{$myref$}$endif$
+$if(myrefname)$\setkomavar*{myref}{$myrefname$}$endif$
+$if(place)$\setkomavar{place}{$place$}$endif$
+$if(PPcode)$\setkomavar{PPcode}{$PPcode$}$endif$
+$if(signature)$\setkomavar{signature}{$signature$}$endif$
+$if(specialmail)$\setkomavar{specialmail}{$specialmail$}$endif$
+$if(subject)$\setkomavar{subject}{$subject$}$endif$
+$if(title)$\setkomavar{title}{$title$}$endif$
+$if(yourmail)$\setkomavar{yourmail}{$yourmail$}$endif$
+$if(yourref)$\setkomavar{yourref}{$yourref$}$endif$
+$if(opening)$\setkomavar{opening}{$opening$}$endif$
+$if(closing)$\setkomavar{closing}{$closing$}$endif$
+$if(firstfoot)$\setkomavar{firstfoot}{$firstfoot$}$endif$
+%    \end{macrocode}
+% Ok, let’s sum up the possible options you can use to pass data to the letter:
+% \begin{itemize} \item addresseeimage \item backaddress \item customer \item date \item fromaddress \item frombank \item fromemail \item fromfax \item fromlogo \item frommobilephone \item fromname \item fromphone \item fromurl \item fromzipcode \item invoice \item location \item myref \item myrefname \item place \item PPcode \item signature \item specialmail \item subject \item title \item yourmail \item yourref \item opening \item closing \item firstfoot \end{itemize}
+% Sometimes you might not have an addressee – we are checking this, too.
+%    \begin{macrocode}
+$if(addressee)$
+$else$
+\KOMAoptions{addrfield=false}
+$endif$
+%    \end{macrocode}
+% Now the actual content of the letter
+%    \begin{macrocode}
+\begin{document}
+\begin{letter}{%
+$for(addressee)$
+$addressee$$sep$\\
+$endfor$
+}
+$for(include-before)$
+$include-before$
+$endfor$
+\opening{\usekomavar{opening}}
+$body$
+\closing{\usekomavar{closing}}
+$if(ps)$\ps{$ps$}$endif$
+$if(encl)$\encl{$encl$}$endif$
+$for(include-after)$$include-after$$endfor$
+\end{letter}
+\end{document}
+%    \end{macrocode}
+%    \begin{macrocode}
+%</letter-md>
+%</template>
 %    \end{macrocode}
 %\chapter{Documentation preamble \param{style}}
 %    \begin{macrocode}

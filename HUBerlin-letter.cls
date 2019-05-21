@@ -18,7 +18,7 @@
 \def\Version{\the\year/\the\month/\the\day\ v0.0.1}
 \NeedsTeXFormat{LaTeX2e}[2005/12/01]
 \ProvidesClass{HUBerlin-letter}
-  [\Version\space Humboldt-Universität zu Berlin - letter documentclass]
+  [\Version\space Humboldt-Universit"at zu Berlin - letter documentclass]
 \ClassInfo{HUBerlin}{* * * HUBerlin * * *\MessageBreak
     Part of the HUBerlin Bundle }
 \LoadClass[%

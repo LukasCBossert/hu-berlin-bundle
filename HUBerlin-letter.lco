@@ -43,10 +43,9 @@ Philosophische Fakultät I
 \setkomavar{connections}{U Bahnhof Hausvogteiplatz (U2)}
 \setkomavar{accessibility}{Hausvogteiplatz}
 \setkomavar{signature}{%
-  \usekomavar{institute.head}
+  \usekomavar{institute.head} --
   \usekomavar{fromname}
 }
-
 %% 
 %% Copyright (C) 2019
 %%
