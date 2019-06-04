@@ -15,7 +15,7 @@
 %% please consider and respect them carefully.
 %% ----------------------------------------------------------------
 %% 
-\def\Version{\the\year/\the\month/\the\day\ v0.0.1}
+\def\Version{\the\year/\the\month/\the\day\ v0.0.2}
 \NeedsTeXFormat{LaTeX2e}[2005/12/01]
 \ProvidesPackage{HUBerlin-bundle-style}
   [\Version\space HUBerlin - package for style the documentation]
@@ -66,10 +66,13 @@ captions   = tableheading,
 \date{\Version}
 
 \RequirePackage{ifluatex,luatex85}
-
-\ifluatex% LuaTeX
+\ifx\directlua\relax
+  \let\directlua\UnDeFiNeD
+\fi
+\ifluatex
 \else
-\GenericError{HUBerlin}{Please use `LuaLaTeX' as Compiler.^^J I abort here.}
+\GenericError{HUBerlin}%
+ {Please use `LuaLaTeX' as Compiler.^^J I abort here.}
 \fi
 \RequirePackage{fontspec}
 \RequirePackage[mono=false]{libertine}
@@ -175,7 +178,7 @@ captions   = tableheading,
 \definecolor{HUBerlin-brown}{RGB}{82,79,60}
 \definecolor{HUBerlin-red}{RGB}{180,0,0}
 
-\usepackage{dirtree}
+\RequirePackage{dirtree}
 \renewcommand*\DTstylecomment{%
   \color{HUBerlin-grey}%
   \footnotesize%
@@ -254,9 +257,9 @@ captions   = tableheading,
 
 \raggedbottom
 
-\usepackage{listings}
+\RequirePackage{listings}
 \PassOptionsToPackage{final}{listings}
-\usepackage[%
+\RequirePackage[%
    skins
   ,listings
   ,breakable
@@ -590,7 +593,7 @@ codecomment/.style={%
 \makeatletter
 \patchcmd{\scr@startchapter}{\if@openright\cleardoublepage\else\clearpage\fi}{}{}{}
 \makeatother
-\usepackage[tightLists=false]{markdown}
+\RequirePackage[tightLists=false]{markdown}
 \markdownSetup{rendererPrototypes={%
 link = {\href{#3}{#1}}%
 }}

@@ -1,0 +1,1 @@
+pandoc --pdf-engine=lualatex --template HUBerlin-letter-template.latex -o (*@\meta{YOUR-FILE}@*).pdf (*@\meta{YOUR-FILE}@*).md

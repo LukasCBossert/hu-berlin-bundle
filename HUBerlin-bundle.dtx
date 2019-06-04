@@ -1,7 +1,6 @@
 % \iffalse
 %<*internal|cls|sty>
-\def\Version{\the\year/\the\month/\the\day\ v0.0.1}
-% \def\Version{2019/04/17 v0.0.1}
+\def\Version{\the\year/\the\month/\the\day\ v0.0.2}
 %</internal|cls|sty>
 %<*internal>
 \iffalse
@@ -215,9 +214,6 @@ Documents and Documentations for \LaTeX\ at the Humboldt-Universität zu Berlin}
   }{scrbook}
 \ReplaceClass{article}{scrbook}
 \documentclass{ltxdoc}
-%\RecordChanges
-% \EnableCrossrefs
-% \CodelineIndex
 \usepackage{HUBerlin-bundle-style} 
 \GetFileInfo{\jobname.dtx}
 % /*
@@ -441,64 +437,66 @@ you get all these various files described above.
 %    \end{macrocode}
 % But you need to give a name:
 %    \begin{macrocode}
-{Dr. Heinz Hermann} 
+{Dr. Max Mustermann} 
 %    \end{macrocode}
 % The mail address
 %    \begin{macrocode}
-\setkomavar{fromemail}{heinz.hermann@hu-berlin.de}
+\setkomavar{fromemail}{max.mustermann@hu-berlin.de}
 %    \end{macrocode}
 % For phone and fax number you only need to type the last digits.
 %    \begin{macrocode}
-\setkomavar{fromphone}{70550}
+\setkomavar{fromphone}{1234}
 %    \end{macrocode}
 % If you don’t have a fax (or a phone),
 % leave it empty. Do \emph{not} delete it.
 %    \begin{macrocode}
-\setkomavar{fromfax}{}
+\setkomavar{fromfax}{5678}
 %    \end{macrocode}
 % And finally the URL.
 %    \begin{macrocode}
-\setkomavar{fromurl}{www.antikezentrum.hu-berlin.de}
+\setkomavar{fromurl}{www.hu-berlin.de}
 %    \end{macrocode}
 % If your backaddress is to long 
 % – it will be set up automatically – 
 % you can redefine it.
 %    \begin{macrocode}
 \setkomavar{backaddress}{HU Berlin\\
-August-Boeckh-Antikezentrum\\
+Unter den Linden 6\\
 D-10099 Berlin} 
 %    \end{macrocode}
 % Selfexplaining: the faculty.
 %    \begin{macrocode}
 \setkomavar{faculty}{%
-Philosophische Fakultät I
+Philosophische Fakultät
 }
 %    \end{macrocode}
 %
 %    \begin{macrocode}
 \setkomavar{institute}{%
-  \mbox{August-Boeckh-Antikezentrum}
+  \mbox{Institut für Briefvorlagen}
 %    \end{macrocode}
 % You could even put a figure/logo of the institute here.
+% Just use |width=\useplength{locwidth}| to get the maximum
+% possible width for the figure in the margin area.
 %    \begin{macrocode}
-  % \includegraphics[width=\useplength{locwidth}]{ABAZ-logo.png}
+%% \includegraphics[width=\useplength{locwidth}]{YOUR-LOGO.png}
 %    \end{macrocode}
 %    \begin{macrocode}
 }
 %    \end{macrocode}
 %    \begin{macrocode}
-\setkomavar{institute.additional}{Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text }
+\setkomavar{institute.additional}{Here you can more text.}
 %    \end{macrocode}
 %    \begin{macrocode}
-\setkomavar{institute.head}[chef]{Prof. Dr. Max Mustermann}
+\setkomavar{institute.head}[Dekan]{Prof. Dr. Maike Musterfrau}
 %    \end{macrocode}
 %    \begin{macrocode}
-\setkomavar{institute.head.mail}{max.mustermann@hu-berlin.de}
+\setkomavar{institute.head.mail}{maike.musterfrau@hu-berlin.de}
 %    \end{macrocode}
 %    \begin{macrocode}
 \setkomavar{local}{%
   Mohrenstraße 40/41\\
-  Zimmer 14\\
+  Zimmer X\\
   D-10117 Berlin}
 %    \end{macrocode}
 %    \begin{macrocode}
@@ -545,19 +543,19 @@ Philosophische Fakultät I
 %    \end{macrocode}
 % Now following the reference information
 %    \begin{macrocode}
-\setkomavar{myref}{111}
+\setkomavar{myref}{}
 %    \end{macrocode}
 %    \begin{macrocode}
-\setkomavar{yourref}{X} 
+\setkomavar{yourref}{} 
 %    \end{macrocode}
 %    \begin{macrocode}
-\setkomavar{yourmail}{3.5.2019}
+\setkomavar{yourmail}{}
 %    \end{macrocode}
 %    \begin{macrocode}
-\setkomavar{customer}{234}
+\setkomavar{customer}{}
 %    \end{macrocode}
 %    \begin{macrocode}
-\setkomavar{invoice}{444}
+\setkomavar{invoice}{}
 %    \end{macrocode}
 %    \begin{macrocode}
 \setkomavar{subject}{Betreff}
@@ -716,6 +714,14 @@ Thank you very much for your letter.
 % we make sure that it will be compilable only with that.
 %    \begin{macrocode}
 \RequirePackage{ifluatex,luatex85}
+%    \end{macrocode}
+% Now a fix.\fnurl{https://tex.stackexchange.com/a/75065}
+%    \begin{macrocode}
+\ifx\directlua\relax
+  \let\directlua\UnDeFiNeD
+\fi
+%    \end{macrocode}
+%    \begin{macrocode}
 \ifluatex
 \else
 \GenericError{HUBerlin}%
@@ -777,6 +783,12 @@ Thank you very much for your letter.
 %    \begin{macrocode}
 \renewcommand*{\raggedsignature}{\raggedright}
 \raggedright
+%    \end{macrocode}
+% We also want to put the enclosures at the bottom of the page.\fnurl{https://tex.stackexchange.com/questions/77991/put-the-encl-at-the-bottom-of-the-page-lettre-class}
+%    \begin{macrocode}
+\def\stopletter{}
+\let\enclold\encl 
+\renewcommand\encl[1]{\vskip0ptplus1filll\enclold{#1}}
 %    \end{macrocode}
 % We define new |komavar|s.
 %
@@ -1256,11 +1268,13 @@ $for(include-after)$$include-after$$endfor$
 
 %---- Required Packages
 \RequirePackage{ifluatex,luatex85}
-
-
-\ifluatex% LuaTeX
+\ifx\directlua\relax
+  \let\directlua\UnDeFiNeD
+\fi
+\ifluatex
 \else
-\GenericError{HUBerlin}{Please use `LuaLaTeX' as Compiler.^^J I abort here.}
+\GenericError{HUBerlin}%
+ {Please use `LuaLaTeX' as Compiler.^^J I abort here.}
 \fi
 %    \end{macrocode}
 % For fonts we load the package \pkg{fontspec} which
@@ -1386,7 +1400,7 @@ $for(include-after)$$include-after$$endfor$
 \definecolor{HUBerlin-red}{RGB}{180,0,0}
 
 
-\usepackage{dirtree}
+\RequirePackage{dirtree}
 \renewcommand*\DTstylecomment{%
   \color{HUBerlin-grey}%
   \footnotesize%
@@ -1484,9 +1498,9 @@ $for(include-after)$$include-after$$endfor$
 
 \raggedbottom
 
-\usepackage{listings}
+\RequirePackage{listings}
 \PassOptionsToPackage{final}{listings}
-\usepackage[%
+\RequirePackage[%
    skins
   ,listings
   ,breakable
@@ -1872,7 +1886,7 @@ codecomment/.style={%
 \patchcmd{\scr@startchapter}{\if@openright\cleardoublepage\else\clearpage\fi}{}{}{}
 \makeatother
 %
-\usepackage[tightLists=false]{markdown}
+\RequirePackage[tightLists=false]{markdown}
 \markdownSetup{rendererPrototypes={%
 	link = {\href{#3}{#1}}%
 }}

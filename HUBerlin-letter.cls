@@ -15,7 +15,7 @@
 %% please consider and respect them carefully.
 %% ----------------------------------------------------------------
 %% 
-\def\Version{\the\year/\the\month/\the\day\ v0.0.1}
+\def\Version{\the\year/\the\month/\the\day\ v0.0.2}
 \NeedsTeXFormat{LaTeX2e}[2005/12/01]
 \ProvidesClass{HUBerlin-letter}
   [\Version\space Humboldt-Universit"at zu Berlin - letter documentclass]
@@ -27,6 +27,9 @@
   % visualize
 ]{scrlttr2}
 \RequirePackage{ifluatex,luatex85}
+\ifx\directlua\relax
+  \let\directlua\UnDeFiNeD
+\fi
 \ifluatex
 \else
 \GenericError{HUBerlin}%
@@ -63,6 +66,9 @@
 }
 \renewcommand*{\raggedsignature}{\raggedright}
 \raggedright
+\def\stopletter{}
+\let\enclold\encl
+\renewcommand\encl[1]{\vskip0ptplus1filll\enclold{#1}}
 \newkomavar{faculty}
 \newkomafont{faculty}{\bfseries\fontsize{8.5}{10}\selectfont}
 \newkomavar{institute}

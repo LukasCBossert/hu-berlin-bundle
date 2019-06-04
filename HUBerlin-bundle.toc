@@ -1,0 +1,40 @@
+\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
+\babel@toc {english}{}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {1}Introduction}{3}{chapter.1}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {1.1}Installation of the bundle}{3}{section.1.1}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {1.2}Changelog}{3}{section.1.2}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {1.3}Copyright}{3}{section.1.3}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {1.3.1}Boilerplate / markdown-template}{3}{subsection.1.3.1}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {2}Preambel}{4}{chapter.2}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {part}{\numberline {I}Guideline for Users}{5}{part.1}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {3}Letter}{6}{chapter.3}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.1}\texttt {.lco}-file}{6}{section.3.1}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.2}\texttt {.tex}-file}{8}{section.3.2}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.3}Letter from markdown}{10}{section.3.3}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {part}{\numberline {II}Guide for Coders}{12}{part.2}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {4}Letter}{13}{chapter.4}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {5}Boilerplate / Template for letters}{19}{chapter.5}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {6}Documentation preamble \begingroup \normalfont \ttfamily \bfseries \textless style\ttfamily \bfseries \textgreater \endgroup }{21}{chapter.6}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {part}{\numberline {III}Example files}{35}{part.3}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {7}Letter}{36}{chapter.7}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {7.1}From \texttt {.tex}}{36}{section.7.1}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {7.2}From \texttt {.md}}{36}{section.7.2}% 

@@ -34,8 +34,7 @@ md2pdf-letter: files
 	pandoc --pdf-engine=lualatex --template HUBerlin-letter-template.latex -o HUBerlin-letter-markdown.pdf HUBerlin-letter.md
 
 letter:
-	# cd examples && 
-	latexmk -lualatex HUBerlin-letter.tex
+	latexmk -lualatex  -interaction=nonstopmode HUBerlin-letter.tex
 
 
 # How to get information from CTAN
@@ -52,9 +51,8 @@ else
 	done
 endif
 
-$(CTANBIB): $(PROJECT).pdf
+$(CTANBIB):
 	lualatex $(PROJECT).dtx
-	# @rm -f $(PROJECT).pdf
 
 files: $(PROJECT).ins
 	latex $(PROJECT).ins
@@ -100,6 +98,7 @@ ctan:
 # clean all files
 cleanbundle: clean
 	rm -f *.{{b,c,d,l}bx,ins,pdf,zip,bib,sty,cls}
+	rm -f HUBerlin-letter*.{tex,md,lco,latex}
 	$(echoPROJECT) "* cleaned all files * $(NC)"
 
 
