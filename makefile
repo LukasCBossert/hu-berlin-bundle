@@ -36,22 +36,24 @@ md2pdf-letter: files
 letter:
 	latexmk -lualatex  -interaction=nonstopmode HUBerlin-letter.tex
 
-
 # How to get information from CTAN
-getCTAN: $(CTANBIB)
-ifneq ("$(wildcard $(CTANBIB))","")
-	$(echoPROJECT) "$(RED)Skipping$(NC) retrieving information from CTAN."
-	$(echoPROJECT) "Using existing $(CTANBIB).$(NC)"	
-else
-	$(echoPROJECT) "$(RED)Retrieving$(NC) information from CTAN."
-	$(echoPROJECT) "Fetching information from CTAN about package...$(NC)"	
+CTAN: $(PROJECT).pkglist
 	@for pkg in $(PKG);\
 	do                \
 	$(CTAN);          \
 	done
-endif
 
-$(CTANBIB):
+# before we retrieve infos from CTAN
+# we clean and sort the list with packages
+getCTAN: $(PROJECT).pkglist
+	$(echoPROJECT) "$(RED)Retrieving$(NC) information from CTAN."
+	$(echoPROJECT) "Fetching information from CTAN about package...$(NC)"	
+	@-rm $(CTANBIB)
+	$(shell sort -u $(PROJECT).pkglist > $(TEMP)/pkg1.lst)
+	mv $(TEMP)/pkg1.lst $(PROJECT).pkglist
+	$(MAKE) CTAN
+
+$(PROJECT).pkglist:
 	lualatex $(PROJECT).dtx
 
 files: $(PROJECT).ins

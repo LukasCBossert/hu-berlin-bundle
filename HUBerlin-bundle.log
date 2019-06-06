@@ -1,5 +1,5 @@
-This is LuaTeX, Version 1.10.0 (TeX Live 2019)  (format=lualatex 2019.6.4)  4 JUN 2019 13:04
- restricted system commands enabled.
+This is LuaTeX, Version 1.10.0 (TeX Live 2019)  (format=lualatex 2019.6.5)  6 JUN 2019 10:23
+ system commands enabled.
 **HUBerlin-bundle.dtx
 (./HUBerlin-bundle.dtx
 LaTeX2e <2018-12-01>
@@ -48,7 +48,7 @@ Inserting `luaotfload.aux.set_capheight' at position 3 in `luaotfload.patch_font
 '.
 Inserting `luaotfload.rewrite_fontname' at position 4 in `luaotfload.patch_font'
 .
-luaotfload | main : initialization completed in 0.069 seconds
+luaotfload | main : initialization completed in 0.135 seconds
 (/usr/local/texlive/2019/texmf-dist/tex/latex/base/docstrip.tex
 \blockLevel=\count80
 \emptyLines=\count81
@@ -152,8 +152,8 @@ Comments removed: 625
 Comments  passed: 19
 Codelines passed: 1167
 
-File: HUBerlin-bundle.dtx 2019/6/4\ v0.0.2 Documents and documentation for HUBer
-lin
+File: HUBerlin-bundle.dtx 2019/06/06 v0.0.2 Documents and documentation for HUBe
+rlin
 (/usr/local/texlive/2019/texmf-dist/tex/latex/koma-script/scrlfile.sty
 Package: scrlfile 2019/02/01 v3.26b KOMA-Script package (loading files)
 )
@@ -347,8 +347,8 @@ Package: multicol 2018/12/27 v1.8v multicolumn formatting (FMi)
 \c@CodelineNo=\count135
 ))
 (./HUBerlin-bundle-style.sty
-Package: HUBerlin-bundle-style 2019/6/4\ v0.0.2 HUBerlin - package for style the
- documentation
+Package: HUBerlin-bundle-style 2019/06/06 v0.0.2 HUBerlin - package for style th
+e documentation
 Package HUBerlin Info: * * * HUBerlin * * *
 (HUBerlin)             Part of the HUBerlin Bundle on input line 23.
 
@@ -2473,7 +2473,7 @@ Library (tcolorbox): 'tcblistingscore.code.tex' version '4.20'
 Library (tcolorbox): 'tcbprocessing.code.tex' version '4.20'
 (/usr/local/texlive/2019/texmf-dist/tex/latex/tools/shellesc.sty
 Package: shellesc 2016/06/07 v0.02a unified shell escape interface for LaTeX
-Package shellesc Info: Restricted shell escape enabled on input line 69.
+Package shellesc Info: Unrestricted shell escape enabled on input line 67.
 ))
 \c@tcblisting=\count482
 ))
@@ -2732,20 +2732,9 @@ Package: markdown 2019/04/30 v2.8.1 markdown renderer
 \markdownLaTeXTableAlignment=\toks44
 \markdownLaTeXTableEnd=\toks45
 ))
-! Missing = inserted for \ifnum.
-<to be read again> 
-\ 
-l.218 \GetFileInfo
-                {\jobname.dtx}
-? 
-! Missing number, treated as zero.
-<to be read again> 
-\ 
-l.218 \GetFileInfo
-                {\jobname.dtx}
-? 
 Package biblatex Info: Trying to load language 'english'...
 Package biblatex Info: ... file 'english.lbx' found.
+
 (/usr/local/texlive/2019/texmf-dist/tex/latex/biblatex/lbx/english.lbx
 File: english.lbx 2018/11/02 v3.12 biblatex localization (PK/MW)
 )
@@ -2944,12 +2933,12 @@ Package biblatex Info: Automatic encoding selection.
 
 \openout3 = HUBerlin-bundle.bcf
 Package biblatex Info: Trying to load bibliographic data...
-Package biblatex Info: ... file 'HUBerlin-bundle.bbl' not found.
+Package biblatex Info: ... file 'HUBerlin-bundle.bbl' found.
 
-No file HUBerlin-bundle.bbl.
+(./HUBerlin-bundle.bbl)
 Package biblatex Info: Reference section=0 on input line 226.
 Package biblatex Info: Reference segment=0 on input line 226.
-ABD: EverySelectfont initializing macros
+ ABD: EverySelectfont initializing macros
 LaTeX Info: Redefining \selectfont on input line 226.
 LaTeX Info: Redefining \microtypecontext on input line 226.
 Package microtype Info: Generating PDF output.
@@ -3507,12 +3496,40 @@ RS)
 )
 LaTeX Font Info:    Font shape `TU/TeXGyreAdventor-Regular(0)/m/n' will be
 (Font)              scaled to size 7.84286pt on input line 226.
+LaTeX Font Info:    Font shape `TU/TeXGyreAdventor-Regular(0)/m/n' will be
+(Font)              scaled to size 9.41144pt on input line 226.
+<texografie.png, id=8, 569.2467pt x 100.4553pt>
+File: texografie.png Graphic file (type png)
+<use texografie.png>
+Package luatex.def Info: texografie.png  used on input line 226.
+(luatex.def)             Requested size: 113.81102pt x 20.08304pt.
+ [1
 
 
-LaTeX Warning: Citation 'Hoare1973' on page 1 undefined on input line 226.
 
+
+{/usr/local/texlive/2019/texmf-var/fonts/map/pdftex/updmap/pdftex.map}</usr/loca
+l/texlive/texmf-local/tex/latex/HUBerlin-bundle/texografie.png>]
+\openout7 = HUBerlin-bundle.pkglist
+
+LaTeX Font Info:    Font shape `TU/TeXGyreAdventor-Regular(0)/m/n' will be
+(Font)              scaled to size 8.58792pt on input line 229.
+
+
+LaTeX Font Warning: Font shape `TU/TeXGyreAdventor-Regular(0)/bx/n' undefined
+(Font)              using `TU/TeXGyreAdventor-Regular(0)/m/n' instead on input l
+ine 229.
+
+LaTeX Font Info:    Font shape `TU/TeXGyreAdventor-Regular(0)/bx/n' will be
+(Font)              scaled to size 9.41144pt on input line 229.
+LaTeX Font Info:    Font shape `TU/TeXGyreAdventor-Regular(0)/bx/n' will be
+(Font)              scaled to size 16.2661pt on input line 229.
+Package tocbasic Info: character protrusion at toc deactivated on input line 229
+.
+(./HUBerlin-bundle.toc
+Package cleveref Info: loaded `english' language definitions on input line 2.
 LaTeX Font Info:    Font shape `TU/TeXGyrePagella(0)/bx/n' will be
-(Font)              scaled to size 10.01616pt on input line 226.
+(Font)              scaled to size 10.01616pt on input line 4.
 Package microtype Info: Character `ﬆ' is missing
 (microtype)             in font `TU/TeXGyrePagella(0)/bx/n/10.95'.
 (microtype)             Ignoring protrusion settings for this character.
@@ -3588,38 +3605,6 @@ Package microtype Info: Character `⁺' is missing
 Package microtype Info: Character `⁻' is missing
 (microtype)             in font `TU/TeXGyrePagella(0)/bx/n/10.95'.
 (microtype)             Ignoring protrusion settings for this character.
-LaTeX Font Info:    Font shape `TU/TeXGyreAdventor-Regular(0)/m/n' will be
-(Font)              scaled to size 9.41144pt on input line 226.
-<texografie.png, id=7, 569.2467pt x 100.4553pt>
-File: texografie.png Graphic file (type png)
-<use texografie.png>
-Package luatex.def Info: texografie.png  used on input line 226.
-(luatex.def)             Requested size: 113.81102pt x 20.08304pt.
-[1
-
-
-
-
-{/usr/local/texlive/2019/texmf-var/fonts/map/pdftex/updmap/pdftex.map}</usr/loca
-l/texlive/texmf-local/tex/latex/HUBerlin-bundle/texografie.png>]
-\openout7 = HUBerlin-bundle.pkglist
-
-LaTeX Font Info:    Font shape `TU/TeXGyreAdventor-Regular(0)/m/n' will be
-(Font)              scaled to size 8.58792pt on input line 229.
-
-
-LaTeX Font Warning: Font shape `TU/TeXGyreAdventor-Regular(0)/bx/n' undefined
-(Font)              using `TU/TeXGyreAdventor-Regular(0)/m/n' instead on input l
-ine 229.
-
-LaTeX Font Info:    Font shape `TU/TeXGyreAdventor-Regular(0)/bx/n' will be
-(Font)              scaled to size 9.41144pt on input line 229.
-LaTeX Font Info:    Font shape `TU/TeXGyreAdventor-Regular(0)/bx/n' will be
-(Font)              scaled to size 16.2661pt on input line 229.
-Package tocbasic Info: character protrusion at toc deactivated on input line 229
-.
-(./HUBerlin-bundle.toc
-Package cleveref Info: loaded `english' language definitions on input line 2.
 LaTeX Font Info:    Font shape `TU/TeXGyrePagella(0)/m/n' will be
 (Font)              scaled to size 8.23247pt on input line 4.
 Package microtype Info: Character `ﬆ' is missing
@@ -4548,9 +4533,6 @@ LaTeX Font Info:    Font shape `TU/TeXGyreAdventor-Regular(0)/m/n' will be
 
 ]
 chapter 4.
-
-LaTeX Warning: Citation 'scrlttr2' on page 13 undefined on input line 695.
-
 LaTeX Font Info:    Font shape `TU/TeXGyrePagella(0)/bx/n' will be
 (Font)              scaled to size 8.23247pt on input line 718.
 Package microtype Info: Character `ﬆ' is missing
@@ -4628,16 +4610,6 @@ Package microtype Info: Character `⁺' is missing
 Package microtype Info: Character `⁻' is missing
 (microtype)             in font `TU/TeXGyrePagella(0)/bx/n/9'.
 (microtype)             Ignoring protrusion settings for this character.
-
-LaTeX Warning: Citation 'graphicx' on page 13 undefined on input line 736.
-
-
-LaTeX Warning: Citation 'marvosym' on page 13 undefined on input line 748.
-
-
-LaTeX Warning: Citation 'scrlayer-scrpage' on page 13 undefined on input line 75
-2.
-
 LaTeX Font Info:    Font shape `TU/TeXGyreCursor(0)/m/sl' in size <10.95> not av
 ailable
 (Font)              Font shape `TU/TeXGyreCursor(0)/m/it' tried instead on input
@@ -4649,9 +4621,6 @@ Overfull \hbox (82.28029pt too wide) in paragraph at lines 766--766
  [][]  \TU/TeXGyreCursor(0)/m/sl/10 contents=\putUL{\raisebox{\dimexpr-\height}
 {\usekomavar{firsthead}}\hfill\thepage} 
  []
-
-
-LaTeX Warning: Citation 'geometry' on page 14 undefined on input line 767.
 
 
 Overfull \hbox (102.00806pt too wide) in paragraph at lines 787--787
@@ -4794,13 +4763,13 @@ Overfull \hbox (100.28029pt too wide) in paragraph at lines 1171--1171
 fromphone}\KOMAoptions{fromphone=true}endif 
  []
 
-[19]
+
 Overfull \hbox (52.28029pt too wide) in paragraph at lines 1171--1171
  [][]\TU/TeXGyreCursor(0)/m/sl/10 if(fromurl)\setkomavar{fromurl}{from
 url}\KOMAoptions{fromurl=true}endif 
  []
 
-[20]
+[19] [20]
 chapter 6.
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
@@ -4820,11 +4789,7 @@ Overfull \hbox (34.28029pt too wide) in paragraph at lines 1279--1279
 n notes and body text (content) 
  []
 
-[22]
-
-LaTeX Warning: Citation 'fontspec' on page 23 undefined on input line 1280.
-
-[23]
+[22] [23]
 Overfull \hbox (136.28029pt too wide) in paragraph at lines 1355--1355
  [][]\TU/TeXGyreCursor(0)/m/sl/10 \clubpenalty=  % prevent singl
 e lines at the beginning of a paragraph (Schusterjungen) 
@@ -4917,14 +4882,7 @@ Overfull \hbox (10.28029pt too wide) in paragraph at lines 1511--1511
 mily\color{HUBerlin-grey}} 
  []
 
-[26]
-
-LaTeX Warning: Citation 'hyperxmp' on page 27 undefined on input line 1512.
-
-
-LaTeX Warning: Citation 'hyperref' on page 27 undefined on input line 1512.
-
-[27] [28]
+[26] [27] [28]
 Overfull \hbox (64.28029pt too wide) in paragraph at lines 1768--1768
  [][]\TU/TeXGyreCursor(0)/m/sl/10 \def\lst@visiblespace{\lst@ttfamily{\char
 }\textcolor{HUBerlin-grey}{\cdot}} 
@@ -4986,10 +4944,90 @@ eardoublepage\else\clearpage\fi}{}{}{}
  []
 
 )
-
-LaTeX Warning: Empty bibliography on input line 362.
-
-[34]
+LaTeX Font Info:    Font shape `TU/TeXGyrePagella(0)/m/sc' will be
+(Font)              scaled to size 10.01616pt on input line 362.
+Package microtype Info: Character `ﬆ' is missing
+(microtype)             in font `TU/TeXGyrePagella(0)/m/sc/10.95'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `ﬅ' is missing
+(microtype)             in font `TU/TeXGyrePagella(0)/m/sc/10.95'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `‥' is missing
+(microtype)             in font `TU/TeXGyrePagella(0)/m/sc/10.95'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `‼' is missing
+(microtype)             in font `TU/TeXGyrePagella(0)/m/sc/10.95'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `⁰' is missing
+(microtype)             in font `TU/TeXGyrePagella(0)/m/sc/10.95'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `⁴' is missing
+(microtype)             in font `TU/TeXGyrePagella(0)/m/sc/10.95'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `⁵' is missing
+(microtype)             in font `TU/TeXGyrePagella(0)/m/sc/10.95'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `⁶' is missing
+(microtype)             in font `TU/TeXGyrePagella(0)/m/sc/10.95'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `⁷' is missing
+(microtype)             in font `TU/TeXGyrePagella(0)/m/sc/10.95'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `⁸' is missing
+(microtype)             in font `TU/TeXGyrePagella(0)/m/sc/10.95'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `⁹' is missing
+(microtype)             in font `TU/TeXGyrePagella(0)/m/sc/10.95'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `₀' is missing
+(microtype)             in font `TU/TeXGyrePagella(0)/m/sc/10.95'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `₁' is missing
+(microtype)             in font `TU/TeXGyrePagella(0)/m/sc/10.95'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `₂' is missing
+(microtype)             in font `TU/TeXGyrePagella(0)/m/sc/10.95'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `₃' is missing
+(microtype)             in font `TU/TeXGyrePagella(0)/m/sc/10.95'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `₄' is missing
+(microtype)             in font `TU/TeXGyrePagella(0)/m/sc/10.95'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `₅' is missing
+(microtype)             in font `TU/TeXGyrePagella(0)/m/sc/10.95'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `₆' is missing
+(microtype)             in font `TU/TeXGyrePagella(0)/m/sc/10.95'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `₇' is missing
+(microtype)             in font `TU/TeXGyrePagella(0)/m/sc/10.95'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `₈' is missing
+(microtype)             in font `TU/TeXGyrePagella(0)/m/sc/10.95'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `₉' is missing
+(microtype)             in font `TU/TeXGyrePagella(0)/m/sc/10.95'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `₊' is missing
+(microtype)             in font `TU/TeXGyrePagella(0)/m/sc/10.95'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `₋' is missing
+(microtype)             in font `TU/TeXGyrePagella(0)/m/sc/10.95'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `⁺' is missing
+(microtype)             in font `TU/TeXGyrePagella(0)/m/sc/10.95'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `⁻' is missing
+(microtype)             in font `TU/TeXGyrePagella(0)/m/sc/10.95'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `ﬅ' is missing
+(microtype)             in font `TU/TeXGyrePagella(0)/m/sc/10.95'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `ﬆ' is missing
+(microtype)             in font `TU/TeXGyrePagella(0)/m/sc/10.95'.
+(microtype)             Ignoring protrusion settings for this character.
+ [34]
 part III.
 Package scrkbase Info: You've told me to use the font selection of the element
 (scrkbase)             `partprefix' that is an alias of element `partnumber'
@@ -4999,8 +5037,90 @@ Package scrkbase Info: You've told me to use the font selection of the element
 
 ]
 chapter 7.
-Package atenddvi Info: Last page = 36.
+<HUBerlin-letter.pdf, id=352, 597.50829pt x 845.04709pt>
+File: HUBerlin-letter.pdf Graphic file (type pdf)
+<use HUBerlin-letter.pdf>
+Package luatex.def Info: HUBerlin-letter.pdf  used on input line 376.
+(luatex.def)             Requested size: 597.50682pt x 845.04503pt.
+File: HUBerlin-letter.pdf Graphic file (type pdf)
+<use HUBerlin-letter.pdf>
+Package luatex.def Info: HUBerlin-letter.pdf  used on input line 376.
+(luatex.def)             Requested size: 597.50682pt x 845.04503pt.
+<HUBerlin-letter.pdf, id=355, page=1, 597.50829pt x 845.04709pt>
+File: HUBerlin-letter.pdf Graphic file (type pdf)
+<use HUBerlin-letter.pdf, page 1>
+Package luatex.def Info: HUBerlin-letter.pdf , page1 used on input line 376.
+(luatex.def)             Requested size: 597.50682pt x 845.04503pt.
+File: HUBerlin-letter.pdf Graphic file (type pdf)
+<use HUBerlin-letter.pdf, page 1>
+Package luatex.def Info: HUBerlin-letter.pdf , page1 used on input line 376.
+(luatex.def)             Requested size: 478.00728pt x 676.03859pt.
 [36]
+File: HUBerlin-letter.pdf Graphic file (type pdf)
+<use HUBerlin-letter.pdf, page 1>
+Package luatex.def Info: HUBerlin-letter.pdf , page1 used on input line 376.
+(luatex.def)             Requested size: 478.00728pt x 676.03859pt.
+File: HUBerlin-letter.pdf Graphic file (type pdf)
+<use HUBerlin-letter.pdf, page 1>
+Package luatex.def Info: HUBerlin-letter.pdf , page1 used on input line 376.
+(luatex.def)             Requested size: 478.00728pt x 676.03859pt.
+File: HUBerlin-letter.pdf Graphic file (type pdf)
+<use HUBerlin-letter.pdf, page 1>
+Package luatex.def Info: HUBerlin-letter.pdf , page1 used on input line 376.
+(luatex.def)             Requested size: 478.00728pt x 676.03859pt.
+ [37<./HUBerlin-letter.pdf>]
+<HUBerlin-letter.pdf, id=393, page=2, 597.50829pt x 845.04709pt>
+File: HUBerlin-letter.pdf Graphic file (type pdf)
+<use HUBerlin-letter.pdf, page 2>
+Package luatex.def Info: HUBerlin-letter.pdf , page2 used on input line 376.
+(luatex.def)             Requested size: 478.00728pt x 676.03859pt.
+File: HUBerlin-letter.pdf Graphic file (type pdf)
+<use HUBerlin-letter.pdf, page 2>
+Package luatex.def Info: HUBerlin-letter.pdf , page2 used on input line 376.
+(luatex.def)             Requested size: 478.00728pt x 676.03859pt.
+File: HUBerlin-letter.pdf Graphic file (type pdf)
+<use HUBerlin-letter.pdf, page 2>
+Package luatex.def Info: HUBerlin-letter.pdf , page2 used on input line 376.
+(luatex.def)             Requested size: 478.00728pt x 676.03859pt.
+ [38<./HUBerlin-letter.pdf>]
+<HUBerlin-letter-markdown.pdf, id=399, 597.50829pt x 845.04709pt>
+File: HUBerlin-letter-markdown.pdf Graphic file (type pdf)
+<use HUBerlin-letter-markdown.pdf>
+Package luatex.def Info: HUBerlin-letter-markdown.pdf  used on input line 387.
+(luatex.def)             Requested size: 597.50682pt x 845.04503pt.
+File: HUBerlin-letter-markdown.pdf Graphic file (type pdf)
+<use HUBerlin-letter-markdown.pdf>
+Package luatex.def Info: HUBerlin-letter-markdown.pdf  used on input line 387.
+(luatex.def)             Requested size: 597.50682pt x 845.04503pt.
+<HUBerlin-letter-markdown.pdf, id=402, page=1, 597.50829pt x 845.04709pt>
+File: HUBerlin-letter-markdown.pdf Graphic file (type pdf)
+<use HUBerlin-letter-markdown.pdf, page 1>
+Package luatex.def Info: HUBerlin-letter-markdown.pdf , page1 used on input line
+ 387.
+(luatex.def)             Requested size: 597.50682pt x 845.04503pt.
+File: HUBerlin-letter-markdown.pdf Graphic file (type pdf)
+<use HUBerlin-letter-markdown.pdf, page 1>
+Package luatex.def Info: HUBerlin-letter-markdown.pdf , page1 used on input line
+ 387.
+(luatex.def)             Requested size: 478.00728pt x 676.03859pt.
+ [39]
+File: HUBerlin-letter-markdown.pdf Graphic file (type pdf)
+<use HUBerlin-letter-markdown.pdf, page 1>
+Package luatex.def Info: HUBerlin-letter-markdown.pdf , page1 used on input line
+ 387.
+(luatex.def)             Requested size: 478.00728pt x 676.03859pt.
+File: HUBerlin-letter-markdown.pdf Graphic file (type pdf)
+<use HUBerlin-letter-markdown.pdf, page 1>
+Package luatex.def Info: HUBerlin-letter-markdown.pdf , page1 used on input line
+ 387.
+(luatex.def)             Requested size: 478.00728pt x 676.03859pt.
+File: HUBerlin-letter-markdown.pdf Graphic file (type pdf)
+<use HUBerlin-letter-markdown.pdf, page 1>
+Package luatex.def Info: HUBerlin-letter-markdown.pdf , page1 used on input line
+ 387.
+(luatex.def)             Requested size: 478.00728pt x 676.03859pt.
+Package atenddvi Info: Last page = 40.
+ [40<./HUBerlin-letter-markdown.pdf>]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 390.
 Package atveryend Info: Executing hook `AfterLastShipout' on input line 390.
  (./HUBerlin-bundle.aux
@@ -5012,43 +5132,38 @@ Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 390.
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-
-LaTeX Warning: There were undefined references.
-
-
-Package biblatex Warning: Please (re)run Biber on the file:
-(biblatex)                HUBerlin-bundle
-(biblatex)                and rerun LaTeX afterwards.
-
 Package logreq Info: Writing requests to 'HUBerlin-bundle.run.xml'.
 
 \openout1 = HUBerlin-bundle.run.xml
 )
 
 Here is how much of LuaTeX's memory you used:
- 68857 strings out of 494291
+ 69019 strings out of 494291
  100000,2373549 words of node,token memory allocated
- 2138 words of node memory still in use:
-   25 hlist, 1 vlist, 1 rule, 90 glue, 3 kern, 1 glyph, 185 attribute, 89 glue_s
-pec, 94 attribute_list, 2 write, 42 pdf_colorstack nodes
-   avail lists: 1:2,2:3349,3:390,4:318,5:824,6:83,7:3875,8:101,9:1558,10:15,11:1
-93,12:1
- 70147 multiletter control sequences out of 65536+600000
- 186 fonts using 31982079 bytes
- 78i,21n,163p,9148b,2281s stack positions out of 5000i,500n,10000p,200000b,100000s
-</Users/lukascbossert/Library/Fonts/texgyrepagella-italic.otf></Users/lukascboss
-ert/Library/Fonts/texgyrecursor-italic.otf></Users/lukascbossert/Library/Fonts/t
-exgyrecursor-bold.otf></Users/lukascbossert/Library/Fonts/texgyrecursor-regular.
-otf></Users/lukascbossert/Library/Fonts/texgyrepagella-bold.otf></usr/local/texl
-ive/2019/texmf-dist/fonts/opentype/public/tex-gyre/texgyreadventor-regular.otf><
-/Users/lukascbossert/Library/Fonts/texgyrepagella-regular.otf></usr/local/texliv
-e/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/
-2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/201
-9/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on HUBerlin-bundle.pdf (36 pages, 235649 bytes).
+ 709 words of node memory still in use:
+   3 hlist, 1 vlist, 1 rule, 6 glue, 3 kern, 1 glyph, 21 attribute, 90 glue_spec
+, 12 attribute_list, 2 write, 2 pdf_action nodes
+   avail lists: 1:2,2:3610,3:395,4:360,5:827,6:105,7:3970,8:102,9:1580,10:15,11:
+193,12:1
+ 70210 multiletter control sequences out of 65536+600000
+ 187 fonts using 32230219 bytes
+ 78i,22n,163p,9148b,2282s stack positions out of 5000i,500n,10000p,200000b,100000s
+</usr/local/texlive/2019/texmf-dist/fonts/opentype/public/tex-gyre/texgyrepagell
+a-italic.otf></usr/local/texlive/2019/texmf-dist/fonts/opentype/public/tex-gyre/
+texgyrecursor-italic.otf></usr/local/texlive/2019/texmf-dist/fonts/opentype/publ
+ic/tex-gyre/texgyrecursor-bold.otf></usr/local/texlive/2019/texmf-dist/fonts/ope
+ntype/public/tex-gyre/texgyrecursor-regular.otf></usr/local/texlive/2019/texmf-d
+ist/fonts/opentype/public/tex-gyre/texgyrepagella-bold.otf></usr/local/texlive/2
+019/texmf-dist/fonts/opentype/public/tex-gyre/texgyreadventor-regular.otf></usr/
+local/texlive/2019/texmf-dist/fonts/opentype/public/tex-gyre/texgyrepagella-regu
+lar.otf></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi1
+0.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.p
+fb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb
+>
+Output written on HUBerlin-bundle.pdf (40 pages, 618510 bytes).
 
-PDF statistics: 447 PDF objects out of 1000 (max. 8388607)
- 260 compressed objects within 3 object streams
- 146 named destinations out of 1000 (max. 131072)
+PDF statistics: 563 PDF objects out of 1000 (max. 8388607)
+ 324 compressed objects within 4 object streams
+ 163 named destinations out of 1000 (max. 131072)
  181 words of extra memory for PDF output out of 10000 (max. 100000000)
 
