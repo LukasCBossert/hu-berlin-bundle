@@ -41,28 +41,44 @@
 \setmainfont{Verdana}
 \RequirePackage{marvosym}
 \RequirePackage{scrlayer-scrpage}
+\clearpairofpagestyles
 \DeclareNewLayer[
-  foreground,
-  textarea,
-  voffset=\useplength{firstheadvpos},
-  hoffset=\useplength{firstheadhpos},
-  width=\useplength{firstheadwidth},
-  mode=picture,
-  contents=\putUL{\raisebox{\dimexpr-\height}{\usekomavar{firsthead}}\hfill\thepage}
+ foreground,
+ voffset=\useplength{firstheadvpos},
+ hoffset=\useplength{firstheadhpos},
+ width=\useplength{firstheadwidth},
+ mode=picture,
+ contents=\putUL{\raisebox{-\height}{\usekomavar{firsthead}}}
 ]{likefirstpage.head}
 \AddLayersToPageStyle{scrheadings}{likefirstpage.head}
-\clearpairofpagestyles
+\DeclareNewLayer[
+ foreground,
+ align=r,
+ voffset=\useplength{locvpos},
+ hoffset=\paperwidth-\useplength{lochpos},
+ width=\useplength{locwidth},
+ height=\useplength{locheight},
+ contents=\usekomavar{nextlocation},
+ %pretocontents=\layercontentsmeasure% to show the position of the layer
+]{likefirstpage.loc}
+\AddLayersToPageStyle{scrheadings}{likefirstpage.head,likefirstpage.loc}
+\newkomavar{nextlocation}
+\setkomavar{nextlocation}{%
+  \raggedright
+  \fontsize{7}{8.5}\selectfont
+  \pagemark
+}
 \RequirePackage{geometry}
 \geometry{%
-   a4paper
-  ,left           =25mm
-  ,bottom         =16mm
-  ,foot           =4mm
-  ,top            =77mm
-  ,nohead
-  ,textwidth      =117mm
-  ,marginparsep   =0mm
-  ,marginparwidth =0mm
+  a4paper
+ ,left           =25mm
+ ,bottom         =16mm
+ ,foot           =4mm
+ ,top            =77mm
+ ,headheight     =15pt
+ ,textwidth      =117mm
+ ,marginparsep   =0mm
+ ,marginparwidth =0mm
 }
 \renewcommand*{\raggedsignature}{\raggedright}
 \raggedright
@@ -193,18 +209,15 @@
   ,backaddress   =plain
   ,parskip       =half-
 }
-\removereffields
-\AtBeginDocument{
-\@setplength{refvpos}{110mm}
-\@setplength{refaftervskip}{0pt}
-\@setplength{toaddrhpos}{25mm}
-\@setplength{firstheadhpos}{\useplength{toaddrhpos}}
-\@setplength{lochpos}{15mm}
-\@setplength{locvpos}{\useplength{toaddrvpos}}
-\@addtoplength{locvpos}{.75\baselineskip}
-\@setplength{locwidth}{45mm}
-\@setplength{locheight}{232mm}
-}
+\setplength{refvpos}{110mm}
+\setplength{refaftervskip}{0pt}
+\setplength{toaddrhpos}{25mm}
+\setplength{firstheadhpos}{\useplength{toaddrhpos}}
+\setplength{lochpos}{15mm}
+\setplength{locvpos}{\useplength{toaddrvpos}}
+\addtoplength{locvpos}{.75\baselineskip}
+\setplength{locwidth}{45mm}
+\setplength{locheight}{232mm}
 \setkomavar{firsthead}{%
  \includegraphics[width=148mm]{HUBerlin-logo.png}%
 }

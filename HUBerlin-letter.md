@@ -1,6 +1,7 @@
 ---
 documentclass: HUBerlin-letter
 sender: HUBerlin-letter
+subject: Short description
 addressee:
 - Alexander von Humboldt
 - Unter den Linden 6

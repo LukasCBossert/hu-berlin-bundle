@@ -163,5 +163,7 @@ INPUT /usr/local/texlive/2019/texmf-dist/fonts/tfm/public/cm/cmr7.tfm
 INPUT /usr/local/texlive/2019/texmf-dist/fonts/tfm/public/cm/cmr5.tfm
 INPUT /usr/local/texlive/texmf-local/tex/latex/HUBerlin-bundle/HUBerlin-logo.png
 INPUT /usr/local/texlive/texmf-local/tex/latex/HUBerlin-bundle/HUBerlin-logo.png
+INPUT /usr/local/texlive/texmf-local/tex/latex/HUBerlin-bundle/HUBerlin-logo.png
+INPUT /usr/local/texlive/texmf-local/tex/latex/HUBerlin-bundle/HUBerlin-logo.png
 INPUT ./HUBerlin-letter.aux
 INPUT /usr/local/texlive/2019/texmf-dist/fonts/type1/public/marvosym/marvosym.pfb

@@ -217,6 +217,90 @@
       \verb http://www.komascript.de/
       \endverb
     \endentry
+    \entry{marvosym}{manual}{}
+      \name{author}{3}{}{%
+        {{hash=758d756cbeef628d9fc0506628ec9514}{%
+           family={Miklavec},
+           familyi={M\bibinitperiod},
+           given={Mojca},
+           giveni={M\bibinitperiod}}}%
+        {{hash=5e0decadabdd1ad598b7ce99d7289d2c}{%
+           family={Vogel},
+           familyi={V\bibinitperiod},
+           given={Martin},
+           giveni={M\bibinitperiod}}}%
+        {{hash=39e0fdd2713ee849ad524b47b5dcd75b}{%
+           family={Henlich},
+           familyi={H\bibinitperiod},
+           given={Thomas},
+           giveni={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{b4ac6c8a89ebe715f87277b8daa3a185}
+      \strng{fullhash}{b4ac6c8a89ebe715f87277b8daa3a185}
+      \strng{bibnamehash}{b4ac6c8a89ebe715f87277b8daa3a185}
+      \strng{authorbibnamehash}{b4ac6c8a89ebe715f87277b8daa3a185}
+      \strng{authornamehash}{b4ac6c8a89ebe715f87277b8daa3a185}
+      \strng{authorfullhash}{b4ac6c8a89ebe715f87277b8daa3a185}
+      \field{sortinit}{M}
+      \field{sortinithash}{cfd219b90152c06204fab207bc6c7cab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{subtitle}{Martin Vogel's Symbols (marvosym) font}
+      \field{title}{The Marvosym package}
+      \field{urlday}{11}
+      \field{urlmonth}{6}
+      \field{urlyear}{2019}
+      \field{version}{2.2a}
+      \field{year}{}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb http://www.marvosym.de
+      \endverb
+      \verb{url}
+      \verb http://www.marvosym.de
+      \endverb
+    \endentry
+    \entry{hyperref}{manual}{}
+      \name{author}{2}{}{%
+        {{hash=8f0b61d209221bedf454f93df67e1dbb}{%
+           family={Oberdiek},
+           familyi={O\bibinitperiod},
+           given={Heiko},
+           giveni={H\bibinitperiod}}}%
+        {{hash=22439d3b66be376e3f27270d8d300c89}{%
+           family={Rahtz},
+           familyi={R\bibinitperiod},
+           given={Sebastian},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{73335f0904aa3c29110f05d30992bace}
+      \strng{fullhash}{73335f0904aa3c29110f05d30992bace}
+      \strng{bibnamehash}{73335f0904aa3c29110f05d30992bace}
+      \strng{authorbibnamehash}{73335f0904aa3c29110f05d30992bace}
+      \strng{authornamehash}{73335f0904aa3c29110f05d30992bace}
+      \strng{authorfullhash}{73335f0904aa3c29110f05d30992bace}
+      \field{sortinit}{O}
+      \field{sortinithash}{dad3efd0836470093a7b4a7bb756eb8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{30}
+      \field{month}{11}
+      \field{subtitle}{Extensive support for hypertext in LaTeX}
+      \field{title}{The Hyperref package}
+      \field{urlday}{11}
+      \field{urlmonth}{6}
+      \field{urlyear}{2019}
+      \field{version}{6.88e}
+      \field{year}{2018}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://github.com/ho-tex/hyperref
+      \endverb
+      \verb{url}
+      \verb https://github.com/ho-tex/hyperref
+      \endverb
+    \endentry
     \entry{hyperxmp}{manual}{}
       \name{author}{1}{}{%
         {{hash=b835af205adc9f4cf7b438d1116ffb60}{%
@@ -250,47 +334,6 @@
       \verb http://www.ctan.org/pkg/hyperxmp
       \endverb
     \endentry
-    \entry{hyperref}{manual}{}
-      \name{author}{2}{}{%
-        {{hash=22439d3b66be376e3f27270d8d300c89}{%
-           family={Rahtz},
-           familyi={R\bibinitperiod},
-           given={Sebastian},
-           giveni={S\bibinitperiod}}}%
-        {{hash=8f0b61d209221bedf454f93df67e1dbb}{%
-           family={Oberdiek},
-           familyi={O\bibinitperiod},
-           given={Heiko},
-           giveni={H\bibinitperiod}}}%
-      }
-      \strng{namehash}{41705dda4e5dac841931f51ef6aebeee}
-      \strng{fullhash}{41705dda4e5dac841931f51ef6aebeee}
-      \strng{bibnamehash}{41705dda4e5dac841931f51ef6aebeee}
-      \strng{authorbibnamehash}{41705dda4e5dac841931f51ef6aebeee}
-      \strng{authornamehash}{41705dda4e5dac841931f51ef6aebeee}
-      \strng{authorfullhash}{41705dda4e5dac841931f51ef6aebeee}
-      \field{sortinit}{R}
-      \field{sortinithash}{da6b42bd3ab22fee61abed031ee405f7}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{day}{30}
-      \field{month}{11}
-      \field{subtitle}{Extensive support for hypertext in LaTeX}
-      \field{title}{The Hyperref package}
-      \field{urlday}{11}
-      \field{urlmonth}{6}
-      \field{urlyear}{2019}
-      \field{version}{6.88e}
-      \field{year}{2018}
-      \field{dateera}{ce}
-      \field{urldateera}{ce}
-      \verb{urlraw}
-      \verb https://github.com/ho-tex/hyperref
-      \endverb
-      \verb{url}
-      \verb https://github.com/ho-tex/hyperref
-      \endverb
-    \endentry
     \entry{fontspec}{manual}{}
       \name{author}{1}{}{%
         {{hash=611950ad1fff863fd8b754338ee6a44f}{%
@@ -322,49 +365,6 @@
       \endverb
       \verb{url}
       \verb http://www.ctan.org/pkg/fontspec
-      \endverb
-    \endentry
-    \entry{marvosym}{manual}{}
-      \name{author}{3}{}{%
-        {{hash=5e0decadabdd1ad598b7ce99d7289d2c}{%
-           family={Vogel},
-           familyi={V\bibinitperiod},
-           given={Martin},
-           giveni={M\bibinitperiod}}}%
-        {{hash=39e0fdd2713ee849ad524b47b5dcd75b}{%
-           family={Henlich},
-           familyi={H\bibinitperiod},
-           given={Thomas},
-           giveni={T\bibinitperiod}}}%
-        {{hash=758d756cbeef628d9fc0506628ec9514}{%
-           family={Miklavec},
-           familyi={M\bibinitperiod},
-           given={Mojca},
-           giveni={M\bibinitperiod}}}%
-      }
-      \strng{namehash}{a37358c00c774464fadde81f7d5538cd}
-      \strng{fullhash}{a37358c00c774464fadde81f7d5538cd}
-      \strng{bibnamehash}{a37358c00c774464fadde81f7d5538cd}
-      \strng{authorbibnamehash}{a37358c00c774464fadde81f7d5538cd}
-      \strng{authornamehash}{a37358c00c774464fadde81f7d5538cd}
-      \strng{authorfullhash}{a37358c00c774464fadde81f7d5538cd}
-      \field{sortinit}{V}
-      \field{sortinithash}{75dd7385c90b2252c3ae853a80ca853b}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{subtitle}{Martin Vogel's Symbols (marvosym) font}
-      \field{title}{The Marvosym package}
-      \field{urlday}{11}
-      \field{urlmonth}{6}
-      \field{urlyear}{2019}
-      \field{version}{2.2a}
-      \field{year}{}
-      \field{urldateera}{ce}
-      \verb{urlraw}
-      \verb http://www.marvosym.de
-      \endverb
-      \verb{url}
-      \verb http://www.marvosym.de
       \endverb
     \endentry
   \enddatalist

@@ -477,7 +477,7 @@ Philosophische Fakultät
 }
 %    \end{macrocode}
 %    \begin{macrocode}
-\setkomavar{institute.additional}{Here you can more text.}
+\setkomavar{institute.additional}{Here you can add more text.}
 %    \end{macrocode}
 %    \begin{macrocode}
 \setkomavar{institute.head}[Dekanin]{Prof. Dr. Maike Musterfrau}
@@ -640,8 +640,11 @@ documentclass: HUBerlin-letter
 %    \begin{macrocode}
 sender: HUBerlin-letter
 %    \end{macrocode}
-%
-% The information for the sender has to be written like this:
+% You should also tell a short subject
+%    \begin{macrocode}
+subject: Short description
+%    \end{macrocode}
+% The information for the addressee has to be written like this:
 %    \begin{macrocode}
 addressee:
 	- Alexander von Humboldt
@@ -737,34 +740,53 @@ Thank you very much for your letter.
 %    \begin{macrocode}
 \RequirePackage{marvosym}
 %    \end{macrocode}
-% To get the HU logo on the second and following pages we load \pkg{scrlayer-scrpage}.
+% To get the HU logo on the second and following pages we load \pkg{scrlayer-scrpage}.\fnurl{https://tex.stackexchange.com/a/495258/98739}
 %    \begin{macrocode}
 \RequirePackage{scrlayer-scrpage}
+\clearpairofpagestyles
 \DeclareNewLayer[
-  foreground,
-  textarea,
-  voffset=\useplength{firstheadvpos},
-  hoffset=\useplength{firstheadhpos},
-  width=\useplength{firstheadwidth},
-  mode=picture,
-  contents=\putUL{\raisebox{\dimexpr-\height}{\usekomavar{firsthead}}\hfill\thepage}
+ foreground,
+ voffset=\useplength{firstheadvpos},
+ hoffset=\useplength{firstheadhpos},
+ width=\useplength{firstheadwidth},
+ mode=picture,
+ contents=\putUL{\raisebox{-\height}{\usekomavar{firsthead}}}
 ]{likefirstpage.head}
 \AddLayersToPageStyle{scrheadings}{likefirstpage.head}
-\clearpairofpagestyles
+\DeclareNewLayer[
+ foreground,
+ align=r,
+ voffset=\useplength{locvpos},
+ hoffset=\paperwidth-\useplength{lochpos},
+ width=\useplength{locwidth},
+ height=\useplength{locheight},
+ contents=\usekomavar{nextlocation},
+ %pretocontents=\layercontentsmeasure% to show the position of the layer
+]{likefirstpage.loc}
+\AddLayersToPageStyle{scrheadings}{likefirstpage.head,likefirstpage.loc}
+%    \end{macrocode}
+% Now we apply the code for following pages.
+%    \begin{macrocode}
+\newkomavar{nextlocation}
+\setkomavar{nextlocation}{%
+  \raggedright
+  \fontsize{7}{8.5}\selectfont
+  \pagemark
+}
 %    \end{macrocode}
 % For better adjustments of the layout we load \pkg{geometry}.
 %    \begin{macrocode}
 \RequirePackage{geometry}
 \geometry{%
-   a4paper
-  ,left           =25mm
-  ,bottom         =16mm
-  ,foot           =4mm
-  ,top            =77mm
-  ,nohead
-  ,textwidth      =117mm
-  ,marginparsep   =0mm
-  ,marginparwidth =0mm
+  a4paper
+ ,left           =25mm
+ ,bottom         =16mm
+ ,foot           =4mm
+ ,top            =77mm
+ ,headheight     =15pt
+ ,textwidth      =117mm
+ ,marginparsep   =0mm
+ ,marginparwidth =0mm
 }
 %    \end{macrocode}
 % Main Text and signature should be raggedright.
@@ -1014,23 +1036,17 @@ Thank you very much for your letter.
   ,parskip       =half-
 }
 %    \end{macrocode}
-% Getting rid of the reference field
+% Redefining length.
 %    \begin{macrocode}
-\removereffields
-%    \end{macrocode}
-% Redefining length, which we ship to the end of the preamble.
-%    \begin{macrocode}
-\AtBeginDocument{
-\@setplength{refvpos}{110mm}
-\@setplength{refaftervskip}{0pt}
-\@setplength{toaddrhpos}{25mm}
-\@setplength{firstheadhpos}{\useplength{toaddrhpos}}
-\@setplength{lochpos}{15mm}
-\@setplength{locvpos}{\useplength{toaddrvpos}}
-\@addtoplength{locvpos}{.75\baselineskip}
-\@setplength{locwidth}{45mm}
-\@setplength{locheight}{232mm}
-}
+\setplength{refvpos}{110mm}
+\setplength{refaftervskip}{0pt}
+\setplength{toaddrhpos}{25mm}
+\setplength{firstheadhpos}{\useplength{toaddrhpos}}
+\setplength{lochpos}{15mm}
+\setplength{locvpos}{\useplength{toaddrvpos}}
+\addtoplength{locvpos}{.75\baselineskip}
+\setplength{locwidth}{45mm}
+\setplength{locheight}{232mm}
 %    \end{macrocode}
 % Now resetting or pre-defining some variables.
 %

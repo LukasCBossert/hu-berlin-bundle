@@ -1,5 +1,5 @@
 # Fdb version 3
-["lualatex"] 1560249711 "HUBerlin-letter.tex" "HUBerlin-letter.pdf" "HUBerlin-letter" 1560250267
+["lualatex"] 1560251118 "HUBerlin-letter.tex" "HUBerlin-letter.pdf" "HUBerlin-letter" 1560251262
   "/Library/Fonts/Verdana Bold.ttf" 1550886778 153260 61f9409ac4f748cf1234899e185513be ""
   "/Library/Fonts/Verdana.ttf" 1550886778 186188 4ba636f1f53078cdd483de8f7630600f ""
   "/usr/local/texlive/2019/texmf-dist/fonts/opentype/public/lm/lmsans8-regular.otf" 1255129361 94256 a52a5407fe2a4281f96a01e9736568c3 ""
@@ -89,11 +89,11 @@
   "/usr/local/texlive/2019/texmf-var/tex/generic/config/language.dat" 1559033157 6573 532bdbb8e5cf58ba79a3c357d15c636b ""
   "/usr/local/texlive/2019/texmf-var/web2c/luatex/lualatex.fmt" 1559644975 1382555 27b42482d10ec449f8497365a0f14c96 ""
   "/usr/local/texlive/texmf-local/tex/latex/HUBerlin-bundle/HUBerlin-logo.png" 1560241134 218697 64cf55702ccc465b21bae706b23794ed ""
-  "HUBerlin-letter.aux" 1560249715 116 bad13716214fb8bdb8f066050cec7b91 "lualatex"
-  "HUBerlin-letter.cls" 1560250266 6268 a227cbb1efa19a77f2e7de396140ccfc ""
-  "HUBerlin-letter.lco" 1560250266 1577 108ba941f90c7ff9be985fd6806ce38a ""
-  "HUBerlin-letter.tex" 1560250266 1244 d72ccd2c44c17cd5c50fb1838ad8e729 ""
+  "HUBerlin-letter.aux" 1560251121 116 bad13716214fb8bdb8f066050cec7b91 "lualatex"
+  "HUBerlin-letter.cls" 1560251262 6682 41c4b772d6720542835993902b047f5a ""
+  "HUBerlin-letter.lco" 1560251262 1581 0dad53860bc2dc2b37535c1b86391936 ""
+  "HUBerlin-letter.tex" 1560251262 1244 d72ccd2c44c17cd5c50fb1838ad8e729 ""
   (generated)
-  "HUBerlin-letter.log"
   "HUBerlin-letter.aux"
   "HUBerlin-letter.pdf"
+  "HUBerlin-letter.log"

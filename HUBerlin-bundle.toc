@@ -31,10 +31,10 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {6}Documentation preamble \begingroup \normalfont \ttfamily \bfseries \textless style\ttfamily \bfseries \textgreater \endgroup }{20}{chapter.6}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {part}{\numberline {III}Example files}{34}{part.3}% 
+\contentsline {part}{\numberline {III}Example files}{35}{part.3}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {7}Letter}{35}{chapter.7}% 
+\contentsline {chapter}{\numberline {7}Letter}{36}{chapter.7}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {7.1}From \texttt {.tex}}{35}{section.7.1}% 
+\contentsline {section}{\numberline {7.1}From \texttt {.tex}}{36}{section.7.1}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {7.2}From \texttt {.md}}{38}{section.7.2}% 
+\contentsline {section}{\numberline {7.2}From \texttt {.md}}{39}{section.7.2}% 

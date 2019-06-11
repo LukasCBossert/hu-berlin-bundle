@@ -1,4 +1,4 @@
-This is LuaTeX, Version 1.10.0 (TeX Live 2019)  (format=lualatex 2019.6.4)  11 JUN 2019 12:41
+This is LuaTeX, Version 1.10.0 (TeX Live 2019)  (format=lualatex 2019.6.4)  11 JUN 2019 13:05
  restricted system commands enabled.
 **HUBerlin-letter.tex
 (./HUBerlin-letter.tex
@@ -48,7 +48,7 @@ Inserting `luaotfload.aux.set_capheight' at position 3 in `luaotfload.patch_font
 '.
 Inserting `luaotfload.rewrite_fontname' at position 4 in `luaotfload.patch_font'
 .
-luaotfload | main : initialization completed in 0.070 seconds
+luaotfload | main : initialization completed in 0.071 seconds
 (./HUBerlin-letter.cls
 Document Class: HUBerlin-letter 2019/06/06 v0.0.2\ Humboldt-Universit"at zu Berl
 in - letter documentclass
@@ -798,16 +798,6 @@ LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
 (Font)                  OT1/cmtt/m/n --> TU/lmtt/bx/n on input line 27.
 
-
-Package scrlayer-scrpage Warning: Very small head height detected!
-(scrlayer-scrpage)                Using scrlayer-scrpage the head height
-(scrlayer-scrpage)                should be at least \baselineskip, which is
-(scrlayer-scrpage)                12.0pt currently.
-(scrlayer-scrpage)                But head height is currently 0.0pt only.
-(scrlayer-scrpage)                You may use
-(scrlayer-scrpage)                geometry option `head=12.0pt'
-(scrlayer-scrpage)                \relax to avoid this warning.
-
 *geometry* driver: auto-detecting
 *geometry* detected driver: luatex
 *geometry* verbose mode - [ preamble ] result:
@@ -824,9 +814,9 @@ Package scrlayer-scrpage Warning: Very small head height detected!
 * \textheight=580.43623pt
 * \oddsidemargin=-1.1381pt
 * \evensidemargin=-1.1381pt
-* \topmargin=146.81622pt
-* \headheight=0.0pt
-* \headsep=0.0pt
+* \topmargin=113.81622pt
+* \headheight=15.0pt
+* \headsep=18.0pt
 * \topskip=10.0pt
 * \footskip=11.38109pt
 * \marginparwidth=0.0pt
@@ -882,21 +872,10 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 LaTeX Font Info:    Font shape `TU/Verdana(0)/m/sl' in size <10> not available
 (Font)              Font shape `TU/Verdana(0)/m/it' tried instead on input line 
 47.
-
-
-Package scrlayer-scrpage Warning: \headheight to low.
-(scrlayer-scrpage)                At least 12.0pt needed,
-(scrlayer-scrpage)                but only 0.0pt found.
-(scrlayer-scrpage)                I'll enlarge \headheight, for further
-(scrlayer-scrpage)                processing, but you should do this yourself,
-(scrlayer-scrpage)                e.g., setting geometry's option
-(scrlayer-scrpage)                `head=12.0pt'.
-(scrlayer-scrpage)                I'll also decrease \topmargin on input line 47
-.
-
-
-Overfull \vbox (12.0pt too high) has occurred while \output is active []
-
+File: HUBerlin-logo.png Graphic file (type png)
+<use HUBerlin-logo.png>
+Package luatex.def Info: HUBerlin-logo.png  used on input line 47.
+(luatex.def)             Requested size: 421.10078pt x 83.52864pt.
 File: HUBerlin-logo.png Graphic file (type png)
 <use HUBerlin-logo.png>
 Package luatex.def Info: HUBerlin-logo.png  used on input line 47.
@@ -907,19 +886,19 @@ Package luatex.def Info: HUBerlin-logo.png  used on input line 47.
 (./HUBerlin-letter.aux))
 
 Here is how much of LuaTeX's memory you used:
- 17705 strings out of 494291
+ 17744 strings out of 494291
  100000,662416 words of node,token memory allocated
  467 words of node memory still in use:
    4 hlist, 1 vlist, 1 rule, 1 dir, 3 glue, 3 kern, 1 glyph, 11 attribute, 52 gl
 ue_spec, 7 attribute_list, 1 write nodes
-   avail lists: 2:440,3:101,4:19,5:61,6:63,7:3091,8:1,9:196,10:15,11:244
- 21514 multiletter control sequences out of 65536+600000
+   avail lists: 2:440,3:101,4:19,5:63,6:63,7:3095,8:1,9:229,10:15,11:244
+ 21549 multiletter control sequences out of 65536+600000
  58 fonts using 9455295 bytes
- 61i,20n,80p,381b,573s stack positions out of 5000i,500n,10000p,200000b,100000s
+ 61i,20n,80p,381b,575s stack positions out of 5000i,500n,10000p,200000b,100000s
 </Library/Fonts/Verdana Bold.ttf></Library/Fonts/Verdana.ttf></usr/local/texlive
 /2019/texmf-dist/fonts/opentype/public/lm/lmsans8-regular.otf></usr/local/texliv
 e/2019/texmf-dist/fonts/type1/public/marvosym/marvosym.pfb>
-Output written on HUBerlin-letter.pdf (2 pages, 187681 bytes).
+Output written on HUBerlin-letter.pdf (2 pages, 187699 bytes).
 
 PDF statistics: 38 PDF objects out of 1000 (max. 8388607)
  21 compressed objects within 1 object stream
