@@ -1,5 +1,18 @@
 [0] Config.pm:304> INFO - This is Biber 2.12
 [0] Config.pm:307> INFO - Logfile is 'HUBerlin-bundle.blg'
-[66] biber-darwin:315> INFO - === Di Jun 11, 2019, 12:12:57
-[90] Utils.pm:209> ERROR - HUBerlin-bundle.bcf is malformed, last biblatex run probably failed. Deleted HUBerlin-bundle.bbl
-[90] Biber.pm:114> INFO - ERRORS: 1
+[54] biber-darwin:315> INFO - === Di Jun 11, 2019, 12:50:37
+[85] Biber.pm:371> INFO - Reading 'HUBerlin-bundle.bcf'
+[220] Biber.pm:889> INFO - Found 9 citekeys in bib section 0
+[242] Biber.pm:4093> INFO - Processing section 0
+[258] Biber.pm:4254> INFO - Looking for bibtex format file 'HUBerlin-bundle-bibliography.bib' for section 0
+[260] bibtex.pm:1523> INFO - LaTeX decoding ...
+[266] bibtex.pm:1340> INFO - Found BibTeX data source 'HUBerlin-bundle-bibliography.bib'
+[279] Biber.pm:4254> INFO - Looking for bibtex format file 'HUBerlin-bundle-ctan.bib' for section 0
+[280] bibtex.pm:1523> INFO - LaTeX decoding ...
+[295] bibtex.pm:1340> INFO - Found BibTeX data source 'HUBerlin-bundle-ctan.bib'
+[374] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[374] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[374] Biber.pm:3921> INFO - Sorting list 'nty/global//global/global' of type 'entry' with template 'nty' and locale 'en-US'
+[374] Biber.pm:3927> INFO - No sort tailoring available for locale 'en-US'
+[393] bbl.pm:636> INFO - Writing 'HUBerlin-bundle.bbl' with encoding 'UTF-8'
+[398] bbl.pm:739> INFO - Output to HUBerlin-bundle.bbl

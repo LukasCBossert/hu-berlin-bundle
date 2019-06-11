@@ -611,7 +611,7 @@ Philosophische Fakultät
 % And how does a example letter looks like?
 % \HUBerlinlisting%
 %  [listing options = {%
-%	,linerange={19-49}
+%	,linerange={18-48}
 %   ,numbers     = left
 %   ,numbersep   = 10pt
 %   ,numberstyle =\footnotesize\ttfamily\color{HUBerlin-grey}
@@ -626,7 +626,8 @@ Philosophische Fakultät
 %    \end{macrocode}
 % You need to have |pandoc| installed on your computer.
 % To create letters via markdown and |pandoc| run from the command line:
-% \begin{code}{pandoc}pandoc --pdf-engine=lualatex --template HUBerlin-letter-template.latex -o (*@\meta{YOUR-FILE}@*).pdf (*@\meta{YOUR-FILE}@*).md\end{code}
+%
+% \begin{warning}pandoc --pdf-engine=lualatex --template HUBerlin-letter-template.latex -o YOUR-FILE.pdf YOUR-FILE.md\end{warning}
 % The |.md| file needs a section with metadata.
 %
 % It starts and ends with three |---|.
@@ -1115,7 +1116,13 @@ Thank you very much for your letter.
 %    \begin{macrocode}
 \documentclass{HUBerlin-letter}
 %    \end{macrocode}
-% We define two new variables.
+% We predefine two  variables.
+%    \begin{macrocode}
+\newkomavar{opening}
+\newkomavar{closing}
+\setkomavar{opening}{Sehr geehrte Damen und Herren}
+\setkomavar{closing}{Mit freundlichen Grüßen}
+%    \end{macrocode}
 %    \begin{macrocode}
 $for(letteroption)$
 \LoadLetterOption{$letteroption$}
@@ -1148,8 +1155,8 @@ $if(subject)$\setkomavar{subject}{$subject$}$endif$
 $if(title)$\setkomavar{title}{$title$}$endif$
 $if(yourmail)$\setkomavar{yourmail}{$yourmail$}$endif$
 $if(yourref)$\setkomavar{yourref}{$yourref$}$endif$
-$if(opening)$\setkomavar{opening}{$opening$}$else$\setkomavar{opening}{Sehr geehrte Damen und Herren}$endif$
-$if(closing)$\setkomavar{closing}{$closing$}$else$\setkomavar{closing}{Mit freundlichen Grüßen}$endif$
+$if(opening)$\setkomavar{opening}{$opening$}$endif$
+$if(closing)$\setkomavar{closing}{$closing$}$endif$
 $if(firstfoot)$\setkomavar{firstfoot}{$firstfoot$}$endif$
 %    \end{macrocode}
 % Ok, let’s sum up the possible options you can use to pass data to the letter:
@@ -1172,9 +1179,9 @@ $endfor$
 $for(include-before)$
 $include-before$
 $endfor$
-\usekomavar{opening}
+\opening{\usekomavar{opening}}
 $body$
-\usekomavar{closing}
+\closing{\usekomavar{closing}}
 $if(ps)$\ps{$ps$}$endif$
 $if(encl)$\encl{$encl$}$endif$
 $for(include-after)$$include-after$$endfor$
