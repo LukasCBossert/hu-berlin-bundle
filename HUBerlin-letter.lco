@@ -31,10 +31,9 @@ Philosophische Fakultät
 }
 \setkomavar{institute}{%
   \mbox{Institut für Briefvorlagen}
-%% \includegraphics[width=\useplength{locwidth}]{YOUR-LOGO.png}
 }
 \setkomavar{institute.additional}{Here you can more text.}
-\setkomavar{institute.head}[Dekan]{Prof. Dr. Maike Musterfrau}
+\setkomavar{institute.head}[Dekanin]{Prof. Dr. Maike Musterfrau}
 \setkomavar{institute.head.mail}{maike.musterfrau@hu-berlin.de}
 \setkomavar{local}{%
   Mohrenstraße 40/41\\

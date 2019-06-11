@@ -16,12 +16,10 @@
 %% ----------------------------------------------------------------
 %% 
 \documentclass{HUBerlin-letter}
-\newkomavar{opening}
-\newkomavar{closing}
 $for(letteroption)$
 \LoadLetterOption{$letteroption$}
 $endfor$
-$if(senderdetails)$\LoadLetterOption{$senderdetails$}$endif$
+$if(sender)$\LoadLetterOption{$sender$}$endif$
 $if(addresseeimage)$\setkomavar{addresseeimage}{$addresseeimage$}$endif$
 $if(backaddress)$\setkomavar{backaddress}{$backaddress$}\KOMAoptions{backaddress=true}$endif$
 $if(fromalign)$\KOMAoptions{fromalign=$fromalign$}$endif$
@@ -49,8 +47,8 @@ $if(subject)$\setkomavar{subject}{$subject$}$endif$
 $if(title)$\setkomavar{title}{$title$}$endif$
 $if(yourmail)$\setkomavar{yourmail}{$yourmail$}$endif$
 $if(yourref)$\setkomavar{yourref}{$yourref$}$endif$
-$if(opening)$\setkomavar{opening}{$opening$}$endif$
-$if(closing)$\setkomavar{closing}{$closing$}$endif$
+$if(opening)$\setkomavar{opening}{$opening$}$else$\setkomavar{opening}{Sehr geehrte Damen und Herren}$endif$
+$if(closing)$\setkomavar{closing}{$closing$}$else$\setkomavar{closing}{Mit freundlichen Grüßen}$endif$
 $if(firstfoot)$\setkomavar{firstfoot}{$firstfoot$}$endif$
 $if(addressee)$
 $else$
@@ -65,9 +63,9 @@ $endfor$
 $for(include-before)$
 $include-before$
 $endfor$
-\opening{\usekomavar{opening}}
+\usekomavar{opening}
 $body$
-\closing{\usekomavar{closing}}
+\usekomavar{closing}
 $if(ps)$\ps{$ps$}$endif$
 $if(encl)$\encl{$encl$}$endif$
 $for(include-after)$$include-after$$endfor$

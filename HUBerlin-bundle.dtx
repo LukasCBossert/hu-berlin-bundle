@@ -474,21 +474,13 @@ Philosophische Fakultät
 %    \begin{macrocode}
 \setkomavar{institute}{%
   \mbox{Institut für Briefvorlagen}
-%    \end{macrocode}
-% You could even put a figure/logo of the institute here.
-% Just use |width=\useplength{locwidth}| to get the maximum
-% possible width for the figure in the margin area.
-%    \begin{macrocode}
-%% \includegraphics[width=\useplength{locwidth}]{YOUR-LOGO.png}
-%    \end{macrocode}
-%    \begin{macrocode}
 }
 %    \end{macrocode}
 %    \begin{macrocode}
 \setkomavar{institute.additional}{Here you can more text.}
 %    \end{macrocode}
 %    \begin{macrocode}
-\setkomavar{institute.head}[Dekan]{Prof. Dr. Maike Musterfrau}
+\setkomavar{institute.head}[Dekanin]{Prof. Dr. Maike Musterfrau}
 %    \end{macrocode}
 %    \begin{macrocode}
 \setkomavar{institute.head.mail}{maike.musterfrau@hu-berlin.de}
@@ -645,14 +637,9 @@ documentclass: HUBerlin-letter
 %    \end{macrocode}
 % The following will load the |.lco|-file, you replace that with the name of your |.lco|-file.
 %    \begin{macrocode}
-senderdetails: HUBerlin-letter
+sender: HUBerlin-letter
 %    \end{macrocode}
 %
-%    \begin{macrocode}
-opening: Sehr geehrte Damen und Herren
-closing: Mit freundlichen Grüßen
-date: 10. Mai 2010
-%    \end{macrocode}
 % The information for the sender has to be written like this:
 %    \begin{macrocode}
 addressee:
@@ -1130,14 +1117,10 @@ Thank you very much for your letter.
 %    \end{macrocode}
 % We define two new variables.
 %    \begin{macrocode}
-\newkomavar{opening}
-\newkomavar{closing}
-%    \end{macrocode}
-%    \begin{macrocode}
 $for(letteroption)$
 \LoadLetterOption{$letteroption$}
 $endfor$
-$if(senderdetails)$\LoadLetterOption{$senderdetails$}$endif$
+$if(sender)$\LoadLetterOption{$sender$}$endif$
 $if(addresseeimage)$\setkomavar{addresseeimage}{$addresseeimage$}$endif$
 $if(backaddress)$\setkomavar{backaddress}{$backaddress$}\KOMAoptions{backaddress=true}$endif$
 $if(fromalign)$\KOMAoptions{fromalign=$fromalign$}$endif$
@@ -1165,8 +1148,8 @@ $if(subject)$\setkomavar{subject}{$subject$}$endif$
 $if(title)$\setkomavar{title}{$title$}$endif$
 $if(yourmail)$\setkomavar{yourmail}{$yourmail$}$endif$
 $if(yourref)$\setkomavar{yourref}{$yourref$}$endif$
-$if(opening)$\setkomavar{opening}{$opening$}$endif$
-$if(closing)$\setkomavar{closing}{$closing$}$endif$
+$if(opening)$\setkomavar{opening}{$opening$}$else$\setkomavar{opening}{Sehr geehrte Damen und Herren}$endif$
+$if(closing)$\setkomavar{closing}{$closing$}$else$\setkomavar{closing}{Mit freundlichen Grüßen}$endif$
 $if(firstfoot)$\setkomavar{firstfoot}{$firstfoot$}$endif$
 %    \end{macrocode}
 % Ok, let’s sum up the possible options you can use to pass data to the letter:
@@ -1189,9 +1172,9 @@ $endfor$
 $for(include-before)$
 $include-before$
 $endfor$
-\opening{\usekomavar{opening}}
+\usekomavar{opening}
 $body$
-\closing{\usekomavar{closing}}
+\usekomavar{closing}
 $if(ps)$\ps{$ps$}$endif$
 $if(encl)$\encl{$encl$}$endif$
 $for(include-after)$$include-after$$endfor$

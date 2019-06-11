@@ -1,9 +1,6 @@
 ---
 documentclass: HUBerlin-letter
-senderdetails: HUBerlin-letter
-opening: Sehr geehrte Damen und Herren
-closing: Mit freundlichen Grüßen
-date: 10. Mai 2010
+sender: HUBerlin-letter
 addressee:
 - Alexander von Humboldt
 - Unter den Linden 6

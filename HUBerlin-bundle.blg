@@ -1,0 +1,5 @@
+[0] Config.pm:304> INFO - This is Biber 2.12
+[0] Config.pm:307> INFO - Logfile is 'HUBerlin-bundle.blg'
+[66] biber-darwin:315> INFO - === Di Jun 11, 2019, 12:12:57
+[90] Utils.pm:209> ERROR - HUBerlin-bundle.bcf is malformed, last biblatex run probably failed. Deleted HUBerlin-bundle.bbl
+[90] Biber.pm:114> INFO - ERRORS: 1
