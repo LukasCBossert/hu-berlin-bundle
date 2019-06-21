@@ -1,4 +1,4 @@
-PWD /Users/lukascbossert/Documents/git/HUBerlin-bundle
+PWD /Users/lukascbossert/Documents/github/HUBerlin-bundle
 INPUT /usr/local/texlive/2019/texmf-var/web2c/luatex/lualatex.fmt
 INPUT ./HUBerlin-letter.tex
 OUTPUT HUBerlin-letter.log

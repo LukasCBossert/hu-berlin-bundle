@@ -1,4 +1,4 @@
-This is LuaTeX, Version 1.10.0 (TeX Live 2019)  (format=lualatex 2019.6.4)  11 JUN 2019 13:07
+This is LuaTeX, Version 1.10.0 (TeX Live 2019)  (format=lualatex 2019.6.5)  21 JUN 2019 12:05
  system commands enabled.
 **HUBerlin-bundle.dtx
 (./HUBerlin-bundle.dtx
@@ -48,7 +48,7 @@ Inserting `luaotfload.aux.set_capheight' at position 3 in `luaotfload.patch_font
 '.
 Inserting `luaotfload.rewrite_fontname' at position 4 in `luaotfload.patch_font'
 .
-luaotfload | main : initialization completed in 0.081 seconds
+luaotfload | main : initialization completed in 0.116 seconds
 (/usr/local/texlive/2019/texmf-dist/tex/latex/base/docstrip.tex
 \blockLevel=\count80
 \emptyLines=\count81
@@ -111,10 +111,10 @@ Processing file HUBerlin-bundle.dtx (readme,main) -> README.md
                                     (bib) -> HUBerlin-bundle-bibliography.bib
                                     (example,letter) -> HUBerlin-letter.tex
                                     (example,letter-md) -> HUBerlin-letter.md
-Lines  processed: 1869
+Lines  processed: 1878
 Comments removed: 619
 Comments  passed: 18
-Codelines passed: 1180
+Codelines passed: 1189
 
 
 Generating file(s) ./HUBerlin-letter.tex ./HUBerlin-letter.lco ./HUBerlin-letter
@@ -136,10 +136,10 @@ Processing file HUBerlin-bundle.dtx (example,letter) -> HUBerlin-letter.tex
                                     (sty,style) -> HUBerlin-bundle-style.sty
                                     (template,letter-md) -> HUBerlin-letter-temp
 late.latex
-Lines  processed: 1869
+Lines  processed: 1878
 Comments removed: 619
 Comments  passed: 18
-Codelines passed: 1180
+Codelines passed: 1189
 
 
 Generating file(s) ./HUBerlin-bundle.ins 
@@ -147,12 +147,12 @@ Generating file(s) ./HUBerlin-bundle.ins
 \openout0 = ./HUBerlin-bundle.ins
 
 Processing file HUBerlin-bundle.dtx (install) -> HUBerlin-bundle.ins
-Lines  processed: 1869
+Lines  processed: 1878
 Comments removed: 619
 Comments  passed: 18
-Codelines passed: 1180
+Codelines passed: 1189
 
-File: HUBerlin-bundle.dtx 2019/06/06 v0.0.2 Documents and documentation for HUBe
+File: HUBerlin-bundle.dtx 2019/06/21 v1.0.0 Documents and documentation for HUBe
 rlin
 (/usr/local/texlive/2019/texmf-dist/tex/latex/koma-script/scrlfile.sty
 Package: scrlfile 2019/02/01 v3.26b KOMA-Script package (loading files)
@@ -347,7 +347,7 @@ Package: multicol 2018/12/27 v1.8v multicolumn formatting (FMi)
 \c@CodelineNo=\count135
 ))
 (./HUBerlin-bundle-style.sty
-Package: HUBerlin-bundle-style 2019/06/06 v0.0.2 HUBerlin - package for style th
+Package: HUBerlin-bundle-style 2019/06/21 v1.0.0 HUBerlin - package for style th
 e documentation
 Package HUBerlin Info: * * * HUBerlin * * *
 (HUBerlin)             Part of the HUBerlin Bundle on input line 23.
@@ -2758,32 +2758,32 @@ File: german.lbx 2018/11/02 v3.12 biblatex localization (PK/MW)
 (./HUBerlin-bundle.aux)
 \openout1 = HUBerlin-bundle.aux
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 226.
-LaTeX Font Info:    ... okay on input line 226.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 226.
-LaTeX Font Info:    ... okay on input line 226.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 226.
-LaTeX Font Info:    ... okay on input line 226.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 226.
-LaTeX Font Info:    ... okay on input line 226.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 226.
-LaTeX Font Info:    ... okay on input line 226.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 226.
-LaTeX Font Info:    ... okay on input line 226.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 226.
-LaTeX Font Info:    ... okay on input line 226.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 226.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 226.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 229.
+LaTeX Font Info:    ... okay on input line 229.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 229.
+LaTeX Font Info:    ... okay on input line 229.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 229.
+LaTeX Font Info:    ... okay on input line 229.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 229.
+LaTeX Font Info:    ... okay on input line 229.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 229.
+LaTeX Font Info:    ... okay on input line 229.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 229.
+LaTeX Font Info:    ... okay on input line 229.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 229.
+LaTeX Font Info:    ... okay on input line 229.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 229.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 229.
 
 (/usr/local/texlive/2019/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 226.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 226.
-LaTeX Font Info:    ... okay on input line 226.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 226.
-LaTeX Font Info:    ... okay on input line 226.
-Package doc Info: Made | a short reference for \verb on input line 226.
+LaTeX Font Info:    ... okay on input line 229.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 229.
+LaTeX Font Info:    ... okay on input line 229.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 229.
+LaTeX Font Info:    ... okay on input line 229.
+Package doc Info: Made | a short reference for \verb on input line 229.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: luatex
@@ -2825,68 +2825,68 @@ Package fontspec Info: Adjusting the maths setup (use [no-math] to avoid
 
 \symlegacymaths=\mathgroup6
 LaTeX Font Info:    Overwriting symbol font `legacymaths' in version `bold'
-(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 226.
-LaTeX Font Info:    Redeclaring math accent \acute on input line 226.
-LaTeX Font Info:    Redeclaring math accent \grave on input line 226.
-LaTeX Font Info:    Redeclaring math accent \ddot on input line 226.
-LaTeX Font Info:    Redeclaring math accent \tilde on input line 226.
-LaTeX Font Info:    Redeclaring math accent \bar on input line 226.
-LaTeX Font Info:    Redeclaring math accent \breve on input line 226.
-LaTeX Font Info:    Redeclaring math accent \check on input line 226.
-LaTeX Font Info:    Redeclaring math accent \hat on input line 226.
-LaTeX Font Info:    Redeclaring math accent \dot on input line 226.
-LaTeX Font Info:    Redeclaring math accent \mathring on input line 226.
-LaTeX Font Info:    Redeclaring math symbol \colon on input line 226.
-LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 226.
-LaTeX Font Info:    Redeclaring math symbol \Delta on input line 226.
-LaTeX Font Info:    Redeclaring math symbol \Theta on input line 226.
-LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 226.
-LaTeX Font Info:    Redeclaring math symbol \Xi on input line 226.
-LaTeX Font Info:    Redeclaring math symbol \Pi on input line 226.
-LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 226.
-LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 226.
-LaTeX Font Info:    Redeclaring math symbol \Phi on input line 226.
-LaTeX Font Info:    Redeclaring math symbol \Psi on input line 226.
-LaTeX Font Info:    Redeclaring math symbol \Omega on input line 226.
-LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 226.
-LaTeX Font Info:    Redeclaring symbol font `operators' on input line 226.
+(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 229.
+LaTeX Font Info:    Redeclaring math accent \acute on input line 229.
+LaTeX Font Info:    Redeclaring math accent \grave on input line 229.
+LaTeX Font Info:    Redeclaring math accent \ddot on input line 229.
+LaTeX Font Info:    Redeclaring math accent \tilde on input line 229.
+LaTeX Font Info:    Redeclaring math accent \bar on input line 229.
+LaTeX Font Info:    Redeclaring math accent \breve on input line 229.
+LaTeX Font Info:    Redeclaring math accent \check on input line 229.
+LaTeX Font Info:    Redeclaring math accent \hat on input line 229.
+LaTeX Font Info:    Redeclaring math accent \dot on input line 229.
+LaTeX Font Info:    Redeclaring math accent \mathring on input line 229.
+LaTeX Font Info:    Redeclaring math symbol \colon on input line 229.
+LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 229.
+LaTeX Font Info:    Redeclaring math symbol \Delta on input line 229.
+LaTeX Font Info:    Redeclaring math symbol \Theta on input line 229.
+LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 229.
+LaTeX Font Info:    Redeclaring math symbol \Xi on input line 229.
+LaTeX Font Info:    Redeclaring math symbol \Pi on input line 229.
+LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 229.
+LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 229.
+LaTeX Font Info:    Redeclaring math symbol \Phi on input line 229.
+LaTeX Font Info:    Redeclaring math symbol \Psi on input line 229.
+LaTeX Font Info:    Redeclaring math symbol \Omega on input line 229.
+LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 229.
+LaTeX Font Info:    Redeclaring symbol font `operators' on input line 229.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `normal' on input line 226.
+(Font)              `operators' in the math version `normal' on input line 229.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
 (Font)                  OT1/cmr/m/n --> TU/TeXGyrePagella(0)/m/n on input line 2
-26.
+29.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `bold' on input line 226.
+(Font)              `operators' in the math version `bold' on input line 229.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
 (Font)                  OT1/cmr/bx/n --> TU/TeXGyrePagella(0)/m/n on input line 
-226.
+229.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
 (Font)                  TU/TeXGyrePagella(0)/m/n --> TU/TeXGyrePagella(0)/m/n on
- input line 226.
+ input line 229.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
 (Font)                  OT1/cmr/m/it --> TU/TeXGyrePagella(0)/m/it on input line
- 226.
+ 229.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
 (Font)                  OT1/cmr/bx/n --> TU/TeXGyrePagella(0)/bx/n on input line
- 226.
+ 229.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
 (Font)                  OT1/cmss/m/n --> TU/TeXGyreAdventor-Regular(0)/m/n on in
-put line 226.
+put line 229.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
 (Font)                  OT1/cmtt/m/n --> TU/TeXGyreCursor(0)/m/n on input line 2
-26.
+29.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
 (Font)                  TU/TeXGyrePagella(0)/m/n --> TU/TeXGyrePagella(0)/bx/n o
-n input line 226.
+n input line 229.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
 (Font)                  OT1/cmr/bx/it --> TU/TeXGyrePagella(0)/bx/it on input li
-ne 226.
+ne 229.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
 (Font)                  OT1/cmss/bx/n --> TU/TeXGyreAdventor-Regular(0)/bx/n on 
-input line 226.
+input line 229.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
 (Font)                  OT1/cmtt/m/n --> TU/TeXGyreCursor(0)/bx/n on input line 
-226.
+229.
 \AtBeginShipoutBox=\box103
 (/usr/local/texlive/2019/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -2936,11 +2936,11 @@ Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'HUBerlin-bundle.bbl' found.
 
 (./HUBerlin-bundle.bbl)
-Package biblatex Info: Reference section=0 on input line 226.
-Package biblatex Info: Reference segment=0 on input line 226.
+Package biblatex Info: Reference section=0 on input line 229.
+Package biblatex Info: Reference segment=0 on input line 229.
  ABD: EverySelectfont initializing macros
-LaTeX Info: Redefining \selectfont on input line 226.
-LaTeX Info: Redefining \microtypecontext on input line 226.
+LaTeX Info: Redefining \selectfont on input line 229.
+LaTeX Info: Redefining \microtypecontext on input line 229.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
@@ -3032,7 +3032,7 @@ Package microtype Info: Character `⁻' is missing
 (microtype)             Ignoring protrusion settings for this character.
 \c@lstlisting=\count514
  ABD: EveryShipout initializing macros
-Package hyperref Info: Link coloring ON on input line 226.
+Package hyperref Info: Link coloring ON on input line 229.
 
 (/usr/local/texlive/2019/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
@@ -3042,9 +3042,9 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
 \c@section@level=\count515
 )
-LaTeX Info: Redefining \ref on input line 226.
-LaTeX Info: Redefining \pageref on input line 226.
-LaTeX Info: Redefining \nameref on input line 226.
+LaTeX Info: Redefining \ref on input line 229.
+LaTeX Info: Redefining \pageref on input line 229.
+LaTeX Info: Redefining \nameref on input line 229.
 
 (/usr/local/texlive/2019/texmf-dist/tex/generic/oberdiek/se-utf32be.def
 File: se-utf32be.def 2016/05/16 v1.11 stringenc: UTF-32BE
@@ -3082,7 +3082,7 @@ File: se-utf32be.def 2016/05/16 v1.11 stringenc: UTF-32BE
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 LaTeX Font Info:    Font shape `TU/TeXGyrePagella(0)/m/n' will be
-(Font)              scaled to size 10.97662pt on input line 226.
+(Font)              scaled to size 10.97662pt on input line 229.
 Package microtype Info: Character `ﬆ' is missing
 (microtype)             in font `TU/TeXGyrePagella(0)/m/n/12'.
 (microtype)             Ignoring protrusion settings for this character.
@@ -3159,7 +3159,7 @@ Package microtype Info: Character `⁻' is missing
 (microtype)             in font `TU/TeXGyrePagella(0)/m/n/12'.
 (microtype)             Ignoring protrusion settings for this character.
 LaTeX Font Info:    Font shape `TU/TeXGyrePagella(0)/m/n' will be
-(Font)              scaled to size 45.73593pt on input line 226.
+(Font)              scaled to size 45.73593pt on input line 229.
 Package microtype Info: Character `ﬆ' is missing
 (microtype)             in font `TU/TeXGyrePagella(0)/m/n/50'.
 (microtype)             Ignoring protrusion settings for this character.
@@ -3236,7 +3236,7 @@ Package microtype Info: Character `⁻' is missing
 (microtype)             in font `TU/TeXGyrePagella(0)/m/n/50'.
 (microtype)             Ignoring protrusion settings for this character.
 LaTeX Font Info:    Font shape `TU/TeXGyrePagella(0)/m/n' will be
-(Font)              scaled to size 13.17194pt on input line 226.
+(Font)              scaled to size 13.17194pt on input line 229.
 Package microtype Info: Character `ﬆ' is missing
 (microtype)             in font `TU/TeXGyrePagella(0)/m/n/14.4'.
 (microtype)             Ignoring protrusion settings for this character.
@@ -3313,7 +3313,7 @@ Package microtype Info: Character `⁻' is missing
 (microtype)             in font `TU/TeXGyrePagella(0)/m/n/14.4'.
 (microtype)             Ignoring protrusion settings for this character.
 LaTeX Font Info:    Font shape `TU/TeXGyreAdventor-Regular(0)/m/n' will be
-(Font)              scaled to size 11.29372pt on input line 226.
+(Font)              scaled to size 11.29372pt on input line 229.
 Inserting `luaotfload.letterspace' at position 2 in `pre_linebreak_filter'.
 Inserting `luaotfload.letterspace' at position 2 in `hpack_filter'.
 Package microtype Info: Loading generic protrusion settings for font family
@@ -3321,7 +3321,7 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 LaTeX Font Info:    Font shape `TU/TeXGyrePagella(0)/m/n' will be
-(Font)              scaled to size 9.14719pt on input line 226.
+(Font)              scaled to size 9.14719pt on input line 229.
 Package microtype Info: Character `ﬆ' is missing
 (microtype)             in font `TU/TeXGyrePagella(0)/m/n/10'.
 (microtype)             Ignoring protrusion settings for this character.
@@ -3398,7 +3398,7 @@ Package microtype Info: Character `⁻' is missing
 (microtype)             in font `TU/TeXGyrePagella(0)/m/n/10'.
 (microtype)             Ignoring protrusion settings for this character.
 LaTeX Font Info:    Font shape `TU/TeXGyrePagella(0)/m/n' will be
-(Font)              scaled to size 6.40303pt on input line 226.
+(Font)              scaled to size 6.40303pt on input line 229.
 Package microtype Info: Character `ﬆ' is missing
 (microtype)             in font `TU/TeXGyrePagella(0)/m/n/7'.
 (microtype)             Ignoring protrusion settings for this character.
@@ -3474,7 +3474,7 @@ Package microtype Info: Character `⁺' is missing
 Package microtype Info: Character `⁻' is missing
 (microtype)             in font `TU/TeXGyrePagella(0)/m/n/7'.
 (microtype)             Ignoring protrusion settings for this character.
-LaTeX Font Info:    Try loading font information for U+msa on input line 226.
+LaTeX Font Info:    Try loading font information for U+msa on input line 229.
 
 (/usr/local/texlive/2019/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
@@ -3482,7 +3482,7 @@ File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 (/usr/local/texlive/2019/texmf-dist/tex/latex/microtype/mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 226.
+LaTeX Font Info:    Try loading font information for U+msb on input line 229.
 
 (/usr/local/texlive/2019/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
@@ -3495,13 +3495,13 @@ File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman (
 RS)
 )
 LaTeX Font Info:    Font shape `TU/TeXGyreAdventor-Regular(0)/m/n' will be
-(Font)              scaled to size 7.84286pt on input line 226.
+(Font)              scaled to size 7.84286pt on input line 229.
 LaTeX Font Info:    Font shape `TU/TeXGyreAdventor-Regular(0)/m/n' will be
-(Font)              scaled to size 9.41144pt on input line 226.
+(Font)              scaled to size 9.41144pt on input line 229.
 <texografie.png, id=8, 569.2467pt x 100.4553pt>
 File: texografie.png Graphic file (type png)
 <use texografie.png>
-Package luatex.def Info: texografie.png  used on input line 226.
+Package luatex.def Info: texografie.png  used on input line 229.
 (luatex.def)             Requested size: 113.81102pt x 20.08304pt.
  [1
 
@@ -3513,18 +3513,18 @@ l/texlive/texmf-local/tex/latex/HUBerlin-bundle/texografie.png>]
 \openout7 = HUBerlin-bundle.pkglist
 
 LaTeX Font Info:    Font shape `TU/TeXGyreAdventor-Regular(0)/m/n' will be
-(Font)              scaled to size 8.58792pt on input line 229.
+(Font)              scaled to size 8.58792pt on input line 232.
 
 
 LaTeX Font Warning: Font shape `TU/TeXGyreAdventor-Regular(0)/bx/n' undefined
 (Font)              using `TU/TeXGyreAdventor-Regular(0)/m/n' instead on input l
-ine 229.
+ine 232.
 
 LaTeX Font Info:    Font shape `TU/TeXGyreAdventor-Regular(0)/bx/n' will be
-(Font)              scaled to size 9.41144pt on input line 229.
+(Font)              scaled to size 9.41144pt on input line 232.
 LaTeX Font Info:    Font shape `TU/TeXGyreAdventor-Regular(0)/bx/n' will be
-(Font)              scaled to size 16.2661pt on input line 229.
-Package tocbasic Info: character protrusion at toc deactivated on input line 229
+(Font)              scaled to size 16.2661pt on input line 232.
+Package tocbasic Info: character protrusion at toc deactivated on input line 232
 .
 (./HUBerlin-bundle.toc
 Package cleveref Info: loaded `english' language definitions on input line 2.
@@ -3687,7 +3687,7 @@ LaTeX Font Info:    Font shape `TU/TeXGyreAdventor-Regular(0)/m/n' will be
 LaTeX Font Info:    Font shape `TU/TeXGyreAdventor-Regular(0)/bx/n' will be
 (Font)              scaled to size 7.05858pt on input line 4.
 LaTeX Font Info:    Font shape `TU/TeXGyrePagella(0)/m/sc' will be
-(Font)              scaled to size 10.97662pt on input line 16.
+(Font)              scaled to size 10.97662pt on input line 18.
 Package microtype Info: Character `ﬆ' is missing
 (microtype)             in font `TU/TeXGyrePagella(0)/m/sc/12'.
 (microtype)             Ignoring protrusion settings for this character.
@@ -3770,19 +3770,19 @@ Package microtype Info: Character `ﬆ' is missing
 (microtype)             in font `TU/TeXGyrePagella(0)/m/sc/12'.
 (microtype)             Ignoring protrusion settings for this character.
 LaTeX Font Info:    Font shape `TU/TeXGyreCursor(0)/m/n' will be
-(Font)              scaled to size 10.95pt on input line 20.
+(Font)              scaled to size 10.95pt on input line 22.
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `TeXGyreCursor' (encoding: TU).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 LaTeX Font Info:    Font shape `TU/TeXGyreCursor(0)/bx/n' will be
-(Font)              scaled to size 10.95pt on input line 32.
+(Font)              scaled to size 10.95pt on input line 34.
 )
 \tf@toc=\write11
 
 \openout11 = HUBerlin-bundle.toc
 LaTeX Font Info:    Font shape `TU/TeXGyrePagella(0)/m/n' will be
-(Font)              scaled to size 5.48831pt on input line 230.
+(Font)              scaled to size 5.48831pt on input line 233.
 Package microtype Info: Character `ﬆ' is missing
 (microtype)             in font `TU/TeXGyrePagella(0)/m/n/6'.
 (microtype)             Ignoring protrusion settings for this character.
@@ -3859,7 +3859,7 @@ Package microtype Info: Character `⁻' is missing
 (microtype)             in font `TU/TeXGyrePagella(0)/m/n/6'.
 (microtype)             Ignoring protrusion settings for this character.
 LaTeX Font Info:    Font shape `TU/TeXGyrePagella(0)/m/n' will be
-(Font)              scaled to size 4.5736pt on input line 230.
+(Font)              scaled to size 4.5736pt on input line 233.
 Package microtype Info: Character `ﬆ' is missing
 (microtype)             in font `TU/TeXGyrePagella(0)/m/n/5'.
 (microtype)             Ignoring protrusion settings for this character.
@@ -3936,7 +3936,7 @@ Package microtype Info: Character `⁻' is missing
 (microtype)             in font `TU/TeXGyrePagella(0)/m/n/5'.
 (microtype)             Ignoring protrusion settings for this character.
 LaTeX Font Info:    Font shape `TU/TeXGyreAdventor-Regular(0)/m/n' will be
-(Font)              scaled to size 4.70572pt on input line 230.
+(Font)              scaled to size 4.70572pt on input line 233.
  [2
 
 ]
@@ -3957,25 +3957,25 @@ Class scrbook Warning: \float@addtolists detected!
 (scrbook)              deprecated \float@addtolist interface .
 
 LaTeX Font Info:    Font shape `TU/TeXGyreAdventor-Regular(0)/bx/n' will be
-(Font)              scaled to size 8.58792pt on input line 231.
+(Font)              scaled to size 8.58792pt on input line 234.
 
 \openout10 = HUBerlin-bundle.markdown.in
 Package markdown Info: Buffering markdown input into the temporary input file "H
 UBerlin-bundle.markdown.in" and scanning for the closing token sequence "\end{ma
-rkdown*}" on input line 232.
-Package markdown Info: The ending token sequence was found on input line 326.
+rkdown*}" on input line 235.
+Package markdown Info: The ending token sequence was found on input line 336.
 Package markdown Info: Including markdown document "HUBerlin-bundle.markdown.in"
- on input line 326.
-(./_markdown_HUBerlin-bundle/56331a8eeb10ca3096fd66d227f3e269.md.tex [3
+ on input line 336.
+(./_markdown_HUBerlin-bundle/9e0b3f3f2f0bb528779d5110099dc100.md.tex [3
 
 ])
 chapter 2.
 LaTeX Font Info:    Font shape `TU/TeXGyreCursor(0)/m/n' will be
-(Font)              scaled to size 9.0pt on input line 349.
+(Font)              scaled to size 9.0pt on input line 361.
 LaTeX Font Info:    Font shape `TU/TeXGyreCursor(0)/m/n' will be
-(Font)              scaled to size 10.0pt on input line 349.
+(Font)              scaled to size 10.0pt on input line 361.
 LaTeX Font Info:    Font shape `TU/TeXGyrePagella(0)/m/n' will be
-(Font)              scaled to size 7.31775pt on input line 350.
+(Font)              scaled to size 7.31775pt on input line 362.
 Package microtype Info: Character `ﬆ' is missing
 (microtype)             in font `TU/TeXGyrePagella(0)/m/n/8'.
 (microtype)             Ignoring protrusion settings for this character.
@@ -4052,7 +4052,7 @@ Package microtype Info: Character `⁻' is missing
 (microtype)             in font `TU/TeXGyrePagella(0)/m/n/8'.
 (microtype)             Ignoring protrusion settings for this character.
 LaTeX Font Info:    Font shape `TU/TeXGyrePagella(0)/bx/n' will be
-(Font)              scaled to size 7.31775pt on input line 350.
+(Font)              scaled to size 7.31775pt on input line 362.
 Package microtype Info: Character `ﬆ' is missing
 (microtype)             in font `TU/TeXGyrePagella(0)/bx/n/8'.
 (microtype)             Ignoring protrusion settings for this character.
@@ -4129,18 +4129,18 @@ Package microtype Info: Character `⁻' is missing
 (microtype)             in font `TU/TeXGyrePagella(0)/bx/n/8'.
 (microtype)             Ignoring protrusion settings for this character.
 LaTeX Font Info:    Font shape `TU/TeXGyreAdventor-Regular(0)/bx/n' will be
-(Font)              scaled to size 6.27429pt on input line 350.
+(Font)              scaled to size 6.27429pt on input line 362.
 LaTeX Font Info:    Font shape `TU/TeXGyreCursor(0)/m/n' will be
-(Font)              scaled to size 8.0pt on input line 350.
+(Font)              scaled to size 8.0pt on input line 362.
 (./HUBerlin-bundle.dtx [4]
 part I.
 Package scrkbase Info: You've told me to use the font selection of the element
 (scrkbase)             `partprefix' that is an alias of element `partnumber'
-(scrkbase)              on input line 408.
+(scrkbase)              on input line 420.
 LaTeX Font Info:    Font shape `TU/TeXGyreAdventor-Regular(0)/bx/n' will be
-(Font)              scaled to size 19.51305pt on input line 408.
+(Font)              scaled to size 19.51305pt on input line 420.
 LaTeX Font Info:    Font shape `TU/TeXGyrePagella(0)/m/n' will be
-(Font)              scaled to size 22.7582pt on input line 408.
+(Font)              scaled to size 22.7582pt on input line 420.
 Package microtype Info: Character `ﬆ' is missing
 (microtype)             in font `TU/TeXGyrePagella(0)/m/n/24.88'.
 (microtype)             Ignoring protrusion settings for this character.
@@ -4217,7 +4217,7 @@ Package microtype Info: Character `⁻' is missing
 (microtype)             in font `TU/TeXGyrePagella(0)/m/n/24.88'.
 (microtype)             Ignoring protrusion settings for this character.
 LaTeX Font Info:    Font shape `TU/TeXGyrePagella(0)/m/n' will be
-(Font)              scaled to size 18.97127pt on input line 408.
+(Font)              scaled to size 18.97127pt on input line 420.
 Package microtype Info: Character `ﬆ' is missing
 (microtype)             in font `TU/TeXGyrePagella(0)/m/n/20.74'.
 (microtype)             Ignoring protrusion settings for this character.
@@ -4294,7 +4294,7 @@ Package microtype Info: Character `⁻' is missing
 (microtype)             in font `TU/TeXGyrePagella(0)/m/n/20.74'.
 (microtype)             Ignoring protrusion settings for this character.
 LaTeX Font Info:    Font shape `TU/TeXGyrePagella(0)/m/n' will be
-(Font)              scaled to size 15.80634pt on input line 408.
+(Font)              scaled to size 15.80634pt on input line 420.
 Package microtype Info: Character `ﬆ' is missing
 (microtype)             in font `TU/TeXGyrePagella(0)/m/n/17.28'.
 (microtype)             Ignoring protrusion settings for this character.
@@ -4375,21 +4375,21 @@ Package microtype Info: Character `⁻' is missing
 
 ]
 LaTeX Font Info:    Font shape `TU/TeXGyreCursor(1)/m/n' will be
-(Font)              scaled to size 11.2651pt on input line 409.
+(Font)              scaled to size 11.2651pt on input line 421.
 LaTeX Font Info:    Font shape `TU/TeXGyreAdventor-Regular(0)/m/n' will be
-(Font)              scaled to size 6.27429pt on input line 411.
+(Font)              scaled to size 6.27429pt on input line 423.
 
 chapter 3.
 LaTeX Font Info:    Font shape `TU/TeXGyreCursor(0)/bx/n' will be
-(Font)              scaled to size 12.0pt on input line 415.
+(Font)              scaled to size 12.0pt on input line 427.
 LaTeX Font Info:    Font shape `TU/TeXGyreCursor(0)/m/sl' in size <10> not avail
 able
 (Font)              Font shape `TU/TeXGyreCursor(0)/m/it' tried instead on input
- line 418.
+ line 430.
 LaTeX Font Info:    Font shape `TU/TeXGyreCursor(0)/m/it' will be
-(Font)              scaled to size 10.0pt on input line 418.
+(Font)              scaled to size 10.0pt on input line 430.
 LaTeX Font Info:    Font shape `TU/TeXGyrePagella(0)/m/it' will be
-(Font)              scaled to size 8.89687pt on input line 434.
+(Font)              scaled to size 8.89687pt on input line 446.
 Package microtype Info: Character `‥' is missing
 (microtype)             in font `TU/TeXGyrePagella(0)/m/it/10.95'.
 (microtype)             Ignoring protrusion settings for this character.
@@ -4457,16 +4457,16 @@ Package microtype Info: Character `⁻' is missing
 (microtype)             in font `TU/TeXGyrePagella(0)/m/it/10.95'.
 (microtype)             Ignoring protrusion settings for this character.
 LaTeX Font Info:    Font shape `TU/TeXGyreAdventor-Regular(0)/m/n' will be
-(Font)              scaled to size 3.92143pt on input line 481.
+(Font)              scaled to size 3.92143pt on input line 493.
 [6]
 LaTeX Font Info:    Font shape `TU/TeXGyreAdventor-Regular(0)/m/n' will be
-(Font)              scaled to size 5.49pt on input line 508.
+(Font)              scaled to size 5.49pt on input line 520.
 LaTeX Font Info:    Font shape `TU/TeXGyreCursor(1)/m/sl' in size <10> not avail
 able
 (Font)              Font shape `TU/TeXGyreCursor(1)/m/it' tried instead on input
- line 508.
+ line 520.
 LaTeX Font Info:    Font shape `TU/TeXGyreCursor(1)/m/it' will be
-(Font)              scaled to size 10.28778pt on input line 508.
+(Font)              scaled to size 10.28778pt on input line 520.
  (./HUBerlin-letter.lco
 Overfull \hbox (17.5051pt too wide) in paragraph at lines 37--38
 [][][][][][][][][][][][][][]  
@@ -4474,7 +4474,7 @@ Overfull \hbox (17.5051pt too wide) in paragraph at lines 37--38
 
 ) [7] [8] (./HUBerlin-letter.tex)
 LaTeX Font Info:    Font shape `TU/TeXGyrePagella(0)/bx/n' will be
-(Font)              scaled to size 22.7582pt on input line 630.
+(Font)              scaled to size 22.7582pt on input line 642.
 Package microtype Info: Character `ﬆ' is missing
 (microtype)             in font `TU/TeXGyrePagella(0)/bx/n/24.88'.
 (microtype)             Ignoring protrusion settings for this character.
@@ -4554,20 +4554,20 @@ Package microtype Info: Character `⁻' is missing
 part II.
 Package scrkbase Info: You've told me to use the font selection of the element
 (scrkbase)             `partprefix' that is an alias of element `partnumber'
-(scrkbase)              on input line 678.
+(scrkbase)              on input line 690.
 LaTeX Font Info:    Font shape `TU/TeXGyreAdventor-Regular(0)/m/n' will be
-(Font)              scaled to size 19.51305pt on input line 678.
+(Font)              scaled to size 19.51305pt on input line 690.
 LaTeX Font Info:    Font shape `TU/TeXGyreAdventor-Regular(0)/m/n' will be
-(Font)              scaled to size 16.2661pt on input line 678.
+(Font)              scaled to size 16.2661pt on input line 690.
 LaTeX Font Info:    Font shape `TU/TeXGyreAdventor-Regular(0)/m/n' will be
-(Font)              scaled to size 13.55246pt on input line 678.
+(Font)              scaled to size 13.55246pt on input line 690.
 [11
 
 
 ]
 chapter 4.
 LaTeX Font Info:    Font shape `TU/TeXGyrePagella(0)/bx/n' will be
-(Font)              scaled to size 8.23247pt on input line 709.
+(Font)              scaled to size 8.23247pt on input line 721.
 Package microtype Info: Character `ﬆ' is missing
 (microtype)             in font `TU/TeXGyrePagella(0)/bx/n/9'.
 (microtype)             Ignoring protrusion settings for this character.
@@ -4646,36 +4646,36 @@ Package microtype Info: Character `⁻' is missing
 LaTeX Font Info:    Font shape `TU/TeXGyreCursor(0)/m/sl' in size <10.95> not av
 ailable
 (Font)              Font shape `TU/TeXGyreCursor(0)/m/it' tried instead on input
- line 767.
+ line 779.
 LaTeX Font Info:    Font shape `TU/TeXGyreCursor(0)/m/it' will be
-(Font)              scaled to size 10.95pt on input line 767.
+(Font)              scaled to size 10.95pt on input line 779.
 [12]
-Overfull \hbox (22.28029pt too wide) in paragraph at lines 767--767
+Overfull \hbox (22.28029pt too wide) in paragraph at lines 779--779
  [][] \TU/TeXGyreCursor(0)/m/sl/10 %pretocontents=\layercontentsmeasure% to sho
 w the position of the layer 
  []
 
 
-Overfull \hbox (10.28029pt too wide) in paragraph at lines 767--767
+Overfull \hbox (10.28029pt too wide) in paragraph at lines 779--779
  [][]\TU/TeXGyreCursor(0)/m/sl/10 \AddLayersToPageStyle{scrheadings}{likefirstp
 age.head,likefirstpage.loc} 
  []
 
 
-Overfull \hbox (102.00806pt too wide) in paragraph at lines 797--797
+Overfull \hbox (102.00806pt too wide) in paragraph at lines 809--809
 [][][][][]$\TU/TeXGyreCursor(0)/m/n/9 https://tex.stackexchange.com/questions/7
 7991/put-[]the-[]encl-[]at-[]the-[]bottom-[]of-[]the-[]page-[]lettre-[]class$[]
 []| 
  []
 
 [13]
-Overfull \hbox (4.28029pt too wide) in paragraph at lines 849--849
+Overfull \hbox (4.28029pt too wide) in paragraph at lines 861--861
  [][]\TU/TeXGyreCursor(0)/m/sl/10 \setkomavar*{accessibility}{{\large\reflectbo
 x{\Wheelchair}} Eingang:} 
  []
 
 
-Overfull \hbox (10.28029pt too wide) in paragraph at lines 872--872
+Overfull \hbox (10.28029pt too wide) in paragraph at lines 884--884
  [][]\TU/TeXGyreCursor(0)/m/sl/10 % and for the section of faculty, institute e
 tc. we use \env{minipage} 
  []
@@ -4683,49 +4683,49 @@ tc. we use \env{minipage}
 [14] [15] [16] [17]
 chapter 5.
 [18]
-Overfull \hbox (22.28029pt too wide) in paragraph at lines 1177--1177
+Overfull \hbox (22.28029pt too wide) in paragraph at lines 1189--1189
  [][]\TU/TeXGyreCursor(0)/m/sl/10 if(addresseeimage)\setkomavar{addressee
 image}{addresseeimage}endif 
  []
 
 
-Overfull \hbox (148.28029pt too wide) in paragraph at lines 1177--1177
+Overfull \hbox (148.28029pt too wide) in paragraph at lines 1189--1189
  [][]\TU/TeXGyreCursor(0)/m/sl/10 if(backaddress)\setkomavar{backaddress}
 {backaddress}\KOMAoptions{backaddress=true}endif 
  []
 
 
-Overfull \hbox (100.28029pt too wide) in paragraph at lines 1177--1177
+Overfull \hbox (100.28029pt too wide) in paragraph at lines 1189--1189
  [][]\TU/TeXGyreCursor(0)/m/sl/10 if(fromemail)\setkomavar{fromemail}{
 fromemail}\KOMAoptions{fromemail=true}endif 
  []
 
 
-Overfull \hbox (52.28029pt too wide) in paragraph at lines 1177--1177
+Overfull \hbox (52.28029pt too wide) in paragraph at lines 1189--1189
  [][]\TU/TeXGyreCursor(0)/m/sl/10 if(fromfax)\setkomavar{fromfax}{from
 fax}\KOMAoptions{fromfax=true}endif 
  []
 
 
-Overfull \hbox (76.28029pt too wide) in paragraph at lines 1177--1177
+Overfull \hbox (76.28029pt too wide) in paragraph at lines 1189--1189
  [][]\TU/TeXGyreCursor(0)/m/sl/10 if(fromlogo)\setkomavar{fromlogo}{fr
 omlogo}\KOMAoptions{fromlogo=true}endif 
  []
 
 
-Overfull \hbox (244.28029pt too wide) in paragraph at lines 1177--1177
+Overfull \hbox (244.28029pt too wide) in paragraph at lines 1189--1189
  [][]\TU/TeXGyreCursor(0)/m/sl/10 if(frommobilephone)\setkomavar{frommobi
 lephone}{frommobilephone}\KOMAoptions{frommobilephone=true}endif 
  []
 
 
-Overfull \hbox (100.28029pt too wide) in paragraph at lines 1177--1177
+Overfull \hbox (100.28029pt too wide) in paragraph at lines 1189--1189
  [][]\TU/TeXGyreCursor(0)/m/sl/10 if(fromphone)\setkomavar{fromphone}{
 fromphone}\KOMAoptions{fromphone=true}endif 
  []
 
 
-Overfull \hbox (52.28029pt too wide) in paragraph at lines 1177--1177
+Overfull \hbox (52.28029pt too wide) in paragraph at lines 1189--1189
  [][]\TU/TeXGyreCursor(0)/m/sl/10 if(fromurl)\setkomavar{fromurl}{from
 url}\KOMAoptions{fromurl=true}endif 
  []
@@ -4734,179 +4734,179 @@ url}\KOMAoptions{fromurl=true}endif
 chapter 6.
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\begingroup' on input line 1211.
+(hyperref)                removing `\begingroup' on input line 1223.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\endgroup' on input line 1211.
+(hyperref)                removing `\endgroup' on input line 1223.
 
 LaTeX Font Info:    Font shape `TU/TeXGyreCursor(0)/m/n' will be
-(Font)              scaled to size 20.74pt on input line 1211.
+(Font)              scaled to size 20.74pt on input line 1223.
 LaTeX Font Info:    Font shape `TU/TeXGyreCursor(0)/bx/n' will be
-(Font)              scaled to size 20.74pt on input line 1211.
+(Font)              scaled to size 20.74pt on input line 1223.
 [20]
-Overfull \hbox (34.28029pt too wide) in paragraph at lines 1285--1285
+Overfull \hbox (34.28029pt too wide) in paragraph at lines 1297--1297
  [][]  \TU/TeXGyreCursor(0)/m/sl/10 marginparsep   = .cm,  %  - space betwee
 n notes and body text (content) 
  []
 
 [21] [22]
-Overfull \hbox (136.28029pt too wide) in paragraph at lines 1361--1361
+Overfull \hbox (136.28029pt too wide) in paragraph at lines 1373--1373
  [][]\TU/TeXGyreCursor(0)/m/sl/10 \clubpenalty=  % prevent singl
 e lines at the beginning of a paragraph (Schusterjungen) 
  []
 
 
-Overfull \hbox (88.28029pt too wide) in paragraph at lines 1361--1361
+Overfull \hbox (88.28029pt too wide) in paragraph at lines 1373--1373
  [][]\TU/TeXGyreCursor(0)/m/sl/10 \widowpenalty=  % prevent sing
 le lines at the end of a paragraph (Hurenkinder) 
  []
 
 
-Overfull \hbox (70.28029pt too wide) in paragraph at lines 1434--1434
+Overfull \hbox (70.28029pt too wide) in paragraph at lines 1446--1446
  [][]  \TU/TeXGyreCursor(0)/m/sl/10 % taken and shortened from /usr/share/texmf
 /tex/latex/koma-script/scrartcl.cls 
  []
 
 [23]
-Overfull \hbox (286.28029pt too wide) in paragraph at lines 1434--1434
+Overfull \hbox (286.28029pt too wide) in paragraph at lines 1446--1446
  [][]\TU/TeXGyreCursor(0)/m/sl/10 \blockcquote[]{Hoare}{Do
 cumentation must be regarded as an integral part of the process of design and c
 oding. 
  []
 
 
-Overfull \hbox (100.28029pt too wide) in paragraph at lines 1434--1434
+Overfull \hbox (100.28029pt too wide) in paragraph at lines 1446--1446
  [][] \TU/TeXGyreCursor(0)/m/sl/10 A good programming language will encourage a
 nd assist the programmer to write clear, 
  []
 
 
-Overfull \hbox (28.28029pt too wide) in paragraph at lines 1434--1434
+Overfull \hbox (28.28029pt too wide) in paragraph at lines 1446--1446
  [][]  \TU/TeXGyreCursor(0)/m/sl/10 autooneside = false,% use left and right ma
 rks with a onesided document 
  []
 
 
-Overfull \hbox (94.28029pt too wide) in paragraph at lines 1434--1434
+Overfull \hbox (94.28029pt too wide) in paragraph at lines 1446--1446
  [][]  \TU/TeXGyreCursor(0)/m/sl/10 automark,% set \leftmark and \rightmark aut
 omatically by *\section and \subsection 
  []
 
 
-Overfull \hbox (70.28029pt too wide) in paragraph at lines 1434--1434
+Overfull \hbox (70.28029pt too wide) in paragraph at lines 1446--1446
  [][]\TU/TeXGyreCursor(0)/m/sl/10 \lofoot*{\textcolor{HUBerlin-blue}{\HUBerlint
 itle}\ \vrule\ \textcolor{HUBerlin-
  []
 
 [24]
-Overfull \hbox (274.28029pt too wide) in paragraph at lines 1475--1475
+Overfull \hbox (274.28029pt too wide) in paragraph at lines 1487--1487
  [][]\TU/TeXGyreCursor(0)/m/sl/10 \putC{\makebox[pt][c]{\raisebox{-.\heig
 ht}{\scalebox{}{\textcolor{black!}{\partnumber}}}}}\gdef\partnumber{}%
  
  []
 
 
-Overfull \hbox (64.28029pt too wide) in paragraph at lines 1475--1475
+Overfull \hbox (64.28029pt too wide) in paragraph at lines 1487--1487
  [][]\TU/TeXGyreCursor(0)/m/sl/10 \parbox{\dimexpr\textwidth+\marginparsep+\mar
 ginparwidth\relax}{\raggedpart#}% 
  []
 
 
-Overfull \hbox (52.28029pt too wide) in paragraph at lines 1475--1475
+Overfull \hbox (52.28029pt too wide) in paragraph at lines 1487--1487
  [][]\TU/TeXGyreCursor(0)/m/sl/10 % add \changedpartwidth as last command to th
 e settings for font element part 
  []
 
 
-Overfull \hbox (142.28029pt too wide) in paragraph at lines 1475--1475
+Overfull \hbox (142.28029pt too wide) in paragraph at lines 1487--1487
  [][]\TU/TeXGyreCursor(0)/m/sl/10 %-https://tex.stackexchange.com/a/
 / | https://tex.stackexchange.com/a//
  
  []
 
 
-Overfull \hbox (22.28029pt too wide) in paragraph at lines 1517--1517
+Overfull \hbox (22.28029pt too wide) in paragraph at lines 1529--1529
  [][]\TU/TeXGyreCursor(0)/m/sl/10 \setkomafont{disposition}{\color{HUBerlin-bro
 wn}\sffamily\bfseries\large} 
  []
 
 
-Overfull \hbox (4.28029pt too wide) in paragraph at lines 1517--1517
+Overfull \hbox (4.28029pt too wide) in paragraph at lines 1529--1529
  [][]\TU/TeXGyreCursor(0)/m/sl/10 \setkomafont{subtitle}{\large\color{HUBerlin-
 brown}\sffamily\flushleft} 
  []
 
 [25]
-Overfull \hbox (10.28029pt too wide) in paragraph at lines 1517--1517
+Overfull \hbox (10.28029pt too wide) in paragraph at lines 1529--1529
  [][]\TU/TeXGyreCursor(0)/m/sl/10 \setkomafont{pageheadfoot}{\footnotesize\sffa
 mily\color{HUBerlin-grey}} 
  []
 
 [26] [27]
-Overfull \hbox (64.28029pt too wide) in paragraph at lines 1774--1774
+Overfull \hbox (64.28029pt too wide) in paragraph at lines 1786--1786
  [][]\TU/TeXGyreCursor(0)/m/sl/10 \def\lst@visiblespace{\lst@ttfamily{\char
 }\textcolor{HUBerlin-grey}{\cdot}} 
  []
 
 
-Overfull \hbox (16.28029pt too wide) in paragraph at lines 1774--1774
+Overfull \hbox (16.28029pt too wide) in paragraph at lines 1786--1786
  [][]  \TU/TeXGyreCursor(0)/m/sl/10 moredelim    = {[is][\ttfamily\bfseries\col
 or{HUBerlin-blue}]{|}{|}}, 
  []
 
 
-Overfull \hbox (28.28029pt too wide) in paragraph at lines 1774--1774
+Overfull \hbox (28.28029pt too wide) in paragraph at lines 1786--1786
  [][]  \TU/TeXGyreCursor(0)/m/sl/10 moredelim    = {[is][\ttfamily\bfseries\col
 or{HUBerlin-blue}]{|}{|}}, 
  []
 
 
-Overfull \hbox (22.28029pt too wide) in paragraph at lines 1774--1774
+Overfull \hbox (22.28029pt too wide) in paragraph at lines 1786--1786
  [][]  \TU/TeXGyreCursor(0)/m/sl/10 moredelim    = {[is][\ttfamily\bfseries\col
 or{HUBerlin-red}]{|}{|}}, 
  []
 
 [28]
-Overfull \hbox (88.28029pt too wide) in paragraph at lines 1774--1774
+Overfull \hbox (88.28029pt too wide) in paragraph at lines 1786--1786
  [][]  \TU/TeXGyreCursor(0)/m/sl/10 commentstyle = \footnotesize\color{HUBerlin
 -grey}\addfontfeature{LetterSpace=.}, 
  []
 
 [29]
-Overfull \hbox (4.28029pt too wide) in paragraph at lines 1774--1774
+Overfull \hbox (4.28029pt too wide) in paragraph at lines 1786--1786
  [][]\TU/TeXGyreCursor(0)/m/sl/10 \path[fill=HUBerlin-grey!!black] ([yshi
 ft=mm]interior.south east)--
  []
 
 
-Overfull \hbox (172.28029pt too wide) in paragraph at lines 1774--1774
+Overfull \hbox (172.28029pt too wide) in paragraph at lines 1786--1786
  [][]\TU/TeXGyreCursor(0)/m/sl/10 \path[draw=HUBerlin-grey,shorten <=-.
 mm,shorten >=-.mm] ([yshift=mm]interior.south east)--
  []
 
 
-Overfull \hbox (370.28029pt too wide) in paragraph at lines 1774--1774
+Overfull \hbox (370.28029pt too wide) in paragraph at lines 1786--1786
  [][]\TU/TeXGyreCursor(0)/m/sl/10 \path[fill=red!!black,draw=none] (inter
 ior.south west) rectangle node[white]{\Huge\bfseries !} ([xshift=mm]interior
 .north west); 
  []
 
 [30] [31]
-Overfull \hbox (46.28029pt too wide) in paragraph at lines 1853--1853
+Overfull \hbox (46.28029pt too wide) in paragraph at lines 1865--1865
  [][]\TU/TeXGyreCursor(0)/m/sl/10 \renewrobustcmd\meta[]{\normalfont{\textla
 ngle}{\itshape#\/}{\textrangle}} 
  []
 
 [32]
-Overfull \hbox (82.28029pt too wide) in paragraph at lines 1900--1900
+Overfull \hbox (82.28029pt too wide) in paragraph at lines 1912--1912
  [][]\TU/TeXGyreCursor(0)/m/sl/10 \patchcmd{\scr@startchapter}{\if@openright\cl
 eardoublepage\else\clearpage\fi}{}{}{} 
  []
 
 )
 LaTeX Font Info:    Font shape `TU/TeXGyrePagella(0)/m/sc' will be
-(Font)              scaled to size 10.01616pt on input line 362.
+(Font)              scaled to size 10.01616pt on input line 374.
 Package microtype Info: Character `ﬆ' is missing
 (microtype)             in font `TU/TeXGyrePagella(0)/m/sc/10.95'.
 (microtype)             Ignoring protrusion settings for this character.
@@ -4992,103 +4992,103 @@ Package microtype Info: Character `ﬆ' is missing
 part III.
 Package scrkbase Info: You've told me to use the font selection of the element
 (scrkbase)             `partprefix' that is an alias of element `partnumber'
-(scrkbase)              on input line 365.
+(scrkbase)              on input line 377.
 [35
 
 
 ]
 chapter 7.
-<HUBerlin-letter.pdf, id=350, 597.50829pt x 845.04709pt>
+<HUBerlin-letter.pdf, id=352, 597.50829pt x 845.04709pt>
 File: HUBerlin-letter.pdf Graphic file (type pdf)
 <use HUBerlin-letter.pdf>
-Package luatex.def Info: HUBerlin-letter.pdf  used on input line 376.
+Package luatex.def Info: HUBerlin-letter.pdf  used on input line 388.
 (luatex.def)             Requested size: 597.50682pt x 845.04503pt.
 File: HUBerlin-letter.pdf Graphic file (type pdf)
 <use HUBerlin-letter.pdf>
-Package luatex.def Info: HUBerlin-letter.pdf  used on input line 376.
+Package luatex.def Info: HUBerlin-letter.pdf  used on input line 388.
 (luatex.def)             Requested size: 597.50682pt x 845.04503pt.
-<HUBerlin-letter.pdf, id=353, page=1, 597.50829pt x 845.04709pt>
+<HUBerlin-letter.pdf, id=355, page=1, 597.50829pt x 845.04709pt>
 File: HUBerlin-letter.pdf Graphic file (type pdf)
 <use HUBerlin-letter.pdf, page 1>
-Package luatex.def Info: HUBerlin-letter.pdf , page1 used on input line 376.
+Package luatex.def Info: HUBerlin-letter.pdf , page1 used on input line 388.
 (luatex.def)             Requested size: 597.50682pt x 845.04503pt.
 File: HUBerlin-letter.pdf Graphic file (type pdf)
 <use HUBerlin-letter.pdf, page 1>
-Package luatex.def Info: HUBerlin-letter.pdf , page1 used on input line 376.
+Package luatex.def Info: HUBerlin-letter.pdf , page1 used on input line 388.
 (luatex.def)             Requested size: 478.00728pt x 676.03859pt.
 [36]
 File: HUBerlin-letter.pdf Graphic file (type pdf)
 <use HUBerlin-letter.pdf, page 1>
-Package luatex.def Info: HUBerlin-letter.pdf , page1 used on input line 376.
+Package luatex.def Info: HUBerlin-letter.pdf , page1 used on input line 388.
 (luatex.def)             Requested size: 478.00728pt x 676.03859pt.
 File: HUBerlin-letter.pdf Graphic file (type pdf)
 <use HUBerlin-letter.pdf, page 1>
-Package luatex.def Info: HUBerlin-letter.pdf , page1 used on input line 376.
+Package luatex.def Info: HUBerlin-letter.pdf , page1 used on input line 388.
 (luatex.def)             Requested size: 478.00728pt x 676.03859pt.
 File: HUBerlin-letter.pdf Graphic file (type pdf)
 <use HUBerlin-letter.pdf, page 1>
-Package luatex.def Info: HUBerlin-letter.pdf , page1 used on input line 376.
+Package luatex.def Info: HUBerlin-letter.pdf , page1 used on input line 388.
 (luatex.def)             Requested size: 478.00728pt x 676.03859pt.
  [37<./HUBerlin-letter.pdf>]
-<HUBerlin-letter.pdf, id=391, page=2, 597.50829pt x 845.04709pt>
+<HUBerlin-letter.pdf, id=393, page=2, 597.50829pt x 845.04709pt>
 File: HUBerlin-letter.pdf Graphic file (type pdf)
 <use HUBerlin-letter.pdf, page 2>
-Package luatex.def Info: HUBerlin-letter.pdf , page2 used on input line 376.
+Package luatex.def Info: HUBerlin-letter.pdf , page2 used on input line 388.
 (luatex.def)             Requested size: 478.00728pt x 676.03859pt.
 File: HUBerlin-letter.pdf Graphic file (type pdf)
 <use HUBerlin-letter.pdf, page 2>
-Package luatex.def Info: HUBerlin-letter.pdf , page2 used on input line 376.
+Package luatex.def Info: HUBerlin-letter.pdf , page2 used on input line 388.
 (luatex.def)             Requested size: 478.00728pt x 676.03859pt.
 File: HUBerlin-letter.pdf Graphic file (type pdf)
 <use HUBerlin-letter.pdf, page 2>
-Package luatex.def Info: HUBerlin-letter.pdf , page2 used on input line 376.
+Package luatex.def Info: HUBerlin-letter.pdf , page2 used on input line 388.
 (luatex.def)             Requested size: 478.00728pt x 676.03859pt.
  [38<./HUBerlin-letter.pdf>]
-<HUBerlin-letter-markdown.pdf, id=397, 597.50829pt x 845.04709pt>
+<HUBerlin-letter-markdown.pdf, id=399, 597.50829pt x 845.04709pt>
 File: HUBerlin-letter-markdown.pdf Graphic file (type pdf)
 <use HUBerlin-letter-markdown.pdf>
-Package luatex.def Info: HUBerlin-letter-markdown.pdf  used on input line 387.
+Package luatex.def Info: HUBerlin-letter-markdown.pdf  used on input line 399.
 (luatex.def)             Requested size: 597.50682pt x 845.04503pt.
 File: HUBerlin-letter-markdown.pdf Graphic file (type pdf)
 <use HUBerlin-letter-markdown.pdf>
-Package luatex.def Info: HUBerlin-letter-markdown.pdf  used on input line 387.
+Package luatex.def Info: HUBerlin-letter-markdown.pdf  used on input line 399.
 (luatex.def)             Requested size: 597.50682pt x 845.04503pt.
-<HUBerlin-letter-markdown.pdf, id=400, page=1, 597.50829pt x 845.04709pt>
+<HUBerlin-letter-markdown.pdf, id=402, page=1, 597.50829pt x 845.04709pt>
 File: HUBerlin-letter-markdown.pdf Graphic file (type pdf)
 <use HUBerlin-letter-markdown.pdf, page 1>
 Package luatex.def Info: HUBerlin-letter-markdown.pdf , page1 used on input line
- 387.
+ 399.
 (luatex.def)             Requested size: 597.50682pt x 845.04503pt.
 File: HUBerlin-letter-markdown.pdf Graphic file (type pdf)
 <use HUBerlin-letter-markdown.pdf, page 1>
 Package luatex.def Info: HUBerlin-letter-markdown.pdf , page1 used on input line
- 387.
+ 399.
 (luatex.def)             Requested size: 478.00728pt x 676.03859pt.
  [39]
 File: HUBerlin-letter-markdown.pdf Graphic file (type pdf)
 <use HUBerlin-letter-markdown.pdf, page 1>
 Package luatex.def Info: HUBerlin-letter-markdown.pdf , page1 used on input line
- 387.
+ 399.
 (luatex.def)             Requested size: 478.00728pt x 676.03859pt.
 File: HUBerlin-letter-markdown.pdf Graphic file (type pdf)
 <use HUBerlin-letter-markdown.pdf, page 1>
 Package luatex.def Info: HUBerlin-letter-markdown.pdf , page1 used on input line
- 387.
+ 399.
 (luatex.def)             Requested size: 478.00728pt x 676.03859pt.
 File: HUBerlin-letter-markdown.pdf Graphic file (type pdf)
 <use HUBerlin-letter-markdown.pdf, page 1>
 Package luatex.def Info: HUBerlin-letter-markdown.pdf , page1 used on input line
- 387.
+ 399.
 (luatex.def)             Requested size: 478.00728pt x 676.03859pt.
 Package atenddvi Info: Last page = 40.
  [40<./HUBerlin-letter-markdown.pdf>]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 390.
-Package atveryend Info: Executing hook `AfterLastShipout' on input line 390.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 402.
+Package atveryend Info: Executing hook `AfterLastShipout' on input line 402.
  (./HUBerlin-bundle.aux
 Package cleveref Info: loaded `english' language definitions on input line 31.
 )
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 390.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 390.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 402.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 402.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
@@ -5099,28 +5099,31 @@ Package logreq Info: Writing requests to 'HUBerlin-bundle.run.xml'.
 )
 
 Here is how much of LuaTeX's memory you used:
- 67959 strings out of 494291
+ 67967 strings out of 494291
  100000,2373549 words of node,token memory allocated
  722 words of node memory still in use:
    3 hlist, 1 vlist, 1 rule, 7 glue, 3 kern, 1 glyph, 23 attribute, 90 glue_spec
 , 13 attribute_list, 2 write, 2 pdf_action nodes
-   avail lists: 1:2,2:3716,3:497,4:328,5:786,6:105,7:3659,8:102,9:1563,10:15,11:
-193,12:1
- 69243 multiletter control sequences out of 65536+600000
- 187 fonts using 32230207 bytes
+   avail lists: 1:3,2:3715,3:496,4:330,5:843,6:105,7:3703,8:102,9:1563,10:16,11:
+234,12:1
+ 69250 multiletter control sequences out of 65536+600000
+ 187 fonts using 32230243 bytes
  72i,22n,122p,9148b,2282s stack positions out of 5000i,500n,10000p,200000b,100000s
-</Users/lukascbossert/Library/Fonts/texgyrepagella-italic.otf></Users/lukascboss
-ert/Library/Fonts/texgyrecursor-italic.otf></Users/lukascbossert/Library/Fonts/t
-exgyrecursor-bold.otf></Users/lukascbossert/Library/Fonts/texgyrecursor-regular.
-otf></Users/lukascbossert/Library/Fonts/texgyrepagella-bold.otf></usr/local/texl
-ive/2019/texmf-dist/fonts/opentype/public/tex-gyre/texgyreadventor-regular.otf><
-/Users/lukascbossert/Library/Fonts/texgyrepagella-regular.otf></usr/local/texliv
-e/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2
-019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on HUBerlin-bundle.pdf (40 pages, 610674 bytes).
+</usr/local/texlive/2019/texmf-dist/fonts/opentype/public/tex-gyre/texgyrepagell
+a-italic.otf></usr/local/texlive/2019/texmf-dist/fonts/opentype/public/tex-gyre/
+texgyrecursor-italic.otf></usr/local/texlive/2019/texmf-dist/fonts/opentype/publ
+ic/tex-gyre/texgyrecursor-bold.otf></usr/local/texlive/2019/texmf-dist/fonts/ope
+ntype/public/tex-gyre/texgyrecursor-regular.otf></usr/local/texlive/2019/texmf-d
+ist/fonts/opentype/public/tex-gyre/texgyrepagella-bold.otf></usr/local/texlive/2
+019/texmf-dist/fonts/opentype/public/tex-gyre/texgyreadventor-regular.otf></usr/
+local/texlive/2019/texmf-dist/fonts/opentype/public/tex-gyre/texgyrepagella-regu
+lar.otf></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10
+.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.p
+fb>
+Output written on HUBerlin-bundle.pdf (40 pages, 611864 bytes).
 
-PDF statistics: 557 PDF objects out of 1000 (max. 8388607)
- 323 compressed objects within 4 object streams
- 159 named destinations out of 1000 (max. 131072)
- 181 words of extra memory for PDF output out of 10000 (max. 100000000)
+PDF statistics: 562 PDF objects out of 1000 (max. 8388607)
+ 325 compressed objects within 4 object streams
+ 160 named destinations out of 1000 (max. 131072)
+ 189 words of extra memory for PDF output out of 10000 (max. 100000000)
 

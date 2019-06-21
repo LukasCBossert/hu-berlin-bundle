@@ -1,3 +1,6 @@
 
 HUBerlin-bundle.pkglist
 archive/*
+*.fdb_latexmk
+*.fls
+*.log

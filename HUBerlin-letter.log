@@ -1,4 +1,4 @@
-This is LuaTeX, Version 1.10.0 (TeX Live 2019)  (format=lualatex 2019.6.4)  11 JUN 2019 13:05
+This is LuaTeX, Version 1.10.0 (TeX Live 2019)  (format=lualatex 2019.6.5)  21 JUN 2019 11:28
  restricted system commands enabled.
 **HUBerlin-letter.tex
 (./HUBerlin-letter.tex
@@ -48,9 +48,9 @@ Inserting `luaotfload.aux.set_capheight' at position 3 in `luaotfload.patch_font
 '.
 Inserting `luaotfload.rewrite_fontname' at position 4 in `luaotfload.patch_font'
 .
-luaotfload | main : initialization completed in 0.071 seconds
+luaotfload | main : initialization completed in 0.133 seconds
 (./HUBerlin-letter.cls
-Document Class: HUBerlin-letter 2019/06/06 v0.0.2\ Humboldt-Universit"at zu Berl
+Document Class: HUBerlin-letter 2019/06/21 v1.0.0\ Humboldt-Universit"at zu Berl
 in - letter documentclass
 Class HUBerlin Info: * * * HUBerlin * * *
 (HUBerlin)           Part of the HUBerlin Bundle  on input line 23.
@@ -898,7 +898,7 @@ ue_spec, 7 attribute_list, 1 write nodes
 </Library/Fonts/Verdana Bold.ttf></Library/Fonts/Verdana.ttf></usr/local/texlive
 /2019/texmf-dist/fonts/opentype/public/lm/lmsans8-regular.otf></usr/local/texliv
 e/2019/texmf-dist/fonts/type1/public/marvosym/marvosym.pfb>
-Output written on HUBerlin-letter.pdf (2 pages, 187699 bytes).
+Output written on HUBerlin-letter.pdf (2 pages, 187695 bytes).
 
 PDF statistics: 38 PDF objects out of 1000 (max. 8388607)
  21 compressed objects within 1 object stream

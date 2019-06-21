@@ -1,18 +1,18 @@
 [0] Config.pm:304> INFO - This is Biber 2.12
 [0] Config.pm:307> INFO - Logfile is 'HUBerlin-bundle.blg'
-[50] biber-darwin:315> INFO - === Di Jun 11, 2019, 13:07:18
-[80] Biber.pm:371> INFO - Reading 'HUBerlin-bundle.bcf'
-[211] Biber.pm:889> INFO - Found 9 citekeys in bib section 0
-[231] Biber.pm:4093> INFO - Processing section 0
-[246] Biber.pm:4254> INFO - Looking for bibtex format file 'HUBerlin-bundle-bibliography.bib' for section 0
-[247] bibtex.pm:1523> INFO - LaTeX decoding ...
-[253] bibtex.pm:1340> INFO - Found BibTeX data source 'HUBerlin-bundle-bibliography.bib'
-[265] Biber.pm:4254> INFO - Looking for bibtex format file 'HUBerlin-bundle-ctan.bib' for section 0
-[266] bibtex.pm:1523> INFO - LaTeX decoding ...
-[281] bibtex.pm:1340> INFO - Found BibTeX data source 'HUBerlin-bundle-ctan.bib'
-[352] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[353] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[353] Biber.pm:3921> INFO - Sorting list 'nty/global//global/global' of type 'entry' with template 'nty' and locale 'en-US'
-[353] Biber.pm:3927> INFO - No sort tailoring available for locale 'en-US'
-[370] bbl.pm:636> INFO - Writing 'HUBerlin-bundle.bbl' with encoding 'UTF-8'
-[374] bbl.pm:739> INFO - Output to HUBerlin-bundle.bbl
+[44] biber-darwin:315> INFO - === Fr Jun 21, 2019, 12:05:18
+[78] Biber.pm:371> INFO - Reading 'HUBerlin-bundle.bcf'
+[205] Biber.pm:889> INFO - Found 9 citekeys in bib section 0
+[221] Biber.pm:4093> INFO - Processing section 0
+[235] Biber.pm:4254> INFO - Looking for bibtex format file 'HUBerlin-bundle-bibliography.bib' for section 0
+[236] bibtex.pm:1523> INFO - LaTeX decoding ...
+[242] bibtex.pm:1340> INFO - Found BibTeX data source 'HUBerlin-bundle-bibliography.bib'
+[259] Biber.pm:4254> INFO - Looking for bibtex format file 'HUBerlin-bundle-ctan.bib' for section 0
+[262] bibtex.pm:1523> INFO - LaTeX decoding ...
+[284] bibtex.pm:1340> INFO - Found BibTeX data source 'HUBerlin-bundle-ctan.bib'
+[366] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[367] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[367] Biber.pm:3921> INFO - Sorting list 'nty/global//global/global' of type 'entry' with template 'nty' and locale 'en-US'
+[367] Biber.pm:3927> INFO - No sort tailoring available for locale 'en-US'
+[382] bbl.pm:636> INFO - Writing 'HUBerlin-bundle.bbl' with encoding 'UTF-8'
+[386] bbl.pm:739> INFO - Output to HUBerlin-bundle.bbl

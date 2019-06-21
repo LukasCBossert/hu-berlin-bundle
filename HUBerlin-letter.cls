@@ -15,7 +15,7 @@
 %% please consider and respect them carefully.
 %% ----------------------------------------------------------------
 %% 
-\def\Version{2019/06/06 v0.0.2}
+\def\Version{2019/06/21 v1.0.0}
 \NeedsTeXFormat{LaTeX2e}[2005/12/01]
 \ProvidesClass{HUBerlin-letter}
   [\Version\ Humboldt-Universit"at zu Berlin - letter documentclass]

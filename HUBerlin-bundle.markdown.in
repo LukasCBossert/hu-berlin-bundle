@@ -6,12 +6,14 @@
 % ▀ ██ ▀██   ██ ██      ██   ██ ██   ██ ██  ██  ██ ██
 %       ██   ██ ███████ ██   ██ ██████  ██      ██ ███████
 % */
-%<*driver|readme&main>
-With this bundle you have several documents which are according to the coporate design of the Humboldt-Universität zu Berlin.
+%<*readme,main>
+
+With this (unofficial) bundle you have several documents which are designed according to the coporate design of the Humboldt-Universität zu Berlin.
+
 
 Following documents or documentclasses are available:
 
-* letter (`HUBerlin-letter.cls`)
+* letter (`HUBerlin-letter.cls`); via `.tex` and `.md`
 
 
 
@@ -49,6 +51,11 @@ All notable changes to this project will be documented in the [README.md](https:
 This project **does not** adhere to [Semantic Versioning](http://semver.org/).
 The markdown syntax is inspired by the conventions proposed by [keepachangelog.com](http://keepachangelog.com/).
 
+
+
+### 1.0.0 (2019-06-21)
+ First release with a documentclass for letter.
+
 ## Copyright
 Various parts of this bundle have different copyrights.
 
@@ -82,7 +89,7 @@ DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
 THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-%</driver|readme&main>
+%</readme,main>
 % /*
 %     ██ ██████  ███████  █████  ██████  ███    ███ ███████
 %    ██  ██   ██ ██      ██   ██ ██   ██ ████  ████ ██

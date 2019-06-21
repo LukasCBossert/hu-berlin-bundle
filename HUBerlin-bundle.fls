@@ -1,4 +1,4 @@
-PWD /Users/lukascbossert/Documents/git/HUBerlin-bundle
+PWD /Users/lukascbossert/Documents/github/HUBerlin-bundle
 INPUT /usr/local/texlive/2019/texmf-var/web2c/luatex/lualatex.fmt
 INPUT ./HUBerlin-bundle.dtx
 OUTPUT HUBerlin-bundle.log
@@ -545,7 +545,7 @@ INPUT /usr/local/texlive/2019/texmf-dist/fonts/tfm/public/cm/cmr6.tfm
 INPUT /usr/local/texlive/2019/texmf-dist/fonts/tfm/public/cm/cmr5.tfm
 OUTPUT HUBerlin-bundle.markdown.in
 INPUT ./HUBerlin-bundle.markdown.in
-INPUT ./_markdown_HUBerlin-bundle/56331a8eeb10ca3096fd66d227f3e269.md.tex
+INPUT ./_markdown_HUBerlin-bundle/9e0b3f3f2f0bb528779d5110099dc100.md.tex
 INPUT ./HUBerlin-bundle.dtx
 INPUT ./HUBerlin-bundle.dtx
 INPUT /usr/local/texlive/2019/texmf-dist/fonts/tfm/public/cm/cmmi12.tfm

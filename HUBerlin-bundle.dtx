@@ -1,6 +1,6 @@
 % \iffalse
 %<*internal|cls|sty>
-\def\Version{2019/06/06 v0.0.2}
+\def\Version{2019/06/21 v1.0.0}
 %</internal|cls|sty>
 %<*internal>
 \iffalse
@@ -33,7 +33,8 @@
 %       ██   ██ ███████ ██   ██ ██████  ██      ██ ███████
 % */
 %<*readme&main>
-# HUBerlin
+# HUBerlin-bundle
+
 ## Documents and Documentations for HUBerlin bundle
 
 This bundle provides following files:
@@ -45,6 +46,7 @@ This bundle provides following files:
   * `makefile`
 
 Furthermore there are a couple of folders.
+
  * `examples`
  * `img`
  * `cls`
@@ -52,6 +54,7 @@ Furthermore there are a couple of folders.
 
 This work has the LPPL maintenance status _maintained_.
 The current maintainer of this work is [Lukas C. Bossert](https://github.com/lukascbossert).
+
 %</readme&main>
 % /*
 %     ██ ██████  ███████  █████  ██████  ███    ███ ███████
@@ -204,7 +207,7 @@ Copyright (C) 2019
 \def\HUBerlinsubject{Guideline}
 \def\HUBerlinshort{HUBerlin-bundle}
 \def\HUBerlintitle{%
-Documents and Documentations for \LaTeX\ at the Humboldt-Universität zu Berlin}
+Documents and Documentations for \LaTeX\ at the Humboldt-Universität zu Berlin (unofficial)}
 \def\HUBerlinsubtitle{For Authors and Developers}
 \def\HUBerlinauthor{Lukas C. Bossert}
 \RequirePackage{scrlfile}
@@ -238,12 +241,14 @@ Documents and Documentations for \LaTeX\ at the Humboldt-Universität zu Berlin}
 % ▀ ██ ▀██   ██ ██      ██   ██ ██   ██ ██  ██  ██ ██
 %       ██   ██ ███████ ██   ██ ██████  ██      ██ ███████
 % */
-%<*driver|readme&main>
-With this bundle you have several documents which are according to the coporate design of the Humboldt-Universität zu Berlin.
+%<*readme,main>
+
+With this (unofficial) bundle you have several documents which are designed according to the coporate design of the Humboldt-Universität zu Berlin.
+
 
 Following documents or documentclasses are available:
 
-* letter (`HUBerlin-letter.cls`)
+* letter (`HUBerlin-letter.cls`); via `.tex` and `.md`
 
 
 
@@ -281,6 +286,11 @@ All notable changes to this project will be documented in the [README.md](https:
 This project **does not** adhere to [Semantic Versioning](http://semver.org/).
 The markdown syntax is inspired by the conventions proposed by [keepachangelog.com](http://keepachangelog.com/).
 
+
+
+### 1.0.0 (2019-06-21)
+ First release with a documentclass for letter.
+
 ## Copyright
 Various parts of this bundle have different copyrights.
 
@@ -314,7 +324,7 @@ DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
 THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-%</driver|readme&main>
+%</readme,main>
 % /*
 %     ██ ██████  ███████  █████  ██████  ███    ███ ███████
 %    ██  ██   ██ ██      ██   ██ ██   ██ ████  ████ ██
@@ -336,6 +346,7 @@ You can easily pick up the basic file structure from \cref{HUBerlin:bundle-struc
 \dirtree{%
 .1 \HUBerlinFolder HUBerlin-bundle.
 .2 HUBerlin-bundle.dtx\DTcomment{code and documentation}.
+.2 HUBerlin-bundle.pdf\DTcomment{documentation}.
 .2 HUBerlin-letter.tex \DTcomment{letter}.
 .2 HUBerlin-letter.lco \DTcomment{datafile for letter}.
 .2 HUBerlin-letter.pdf \DTcomment{letter}.
@@ -343,7 +354,8 @@ You can easily pick up the basic file structure from \cref{HUBerlin:bundle-struc
 .2 HUBerlin-letter-markdown.pdf \DTcomment{converted letter from markdown}.
 .2 HUBerlin-letter.md \DTcomment{example markdown file }.
 .2 \HUBerlinFolder img\DTcomment{folder for images}.
-.3 texografie-logo.png\DTcomment{logo of \TeXografie}.
+.3 texografie-logo.png\DTcomment{logo of maintainer}.
+.3 HUBerlin-logo.png\DTcomment{logo of HU}.
 .2 makefile\DTcomment{makefile to generate all required files}.
 .2 README.md\DTcomment{README file with information on installation}.
 }

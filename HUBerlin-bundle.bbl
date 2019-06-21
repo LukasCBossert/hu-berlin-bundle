@@ -19,81 +19,47 @@
 
 \refsection{0}
   \datalist[entry]{nty/global//global/global}
-    \entry{graphicx}{manual}{}
-      \name{author}{2}{}{%
-        {{hash=3094f4812cc660f7320fd1ab3d3da906}{%
-           family={Carlisle},
-           familyi={C\bibinitperiod},
-           given={David},
-           giveni={D\bibinitperiod}}}%
-        {{hash=07f86997f62ce230e28cdad3bec300d6}{%
-           family={{The LaTeX Team}},
-           familyi={T\bibinitperiod}}}%
+    \entry{marvosym}{manual}{}
+      \name{author}{3}{}{%
+        {{hash=39e0fdd2713ee849ad524b47b5dcd75b}{%
+           family={Henlich},
+           familyi={H\bibinitperiod},
+           given={Thomas},
+           giveni={T\bibinitperiod}}}%
+        {{hash=758d756cbeef628d9fc0506628ec9514}{%
+           family={Miklavec},
+           familyi={M\bibinitperiod},
+           given={Mojca},
+           giveni={M\bibinitperiod}}}%
+        {{hash=5e0decadabdd1ad598b7ce99d7289d2c}{%
+           family={Vogel},
+           familyi={V\bibinitperiod},
+           given={Martin},
+           giveni={M\bibinitperiod}}}%
       }
-      \strng{namehash}{37671d4ea490635164a4d9bafc621603}
-      \strng{fullhash}{37671d4ea490635164a4d9bafc621603}
-      \strng{bibnamehash}{37671d4ea490635164a4d9bafc621603}
-      \strng{authorbibnamehash}{37671d4ea490635164a4d9bafc621603}
-      \strng{authornamehash}{37671d4ea490635164a4d9bafc621603}
-      \strng{authorfullhash}{37671d4ea490635164a4d9bafc621603}
-      \field{sortinit}{C}
-      \field{sortinithash}{963e9d84a3da2344e8833203de5aed05}
+      \strng{namehash}{abec02023b1b21a94dcbe2c43bebae0d}
+      \strng{fullhash}{abec02023b1b21a94dcbe2c43bebae0d}
+      \strng{bibnamehash}{abec02023b1b21a94dcbe2c43bebae0d}
+      \strng{authorbibnamehash}{abec02023b1b21a94dcbe2c43bebae0d}
+      \strng{authornamehash}{abec02023b1b21a94dcbe2c43bebae0d}
+      \strng{authorfullhash}{abec02023b1b21a94dcbe2c43bebae0d}
+      \field{sortinit}{H}
+      \field{sortinithash}{5f15a7bc777ad49ff15aa4d2831b1681}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{day}{1}
-      \field{month}{6}
-      \field{subtitle}{Enhanced support for graphics}
-      \field{title}{The Graphicx package}
-      \field{urlday}{11}
+      \field{subtitle}{Martin Vogel's Symbols (marvosym) font}
+      \field{title}{The Marvosym package}
+      \field{urlday}{21}
       \field{urlmonth}{6}
       \field{urlyear}{2019}
-      \field{version}{1.1a}
-      \field{year}{2017}
-      \field{dateera}{ce}
-      \field{urldateera}{ce}
-      \verb{urlraw}
-      \verb http://www.ctan.org/pkg/graphicx
-      \endverb
-      \verb{url}
-      \verb http://www.ctan.org/pkg/graphicx
-      \endverb
-    \endentry
-    \entry{geometry}{manual}{}
-      \name{author}{2}{}{%
-        {{hash=3094f4812cc660f7320fd1ab3d3da906}{%
-           family={Carlisle},
-           familyi={C\bibinitperiod},
-           given={David},
-           giveni={D\bibinitperiod}}}%
-        {{hash=ba0263921088645dd1bd8d289413f57d}{%
-           family={Umeki},
-           familyi={U\bibinitperiod},
-           given={Hideo},
-           giveni={H\bibinitperiod}}}%
-      }
-      \strng{namehash}{27e92109d69fe3866aa248ae84c33ede}
-      \strng{fullhash}{27e92109d69fe3866aa248ae84c33ede}
-      \strng{bibnamehash}{27e92109d69fe3866aa248ae84c33ede}
-      \strng{authorbibnamehash}{27e92109d69fe3866aa248ae84c33ede}
-      \strng{authornamehash}{27e92109d69fe3866aa248ae84c33ede}
-      \strng{authorfullhash}{27e92109d69fe3866aa248ae84c33ede}
-      \field{sortinit}{C}
-      \field{sortinithash}{963e9d84a3da2344e8833203de5aed05}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{subtitle}{Flexible and complete interface to document dimensions}
-      \field{title}{The Geometry package}
-      \field{urlday}{11}
-      \field{urlmonth}{6}
-      \field{urlyear}{2019}
-      \field{version}{5.8}
+      \field{version}{2.2a}
       \field{year}{}
       \field{urldateera}{ce}
       \verb{urlraw}
-      \verb http://www.ctan.org/pkg/geometry
+      \verb http://www.marvosym.de
       \endverb
       \verb{url}
-      \verb http://www.ctan.org/pkg/geometry
+      \verb http://www.marvosym.de
       \endverb
     \endentry
     \entry{Hoare1973}{incollection}{}
@@ -166,7 +132,7 @@
       \field{month}{2}
       \field{subtitle}{Define and manage page styles}
       \field{title}{The Scrlayer-scrpage package}
-      \field{urlday}{11}
+      \field{urlday}{21}
       \field{urlmonth}{6}
       \field{urlyear}{2019}
       \field{version}{3.26b}
@@ -203,7 +169,7 @@
       \field{month}{2}
       \field{subtitle}{Koma-Script ‘letter’ class}
       \field{title}{The Scrlttr2 package}
-      \field{urlday}{11}
+      \field{urlday}{21}
       \field{urlmonth}{6}
       \field{urlyear}{2019}
       \field{version}{3.26b}
@@ -215,49 +181,6 @@
       \endverb
       \verb{url}
       \verb http://www.komascript.de/
-      \endverb
-    \endentry
-    \entry{marvosym}{manual}{}
-      \name{author}{3}{}{%
-        {{hash=758d756cbeef628d9fc0506628ec9514}{%
-           family={Miklavec},
-           familyi={M\bibinitperiod},
-           given={Mojca},
-           giveni={M\bibinitperiod}}}%
-        {{hash=5e0decadabdd1ad598b7ce99d7289d2c}{%
-           family={Vogel},
-           familyi={V\bibinitperiod},
-           given={Martin},
-           giveni={M\bibinitperiod}}}%
-        {{hash=39e0fdd2713ee849ad524b47b5dcd75b}{%
-           family={Henlich},
-           familyi={H\bibinitperiod},
-           given={Thomas},
-           giveni={T\bibinitperiod}}}%
-      }
-      \strng{namehash}{b4ac6c8a89ebe715f87277b8daa3a185}
-      \strng{fullhash}{b4ac6c8a89ebe715f87277b8daa3a185}
-      \strng{bibnamehash}{b4ac6c8a89ebe715f87277b8daa3a185}
-      \strng{authorbibnamehash}{b4ac6c8a89ebe715f87277b8daa3a185}
-      \strng{authornamehash}{b4ac6c8a89ebe715f87277b8daa3a185}
-      \strng{authorfullhash}{b4ac6c8a89ebe715f87277b8daa3a185}
-      \field{sortinit}{M}
-      \field{sortinithash}{cfd219b90152c06204fab207bc6c7cab}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{subtitle}{Martin Vogel's Symbols (marvosym) font}
-      \field{title}{The Marvosym package}
-      \field{urlday}{11}
-      \field{urlmonth}{6}
-      \field{urlyear}{2019}
-      \field{version}{2.2a}
-      \field{year}{}
-      \field{urldateera}{ce}
-      \verb{urlraw}
-      \verb http://www.marvosym.de
-      \endverb
-      \verb{url}
-      \verb http://www.marvosym.de
       \endverb
     \endentry
     \entry{hyperref}{manual}{}
@@ -287,7 +210,7 @@
       \field{month}{11}
       \field{subtitle}{Extensive support for hypertext in LaTeX}
       \field{title}{The Hyperref package}
-      \field{urlday}{11}
+      \field{urlday}{21}
       \field{urlmonth}{6}
       \field{urlyear}{2019}
       \field{version}{6.88e}
@@ -321,7 +244,7 @@
       \field{labeltitlesource}{title}
       \field{subtitle}{Embed XMP metadata within a LaTeX document}
       \field{title}{The Hyperxmp package}
-      \field{urlday}{11}
+      \field{urlday}{21}
       \field{urlmonth}{6}
       \field{urlyear}{2019}
       \field{version}{4.1}
@@ -354,7 +277,7 @@
       \field{labeltitlesource}{title}
       \field{subtitle}{Advanced font selection in XeLaTeX and LuaLaTeX}
       \field{title}{The Fontspec package}
-      \field{urlday}{11}
+      \field{urlday}{21}
       \field{urlmonth}{6}
       \field{urlyear}{2019}
       \field{version}{2.7c}
@@ -365,6 +288,83 @@
       \endverb
       \verb{url}
       \verb http://www.ctan.org/pkg/fontspec
+      \endverb
+    \endentry
+    \entry{graphicx}{manual}{}
+      \name{author}{2}{}{%
+        {{hash=07f86997f62ce230e28cdad3bec300d6}{%
+           family={{The LaTeX Team}},
+           familyi={T\bibinitperiod}}}%
+        {{hash=3094f4812cc660f7320fd1ab3d3da906}{%
+           family={Carlisle},
+           familyi={C\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{0874aa3b755f447ac6a8927370901936}
+      \strng{fullhash}{0874aa3b755f447ac6a8927370901936}
+      \strng{bibnamehash}{0874aa3b755f447ac6a8927370901936}
+      \strng{authorbibnamehash}{0874aa3b755f447ac6a8927370901936}
+      \strng{authornamehash}{0874aa3b755f447ac6a8927370901936}
+      \strng{authorfullhash}{0874aa3b755f447ac6a8927370901936}
+      \field{sortinit}{T}
+      \field{sortinithash}{6f7aff9db9dcfeb7f95fd5bbd2f78df9}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{1}
+      \field{month}{6}
+      \field{subtitle}{Enhanced support for graphics}
+      \field{title}{The Graphicx package}
+      \field{urlday}{21}
+      \field{urlmonth}{6}
+      \field{urlyear}{2019}
+      \field{version}{1.1a}
+      \field{year}{2017}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb http://www.ctan.org/pkg/graphicx
+      \endverb
+      \verb{url}
+      \verb http://www.ctan.org/pkg/graphicx
+      \endverb
+    \endentry
+    \entry{geometry}{manual}{}
+      \name{author}{2}{}{%
+        {{hash=ba0263921088645dd1bd8d289413f57d}{%
+           family={Umeki},
+           familyi={U\bibinitperiod},
+           given={Hideo},
+           giveni={H\bibinitperiod}}}%
+        {{hash=3094f4812cc660f7320fd1ab3d3da906}{%
+           family={Carlisle},
+           familyi={C\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{0dd1965ac4b597cda95c2affee5af9b0}
+      \strng{fullhash}{0dd1965ac4b597cda95c2affee5af9b0}
+      \strng{bibnamehash}{0dd1965ac4b597cda95c2affee5af9b0}
+      \strng{authorbibnamehash}{0dd1965ac4b597cda95c2affee5af9b0}
+      \strng{authornamehash}{0dd1965ac4b597cda95c2affee5af9b0}
+      \strng{authorfullhash}{0dd1965ac4b597cda95c2affee5af9b0}
+      \field{sortinit}{U}
+      \field{sortinithash}{36a2444f5238e0dcf4bb59704df6624d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{subtitle}{Flexible and complete interface to document dimensions}
+      \field{title}{The Geometry package}
+      \field{urlday}{21}
+      \field{urlmonth}{6}
+      \field{urlyear}{2019}
+      \field{version}{5.8}
+      \field{year}{}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb http://www.ctan.org/pkg/geometry
+      \endverb
+      \verb{url}
+      \verb http://www.ctan.org/pkg/geometry
       \endverb
     \endentry
   \enddatalist
