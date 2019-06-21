@@ -1,0 +1,81 @@
+%%
+%% This is file `HUBerlin-letter-template.latex',
+%% generated with the docstrip utility.
+%%
+%% The original source files were:
+%%
+%% HUBerlin-bundle.dtx  (with options: `template,letter-md')
+%% ----------------------------------------------------------------
+%% HUBerlin-bundle
+%% Author:  Lukas C. Bossert
+%% E-mail:  lukas@texografie.de
+%% License: Released under the LaTeX Project Public License v1.3c or later
+%% See:     http://www.latex-project.org/lppl.txt
+%% Various parts my have a different licence,
+%% please consider and respect them carefully.
+%% ----------------------------------------------------------------
+%% 
+\documentclass{HUBerlin-letter}
+\newkomavar{opening}
+\newkomavar{closing}
+\setkomavar{opening}{Sehr geehrte Damen und Herren}
+\setkomavar{closing}{Mit freundlichen Grüßen}
+$for(letteroption)$
+\LoadLetterOption{$letteroption$}
+$endfor$
+$if(sender)$\LoadLetterOption{$sender$}$endif$
+$if(addresseeimage)$\setkomavar{addresseeimage}{$addresseeimage$}$endif$
+$if(backaddress)$\setkomavar{backaddress}{$backaddress$}\KOMAoptions{backaddress=true}$endif$
+$if(fromalign)$\KOMAoptions{fromalign=$fromalign$}$endif$
+$if(customer)$\setkomavar{customer}{$customer$}$endif$
+$if(date)$\setkomavar{date}{$date$}$endif$
+$if(fromaddress)$\setkomavar{fromaddress}{$fromaddress$}$endif$
+$if(frombank)$\setkomavar{frombank}{$frombank$}$endif$
+$if(fromemail)$\setkomavar{fromemail}{$fromemail$}\KOMAoptions{fromemail=true}$endif$
+$if(fromfax)$\setkomavar{fromfax}{$fromfax$}\KOMAoptions{fromfax=true}$endif$
+$if(fromlogo)$\setkomavar{fromlogo}{$fromlogo$}\KOMAoptions{fromlogo=true}$endif$
+$if(frommobilephone)$\setkomavar{frommobilephone}{$frommobilephone$}\KOMAoptions{frommobilephone=true}$endif$
+$if(fromname)$\setkomavar{fromname}{$fromname$}$endif$
+$if(fromphone)$\setkomavar{fromphone}{$fromphone$}\KOMAoptions{fromphone=true}$endif$
+$if(fromurl)$\setkomavar{fromurl}{$fromurl$}\KOMAoptions{fromurl=true}$endif$
+$if(fromzipcode)$\setkomavar{fromzipcode}{$fromzipcode$}$endif$
+$if(invoice)$\setkomavar{invoice}{$invoice$}$endif$
+$if(location)$\setkomavar{location}{$location$}$endif$
+$if(myref)$\setkomavar{myref}{$myref$}$endif$
+$if(myrefname)$\setkomavar*{myref}{$myrefname$}$endif$
+$if(place)$\setkomavar{place}{$place$}$endif$
+$if(PPcode)$\setkomavar{PPcode}{$PPcode$}$endif$
+$if(signature)$\setkomavar{signature}{$signature$}$endif$
+$if(specialmail)$\setkomavar{specialmail}{$specialmail$}$endif$
+$if(subject)$\setkomavar{subject}{$subject$}$endif$
+$if(title)$\setkomavar{title}{$title$}$endif$
+$if(yourmail)$\setkomavar{yourmail}{$yourmail$}$endif$
+$if(yourref)$\setkomavar{yourref}{$yourref$}$endif$
+$if(opening)$\setkomavar{opening}{$opening$}$endif$
+$if(closing)$\setkomavar{closing}{$closing$}$endif$
+$if(firstfoot)$\setkomavar{firstfoot}{$firstfoot$}$endif$
+$if(addressee)$
+$else$
+\KOMAoptions{addrfield=false}
+$endif$
+\begin{document}
+\begin{letter}{%
+$for(addressee)$
+$addressee$$sep$\\
+$endfor$
+}
+$for(include-before)$
+$include-before$
+$endfor$
+\opening{\usekomavar{opening}}
+$body$
+\closing{\usekomavar{closing}}
+$if(ps)$\ps{$ps$}$endif$
+$if(encl)$\encl{$encl$}$endif$
+$for(include-after)$$include-after$$endfor$
+\end{letter}
+\end{document}
+%% 
+%% Copyright (C) 2019
+%%
+%% End of file `HUBerlin-letter-template.latex'.

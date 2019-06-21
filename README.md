@@ -19,6 +19,8 @@ Furthermore there are a couple of folders.
 This work has the LPPL maintenance status _maintained_.
 The current maintainer of this work is [Lukas C. Bossert](https://github.com/lukascbossert).
 
+You find this bundle also on [Zenodo](https://doi.org/10.5281/zenodo.3251728)
+
 
 With this (unofficial) bundle you have several documents which are designed according to the coporate design of the Humboldt-Universität zu Berlin.
 
@@ -56,6 +58,9 @@ This bundle is constantly updated. For hints, errors or suggestions use the GitH
 All notable changes to this project will be documented in the [README.md](https://github.com/LukasCBossert/HUBerlin-bundle/blob/master/README.md).
 This project **does not** adhere to [Semantic Versioning](http://semver.org/).
 The markdown syntax is inspired by the conventions proposed by [keepachangelog.com](http://keepachangelog.com/).
+
+### 1.0.1 (2019-06-21)
+ Internal changes for publishing. Still one documentclass for a letter.
 
 ### 1.0.0 (2019-06-21)
  First release with a documentclass for letter.

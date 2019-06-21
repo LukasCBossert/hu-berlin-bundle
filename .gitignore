@@ -5,3 +5,6 @@ archive/*
 *.fls
 *.log
 .DS_Store
+HUBerlin-bundle-ctan.bib
+HUBerlin-bundle-style.sty
+HUBerlin-bundle-bibliography.bib
