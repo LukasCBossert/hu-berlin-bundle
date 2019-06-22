@@ -1,6 +1,6 @@
 ---
-documentclass: HUBerlin-letter
-sender: HUBerlin-letter
+documentclass: hu-berlin-letter
+sender: hu-berlin-letter
 subject: Short description
 addressee:
 - Alexander von Humboldt

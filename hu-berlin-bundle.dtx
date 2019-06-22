@@ -1,29 +1,29 @@
 % \iffalse
 %<*internal|cls|sty>
-\def\Version{2019/06/21 v1.0.1}
+\def\Version{2019/06/21 v1.0.2}
 %</internal|cls|sty>
 %<*internal>
 \iffalse
 %</internal>
 %<cls|sty>\NeedsTeXFormat{LaTeX2e}[2005/12/01]
 %<*cls&letter>
-\ProvidesClass{HUBerlin-letter}
+\ProvidesClass{hu-berlin-letter}
   [\Version\ Humboldt-Universit"at zu Berlin - letter documentclass]
-\ClassInfo{HUBerlin}{* * * HUBerlin * * *\MessageBreak
-    Part of the HUBerlin Bundle }
+\ClassInfo{hu-berlin}{* * * hu-berlin * * *\MessageBreak
+    Part of the hu-berlin Bundle }
 %</cls&letter>
 %<*sty>
 %<*style>
-\ProvidesPackage{HUBerlin-bundle-style}
-  [\Version\space HUBerlin - package for style the documentation]
-  \PackageInfo{HUBerlin}{* * * HUBerlin * * *\MessageBreak
-	  Part of the HUBerlin Bundle}
+\ProvidesPackage{hu-berlin-bundle-style}
+  [\Version\space hu-berlin - package for style the documentation]
+  \PackageInfo{hu-berlin}{* * * hu-berlin * * *\MessageBreak
+	  Part of the hu-berlin Bundle}
 %</style>
 %</sty>
 %<*driver>
 \catcode9=12
 \ProvidesFile{\jobname.dtx}
-	[\Version\space Documentation of the HUBerlin Bundle]
+	[\Version\space Documentation of the hu-berlin Bundle]
 %</driver>
 % /*
 %       ██████  ███████  █████  ██████  ███    ███ ███████
@@ -33,29 +33,37 @@
 %       ██   ██ ███████ ██   ██ ██████  ██      ██ ███████
 % */
 %<*readme&main>
-# HUBerlin-bundle
+hu-berlin-bundle
+================
 
-## Documents and Documentations for HUBerlin bundle
+This package provides files according to the corporate design
+for the Humboldt-Universität zu Berlin.
+It is _no_ official package of the university itself and
+not officially approved by it.
+
+You find more information in the official [corporate design guideline](https://www.hu-berlin.de/de/hu-intern/design/basiselemente/leitfaden-corporate-design-hu.pdf) 
+and on the website <https://www.hu-berlin.de/de/hu-intern/design>.
+
+## Documents and Documentations for hu-berlin bundle
+
 
 This bundle provides following files:
 
-  * `HUBerlin-bundle.dtx` which is the core file designed with literate programming 
-  * `HUBerlin-bundle.pdf` is documentation of the bundle.
-  * `HUBerlin-letter.cls` is the documentclass for letters
+  * `hu-berlin-bundle.dtx` which is the core file designed with literate programming 
+  * `hu-berlin-bundle.pdf` is documentation of the bundle.
   * `README.md`
   * `makefile`
 
-Furthermore there are a couple of folders.
+All other files can and will be generated from the `.dtx` file (see below).
 
- * `examples`
- * `img`
- * `cls`
+Furthermore there is the folder `img` which contains the necessary image files.
 
 
 This work has the LPPL maintenance status _maintained_.
 The current maintainer of this work is [Lukas C. Bossert](https://github.com/lukascbossert).
 
-You find this bundle also on [Zenodo](https://doi.org/10.5281/zenodo.3251728) 
+
+You find this bundle versioned and available on [Zenodo](https://doi.org/10.5281/zenodo.3251728) 
 
 %</readme&main>
 % /*
@@ -143,14 +151,14 @@ You find this bundle also on [Zenodo](https://doi.org/10.5281/zenodo.3251728)
 \usedir{doc/latex/\jobname}
 \generate{
   \file{README.md}{\from{\jobname.dtx}{readme,main}}
-  \file{HUBerlin-bundle-bibliography.bib}{\from{\jobname.dtx}{bib}}
-  \file{HUBerlin-letter.tex}{\from{\jobname.dtx}{example,letter}}
-  \file{HUBerlin-letter.md}{\from{\jobname.dtx}{example,letter-md}}
+  \file{hu-berlin-bundle-bibliography.bib}{\from{\jobname.dtx}{bib}}
+  \file{hu-berlin-letter.tex}{\from{\jobname.dtx}{example,letter}}
+  \file{hu-berlin-letter.md}{\from{\jobname.dtx}{example,letter-md}}
 }
 
 \preamble
 ----------------------------------------------------------------
-HUBerlin-bundle
+hu-berlin-bundle
 Author:  Lukas C. Bossert
 E-mail:  lukas@texografie.de
 License: Released under the LaTeX Project Public License v1.3c or later
@@ -167,12 +175,12 @@ Copyright (C) 2019
 
 \usedir{tex/latex/\jobname}
 \generate{
-  \file{HUBerlin-letter.tex}{\from{\jobname.dtx}{example,letter}}
-  \file{HUBerlin-letter.lco}{\from{\jobname.dtx}{example,lco}}
-  \file{HUBerlin-letter.cls}{\from{\jobname.dtx}{cls,letter}}
+  \file{hu-berlin-letter.tex}{\from{\jobname.dtx}{example,letter}}
+  \file{hu-berlin-letter.lco}{\from{\jobname.dtx}{example,lco}}
+  \file{hu-berlin-letter.cls}{\from{\jobname.dtx}{cls,letter}}
   %
-  \file{HUBerlin-bundle-style.sty}{\from{\jobname.dtx}{sty,style}}
-  \file{HUBerlin-letter-template.latex}{\from{\jobname.dtx}{template,letter-md}}
+  \file{hu-berlin-bundle-style.sty}{\from{\jobname.dtx}{sty,style}}
+  \file{hu-berlin-letter-template.latex}{\from{\jobname.dtx}{template,letter-md}}
 }
 %</install>
 %<install>\endbatchfile
@@ -196,7 +204,7 @@ Copyright (C) 2019
 % */
 %<*driver>
 \ProvidesFile{\jobname.dtx}
-	[\Version\space Documents and documentation for HUBerlin]
+	[\Version\space Documents and documentation for hu-berlin]
 %</driver>
 % /*
 % ██████   ██████   ██████  ██████ ██       █████  ███████ ███████
@@ -206,12 +214,12 @@ Copyright (C) 2019
 % ██████   ██████   ██████  ██████ ███████ ██   ██ ███████ ███████
 % */
 %<*driver>
-\def\HUBerlinsubject{Guideline}
-\def\HUBerlinshort{HUBerlin-bundle}
-\def\HUBerlintitle{%
+\def\huberlinsubject{Guideline}
+\def\huberlinshort{hu-berlin-bundle}
+\def\huberlintitle{%
 Documents and Documentations for \LaTeX\ at the Humboldt-Universität zu Berlin (unofficial)}
-\def\HUBerlinsubtitle{For Authors and Developers}
-\def\HUBerlinauthor{Lukas C. Bossert}
+\def\huberlinsubtitle{For Authors and Developers}
+\def\huberlinauthor{Lukas C. Bossert}
 \RequirePackage{scrlfile}
 \PassOptionsToClass{%
 	english
@@ -219,7 +227,7 @@ Documents and Documentations for \LaTeX\ at the Humboldt-Universität zu Berlin 
   }{scrbook}
 \ReplaceClass{article}{scrbook}
 \documentclass{ltxdoc}
-\usepackage{HUBerlin-bundle-style} 
+\usepackage{hu-berlin-bundle-style} 
 \GetFileInfo{\jobname.dtx}
 % /*
 %           ██████   ██████   ██████ ██    ██ ███    ███ ███████ ███    ██ ████████
@@ -245,21 +253,21 @@ Documents and Documentations for \LaTeX\ at the Humboldt-Universität zu Berlin 
 % */
 %<*readme,main>
 
-With this (unofficial) bundle you have several documents which are designed according to the coporate design of the Humboldt-Universität zu Berlin.
+With this (unofficial) bundle you have several documents which are designed according to the corporate design of the Humboldt-Universität zu Berlin.
 
 
 Following documents or documentclasses are available:
 
-* letter (`HUBerlin-letter.cls`); via `.tex` and `.md`
+* letter (`hu-berlin-letter.cls`); via `.tex` and `.md`
 
 
 
 ## Installation of the bundle
-`HUBerlin` is part of the distributions [MiKTeX](http://www.miktex.org)
+`hu-berlin` is part of the distributions [MiKTeX](http://www.miktex.org)
 and [TeXLive](http://www.tug.org/texlive) -- thus, you
 can easily install it using the respective package manager.
 If you would like to
-install `HUBerlin-bundle` into your local folder  manually, do the following:
+install `hu-berlin-bundle` into your local folder  manually, do the following:
 Go to your terminal, browse to the folder of this bundle and run
 
 ```
@@ -280,27 +288,33 @@ This might be helpful if you send the bundle to someone else.
 * `uninstall`: will erase the locally installed files.
 
 
-This bundle is constantly updated. For hints, errors or suggestions use the GitHub repository [https://github.com/LukasCBossert/HUBerlin-bundle](https://github.com/LukasCBossert/HUBerlin-bundle).
+This bundle is constantly updated. For hints, errors or suggestions use the GitHub repository [https://github.com/LukasCBossert/hu-berlin-bundle](https://github.com/LukasCBossert/hu-berlin-bundle).
 
 ## Changelog
 
-All notable changes to this project will be documented in the [README.md](https://github.com/LukasCBossert/HUBerlin-bundle/blob/master/README.md).
+All notable changes to this project will be documented in the [README.md](https://github.com/LukasCBossert/hu-berlin-bundle/blob/master/README.md).
 This project **does not** adhere to [Semantic Versioning](http://semver.org/).
 The markdown syntax is inspired by the conventions proposed by [keepachangelog.com](http://keepachangelog.com/).
 
+### v1.0.2 (2019-06-22)
+ Renaming files for CTAN compatability.
 
-### 1.0.1 (2019-06-21)
+
+### v1.0.1 (2019-06-21)
  Internal changes for publishing. Still one documentclass for a letter.
 
-### 1.0.0 (2019-06-21)
+### v1.0.0 (2019-06-21)
  First release with a documentclass for letter.
 
 ## Copyright
 Various parts of this bundle have different copyrights.
+If not otherwise stated the copyright is [The LaTeX project public license (LPPL), version 1.3c](https://www.latex-project.org/lppl/lppl-1-3c/)
 
 
 ### Boilerplate / markdown-template
-This template, forked from the pandoc-templates and <https://github.com/JensErat/pandoc-scrlttr2> is dual-licensed, under both the GPL (v2 or higher, same as pandoc) and the BSD 3-clause license (included below).
+The template for the markdown conversion, 
+forked from the pandoc-templates and [JensErat pandoc-scrlttr2](https://github.com/JensErat/pandoc-scrlttr2) is dual-licensed, 
+under both the GPL (v2 or higher, same as pandoc) and the BSD 3-clause license (included below).
 
 ----
 
@@ -338,33 +352,34 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 % */
 %<*driver>
 \end{markdown*}
+\clearpage
 \chapter{Preambel}
 
 This bundle consists of various files
 which are either generated by the core file (|.dtx|)
 or are part of the basic structure of this bundle.
-You can easily pick up the basic file structure from \cref{HUBerlin:bundle-structure}.
+You can easily pick up the basic file structure from \cref{hu-berlin:bundle-structure}.
 
 \begin{figure}[!htb]
 \footnotesize
 \dirtree{%
-.1 \HUBerlinFolder HUBerlin-bundle.
-.2 HUBerlin-bundle.dtx\DTcomment{code and documentation}.
-.2 HUBerlin-bundle.pdf\DTcomment{documentation}.
-.2 HUBerlin-letter.tex \DTcomment{letter}.
-.2 HUBerlin-letter.lco \DTcomment{datafile for letter}.
-.2 HUBerlin-letter.pdf \DTcomment{letter}.
-.2 HUBerlin-letter-template.latex \DTcomment{template for conversion}.
-.2 HUBerlin-letter-markdown.pdf \DTcomment{converted letter from markdown}.
-.2 HUBerlin-letter.md \DTcomment{example markdown file }.
-.2 \HUBerlinFolder img\DTcomment{folder for images}.
+.1 \huberlinFolder hu-berlin-bundle.
+.2 hu-berlin-bundle.dtx\DTcomment{code and documentation}.
+.2 hu-berlin-bundle.pdf\DTcomment{documentation}.
+.2 hu-berlin-letter.tex \DTcomment{letter}.
+.2 hu-berlin-letter.lco \DTcomment{datafile for letter}.
+.2 hu-berlin-letter.pdf \DTcomment{letter}.
+.2 hu-berlin-letter-template.latex \DTcomment{template for conversion}.
+.2 hu-berlin-letter-markdown.pdf \DTcomment{converted letter from markdown}.
+.2 hu-berlin-letter.md \DTcomment{example markdown file }.
+.2 \huberlinFolder img\DTcomment{folder for images}.
 .3 texografie-logo.png\DTcomment{logo of maintainer}.
-.3 HUBerlin-logo.png\DTcomment{logo of HU}.
+.3 hu-berlin-logo.jpg\DTcomment{logo of HU}.
 .2 makefile\DTcomment{makefile to generate all required files}.
 .2 README.md\DTcomment{README file with information on installation}.
 }
-\caption{Structure of \texttt{HUBerlin} bundle}
-\label{HUBerlin:bundle-structure}
+\caption{Structure of \texttt{hu-berlin} bundle}
+\label{hu-berlin:bundle-structure}
 \end{figure}
 
 When you run the |makefile|
@@ -381,26 +396,26 @@ you get all these various files described above.
 \part{Example files}
 \chapter{Letter}
 \section{From \texttt{.tex}}
-\IfFileExists{HUBerlin-letter.pdf}
+\IfFileExists{hu-berlin-letter.pdf}
   {\includepdf[%
   pagecommand={\pagestyle{scrheadings}}
  ,link
  ,pages=-
  ,scale=.8
  % ,nup=1x2
- ,frame]{HUBerlin-letter.pdf}}
- {|HUBerlin-letter.pdf| missing!}
+ ,frame]{hu-berlin-letter.pdf}}
+ {|hu-berlin-letter.pdf| missing!}
 
 \section{From \texttt{.md}}
-\IfFileExists{HUBerlin-letter-markdown.pdf}
+\IfFileExists{hu-berlin-letter-markdown.pdf}
   {\includepdf[%
   pagecommand={\pagestyle{scrheadings}}
  ,link
  ,pages=-
  ,scale=.8
  % ,nup=1x2
- ,frame]{HUBerlin-letter-markdown.pdf}}
- {|HUBerlin-letter-markdown.pdf| missing!}
+ ,frame]{hu-berlin-letter-markdown.pdf}}
+ {|hu-berlin-letter-markdown.pdf| missing!}
 
 
 \end{document}
@@ -438,7 +453,7 @@ you get all these various files described above.
 %
 % The first line should provide this information.
 %    \begin{macrocode}
-\ProvidesFile{HUBerlin-letter.lco}
+\ProvidesFile{hu-berlin-letter.lco}
 %    \end{macrocode}
 % Now we set up the personal data.
 %
@@ -522,25 +537,25 @@ Philosophische Fakultät
 %    \begin{macrocode}
 %</lco>
 %    \end{macrocode}
-% \HUBerlinlisting%
+% \huberlinlisting%
 %  [listing options = {%
 %	,linerange={18-48}
 %   ,numbers     = left
 %   ,numbersep   = 10pt
-%   ,numberstyle =\footnotesize\ttfamily\color{HUBerlin-grey}
+%   ,numberstyle =\footnotesize\ttfamily\color{hu-berlin-grey}
 %   }]%
-%  {HUBerlin-letter.lco}
+%  {hu-berlin-letter.lco}
 %
 % \section{\texttt{.tex}-file}
 %    \begin{macrocode}
 %<*letter>
 %    \end{macrocode}
 %    \begin{macrocode}
-\documentclass{HUBerlin-letter}
+\documentclass{hu-berlin-letter}
 %    \end{macrocode}
 % Now we load the personal data-file which has the ending |.lco|.
 %    \begin{macrocode}
-\LoadLetterOption{HUBerlin-letter}
+\LoadLetterOption{hu-berlin-letter}
 %    \end{macrocode}
 % If you have the HU font installed on your computer, 
 % you can load it, too:
@@ -625,14 +640,14 @@ Philosophische Fakultät
 \end{document}
 %    \end{macrocode}
 % And how does a example letter looks like?
-% \HUBerlinlisting%
+% \huberlinlisting%
 %  [listing options = {%
 %	,linerange={18-48}
 %   ,numbers     = left
 %   ,numbersep   = 10pt
-%   ,numberstyle =\footnotesize\ttfamily\color{HUBerlin-grey}
+%   ,numberstyle =\footnotesize\ttfamily\color{hu-berlin-grey}
 %   }]%
-%  {HUBerlin-letter.tex}
+%  {hu-berlin-letter.tex}
 %    \begin{macrocode}
 %</letter>
 %    \end{macrocode}
@@ -643,18 +658,18 @@ Philosophische Fakultät
 % You need to have |pandoc| installed on your computer.
 % To create letters via markdown and |pandoc| run from the command line:
 %
-% \begin{warning}pandoc --pdf-engine=lualatex --template HUBerlin-letter-template.latex -o YOUR-FILE.pdf YOUR-FILE.md\end{warning}
+% \begin{warning}pandoc --pdf-engine=lualatex --template hu-berlin-letter-template.latex -o YOUR-FILE.pdf YOUR-FILE.md\end{warning}
 % The |.md| file needs a section with metadata.
 %
 % It starts and ends with three |---|.
 % All necessary metadata information are listed inbetween.
 %    \begin{macrocode}
 ---
-documentclass: HUBerlin-letter
+documentclass: hu-berlin-letter
 %    \end{macrocode}
 % The following will load the |.lco|-file, you replace that with the name of your |.lco|-file.
 %    \begin{macrocode}
-sender: HUBerlin-letter
+sender: hu-berlin-letter
 %    \end{macrocode}
 % You should also tell a short subject
 %    \begin{macrocode}
@@ -677,13 +692,13 @@ addressee:
 Thank you very much for your letter.
 %    \end{macrocode}
 % Let’s see how this example file looks like:
-% \HUBerlinlisting%
+% \huberlinlisting%
 %  [listing options = {%
 %   ,numbers     = left
 %   ,numbersep   = 10pt
-%   ,numberstyle =\footnotesize\ttfamily\color{HUBerlin-grey}
+%   ,numberstyle =\footnotesize\ttfamily\color{hu-berlin-grey}
 %   }]%
-%  {HUBerlin-letter.md}
+%  {hu-berlin-letter.md}
 %    \begin{macrocode}
 %</letter-md>
 %    \end{macrocode}
@@ -731,7 +746,7 @@ Thank you very much for your letter.
 %    \begin{macrocode}
 \ifluatex
 \else
-\GenericError{HUBerlin}%
+\GenericError{hu-berlin}%
  {Please use `LuaLaTeX' as Compiler.^^J I abort here.}
 \fi
 %    \end{macrocode}
@@ -1066,11 +1081,14 @@ Thank you very much for your letter.
 %    \end{macrocode}
 % Now resetting or pre-defining some variables.
 %
-% First we set the head of the first page.\\
-%\begin{warning}You need to have the logo of the HU stored on your computer!\end{warning}
+% First we set the head of the first page,
+% which is the logo. 
+% Be sure that you have the right using it!
+% Everything regarding the logo is defined in
+% the corporate design guidlines.\fnurl{https://www.hu-berlin.de/de/hu-intern/design/basiselemente/leitfaden-corporate-design-hu.pdf}
 %    \begin{macrocode}
 \setkomavar{firsthead}{%
- \includegraphics[width=148mm]{HUBerlin-logo.png}%
+ \includegraphics[width=145mm]{hu-berlin-logo.jpg}%
 }
 %    \end{macrocode}
 %
@@ -1111,7 +1129,7 @@ Thank you very much for your letter.
 \setkomavar*{enclseparator}{Anlage}
 %    \end{macrocode}
 %    \begin{macrocode}
-\setkomavar*{ccseparator}{Kopie an}
+\setkomavar*{ccseparator}{Kopie an} 
 %    \end{macrocode}
 %    \begin{macrocode}
 % \RequirePackage{hyperref}
@@ -1146,7 +1164,7 @@ Thank you very much for your letter.
 %<*letter-md>
 %    \end{macrocode}
 %    \begin{macrocode}
-\documentclass{HUBerlin-letter}
+\documentclass{hu-berlin-letter}
 %    \end{macrocode}
 % We predefine two  variables.
 %    \begin{macrocode}
@@ -1282,9 +1300,9 @@ $for(include-after)$$include-after$$endfor$
 
 
 
-\title{\HUBerlintitle}
-%\subtitle{\HUBerlinsubtitle}
-\author{\HUBerlinauthor}
+\title{\huberlintitle}
+%\subtitle{\huberlinsubtitle}
+\author{\huberlinauthor}
 \date{\Version}
 
 
@@ -1295,7 +1313,7 @@ $for(include-after)$$include-after$$endfor$
 \fi
 \ifluatex
 \else
-\GenericError{HUBerlin}%
+\GenericError{hu-berlin}%
  {Please use `LuaLaTeX' as Compiler.^^J I abort here.}
 \fi
 %    \end{macrocode}
@@ -1337,7 +1355,7 @@ $for(include-after)$$include-after$$endfor$
 \renewcommand*{\marginfont}{%
   \rule{0pt}{0.7\baselineskip}%
   \footnotesize%
-  \color{HUBerlin-brown}}
+  \color{hu-berlin-brown}}
 
 \RequirePackage[
   german = guillemets,
@@ -1391,8 +1409,8 @@ $for(include-after)$$include-after$$endfor$
   \null
    {\large\@author\hfill Guideline and Documentation\par}
   \vskip 10em%
-	{\begin{center}\color{HUBerlin-blue}
-	{\fontsize{50}{55}\selectfont\HUBerlinshort{} \par\vskip .5em%
+	{\begin{center}\color{hu-berlin-blue}
+	{\fontsize{50}{55}\selectfont\huberlinshort{} \par\vskip .5em%
 	\Large\sffamily\@title}\par
 	\vskip .5em
 	\end{center}}%
@@ -1415,16 +1433,16 @@ $for(include-after)$$include-after$$endfor$
 \makeatother
 
 \RequirePackage{xcolor}
-\definecolor{HUBerlin-blue}{RGB}{0,65,137} % HEX 004189
-\definecolor{HUBerlin-green}{RGB}{150,190,20} % HEX 93C11A % Topoi
-\definecolor{HUBerlin-grey}{RGB}{169,169,169}
-\definecolor{HUBerlin-brown}{RGB}{82,79,60}
-\definecolor{HUBerlin-red}{RGB}{180,0,0}
+\definecolor{hu-berlin-blue}{RGB}{0,65,137} % HEX 004189
+\definecolor{hu-berlin-green}{RGB}{150,190,20} % HEX 93C11A % Topoi
+\definecolor{hu-berlin-grey}{RGB}{169,169,169}
+\definecolor{hu-berlin-brown}{RGB}{82,79,60}
+\definecolor{hu-berlin-red}{RGB}{180,0,0}
 
 
 \RequirePackage{dirtree}
 \renewcommand*\DTstylecomment{%
-  \color{HUBerlin-grey}%
+  \color{hu-berlin-grey}%
   \footnotesize%
   \sffamily}
 \renewcommand*\DTstyle{%
@@ -1444,8 +1462,8 @@ $for(include-after)$$include-after$$endfor$
 \pagestyle{scrheadings}
 \clearscrheadfoot
 \rofoot*{\thepage}
-\lofoot*{\textcolor{HUBerlin-blue}{\HUBerlintitle}\ \vrule\ \textcolor{HUBerlin-brown}{\HUBerlinsubtitle}}
-\rohead*{HUBerlin-bundle}
+\lofoot*{\textcolor{hu-berlin-blue}{\huberlintitle}\ \vrule\ \textcolor{hu-berlin-brown}{\huberlinsubtitle}}
+\rohead*{hu-berlin-bundle}
 \lohead*{Version: \Version}
 %    \end{macrocode}
 %    \begin{macrocode}
@@ -1499,20 +1517,20 @@ $for(include-after)$$include-after$$endfor$
 \RequirePackage{url}
 %  \urlstyle{same}
 
-\setkomafont{title}{\sffamily\color{HUBerlin-blue}\flushleft\bfseries}
-\setkomafont{disposition}{\color{HUBerlin-brown}\sffamily\bfseries\large}
+\setkomafont{title}{\sffamily\color{hu-berlin-blue}\flushleft\bfseries}
+\setkomafont{disposition}{\color{hu-berlin-brown}\sffamily\bfseries\large}
 \setkomafont{section}{\usekomafont{disposition}}
 \setkomafont{subsection}{\usekomafont{disposition}}
 \setkomafont{subsubsection}{\usekomafont{disposition}}
 % \setkomafont{paragraph}{\bfseries}
 % \setkomafont{subsubsection}{\sffamilybold}
-\setkomafont{subtitle}{\large\color{HUBerlin-brown}\sffamily\flushleft}
-\setkomafont{pageheadfoot}{\footnotesize\sffamily\color{HUBerlin-grey}}
+\setkomafont{subtitle}{\large\color{hu-berlin-brown}\sffamily\flushleft}
+\setkomafont{pageheadfoot}{\footnotesize\sffamily\color{hu-berlin-grey}}
 \setkomafont{descriptionlabel}{\bfseries}
 \setkomafont{footnotelabel}{\bfseries}
 \addtokomafont{titlehead}{\flushright}
-% \setkomafont{headsepline}{\color{HUBerlin-blue}}
-%\setkomafont{marginnote}{\MakeUppercase\color{HUBerlin-brown}} 
+% \setkomafont{headsepline}{\color{hu-berlin-blue}}
+%\setkomafont{marginnote}{\MakeUppercase\color{hu-berlin-brown}} 
 \addtokomafont{caption}{\scriptsize}
 \setkomafont{captionlabel}{\bfseries\sffamily}
 \setkomafont{subject}{\bfseries\sffamily}
@@ -1537,7 +1555,7 @@ $for(include-after)$$include-after$$endfor$
 \RequirePackage{hyperref}
 \hypersetup{% setup the hyperref-package options
   unicode    = true,
-  pdfauthor      = {HUBerlin}, %   - author (PDF meta)
+  pdfauthor      = {hu-berlin}, %   - author (PDF meta)
   pdfauthortitle     = {},
   pdfcopyright   = {Copyright (c) \the\year . All rights reserved.},
   pdfhighlight   = /N,
@@ -1545,15 +1563,15 @@ $for(include-after)$$include-after$$endfor$
   pdfdate    = {\today},
   pdflang    = {},%de en
   pdfcaptionwriter   = {Lukas C. Bossert},
-  pdfkeywords    = {HUBerlin},
+  pdfkeywords    = {hu-berlin},
   pdfencoding    = auto,
-  pdfproducer    = {HUBerlin with LuaLaTeX},
+  pdfproducer    = {hu-berlin with LuaLaTeX},
   bookmarksnumbered  = true,    
   bookmarksopenlevel = 2,
   bookmarksopen  = true,    
   bookmarksdepth = 3,
   colorlinks     = true,    %Colours links instead of ugly boxes
-  urlcolor       = HUBerlin-blue,    %Colour for external hyperlinks
+  urlcolor       = hu-berlin-blue,    %Colour for external hyperlinks
   linkcolor      = black,   %Colour of internal links
   citecolor      = black,   %Colour of citations
   linktoc        = page,
@@ -1574,13 +1592,13 @@ $for(include-after)$$include-after$$endfor$
 %---- newcommands
 \newcommand{\TeXografie}{Lukas C. Bossert
   (www.TeXografie.de)}
-\newcommand\HUBerlin{\HUBerlintitle\xspace}
+\newcommand\huberlin{\huberlintitle\xspace}
 
 
-\newcommand\HUBerlinFolder{%
+\newcommand\huberlinFolder{%
   \begingroup%
   \normalfont%
-  \color{HUBerlin-blue}%
+  \color{hu-berlin-blue}%
   % \faFolderOpen% taken from fontawesome
   \hspace{.3em}%
   \endgroup}
@@ -1623,8 +1641,8 @@ $for(include-after)$$include-after$$endfor$
   breakable,
   top=5pt,
   bottom=5pt,
-  colback=HUBerlin-blue!10,
-  colframe=HUBerlin-blue,
+  colback=hu-berlin-blue!10,
+  colframe=hu-berlin-blue,
   left=5pt,
   right=5pt,
    sharp corners,
@@ -1636,14 +1654,14 @@ $for(include-after)$$include-after$$endfor$
    coltitle=white,
    fonttitle=\bfseries,
    fontupper=\small,%\ttfamily,
-  % colbacktitle=HUBerlin-blue!20
+  % colbacktitle=hu-berlin-blue!20
   #1,
 }
 
 % Replace the squat-u symbol for spaces
 % https://tex.stackexchange.com/a/488123/98739
 \makeatletter
-\def\lst@visiblespace{\lst@ttfamily{\char32}$\textcolor{HUBerlin-grey}{\cdot}$}
+\def\lst@visiblespace{\lst@ttfamily{\char32}$\textcolor{hu-berlin-grey}{\cdot}$}
 \makeatother
 
 
@@ -1655,16 +1673,16 @@ $for(include-after)$$include-after$$endfor$
  ,showstringspaces=true
  }
 
-\lstdefinestyle{HUBerlinlistingstyledef}{%
+\lstdefinestyle{hu-berlinlistingstyledef}{%
   tabsize      = 4,
   breaklines   = true,
   breakatwhitespace = true,
   postbreak=\mbox{$\hookrightarrow$},
   %keepspaces   = true,
   escapeinside = {(*@}{@*)},
-  moredelim    = {[is][\ttfamily\bfseries\color{HUBerlin-blue}]{|}{|}},
-  moredelim    = {[is][\ttfamily\bfseries\color{HUBerlin-blue}]{|1}{1|}},
-  moredelim    = {[is][\ttfamily\bfseries\color{HUBerlin-red}]{|2}{2|}},
+  moredelim    = {[is][\ttfamily\bfseries\color{hu-berlin-blue}]{|}{|}},
+  moredelim    = {[is][\ttfamily\bfseries\color{hu-berlin-blue}]{|1}{1|}},
+  moredelim    = {[is][\ttfamily\bfseries\color{hu-berlin-red}]{|2}{2|}},
   aboveskip=0pt,
   belowskip=0pt,
   captionpos=b,
@@ -1673,19 +1691,19 @@ $for(include-after)$$include-after$$endfor$
   upquote=true,
   showspaces=true,
   showtabs=true,
-  tab=\textcolor{HUBerlin-grey}{\rightarrowfill},
+  tab=\textcolor{hu-berlin-grey}{\rightarrowfill},
   %numbers=left,
-  %numberstyle=\footnotesize\ttfamily\color{HUBerlin-grey},
+  %numberstyle=\footnotesize\ttfamily\color{hu-berlin-grey},
   comment      = [l]{\%},
-  commentstyle = \footnotesize\color{HUBerlin-grey}\addfontfeature{LetterSpace=.7},
+  commentstyle = \footnotesize\color{hu-berlin-grey}\addfontfeature{LetterSpace=.7},
   % deletecomment = [l]{\%<}
   % morecomment  = [l][\nullfont]{\%<},
   % deletecomment  = [is]{\%<}{>},
 }
 
-\lstdefinestyle{HUBerlinlistingstyle}{%
+\lstdefinestyle{hu-berlinlistingstyle}{%
   language  = {TeX},
-  style     = {HUBerlinlistingstyledef},
+  style     = {hu-berlinlistingstyledef},
 }
 
 
@@ -1694,7 +1712,7 @@ $for(include-after)$$include-after$$endfor$
 
 
 \tcbset{%
-HUBerlinstyle/.style={%
+hu-berlinstyle/.style={%
   enhanced,
   before skip=2mm,
   after skip=3mm,
@@ -1710,7 +1728,7 @@ HUBerlinstyle/.style={%
   breakable,
   %before skip=\baselineskip,
   coltitle=white,
-  colbacktitle=HUBerlin-blue!50!black,
+  colbacktitle=hu-berlin-blue!50!black,
   fonttitle=\bfseries\sffamily\footnotesize,
   % before upper={\mynote{\thetcbcounter}},
   title={\hfill{Example \thetcbcounter}},
@@ -1738,8 +1756,8 @@ codecomment/.style={%
   arc is angular,
   arc=3mm,
   underlay={%
-	\path[fill=HUBerlin-grey!80!black] ([yshift=3mm]interior.south east)--++(-0.4,-0.1)--++(0.1,-0.2);
-	\path[draw=HUBerlin-grey,shorten <=-0.05mm,shorten >=-0.05mm] ([yshift=3mm]interior.south east)--++(-0.4,-0.1)--++(0.1,-0.2);
+	\path[fill=hu-berlin-grey!80!black] ([yshift=3mm]interior.south east)--++(-0.4,-0.1)--++(0.1,-0.2);
+	\path[draw=hu-berlin-grey,shorten <=-0.05mm,shorten >=-0.05mm] ([yshift=3mm]interior.south east)--++(-0.4,-0.1)--++(0.1,-0.2);
 	\path[fill=red!50!black,draw=none] (interior.south west) rectangle node[white]{\Huge\bfseries !} ([xshift=4mm]interior.north west);
 	},
   drop fuzzy shadow,
@@ -1751,11 +1769,11 @@ codecomment/.style={%
   crefname   = {example}{examples},
   Crefname   = {Example}{Examples},
 ]{codetext}[2][]{%
-  HUBerlinstyle,
+  hu-berlinstyle,
 %  side text,
   rounded corners=northeast,
   arc=6mm,
-  listing style=HUBerlinlistingstyle,
+  listing style=hu-berlinlistingstyle,
   label = #2,
   #1,
   }
@@ -1765,11 +1783,11 @@ codecomment/.style={%
   crefname={code example}{code examples},
   Crefname={Code example}{Code examples}%
 ]{code}[2][]{%
-  HUBerlinstyle,
+  hu-berlinstyle,
   rounded corners=southeast,
   arc=6mm,
   listing only,
-  listing style=HUBerlinlistingstyle,
+  listing style=hu-berlinlistingstyle,
   label = #2,
   #1,
 }
@@ -1779,11 +1797,11 @@ codecomment/.style={%
   use counter from=codetext,
   crefname={code example}{code examples},
   Crefname={Code example}{Code examples}%
-]{\HUBerlinlisting}{ O{} m }{%
-  HUBerlinstyle,
+]{\huberlinlisting}{ O{} m }{%
+  hu-berlinstyle,
   listing file={#2},
   listing only,
-    listing style=HUBerlinlistingstyle,
+    listing style=hu-berlinlistingstyle,
   #1,
 }
 
@@ -1841,29 +1859,29 @@ codecomment/.style={%
 
 % directly taken from ltxdoc.dtx
 \renewrobustcmd\marg[1]{%
-  {\ttfamily\textcolor{HUBerlin-red}{\{}}%
+  {\ttfamily\textcolor{hu-berlin-red}{\{}}%
    \meta{#1}%
-  {\ttfamily\textcolor{HUBerlin-red}{\}}}%
+  {\ttfamily\textcolor{hu-berlin-red}{\}}}%
   }
 
 \renewrobustcmd\oarg[1]{%
-  {\ttfamily\textcolor{HUBerlin-green}{[}}%
+  {\ttfamily\textcolor{hu-berlin-green}{[}}%
    \meta{#1}%
-  {\ttfamily\textcolor{HUBerlin-green}{]}}%
+  {\ttfamily\textcolor{hu-berlin-green}{]}}%
   }
 
 % adapted from listings.dtx (lstdoc.sty)
 \renewrobustcmd\cmd[1]{%
-  \texttt{\color{HUBerlin-blue}\textbackslash\string#1}\xspace%
+  \texttt{\color{hu-berlin-blue}\textbackslash\string#1}\xspace%
   }
 
 \newrobustcmd\env[2][]{%
   \texttt{%
-	\color{HUBerlin-blue}%
+	\color{hu-berlin-blue}%
 	\textbackslash begin\{\string#2\}#1}%
   \ldots
   \texttt{%
-	\color{HUBerlin-blue}%
+	\color{hu-berlin-blue}%
 	\textbackslash end\{\string#2\}}%
   \xspace}
 %    \end{macrocode}

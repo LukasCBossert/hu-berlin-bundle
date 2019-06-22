@@ -8,3 +8,5 @@ archive/*
 HUBerlin-bundle-ctan.bib
 HUBerlin-bundle-style.sty
 HUBerlin-bundle-bibliography.bib
+.DS_Store
+*.pkglist

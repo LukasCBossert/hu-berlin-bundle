@@ -1,12 +1,12 @@
 %%
-%% This is file `HUBerlin-letter-template.latex',
+%% This is file `hu-berlin-letter-template.latex',
 %% generated with the docstrip utility.
 %%
 %% The original source files were:
 %%
-%% HUBerlin-bundle.dtx  (with options: `template,letter-md')
+%% hu-berlin-bundle.dtx  (with options: `template,letter-md')
 %% ----------------------------------------------------------------
-%% HUBerlin-bundle
+%% hu-berlin-bundle
 %% Author:  Lukas C. Bossert
 %% E-mail:  lukas@texografie.de
 %% License: Released under the LaTeX Project Public License v1.3c or later
@@ -15,7 +15,7 @@
 %% please consider and respect them carefully.
 %% ----------------------------------------------------------------
 %% 
-\documentclass{HUBerlin-letter}
+\documentclass{hu-berlin-letter}
 \newkomavar{opening}
 \newkomavar{closing}
 \setkomavar{opening}{Sehr geehrte Damen und Herren}
@@ -78,4 +78,4 @@ $for(include-after)$$include-after$$endfor$
 %% 
 %% Copyright (C) 2019
 %%
-%% End of file `HUBerlin-letter-template.latex'.
+%% End of file `hu-berlin-letter-template.latex'.

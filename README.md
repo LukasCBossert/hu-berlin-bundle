@@ -1,39 +1,45 @@
-# HUBerlin-bundle
+hu-berlin-bundle
+================
 
-## Documents and Documentations for HUBerlin bundle
+This package provides files according to the corporate design
+for the Humboldt-Universität zu Berlin.
+It is _no_ official package of the university itself and
+not officially approved by it.
+
+You find more information in the official [corporate design guideline](https://www.hu-berlin.de/de/hu-intern/design/basiselemente/leitfaden-corporate-design-hu.pdf)
+and on the website <https://www.hu-berlin.de/de/hu-intern/design>.
+
+## Documents and Documentations for hu-berlin bundle
 
 This bundle provides following files:
 
-  * `HUBerlin-bundle.dtx` which is the core file designed with literate programming
-  * `HUBerlin-bundle.pdf` is documentation of the bundle.
-  * `HUBerlin-letter.cls` is the documentclass for letters
+  * `hu-berlin-bundle.dtx` which is the core file designed with literate programming
+  * `hu-berlin-bundle.pdf` is documentation of the bundle.
   * `README.md`
   * `makefile`
 
-Furthermore there are a couple of folders.
+All other files can and will be generated from the `.dtx` file (see below).
 
- * `examples`
- * `img`
- * `cls`
+Furthermore there is the folder `img` which contains the necessary image files.
 
 This work has the LPPL maintenance status _maintained_.
 The current maintainer of this work is [Lukas C. Bossert](https://github.com/lukascbossert).
 
-You find this bundle also on [Zenodo](https://doi.org/10.5281/zenodo.3251728)
+You find this bundle versioned and available on [Zenodo](https://doi.org/10.5281/zenodo.3251728)
 
 
-With this (unofficial) bundle you have several documents which are designed according to the coporate design of the Humboldt-Universität zu Berlin.
+With this (unofficial) bundle you have several documents which are designed according to the corporate design of the Humboldt-Universität zu Berlin.
 
 Following documents or documentclasses are available:
 
-* letter (`HUBerlin-letter.cls`); via `.tex` and `.md`
+* letter (`hu-berlin-letter.cls`); via `.tex` and `.md`
 
 ## Installation of the bundle
-`HUBerlin` is part of the distributions [MiKTeX](http://www.miktex.org)
+`hu-berlin` is part of the distributions [MiKTeX](http://www.miktex.org)
 and [TeXLive](http://www.tug.org/texlive) -- thus, you
 can easily install it using the respective package manager.
 If you would like to
-install `HUBerlin-bundle` into your local folder  manually, do the following:
+install `hu-berlin-bundle` into your local folder  manually, do the following:
 Go to your terminal, browse to the folder of this bundle and run
 
 ```
@@ -51,25 +57,31 @@ This might be helpful if you send the bundle to someone else.
 * `files`: will only create the files from the `.dtx`-scratch.
 * `uninstall`: will erase the locally installed files.
 
-This bundle is constantly updated. For hints, errors or suggestions use the GitHub repository [https://github.com/LukasCBossert/HUBerlin-bundle](https://github.com/LukasCBossert/HUBerlin-bundle).
+This bundle is constantly updated. For hints, errors or suggestions use the GitHub repository [https://github.com/LukasCBossert/hu-berlin-bundle](https://github.com/LukasCBossert/hu-berlin-bundle).
 
 ## Changelog
 
-All notable changes to this project will be documented in the [README.md](https://github.com/LukasCBossert/HUBerlin-bundle/blob/master/README.md).
+All notable changes to this project will be documented in the [README.md](https://github.com/LukasCBossert/hu-berlin-bundle/blob/master/README.md).
 This project **does not** adhere to [Semantic Versioning](http://semver.org/).
 The markdown syntax is inspired by the conventions proposed by [keepachangelog.com](http://keepachangelog.com/).
 
-### 1.0.1 (2019-06-21)
+### v1.0.2 (2019-06-22)
+ Renaming files for CTAN compatability.
+
+### v1.0.1 (2019-06-21)
  Internal changes for publishing. Still one documentclass for a letter.
 
-### 1.0.0 (2019-06-21)
+### v1.0.0 (2019-06-21)
  First release with a documentclass for letter.
 
 ## Copyright
 Various parts of this bundle have different copyrights.
+If not otherwise stated the copyright is [The LaTeX project public license (LPPL), version 1.3c](https://www.latex-project.org/lppl/lppl-1-3c/)
 
 ### Boilerplate / markdown-template
-This template, forked from the pandoc-templates and <https://github.com/JensErat/pandoc-scrlttr2> is dual-licensed, under both the GPL (v2 or higher, same as pandoc) and the BSD 3-clause license (included below).
+The template for the markdown conversion,
+forked from the pandoc-templates and [JensErat pandoc-scrlttr2](https://github.com/JensErat/pandoc-scrlttr2) is dual-licensed,
+under both the GPL (v2 or higher, same as pandoc) and the BSD 3-clause license (included below).
 
 ----
 

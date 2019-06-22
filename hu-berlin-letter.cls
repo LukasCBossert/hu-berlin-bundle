@@ -1,12 +1,12 @@
 %%
-%% This is file `HUBerlin-letter.cls',
+%% This is file `hu-berlin-letter.cls',
 %% generated with the docstrip utility.
 %%
 %% The original source files were:
 %%
-%% HUBerlin-bundle.dtx  (with options: `cls,letter')
+%% hu-berlin-bundle.dtx  (with options: `cls,letter')
 %% ----------------------------------------------------------------
-%% HUBerlin-bundle
+%% hu-berlin-bundle
 %% Author:  Lukas C. Bossert
 %% E-mail:  lukas@texografie.de
 %% License: Released under the LaTeX Project Public License v1.3c or later
@@ -15,12 +15,12 @@
 %% please consider and respect them carefully.
 %% ----------------------------------------------------------------
 %% 
-\def\Version{2019/06/21 v1.0.1}
+\def\Version{2019/06/21 v1.0.2}
 \NeedsTeXFormat{LaTeX2e}[2005/12/01]
-\ProvidesClass{HUBerlin-letter}
+\ProvidesClass{hu-berlin-letter}
   [\Version\ Humboldt-Universit"at zu Berlin - letter documentclass]
-\ClassInfo{HUBerlin}{* * * HUBerlin * * *\MessageBreak
-    Part of the HUBerlin Bundle }
+\ClassInfo{hu-berlin}{* * * hu-berlin * * *\MessageBreak
+    Part of the hu-berlin Bundle }
 \LoadClass[%
   fontsize=10pt,
   version=last,
@@ -32,7 +32,7 @@
 \fi
 \ifluatex
 \else
-\GenericError{HUBerlin}%
+\GenericError{hu-berlin}%
  {Please use `LuaLaTeX' as Compiler.^^J I abort here.}
 \fi
 \RequirePackage[english,ngerman]{babel}
@@ -219,7 +219,7 @@
 \setplength{locwidth}{45mm}
 \setplength{locheight}{232mm}
 \setkomavar{firsthead}{%
- \includegraphics[width=148mm]{HUBerlin-logo.png}%
+ \includegraphics[width=145mm]{hu-berlin-logo.jpg}%
 }
 \setkomavar{backaddressseparator}{~\textbar~}
 \setkomavar{fromphone}{0000}
@@ -239,4 +239,4 @@
 %% 
 %% Copyright (C) 2019
 %%
-%% End of file `HUBerlin-letter.cls'.
+%% End of file `hu-berlin-letter.cls'.

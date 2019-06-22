@@ -1,12 +1,12 @@
 %%
-%% This is file `HUBerlin-letter.lco',
+%% This is file `hu-berlin-letter.lco',
 %% generated with the docstrip utility.
 %%
 %% The original source files were:
 %%
-%% HUBerlin-bundle.dtx  (with options: `example,lco')
+%% hu-berlin-bundle.dtx  (with options: `example,lco')
 %% ----------------------------------------------------------------
-%% HUBerlin-bundle
+%% hu-berlin-bundle
 %% Author:  Lukas C. Bossert
 %% E-mail:  lukas@texografie.de
 %% License: Released under the LaTeX Project Public License v1.3c or later
@@ -15,7 +15,7 @@
 %% please consider and respect them carefully.
 %% ----------------------------------------------------------------
 %% 
-\ProvidesFile{HUBerlin-letter.lco}
+\ProvidesFile{hu-berlin-letter.lco}
 \setkomavar{fromname}
 [Wissenschaftlicher Mitarbeiter]
 {Dr. Max Mustermann}
@@ -48,4 +48,4 @@ Philosophische Fakultät
 %% 
 %% Copyright (C) 2019
 %%
-%% End of file `HUBerlin-letter.lco'.
+%% End of file `hu-berlin-letter.lco'.

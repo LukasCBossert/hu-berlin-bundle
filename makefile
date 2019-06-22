@@ -1,4 +1,4 @@
-PROJECT:=HUBerlin-bundle
+PROJECT:=hu-berlin-bundle
 SHELL = bash
 MAKE  = make
 CTANBIB = $(PROJECT)-ctan.bib
@@ -31,10 +31,10 @@ examples: files
 	$(MAKE) md2pdf-letter
 
 md2pdf-letter: files
-	pandoc --pdf-engine=lualatex --template HUBerlin-letter-template.latex -o HUBerlin-letter-markdown.pdf HUBerlin-letter.md
+	pandoc --pdf-engine=lualatex --template hu-berlin-letter-template.latex -o hu-berlin-letter-markdown.pdf hu-berlin-letter.md
 
-letter:
-	latexmk -lualatex  -interaction=nonstopmode HUBerlin-letter.tex
+letter: files
+	latexmk -lualatex  -interaction=nonstopmode hu-berlin-letter.tex
 
 # How to get information from CTAN
 CTAN: $(PROJECT).pkglist
@@ -63,7 +63,7 @@ files: $(PROJECT).ins
 $(PROJECT).ins:
 	latex $(PROJECT).dtx
 
-doc: 
+doc: files
 	$(MAKE) $(PROJECT).pdf
 	# $(MAKE) install
 	$(MAKE) examples
@@ -85,12 +85,12 @@ clean:
 	rm -rf _markdown_*
 	$(echoPROJECT) "* cleaned temp files * $(NC)"
 
-ctan:
+ctan: $(PROJECT).dtx
 	$(echoPROJECT) "* start zipping files * $(NC)"
 	@-mkdir archive
 	@rm -f archive/$(PROJECT)-$(DATE)*.zip
 	@mkdir $(TDIR)
-	@cp $(PROJECT).{dtx,pdf,ins} README.md makefile HUBerlin-*.{lco,pdf,tex,cls,latex,md} $(TDIR)
+	@cp $(PROJECT).{dtx,pdf} README.md makefile $(TDIR)
 	@cp -R img $(TDIR)
 	@cd $(TEMP); \
    zip -Drq $(PWD)/archive/$(PROJECT)-$(VERS).zip $(PROJECT)
@@ -100,18 +100,18 @@ ctan:
 # clean all files
 cleanbundle: clean
 	rm -f *.{{b,c,d,l}bx,ins,pdf,zip,bib,sty,cls}
-	rm -f HUBerlin-letter*.{tex,md,lco,latex}
+	rm -f hu-berlin-letter*.{tex,md,lco,latex}
 	$(echoPROJECT) "* cleaned all files * $(NC)"
 
 
 install: uninstall
 	@mkdir -p $(LOCAL)/{tex,source,doc}/latex/$(PROJECT)
 	@cp $(PROJECT).{dtx,ins} $(LOCAL)/source/latex/$(PROJECT)
-	@cp HUBerlin-*.cls $(LOCAL)/tex/latex/$(PROJECT)
+	@cp hu-berlin-*.cls $(LOCAL)/tex/latex/$(PROJECT)
 	@cp img/* $(LOCAL)/tex/latex/$(PROJECT)
 	@cp $(PROJECT).pdf $(LOCAL)/doc/latex/$(PROJECT)
 	mktexlsr
-	@cp HUBerlin-*-template.* ~/.pandoc/templates/
+	@cp hu-berlin-*-template.* ~/.pandoc/templates/
 	$(echoPROJECT) "* all files installed * $(NC)"
 
 
