@@ -91,6 +91,7 @@ ctan: $(PROJECT).dtx
 	@rm -f archive/$(PROJECT)-$(DATE)*.zip
 	@mkdir $(TDIR)
 	@cp $(PROJECT).{dtx,pdf} README.md makefile $(TDIR)
+	-@rm -f img/.DS_Store
 	@cp -R img $(TDIR)
 	@cd $(TEMP); \
    zip -Drq $(PWD)/archive/$(PROJECT)-$(VERS).zip $(PROJECT)
