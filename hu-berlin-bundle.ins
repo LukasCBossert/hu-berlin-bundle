@@ -1,0 +1,78 @@
+%%
+%% This is file `hu-berlin-bundle.ins',
+%% generated with the docstrip utility.
+%%
+%% The original source files were:
+%%
+%% hu-berlin-bundle.dtx  (with options: `install')
+%% ----------------------------------------------------------------
+%% hu-berlin-bundle
+%% Author:  Lukas C. Bossert
+%% E-mail:  lukas@texografie.de
+%% License: Released under the LaTeX Project Public License v1.3c or later
+%% See:     http://www.latex-project.org/lppl.txt
+%% Various parts my have a different licence,
+%% please consider and respect them carefully.
+%% ----------------------------------------------------------------
+%% 
+%% \CharacterTable
+%%  {Upper-case    \A\B\C\D\E\F\G\H\I\J\K\L\M\N\O\P\Q\R\S\T\U\V\W\X\Y\Z
+%%   Lower-case    \a\b\c\d\e\f\g\h\i\j\k\l\m\n\o\p\q\r\s\t\u\v\w\x\y\z
+%%   Digits        \0\1\2\3\4\5\6\7\8\9
+%%   Exclamation   \!     Double quote  \"     Hash (number) \#
+%%   Dollar        \$     Percent       \%     Ampersand     \&
+%%   Acute accent  \'     Left paren    \(     Right paren   \)
+%%   Asterisk      \*     Plus          \+     Comma         \,
+%%   Minus         \-     Point         \.     Solidus       \/
+%%   Colon         \:     Semicolon     \;     Less than     \<
+%%   Equals        \=     Greater than  \>     Question mark \?
+%%   Commercial at \@     Left bracket  \[     Backslash     \\
+%%   Right bracket \]     Circumflex    \^     Underscore    \_
+%%   Grave accent  \`     Left brace    \{     Vertical bar  \|
+%%   Right brace   \}     Tilde         \~}
+
+\input docstrip.tex
+\keepsilent
+\askforoverwritefalse
+
+\nopreamble\nopostamble
+
+\usedir{doc/latex/\jobname}
+\generate{
+  \file{README.md}{\from{\jobname.dtx}{readme,main}}
+  \file{hu-berlin-bundle-bibliography.bib}{\from{\jobname.dtx}{bib}}
+  \file{hu-berlin-letter.tex}{\from{\jobname.dtx}{example,letter}}
+  \file{hu-berlin-letter.md}{\from{\jobname.dtx}{example,letter-md}}
+}
+
+\preamble
+----------------------------------------------------------------
+hu-berlin-bundle
+Author:  Lukas C. Bossert
+E-mail:  lukas@texografie.de
+License: Released under the LaTeX Project Public License v1.3c or later
+See:     http://www.latex-project.org/lppl.txt
+Various parts my have a different licence,
+please consider and respect them carefully.
+----------------------------------------------------------------
+
+\endpreamble
+\postamble
+
+Copyright (C) 2019
+\endpostamble
+
+\usedir{tex/latex/\jobname}
+\generate{
+  \file{hu-berlin-letter.tex}{\from{\jobname.dtx}{example,letter}}
+  \file{hu-berlin-letter.lco}{\from{\jobname.dtx}{example,lco}}
+  \file{hu-berlin-letter.cls}{\from{\jobname.dtx}{cls,letter}}
+  %
+  \file{hu-berlin-bundle-style.sty}{\from{\jobname.dtx}{sty,style}}
+  \file{hu-berlin-letter-template.latex}{\from{\jobname.dtx}{template,letter-md}}
+}
+\endbatchfile
+%% 
+%% Copyright (C) 2019
+%%
+%% End of file `hu-berlin-bundle.ins'.

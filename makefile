@@ -74,7 +74,6 @@ doc: files
 $(PROJECT).pdf: getCTAN files
 	$(echoPROJECT) "* creating $(PROJECT).pdf * $(NC)"
 	latexmk -lualatex -f --shell-escape  $(PROJECT).dtx
-	open $(PROJECT).pdf
 	$(echoPROJECT) "* $(PROJECT).pdf created * $(NC)"
 
 # clean all temporary files
@@ -104,6 +103,19 @@ cleanbundle: clean
 	rm -f hu-berlin-letter*.{tex,md,lco,latex}
 	$(echoPROJECT) "* cleaned all files * $(NC)"
 
+# This will check whether there is the folder
+# .pandoc in the main directory
+pandoc-files:
+ifneq ("$(wildcard ~/.pandoc/templates/)","")
+	$(echoPROJECT) "* pandoc/templates/ exists. * $(NC)"
+else
+	$(echoPROJECT) "* pandoc/templates/ missing, creating it. * $(NC)"
+	mkdir ~/.pandoc
+	mkdir ~/.pandoc/templates
+endif
+	cp  hu-berlin-*-template.* ~/.pandoc/templates/
+
+
 
 install: uninstall
 	@mkdir -p $(LOCAL)/{tex,source,doc}/latex/$(PROJECT)
@@ -112,7 +124,7 @@ install: uninstall
 	@cp img/* $(LOCAL)/tex/latex/$(PROJECT)
 	@cp $(PROJECT).pdf $(LOCAL)/doc/latex/$(PROJECT)
 	mktexlsr
-	@cp hu-berlin-*-template.* ~/.pandoc/templates/
+	$(MAKE) pandoc-files
 	$(echoPROJECT) "* all files installed * $(NC)"
 
 
