@@ -38,7 +38,7 @@
 \RequirePackage[english,ngerman]{babel}
 \RequirePackage{graphicx}
 \RequirePackage{fontspec}
-\setmainfont{Verdana}
+\setmainfont{TeX Gyre Heros}
 \RequirePackage{marvosym}
 \RequirePackage{scrlayer-scrpage}
 \clearpairofpagestyles

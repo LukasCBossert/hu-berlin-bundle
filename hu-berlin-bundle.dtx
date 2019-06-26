@@ -296,6 +296,9 @@ All notable changes to this project will be documented in the [README.md](https:
 This project **does not** adhere to [Semantic Versioning](http://semver.org/).
 The markdown syntax is inspired by the conventions proposed by [keepachangelog.com](http://keepachangelog.com/).
 
+### v1.0.3 (2019-06-26)
+ * Changed the main font for compatibility with UNIX-systems (TeX Gyre Heros instead of Verdana).
+ 
 ### v1.0.2 (2019-06-22)
  Renaming files for CTAN compatability.
 
@@ -763,9 +766,17 @@ Thank you very much for your letter.
 %    \begin{macrocode}
 \RequirePackage{fontspec}
 %    \end{macrocode}
-% Verdana font as main font.
+% Actually the corporate design says
+% that the font Verdana should be used.
+% But since this font is not included in
+% UNIX-systems we use a derivative.
 %    \begin{macrocode}
-\setmainfont{Verdana}
+\setmainfont{TeX Gyre Heros}
+%    \end{macrocode}
+% If you have Verdana on your system
+% you can uncomment the following line.
+%    \begin{macrocode}
+% \setmainfont{Verdana}
 %    \end{macrocode}
 % For the wheelchair symbol we load \pkg{marvosym}
 %    \begin{macrocode}

@@ -57,11 +57,11 @@ $(PROJECT).pkglist:
 	lualatex $(PROJECT).dtx
 
 files: $(PROJECT).ins
-	latex $(PROJECT).ins
+	lualatex $(PROJECT).ins
 	$(echoPROJECT) "* source files created * $(NC)"
 
 $(PROJECT).ins:
-	latex $(PROJECT).dtx
+	lualatex $(PROJECT).dtx
 
 doc: files
 	$(MAKE) $(PROJECT).pdf
