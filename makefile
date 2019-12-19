@@ -120,7 +120,7 @@ endif
 install: uninstall files
 	@mkdir -p $(LOCAL)/{tex,source,doc}/latex/$(PROJECT)
 	@cp $(PROJECT).{dtx,ins} $(LOCAL)/source/latex/$(PROJECT)
-	@cp hu-berlin-*.cls $(LOCAL)/tex/latex/$(PROJECT)
+	@cp hu-berlin-*.{cls,sty} $(LOCAL)/tex/latex/$(PROJECT)
 	@cp img/* $(LOCAL)/tex/latex/$(PROJECT)
 	@cp $(PROJECT).pdf $(LOCAL)/doc/latex/$(PROJECT)
 	mktexlsr
