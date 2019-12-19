@@ -41,8 +41,8 @@
 \generate{
   \file{README.md}{\from{\jobname.dtx}{readme,main}}
   \file{hu-berlin-bundle-bibliography.bib}{\from{\jobname.dtx}{bib}}
-  \file{hu-berlin-letter.tex}{\from{\jobname.dtx}{example,letter}}
-  \file{hu-berlin-letter.md}{\from{\jobname.dtx}{example,letter-md}}
+  \file{hu-berlin-letter-example-lualatex.tex}{\from{\jobname.dtx}{example,letter}}
+  \file{hu-berlin-letter-example-markdown.md}{\from{\jobname.dtx}{example,letter-md}}
 }
 
 \preamble
@@ -59,20 +59,21 @@ please consider and respect them carefully.
 \endpreamble
 \postamble
 
-Copyright (C) 2019
+Copyright (C) 2019-2020
 \endpostamble
 
 \usedir{tex/latex/\jobname}
 \generate{
-  \file{hu-berlin-letter.tex}{\from{\jobname.dtx}{example,letter}}
-  \file{hu-berlin-letter.lco}{\from{\jobname.dtx}{example,lco}}
+  \file{hu-berlin-letter-example-lualatex.tex}{\from{\jobname.dtx}{example,letter}}
+  \file{hu-berlin-letter-example.lco}{\from{\jobname.dtx}{example,lco}}
   \file{hu-berlin-letter.cls}{\from{\jobname.dtx}{cls,letter}}
   %
+  \file{hu-berlin-base.sty}{\from{\jobname.dtx}{sty,base}}
   \file{hu-berlin-bundle-style.sty}{\from{\jobname.dtx}{sty,style}}
   \file{hu-berlin-letter-template.latex}{\from{\jobname.dtx}{template,letter-md}}
 }
 \endbatchfile
 %% 
-%% Copyright (C) 2019
+%% Copyright (C) 2019-2020
 %%
 %% End of file `hu-berlin-bundle.ins'.

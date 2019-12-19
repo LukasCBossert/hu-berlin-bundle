@@ -1,5 +1,5 @@
 %%
-%% This is file `hu-berlin-letter.lco',
+%% This is file `hu-berlin-letter-example.lco',
 %% generated with the docstrip utility.
 %%
 %% The original source files were:
@@ -15,10 +15,10 @@
 %% please consider and respect them carefully.
 %% ----------------------------------------------------------------
 %% 
-\ProvidesFile{hu-berlin-letter.lco}
+\ProvidesFile{hu-berlin-letter-example.lco}
 \setkomavar{fromname}
-[Wissenschaftlicher Mitarbeiter]
-{Dr. Max Mustermann}
+  [Wissenschaftlicher Mitarbeiter]
+  {Dr. Max Mustermann}
 \setkomavar{fromemail}{max.mustermann@hu-berlin.de}
 \setkomavar{fromphone}{1234}
 \setkomavar{fromfax}{5678}
@@ -46,6 +46,6 @@ Philosophische Fakultät
   \usekomavar{fromname}
 }
 %% 
-%% Copyright (C) 2019
+%% Copyright (C) 2019-2020
 %%
-%% End of file `hu-berlin-letter.lco'.
+%% End of file `hu-berlin-letter-example.lco'.

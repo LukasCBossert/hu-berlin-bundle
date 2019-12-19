@@ -1,0 +1,47 @@
+%%
+%% This is file `hu-berlin-base.sty',
+%% generated with the docstrip utility.
+%%
+%% The original source files were:
+%%
+%% hu-berlin-bundle.dtx  (with options: `sty,base')
+%% ----------------------------------------------------------------
+%% hu-berlin-bundle
+%% Author:  Lukas C. Bossert
+%% E-mail:  lukas@texografie.de
+%% License: Released under the LaTeX Project Public License v1.3c or later
+%% See:     http://www.latex-project.org/lppl.txt
+%% Various parts my have a different licence,
+%% please consider and respect them carefully.
+%% ----------------------------------------------------------------
+%% 
+\def\Version{2019/12/19 v1.0.4}
+\NeedsTeXFormat{LaTeX2e}[2005/12/01]
+\ProvidesPackage{hu-berlin-base}
+  [\Version\space hu-berlin - package for basic features]
+  \PackageInfo{hu-berlin}{* * * hu-berlin * * *\MessageBreak
+  Part of the hu-berlin Bundle}
+\RequirePackage{ifluatex,luatex85}
+\ifx\directlua\relax
+  \let\directlua\UnDeFiNeD
+\fi
+\ifluatex
+\else
+\GenericError{hu-berlin}%
+ {Please use `LuaLaTeX' as Compiler.^^J I abort here.}
+\fi
+\RequirePackage[english,ngerman]{babel}
+\RequirePackage{graphicx}
+\RequirePackage{fontspec}
+\setmainfont{TeX Gyre Heros}
+\RequirePackage{marvosym}
+\RequirePackage{xcolor}
+\definecolor{hu-berlin-blue}{RGB}{0,65,137}
+\definecolor{hu-berlin-green}{RGB}{150,190,20}
+\definecolor{hu-berlin-grey}{RGB}{169,169,169}
+\definecolor{hu-berlin-brown}{RGB}{82,79,60}
+\definecolor{hu-berlin-red}{RGB}{180,0,0}
+%% 
+%% Copyright (C) 2019-2020
+%%
+%% End of file `hu-berlin-base.sty'.

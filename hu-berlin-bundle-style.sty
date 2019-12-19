@@ -15,7 +15,7 @@
 %% please consider and respect them carefully.
 %% ----------------------------------------------------------------
 %% 
-\def\Version{2019/06/26 v1.0.3}
+\def\Version{2019/12/19 v1.0.4}
 \NeedsTeXFormat{LaTeX2e}[2005/12/01]
 \ProvidesPackage{hu-berlin-bundle-style}
   [\Version\space hu-berlin - package for style the documentation]
@@ -80,20 +80,17 @@ captions   = tableheading,
 
 \defaultfontfeatures{%
   Ligatures = TeX
- ,Scale     = MatchLowercase
- ,Numbers   = OldStyle
 }
 \setmainfont[%
    Ligatures = TeX
   ,Numbers   = OldStyle]{TeX Gyre Pagella}
-\setmonofont[Scale=1]{TeX Gyre Cursor}
-\setsansfont[%
-  ,LetterSpace = .8]{TeX Gyre Adventor-Regular}
-\linespread{1.05}
-\newfontfamily\listingsfont[
-  Scale     = MatchLowercase,
+\setmonofont[%
+  Scale=1
 ]{TeX Gyre Cursor}
-\renewcommand\MacroFont{\listingsfont}
+\setsansfont[%
+  ,LetterSpace = .8
+]{TeX Gyre Adventor-Regular}
+\linespread{1.05}
 
 \RequirePackage{marginnote}
 \renewcommand*{\marginfont}{%
@@ -136,7 +133,11 @@ captions   = tableheading,
 \RequirePackage{graphicx}
 \graphicspath{{img/}}
 \RequirePackage{etoolbox}
-\AfterEndPreamble{\maketitle}
+\AfterEndPreamble{%
+  \maketitle
+  \renewcommand\MacroFont{\ttfamily}
+  \renewcommand\AltMacroFont{\ttfamily\linespread{.8}}% slanted verbatim
+}
 
 \makeatletter
 \renewcommand*{\maketitle}{%
@@ -276,7 +277,6 @@ captions   = tableheading,
   pdfcopyright   = {Copyright (c) \the\year . All rights reserved.},
   pdfhighlight   = /N,
   pdfdisplaydoctitle = true,
-  pdfdate    = {\today},
   pdflang    = {},%de en
   pdfcaptionwriter   = {Lukas C. Bossert},
   pdfkeywords    = {hu-berlin},
@@ -367,7 +367,7 @@ captions   = tableheading,
 \makeatother
 
 \lstset{%
-  basicstyle = \linespread{0.7}\listingsfont
+  basicstyle = \linespread{0.7}\ttfamily
  ,breaklines = true
  ,breakatwhitespace
  ,alsoletter=\\\{\}\*\[\]\-
@@ -598,6 +598,6 @@ codecomment/.style={%
 link = {\href{#3}{#1}}%
 }}
 %% 
-%% Copyright (C) 2019
+%% Copyright (C) 2019-2020
 %%
 %% End of file `hu-berlin-bundle-style.sty'.

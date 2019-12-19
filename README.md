@@ -34,6 +34,7 @@ With this (unofficial) bundle you have several documents which are designed acco
 Following documents or documentclasses are available:
 
 * letter (`hu-berlin-letter.cls`); via `.tex` and `.md`
+* base package (`hu-berlin-base.sty`)
 
 ## Installation of the bundle
 `hu-berlin` is part of the distributions [MiKTeX](http://www.miktex.org)
@@ -65,6 +66,9 @@ This bundle is constantly updated. For hints, errors or suggestions use the GitH
 All notable changes to this project will be documented in the [README.md](https://github.com/LukasCBossert/hu-berlin-bundle/blob/master/README.md).
 This project **does not** adhere to [Semantic Versioning](http://semver.org/).
 The markdown syntax is inspired by the conventions proposed by [keepachangelog.com](http://keepachangelog.com/).
+
+### v1.0.4 (2019-12-19)
+* Added `hu-berlin-base.sty` as a package which contains all relevant code for documents and documentclasses of the bundle.
 
 ### v1.0.3 (2019-06-26)
  * Changed the main font for compatibility with UNIX-systems (TeX Gyre Heros instead of Verdana).

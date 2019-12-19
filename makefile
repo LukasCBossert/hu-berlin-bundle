@@ -31,10 +31,10 @@ examples: files
 	$(MAKE) md2pdf-letter
 
 md2pdf-letter: files
-	pandoc --pdf-engine=lualatex --template hu-berlin-letter-template.latex -o hu-berlin-letter-markdown.pdf hu-berlin-letter.md
+	pandoc --pdf-engine=lualatex --template hu-berlin-letter-template.latex -o hu-berlin-letter-example-markdown.pdf hu-berlin-letter-example-markdown.md
 
 letter: files
-	latexmk -lualatex  -interaction=nonstopmode hu-berlin-letter.tex
+	latexmk -lualatex  -interaction=nonstopmode hu-berlin-letter-example-lualatex.tex
 
 # How to get information from CTAN
 CTAN: $(PROJECT).pkglist
@@ -117,7 +117,7 @@ endif
 
 
 
-install: uninstall
+install: uninstall files
 	@mkdir -p $(LOCAL)/{tex,source,doc}/latex/$(PROJECT)
 	@cp $(PROJECT).{dtx,ins} $(LOCAL)/source/latex/$(PROJECT)
 	@cp hu-berlin-*.cls $(LOCAL)/tex/latex/$(PROJECT)

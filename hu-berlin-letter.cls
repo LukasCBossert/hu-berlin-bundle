@@ -15,7 +15,7 @@
 %% please consider and respect them carefully.
 %% ----------------------------------------------------------------
 %% 
-\def\Version{2019/06/26 v1.0.3}
+\def\Version{2019/12/19 v1.0.4}
 \NeedsTeXFormat{LaTeX2e}[2005/12/01]
 \ProvidesClass{hu-berlin-letter}
   [\Version\ Humboldt-Universit"at zu Berlin - letter documentclass]
@@ -26,20 +26,7 @@
   version=last,
   % visualize
 ]{scrlttr2}
-\RequirePackage{ifluatex,luatex85}
-\ifx\directlua\relax
-  \let\directlua\UnDeFiNeD
-\fi
-\ifluatex
-\else
-\GenericError{hu-berlin}%
- {Please use `LuaLaTeX' as Compiler.^^J I abort here.}
-\fi
-\RequirePackage[english,ngerman]{babel}
-\RequirePackage{graphicx}
-\RequirePackage{fontspec}
-\setmainfont{TeX Gyre Heros}
-\RequirePackage{marvosym}
+\RequirePackage{hu-berlin-base}
 \RequirePackage{scrlayer-scrpage}
 \clearpairofpagestyles
 \DeclareNewLayer[
@@ -219,7 +206,7 @@
 \setplength{locwidth}{45mm}
 \setplength{locheight}{232mm}
 \setkomavar{firsthead}{%
- \includegraphics[width=145mm]{hu-berlin-logo.jpg}%
+ \includegraphics[width=145mm]{hu-berlin-logo}%
 }
 \setkomavar{backaddressseparator}{~\textbar~}
 \setkomavar{fromphone}{0000}
@@ -228,8 +215,8 @@
 \setkomavar*{fromfax}{Telefax +49 [30] 2093–}
 \setkomavar*{fromaddress}{Postanschrift:}
 \setkomavar{fromaddress}{%
-  Humboldt-Universität zu Berlin\\
-  Unter den Linden 6\\
+  Humboldt-Universität zu Berlin\par
+  Unter den Linden 6\par
   D-10099 Berlin}
 \setkomavar*{date}{Datum:}
 \setkomavar*{fromname}{Bearbeiter:}
@@ -237,6 +224,6 @@
 \setkomavar*{enclseparator}{Anlage}
 \setkomavar*{ccseparator}{Kopie an}
 %% 
-%% Copyright (C) 2019
+%% Copyright (C) 2019-2020
 %%
 %% End of file `hu-berlin-letter.cls'.

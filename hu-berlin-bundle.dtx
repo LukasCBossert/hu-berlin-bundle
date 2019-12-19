@@ -1,6 +1,6 @@
 % \iffalse
 %<*internal|cls|sty>
-\def\Version{2019/06/26 v1.0.3}
+\def\Version{2019/12/19 v1.0.4}
 %</internal|cls|sty>
 %<*internal>
 \iffalse
@@ -19,6 +19,12 @@
   \PackageInfo{hu-berlin}{* * * hu-berlin * * *\MessageBreak
 	  Part of the hu-berlin Bundle}
 %</style>
+%<*base>
+\ProvidesPackage{hu-berlin-base}
+  [\Version\space hu-berlin - package for basic features]
+  \PackageInfo{hu-berlin}{* * * hu-berlin * * *\MessageBreak
+	  Part of the hu-berlin Bundle}
+%</base>
 %</sty>
 %<*driver>
 \catcode9=12
@@ -153,8 +159,8 @@ You find this bundle versioned and available on [Zenodo](https://doi.org/10.5281
 \generate{
   \file{README.md}{\from{\jobname.dtx}{readme,main}}
   \file{hu-berlin-bundle-bibliography.bib}{\from{\jobname.dtx}{bib}}
-  \file{hu-berlin-letter.tex}{\from{\jobname.dtx}{example,letter}}
-  \file{hu-berlin-letter.md}{\from{\jobname.dtx}{example,letter-md}}
+  \file{hu-berlin-letter-example-lualatex.tex}{\from{\jobname.dtx}{example,letter}}
+  \file{hu-berlin-letter-example-markdown.md}{\from{\jobname.dtx}{example,letter-md}}
 }
 
 \preamble
@@ -171,15 +177,16 @@ please consider and respect them carefully.
 \endpreamble
 \postamble
  
-Copyright (C) 2019
+Copyright (C) 2019-2020
 \endpostamble
 
 \usedir{tex/latex/\jobname}
 \generate{
-  \file{hu-berlin-letter.tex}{\from{\jobname.dtx}{example,letter}}
-  \file{hu-berlin-letter.lco}{\from{\jobname.dtx}{example,lco}}
+  \file{hu-berlin-letter-example-lualatex.tex}{\from{\jobname.dtx}{example,letter}}
+  \file{hu-berlin-letter-example.lco}{\from{\jobname.dtx}{example,lco}}
   \file{hu-berlin-letter.cls}{\from{\jobname.dtx}{cls,letter}}
   %
+  \file{hu-berlin-base.sty}{\from{\jobname.dtx}{sty,base}}
   \file{hu-berlin-bundle-style.sty}{\from{\jobname.dtx}{sty,style}}
   \file{hu-berlin-letter-template.latex}{\from{\jobname.dtx}{template,letter-md}}
 }
@@ -260,7 +267,7 @@ With this (unofficial) bundle you have several documents which are designed acco
 Following documents or documentclasses are available:
 
 * letter (`hu-berlin-letter.cls`); via `.tex` and `.md`
-
+* base package (`hu-berlin-base.sty`)
 
 
 ## Installation of the bundle
@@ -296,6 +303,9 @@ This bundle is constantly updated. For hints, errors or suggestions use the GitH
 All notable changes to this project will be documented in the [README.md](https://github.com/LukasCBossert/hu-berlin-bundle/blob/master/README.md).
 This project **does not** adhere to [Semantic Versioning](http://semver.org/).
 The markdown syntax is inspired by the conventions proposed by [keepachangelog.com](http://keepachangelog.com/).
+
+### v1.0.4 (2019-12-19)
+* Added `hu-berlin-base.sty` as a package which contains all relevant code for documents and documentclasses of the bundle.
 
 ### v1.0.3 (2019-06-26)
  * Changed the main font for compatibility with UNIX-systems (TeX Gyre Heros instead of Verdana).
@@ -368,14 +378,15 @@ You can easily pick up the basic file structure from \cref{hu-berlin:bundle-stru
 \footnotesize
 \dirtree{%
 .1 \huberlinFolder hu-berlin-bundle.
-.2 hu-berlin-bundle.dtx\DTcomment{code and documentation}.
-.2 hu-berlin-bundle.pdf\DTcomment{documentation}.
-.2 hu-berlin-letter.tex \DTcomment{letter}.
-.2 hu-berlin-letter.lco \DTcomment{datafile for letter}.
-.2 hu-berlin-letter.pdf \DTcomment{letter}.
+.2 hu-berlin-bundle.dtx \DTcomment{code and documentation}.
+.2 hu-berlin-bundle.pdf \DTcomment{documentation}.
+.2 hu-berlin-base.sty \DTcomment{basic components of the bundle}.
+.2 hu-berlin-letter-example-lualatex.tex \DTcomment{letter}.
+.2 hu-berlin-letter-example.lco \DTcomment{datafile for letter}.
+.2 hu-berlin-letter-example-lualatex.pdf \DTcomment{letter}.
+.2 hu-berlin-letter-example-markdown.pdf \DTcomment{converted letter from markdown}.
+.2 hu-berlin-letter-example-markdown.md \DTcomment{example markdown file }.
 .2 hu-berlin-letter-template.latex \DTcomment{template for conversion}.
-.2 hu-berlin-letter-markdown.pdf \DTcomment{converted letter from markdown}.
-.2 hu-berlin-letter.md \DTcomment{example markdown file }.
 .2 \huberlinFolder img\DTcomment{folder for images}.
 .3 texografie-logo.png\DTcomment{logo of maintainer}.
 .3 hu-berlin-logo.jpg\DTcomment{logo of HU}.
@@ -400,26 +411,26 @@ you get all these various files described above.
 \part{Example files}
 \chapter{Letter}
 \section{From \texttt{.tex}}
-\IfFileExists{hu-berlin-letter.pdf}
+\IfFileExists{hu-berlin-letter-example-lualatex.pdf}
   {\includepdf[%
   pagecommand={\pagestyle{scrheadings}}
  ,link
  ,pages=-
- ,scale=.8
- % ,nup=1x2
- ,frame]{hu-berlin-letter.pdf}}
- {|hu-berlin-letter.pdf| missing!}
+ % ,scale=.5
+ ,nup=2x1
+ ,frame]{hu-berlin-letter-example-lualatex.pdf}}
+ {|hu-berlin-letter-example-lualatex.pdf| missing!}
 
 \section{From \texttt{.md}}
-\IfFileExists{hu-berlin-letter-markdown.pdf}
+\IfFileExists{hu-berlin-letter-example-markdown.pdf}
   {\includepdf[%
   pagecommand={\pagestyle{scrheadings}}
  ,link
  ,pages=-
- ,scale=.8
- % ,nup=1x2
- ,frame]{hu-berlin-letter-markdown.pdf}}
- {|hu-berlin-letter-markdown.pdf| missing!}
+ % ,scale=.5
+ ,nup=2x1
+ ,frame]{hu-berlin-letter-example-markdown.pdf}}
+ {|hu-berlin-letter-example-markdown.pdf| missing!}
 
 
 \end{document}
@@ -457,7 +468,7 @@ you get all these various files described above.
 %
 % The first line should provide this information.
 %    \begin{macrocode}
-\ProvidesFile{hu-berlin-letter.lco}
+\ProvidesFile{hu-berlin-letter-example.lco}
 %    \end{macrocode}
 % Now we set up the personal data.
 %
@@ -468,11 +479,11 @@ you get all these various files described above.
 % you can also write the position of this person in brackets, this is optional; 
 % \oarg{position}
 %    \begin{macrocode}
-[Wissenschaftlicher Mitarbeiter]
+  [Wissenschaftlicher Mitarbeiter]
 %    \end{macrocode}
 % But you need to give a name:
 %    \begin{macrocode}
-{Dr. Max Mustermann} 
+  {Dr. Max Mustermann} 
 %    \end{macrocode}
 % The mail address
 %    \begin{macrocode}
@@ -548,7 +559,7 @@ Philosophische Fakultät
 %   ,numbersep   = 10pt
 %   ,numberstyle =\footnotesize\ttfamily\color{hu-berlin-grey}
 %   }]%
-%  {hu-berlin-letter.lco}
+%  {hu-berlin-letter-example.lco}
 %
 % \section{\texttt{.tex}-file}
 %    \begin{macrocode}
@@ -559,7 +570,7 @@ Philosophische Fakultät
 %    \end{macrocode}
 % Now we load the personal data-file which has the ending |.lco|.
 %    \begin{macrocode}
-\LoadLetterOption{hu-berlin-letter}
+\LoadLetterOption{hu-berlin-letter-example}
 %    \end{macrocode}
 % If you have the HU font installed on your computer, 
 % you can load it, too:
@@ -599,8 +610,8 @@ Philosophische Fakultät
 \begin{letter}{%
 %    \end{macrocode}
 %    \begin{macrocode}
-  Erika Musterfrau\\
-  Musterweg 43\\
+  Erika Musterfrau\par
+  Musterweg 43\par
   56789 Musterhausen%
 %    \end{macrocode}
 % Closing now again.
@@ -651,7 +662,7 @@ Philosophische Fakultät
 %   ,numbersep   = 10pt
 %   ,numberstyle =\footnotesize\ttfamily\color{hu-berlin-grey}
 %   }]%
-%  {hu-berlin-letter.tex}
+%  {hu-berlin-letter-example-lualatex.tex}
 %    \begin{macrocode}
 %</letter>
 %    \end{macrocode}
@@ -673,7 +684,7 @@ documentclass: hu-berlin-letter
 %    \end{macrocode}
 % The following will load the |.lco|-file, you replace that with the name of your |.lco|-file.
 %    \begin{macrocode}
-sender: hu-berlin-letter
+sender: hu-berlin-letter-example
 %    \end{macrocode}
 % You should also tell a short subject
 %    \begin{macrocode}
@@ -702,7 +713,7 @@ Thank you very much for your letter.
 %   ,numbersep   = 10pt
 %   ,numberstyle =\footnotesize\ttfamily\color{hu-berlin-grey}
 %   }]%
-%  {hu-berlin-letter.md}
+%  {hu-berlin-letter-example-markdown.md}
 %    \begin{macrocode}
 %</letter-md>
 %    \end{macrocode}
@@ -712,29 +723,11 @@ Thank you very much for your letter.
 %    \end{macrocode}
 %\part{Guide for Coders}
 %    \begin{macrocode}
-%<*cls>
+%<*sty>
 %    \end{macrocode}
-%\chapter{Letter}
+%\chapter{hu-berlin-base-package}
 %    \begin{macrocode}
-%<*letter>
-%    \end{macrocode}
-% We load \pkg{scrlttr2} which is the documentclass for letters.
-% Furthermore we set up some options.
-%    \begin{macrocode}
-\LoadClass[%
-  fontsize=10pt,
-  version=last,
-%    \end{macrocode}
-% If there is anything to debug, you can enable |visualize|
-%    \begin{macrocode}
-  % visualize
-%    \end{macrocode}
-%    \begin{macrocode}
-]{scrlttr2}
-%    \end{macrocode}
-% For debugging also uncomment the \cs{showfields}\marg{fields} commanand.
-%    \begin{macrocode}
-% \showfields{head,address,location,refline,foot}
+%<*base>
 %    \end{macrocode}
 % Since we do want to compile with \lualatex, 
 % we make sure that it will be compilable only with that.
@@ -782,6 +775,52 @@ Thank you very much for your letter.
 % For the wheelchair symbol we load \pkg{marvosym}
 %    \begin{macrocode}
 \RequirePackage{marvosym}
+%    \end{macrocode}
+% And we define various colors from the corporate design manual.
+%    \begin{macrocode}
+\RequirePackage{xcolor}
+\definecolor{hu-berlin-blue}{RGB}{0,65,137}
+\definecolor{hu-berlin-green}{RGB}{150,190,20}
+\definecolor{hu-berlin-grey}{RGB}{169,169,169}
+\definecolor{hu-berlin-brown}{RGB}{82,79,60}
+\definecolor{hu-berlin-red}{RGB}{180,0,0}
+%    \end{macrocode}
+% That’s all for the base package, so we close it.
+%    \begin{macrocode}
+%</base>
+%    \end{macrocode}
+%    \begin{macrocode}
+%</sty>
+%    \end{macrocode}
+%    \begin{macrocode}
+%<*cls>
+%    \end{macrocode}
+%\chapter{Letter}
+%    \begin{macrocode}
+%<*letter>
+%    \end{macrocode}
+% We load \pkg{scrlttr2} which is the documentclass for letters.
+% Furthermore we set up some options.
+%    \begin{macrocode}
+\LoadClass[%
+  fontsize=10pt,
+  version=last,
+%    \end{macrocode}
+% If there is anything to debug, you can enable |visualize|
+%    \begin{macrocode}
+  % visualize
+%    \end{macrocode}
+%    \begin{macrocode}
+]{scrlttr2}
+%    \end{macrocode}
+% For debugging also uncomment the \cs{showfields}\marg{fields} commanand.
+%    \begin{macrocode}
+% \showfields{head,address,location,refline,foot}
+%    \end{macrocode}
+% Since all common and basic features of the bundle
+% are located in a separate package we load that first.
+%    \begin{macrocode}
+\RequirePackage{hu-berlin-base}
 %    \end{macrocode}
 % To get the HU logo on the second and following pages we load \pkg{scrlayer-scrpage}.\fnurl{https://tex.stackexchange.com/a/495258/98739}
 %    \begin{macrocode}
@@ -1100,7 +1139,7 @@ Thank you very much for your letter.
 % the corporate design guidlines.\fnurl{https://www.hu-berlin.de/de/hu-intern/design/basiselemente/leitfaden-corporate-design-hu.pdf}
 %    \begin{macrocode}
 \setkomavar{firsthead}{%
- \includegraphics[width=145mm]{hu-berlin-logo.jpg}%
+ \includegraphics[width=145mm]{hu-berlin-logo}%
 }
 %    \end{macrocode}
 %
@@ -1121,8 +1160,8 @@ Thank you very much for your letter.
 %    \begin{macrocode}
 \setkomavar*{fromaddress}{Postanschrift:}
 \setkomavar{fromaddress}{%
-  Humboldt-Universität zu Berlin\\
-  Unter den Linden 6\\
+  Humboldt-Universität zu Berlin\par
+  Unter den Linden 6\par
   D-10099 Berlin}
 %    \end{macrocode}
 %
@@ -1235,7 +1274,7 @@ $endif$
 \begin{document}
 \begin{letter}{%
 $for(addressee)$
-$addressee$$sep$\\
+$addressee$$sep$\par
 $endfor$
 }
 $for(include-before)$
@@ -1340,8 +1379,6 @@ $for(include-after)$$include-after$$endfor$
 
 \defaultfontfeatures{%
   Ligatures = TeX
- ,Scale     = MatchLowercase
- ,Numbers   = OldStyle
 }
 %    \end{macrocode}
 % For fonts we use the available |TeX Gyre Pagella| as main font.\fnurl{http://www.gust.org.pl/projects/e-foundry/tex-gyre}
@@ -1352,16 +1389,17 @@ $for(include-after)$$include-after$$endfor$
 %    \end{macrocode}
 % And we declare also the other fonts, too.
 %    \begin{macrocode}
-\setmonofont[Scale=1]{TeX Gyre Cursor}
+\setmonofont[%
+  Scale=1
+]{TeX Gyre Cursor}
 \setsansfont[%
-  ,LetterSpace = .8]{TeX Gyre Adventor-Regular}
+  ,LetterSpace = .8
+]{TeX Gyre Adventor-Regular}
 \linespread{1.05}
 %    \end{macrocode}
 %    \begin{macrocode}
-\newfontfamily\listingsfont[ 
-  Scale     = MatchLowercase,
-]{TeX Gyre Cursor}
-\renewcommand\MacroFont{\listingsfont}
+
+
 
 \RequirePackage{marginnote}
 \renewcommand*{\marginfont}{%
@@ -1408,7 +1446,11 @@ $for(include-after)$$include-after$$endfor$
 %    \begin{macrocode}
 \RequirePackage{etoolbox}
 %https://tex.stackexchange.com/a/235881/98739
-\AfterEndPreamble{\maketitle}
+\AfterEndPreamble{%
+  \maketitle
+  \renewcommand\MacroFont{\ttfamily}
+  \renewcommand\AltMacroFont{\ttfamily\linespread{.8}}% slanted verbatim
+}
 
 % https://tex.stackexchange.com/a/401466/98739
 \makeatletter
@@ -1572,7 +1614,6 @@ $for(include-after)$$include-after$$endfor$
   pdfcopyright   = {Copyright (c) \the\year . All rights reserved.},
   pdfhighlight   = /N,
   pdfdisplaydoctitle = true,
-  pdfdate    = {\today},
   pdflang    = {},%de en
   pdfcaptionwriter   = {Lukas C. Bossert},
   pdfkeywords    = {hu-berlin},
@@ -1678,7 +1719,7 @@ $for(include-after)$$include-after$$endfor$
 
 
 \lstset{%
-  basicstyle = \linespread{0.7}\listingsfont
+  basicstyle = \linespread{0.7}\ttfamily
  ,breaklines = true
  ,breakatwhitespace
  ,alsoletter=\\\{\}\*\[\]\-

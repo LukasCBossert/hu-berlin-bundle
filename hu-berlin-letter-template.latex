@@ -61,7 +61,7 @@ $endif$
 \begin{document}
 \begin{letter}{%
 $for(addressee)$
-$addressee$$sep$\\
+$addressee$$sep$\par
 $endfor$
 }
 $for(include-before)$
@@ -76,6 +76,6 @@ $for(include-after)$$include-after$$endfor$
 \end{letter}
 \end{document}
 %% 
-%% Copyright (C) 2019
+%% Copyright (C) 2019-2020
 %%
 %% End of file `hu-berlin-letter-template.latex'.
