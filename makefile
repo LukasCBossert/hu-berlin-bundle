@@ -89,7 +89,7 @@ ctan: $(PROJECT).dtx
 	@-mkdir archive
 	@rm -f archive/$(PROJECT)-$(DATE)*.zip
 	@mkdir $(TDIR)
-	@cp $(PROJECT).{dtx,pdf,ins} README.md makefile $(TDIR)
+	@cp $(PROJECT).{dtx,pdf} README.md makefile $(TDIR)
 	-@rm -f img/.DS_Store
 	@cp -R img $(TDIR)
 	@cd $(TEMP); \

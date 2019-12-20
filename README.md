@@ -14,7 +14,6 @@ and on the website <https://www.hu-berlin.de/de/hu-intern/design>.
 This bundle provides following files:
 
   * `hu-berlin-bundle.dtx` which is the core file designed with literate programming
-  * `hu-berlin-bundle.ins` which is the installation file for all necessary files generated automatically
   * `hu-berlin-bundle.pdf` is documentation of the bundle.
   * `README.md`
   * `makefile`
