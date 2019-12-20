@@ -34,7 +34,7 @@ md2pdf-letter: files
 	pandoc --pdf-engine=lualatex --template hu-berlin-letter-template.latex -o hu-berlin-letter-example-markdown.pdf hu-berlin-letter-example-markdown.md
 
 letter: files
-	latexmk -lualatex  -interaction=nonstopmode hu-berlin-letter-example-lualatex.tex
+	latexmk -lualatex -gg -interaction=nonstopmode hu-berlin-letter-example-lualatex.tex
 
 # How to get information from CTAN
 CTAN: $(PROJECT).pkglist

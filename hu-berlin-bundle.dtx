@@ -304,6 +304,9 @@ All notable changes to this project will be documented in the [README.md](https:
 This project **does not** adhere to [Semantic Versioning](http://semver.org/).
 The markdown syntax is inspired by the conventions proposed by [keepachangelog.com](http://keepachangelog.com/).
 
+### v1.0.5 (2020-01-XX)
+* Changed logo format to `.pdf` 
+
 ### v1.0.4 (2019-12-19)
 * Added `hu-berlin-base.sty` as a package which contains all relevant code for documents and documentclasses of the bundle.
 
@@ -389,7 +392,7 @@ You can easily pick up the basic file structure from \cref{hu-berlin:bundle-stru
 .2 hu-berlin-letter-template.latex \DTcomment{template for conversion}.
 .2 \huberlinFolder img\DTcomment{folder for images}.
 .3 texografie-logo.png\DTcomment{logo of maintainer}.
-.3 hu-berlin-logo.jpg\DTcomment{logo of HU}.
+.3 hu-berlin-logo.pdf\DTcomment{logo of HU}.
 .2 makefile\DTcomment{makefile to generate all required files}.
 .2 README.md\DTcomment{README file with information on installation}.
 }
@@ -581,7 +584,7 @@ Philosophische Fakultät
 %    \end{macrocode}
 % Now following the reference information
 %    \begin{macrocode}
-\setkomavar{myref}{}
+\setkomavar{myref}{} 
 %    \end{macrocode}
 %    \begin{macrocode}
 \setkomavar{yourref}{} 
