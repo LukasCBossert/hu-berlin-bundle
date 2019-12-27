@@ -14,6 +14,7 @@ and on the website <https://www.hu-berlin.de/de/hu-intern/design>.
 This bundle provides following files:
 
   * `hu-berlin-bundle.dtx` which is the core file designed with literate programming
+  * `hu-berlin-bundle.ins` which is the installation file for all necessary files generated automatically
   * `hu-berlin-bundle.pdf` is documentation of the bundle.
   * `README.md`
   * `makefile`
@@ -65,6 +66,9 @@ This bundle is constantly updated. For hints, errors or suggestions use the GitH
 All notable changes to this project will be documented in the [README.md](https://github.com/LukasCBossert/hu-berlin-bundle/blob/master/README.md).
 This project **does not** adhere to [Semantic Versioning](http://semver.org/).
 The markdown syntax is inspired by the conventions proposed by [keepachangelog.com](http://keepachangelog.com/).
+
+### v1.0.5 (2020-01-XX)
+* Changed logo format to `.pdf`
 
 ### v1.0.4 (2019-12-19)
 * Added `hu-berlin-base.sty` as a package which contains all relevant code for documents and documentclasses of the bundle.
