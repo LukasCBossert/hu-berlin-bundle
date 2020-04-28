@@ -15,7 +15,7 @@
 %% please consider and respect them carefully.
 %% ----------------------------------------------------------------
 %% 
-\def\Version{2019/12/19 v1.0.4}
+\def\Version{2020/04/28 v1.0.5}
 \NeedsTeXFormat{LaTeX2e}[2005/12/01]
 \ProvidesClass{hu-berlin-letter}
   [\Version\ Humboldt-Universit"at zu Berlin - letter documentclass]
@@ -102,10 +102,10 @@
   {\usekomafont{faculty}%
    \usekomavar{faculty}\\[1\baselineskip]}
   {\usekomafont{institute}\usekomavar{institute}\\[1\baselineskip]}
-\ifkomavarempty{institute.additional}
+\Ifkomavarempty{institute.additional}
   {}
   {\usekomavar{institute.additional}\\[1\baselineskip]}
-\ifkomavarempty{institute.head}
+\Ifkomavarempty{institute.head}
  {}
  {{\usekomafont{institute.head}%
   \usekomavar{institute.head}}\\%
@@ -113,76 +113,76 @@
  \end{minipage}
   \textbf{\usekomavar*{date}}\\
   \usekomavar{date}\par
-\ifkomavarempty{fromname}
+\Ifkomavarempty{fromname}
  {}
  {\textbf{\usekomavar*{fromname}}\\
   \usekomavar{fromname}\par}
-\ifkomavarempty{myref}
+\Ifkomavarempty{myref}
  {}
  {\textbf{\usekomavar*{myref}}\\
   \usekomavar{myref}\par}
-\ifkomavarempty{yourref}
+\Ifkomavarempty{yourref}
  {}
  {\textbf{\usekomavar*{yourref}}\\
   \usekomavar{yourref}\par}
-\ifkomavarempty{yourmail}
+\Ifkomavarempty{yourmail}
  {}
  {\textbf{\usekomavar*{yourmail}}\\
   \usekomavar{yourmail}\par}
-\ifkomavarempty{customer}
+\Ifkomavarempty{customer}
  {}
  {\textbf{\usekomavar*{customer}}\\
   \usekomavar{customer}\par}
-\ifkomavarempty{invoice}
+\Ifkomavarempty{invoice}
  {}
  {\textbf{\usekomavar*{invoice}}\\
   \usekomavar{invoice}\par}
   \textbf{\usekomavar*{fromaddress}}\\
   \usekomavar{fromaddress}
-  \ifkomavarempty{fromphone}
+  \Ifkomavarempty{fromphone}
     {\par}
     {\\\usekomavar*{fromphone}\usekomavar{fromphone}
-     \ifkomavarempty{fromfax}
+     \Ifkomavarempty{fromfax}
     {\par}
     {\\}}
-  \ifkomavarempty{fromfax}
+  \Ifkomavarempty{fromfax}
     {}
     {\usekomavar*{fromfax}\usekomavar{fromfax}\par}
-\ifkomavarempty{institute.head.mail}
+\Ifkomavarempty{institute.head.mail}
   {}
   {\usekomavar{institute.head.mail}
-  \ifkomavarempty{fromemail}
-  {\ifkomavarempty{fromurl}
+  \Ifkomavarempty{fromemail}
+  {\Ifkomavarempty{fromurl}
    {\par}
    {\\}}
   {\\}}
-\ifkomavarempty{fromemail}
+\Ifkomavarempty{fromemail}
   {}
   {\usekomavar{fromemail}
-  \ifkomavarempty{fromurl}
+  \Ifkomavarempty{fromurl}
   {\par}
   {\\}}
-\ifkomavarempty{fromurl}
+\Ifkomavarempty{fromurl}
   {}
   {\usekomavar{fromurl}\par}
-\ifkomavarempty{local}
+\Ifkomavarempty{local}
   {}
   {\textbf{\usekomavar*{local}}\\
   \usekomavar{local}\par}
 \vfill
-\ifkomavarempty{connections}
+\Ifkomavarempty{connections}
   {}
   {\textbf{\usekomavar*{connections}}\\
   \usekomavar{connections}\par}
-\ifkomavarempty{officehours}
+\Ifkomavarempty{officehours}
   {}
   {\textbf{\usekomavar*{officehours}}\\
   \usekomavar{officehours}\par}
-\ifkomavarempty{accessibility}
+\Ifkomavarempty{accessibility}
   {}
   {\textbf{\usekomavar*{accessibility}}\\
   \usekomavar{accessibility}\par}
-\ifkomavarempty{bank}
+\Ifkomavarempty{bank}
   {}
   {\textbf{\usekomavar*{bank}}\\
   \usekomavar{bank}\\

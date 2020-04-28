@@ -1,6 +1,6 @@
 % \iffalse
 %<*internal|cls|sty>
-\def\Version{2019/12/19 v1.0.4}
+\def\Version{2020/04/28 v1.0.5}
 %</internal|cls|sty>
 %<*internal>
 \iffalse
@@ -304,8 +304,11 @@ All notable changes to this project will be documented in the [README.md](https:
 This project **does not** adhere to [Semantic Versioning](http://semver.org/).
 The markdown syntax is inspired by the conventions proposed by [keepachangelog.com](http://keepachangelog.com/).
 
-### v1.0.5 (2020-01-XX)
-* Changed logo format to `.pdf` 
+### v1.0.5 (2020-04-28)
+* (general) Changed logo format to `.pdf` 
+* (letter) Changed `\ifkomavarempty` to `\ifkomavarempty`, fixes 
+  [github-issue nr. 1](https://github.com/LukasCBossert/hu-berlin-bundle/issues/1)
+
 
 ### v1.0.4 (2019-12-19)
 * Added `hu-berlin-base.sty` as a package which contains all relevant code for documents and documentclasses of the bundle.
@@ -966,13 +969,13 @@ Thank you very much for your letter.
 %    \end{macrocode}
 % Now anything else regarding the institute.
 %    \begin{macrocode}
-\ifkomavarempty{institute.additional}
+\Ifkomavarempty{institute.additional}
   {}
   {\usekomavar{institute.additional}\\[1\baselineskip]}
 %    \end{macrocode}
 % What follows is the head of institute and its position name.
 %    \begin{macrocode}
-\ifkomavarempty{institute.head}
+\Ifkomavarempty{institute.head}
  {}
  {{\usekomafont{institute.head}%
   \usekomavar{institute.head}}\\%
@@ -991,39 +994,39 @@ Thank you very much for your letter.
 %    \end{macrocode}
 % and the sender of the letter.
 %    \begin{macrocode}
-\ifkomavarempty{fromname}
+\Ifkomavarempty{fromname}
  {}
  {\textbf{\usekomavar*{fromname}}\\
   \usekomavar{fromname}\par}
 %    \end{macrocode}
 % And the reference of correspondence.
 %    \begin{macrocode}
-\ifkomavarempty{myref}
+\Ifkomavarempty{myref}
  {}
  {\textbf{\usekomavar*{myref}}\\
   \usekomavar{myref}\par}
 %    \end{macrocode}
 % To complete this template we provide the possibility to name further reference fields.
 %    \begin{macrocode}
-\ifkomavarempty{yourref}
+\Ifkomavarempty{yourref}
  {}
  {\textbf{\usekomavar*{yourref}}\\
   \usekomavar{yourref}\par}
 %    \end{macrocode}
 %    \begin{macrocode}
-\ifkomavarempty{yourmail}
+\Ifkomavarempty{yourmail}
  {}
  {\textbf{\usekomavar*{yourmail}}\\
   \usekomavar{yourmail}\par}
 %    \end{macrocode}
 %    \begin{macrocode}
-\ifkomavarempty{customer}
+\Ifkomavarempty{customer}
  {}
  {\textbf{\usekomavar*{customer}}\\
   \usekomavar{customer}\par}
 %    \end{macrocode}
 %    \begin{macrocode}
-\ifkomavarempty{invoice}
+\Ifkomavarempty{invoice}
  {}
  {\textbf{\usekomavar*{invoice}}\\
   \usekomavar{invoice}\par}
@@ -1031,45 +1034,45 @@ Thank you very much for your letter.
 %    \begin{macrocode}
   \textbf{\usekomavar*{fromaddress}}\\
   \usekomavar{fromaddress}
-  \ifkomavarempty{fromphone}
+  \Ifkomavarempty{fromphone}
     {\par}
     {\\\usekomavar*{fromphone}\usekomavar{fromphone}
-     \ifkomavarempty{fromfax}
+     \Ifkomavarempty{fromfax}
     {\par}
     {\\}}
-  \ifkomavarempty{fromfax}
+  \Ifkomavarempty{fromfax}
     {}
     {\usekomavar*{fromfax}\usekomavar{fromfax}\par}
 %    \end{macrocode}
 % Next, emails and url:
 %    \begin{macrocode}
-\ifkomavarempty{institute.head.mail}
+\Ifkomavarempty{institute.head.mail}
   {}
   {\usekomavar{institute.head.mail}
-  \ifkomavarempty{fromemail}
-  {\ifkomavarempty{fromurl}
+  \Ifkomavarempty{fromemail}
+  {\Ifkomavarempty{fromurl}
    {\par}
    {\\}}
   {\\}}
 %    \end{macrocode}
 %
 %    \begin{macrocode}
-\ifkomavarempty{fromemail}
+\Ifkomavarempty{fromemail}
   {}
   {\usekomavar{fromemail}
-  \ifkomavarempty{fromurl}
+  \Ifkomavarempty{fromurl}
   {\par}
   {\\}}
 %    \end{macrocode}
 %
 %    \begin{macrocode}
-\ifkomavarempty{fromurl}
+\Ifkomavarempty{fromurl}
   {}
   {\usekomavar{fromurl}\par}
 %    \end{macrocode}
 % Now the actual location of the sender
 %    \begin{macrocode}
-\ifkomavarempty{local}
+\Ifkomavarempty{local}
   {}
   {\textbf{\usekomavar*{local}}\\
   \usekomavar{local}\par}
@@ -1080,27 +1083,27 @@ Thank you very much for your letter.
 %    \end{macrocode}
 % Inform your addressee about the connection possibilities.
 %    \begin{macrocode}
-\ifkomavarempty{connections}
+\Ifkomavarempty{connections}
   {}
   {\textbf{\usekomavar*{connections}}\\
   \usekomavar{connections}\par}
 %    \end{macrocode}
 %    \begin{macrocode}
-\ifkomavarempty{officehours}
+\Ifkomavarempty{officehours}
   {}
   {\textbf{\usekomavar*{officehours}}\\
   \usekomavar{officehours}\par}
 %    \end{macrocode}
 % If there is a barrier free entrance, tell it.
 %    \begin{macrocode}
-\ifkomavarempty{accessibility}
+\Ifkomavarempty{accessibility}
   {}
   {\textbf{\usekomavar*{accessibility}}\\
   \usekomavar{accessibility}\par}
 %    \end{macrocode}
 % And last the bank connection
 %    \begin{macrocode}
-\ifkomavarempty{bank}
+\Ifkomavarempty{bank}
   {}
   {\textbf{\usekomavar*{bank}}\\
   \usekomavar{bank}\\
@@ -1277,7 +1280,7 @@ $endif$
 \begin{document}
 \begin{letter}{%
 $for(addressee)$
-$addressee$$sep$\par
+$addressee$$sep$\\
 $endfor$
 }
 $for(include-before)$
@@ -1481,7 +1484,7 @@ $for(include-after)$$include-after$$endfor$
  of writing.}
 	\null\vfill
 	{\usekomafont{subtitle}{\@date \hfill
-	\includegraphics[width=4cm]{texografie-logo}\\}}%
+	\includegraphics[width=4cm]{img/texografie-logo.pdf}\\}}%
   \par
  \vskip 0em
   \restoregeometry

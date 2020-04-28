@@ -67,8 +67,10 @@ All notable changes to this project will be documented in the [README.md](https:
 This project **does not** adhere to [Semantic Versioning](http://semver.org/).
 The markdown syntax is inspired by the conventions proposed by [keepachangelog.com](http://keepachangelog.com/).
 
-### v1.0.5 (2020-01-XX)
-* Changed logo format to `.pdf`
+### v1.0.5 (2020-04-28)
+* (general) Changed logo format to `.pdf`
+* (letter) Changed `\ifkomavarempty` to `\ifkomavarempty`, fixes
+  [github-issue nr. 1](https://github.com/LukasCBossert/hu-berlin-bundle/issues/1)
 
 ### v1.0.4 (2019-12-19)
 * Added `hu-berlin-base.sty` as a package which contains all relevant code for documents and documentclasses of the bundle.

@@ -61,7 +61,7 @@ $endif$
 \begin{document}
 \begin{letter}{%
 $for(addressee)$
-$addressee$$sep$\par
+$addressee$$sep$\\
 $endfor$
 }
 $for(include-before)$
