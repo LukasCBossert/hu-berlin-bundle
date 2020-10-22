@@ -1,6 +1,6 @@
 % \iffalse
 %<*internal|cls|sty>
-\def\Version{2020/04/28 v1.0.5}
+\def\Version{2020/10/22 v1.0.6}
 %</internal|cls|sty>
 %<*internal>
 \iffalse
@@ -304,6 +304,12 @@ All notable changes to this project will be documented in the [README.md](https:
 This project **does not** adhere to [Semantic Versioning](http://semver.org/).
 The markdown syntax is inspired by the conventions proposed by [keepachangelog.com](http://keepachangelog.com/).
 
+### v1.0.6 (2020-10-22)
+* (letter) changed address separator
+* (letter) fixed empty minipage when no metadata given 
+* (letter) changed default backaddress
+
+
 ### v1.0.5 (2020-04-28)
 * (general) Changed logo format to `.pdf` 
 * (letter) Changed `\ifkomavarempty` to `\ifkomavarempty`, fixes 
@@ -511,10 +517,11 @@ you get all these various files described above.
 % If your backaddress is to long 
 % – it will be set up automatically – 
 % you can redefine it.
+% 
 %    \begin{macrocode}
-\setkomavar{backaddress}{HU Berlin\\
-Unter den Linden 6\\
-D-10099 Berlin} 
+%% \setkomavar{backaddress}{HU Berlin\\
+%% Unter den Linden 6\\
+%% D-10099 Berlin} 
 %    \end{macrocode}
 % Selfexplaining: the faculty.
 %    \begin{macrocode}
@@ -960,11 +967,19 @@ Thank you very much for your letter.
 %    \end{macrocode}
 % then the faculty
 %    \begin{macrocode}
+\Ifkomavarempty{faculty}
+%    \end{macrocode}
+% This is a fake space to avoid any trouble 
+% if no custom metadata are given.
+%    \begin{macrocode}
+  {\hspace*{1em}}
   {\usekomafont{faculty}%
    \usekomavar{faculty}\\[1\baselineskip]}
 %    \end{macrocode}
 % and the institute.
 %    \begin{macrocode}
+\Ifkomavarempty{institute}
+  {}
   {\usekomafont{institute}\usekomavar{institute}\\[1\baselineskip]}
 %    \end{macrocode}
 % Now anything else regarding the institute.
@@ -1166,8 +1181,15 @@ Thank you very much for your letter.
 %    \begin{macrocode}
 \setkomavar*{fromaddress}{Postanschrift:}
 \setkomavar{fromaddress}{%
-  Humboldt-Universität zu Berlin\par
-  Unter den Linden 6\par
+  Humboldt-Universität zu Berlin\\
+  Unter den Linden 6\\
+  D-10099 Berlin}
+%    \end{macrocode}
+% The default backaddress is slightly changed:
+%    \begin{macrocode}
+\setkomavar{backaddress}{%
+  Humboldt-Universität zu Berlin\\
+  UdL 6\\
   D-10099 Berlin}
 %    \end{macrocode}
 %

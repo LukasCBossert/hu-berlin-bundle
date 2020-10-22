@@ -23,9 +23,9 @@
 \setkomavar{fromphone}{1234}
 \setkomavar{fromfax}{5678}
 \setkomavar{fromurl}{www.hu-berlin.de}
-\setkomavar{backaddress}{HU Berlin\\
-Unter den Linden 6\\
-D-10099 Berlin}
+%% \setkomavar{backaddress}{HU Berlin\\
+%% Unter den Linden 6\\
+%% D-10099 Berlin}
 \setkomavar{faculty}{%
 Philosophische Fakultät
 }

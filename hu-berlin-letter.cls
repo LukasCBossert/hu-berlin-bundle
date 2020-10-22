@@ -15,7 +15,7 @@
 %% please consider and respect them carefully.
 %% ----------------------------------------------------------------
 %% 
-\def\Version{2020/04/28 v1.0.5}
+\def\Version{2020/10/22 v1.0.6}
 \NeedsTeXFormat{LaTeX2e}[2005/12/01]
 \ProvidesClass{hu-berlin-letter}
   [\Version\ Humboldt-Universit"at zu Berlin - letter documentclass]
@@ -99,8 +99,12 @@
   \raggedright
   \fontsize{7}{8.5}\selectfont
 \begin{minipage}[t][64mm]{\useplength{locwidth}}
+\Ifkomavarempty{faculty}
+  {\hspace*{1em}}
   {\usekomafont{faculty}%
    \usekomavar{faculty}\\[1\baselineskip]}
+\Ifkomavarempty{institute}
+  {}
   {\usekomafont{institute}\usekomavar{institute}\\[1\baselineskip]}
 \Ifkomavarempty{institute.additional}
   {}
@@ -215,8 +219,12 @@
 \setkomavar*{fromfax}{Telefax +49 [30] 2093–}
 \setkomavar*{fromaddress}{Postanschrift:}
 \setkomavar{fromaddress}{%
-  Humboldt-Universität zu Berlin\par
-  Unter den Linden 6\par
+  Humboldt-Universität zu Berlin\\
+  Unter den Linden 6\\
+  D-10099 Berlin}
+\setkomavar{backaddress}{%
+  Humboldt-Universität zu Berlin\\
+  UdL 6\\
   D-10099 Berlin}
 \setkomavar*{date}{Datum:}
 \setkomavar*{fromname}{Bearbeiter:}
