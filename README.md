@@ -74,7 +74,7 @@ The markdown syntax is inspired by the conventions proposed by [keepachangelog.c
 
 ### v1.0.5 (2020-04-28)
 * (general) Changed logo format to `.pdf`
-* (letter) Changed `\ifkomavarempty` to `\ifkomavarempty`, fixes
+* (letter) Changed `\ifkomavarempty` to `\Ifkomavarempty`, fixes
   [github-issue nr. 1](https://github.com/LukasCBossert/hu-berlin-bundle/issues/1)
 
 ### v1.0.4 (2019-12-19)
