@@ -67,6 +67,10 @@ All notable changes to this project will be documented in the [README.md](https:
 This project **does not** adhere to [Semantic Versioning](http://semver.org/).
 The markdown syntax is inspired by the conventions proposed by [keepachangelog.com](http://keepachangelog.com/).
 
+### v1.0.7 (2020/10/29)
+* (letter) fixed missing `\removereffields`
+* (letter) added missing suffix for hu-logo (`.pdf`)
+
 ### v1.0.6 (2020-10-22)
 * (letter) changed address separator
 * (letter) fixed empty minipage when no metadata given
@@ -74,7 +78,7 @@ The markdown syntax is inspired by the conventions proposed by [keepachangelog.c
 
 ### v1.0.5 (2020-04-28)
 * (general) Changed logo format to `.pdf`
-* (letter) Changed `\ifkomavarempty` to `\Ifkomavarempty`, fixes
+* (letter) Changed `\ifkomavarempty` to `\ifkomavarempty`, fixes
   [github-issue nr. 1](https://github.com/LukasCBossert/hu-berlin-bundle/issues/1)
 
 ### v1.0.4 (2019-12-19)

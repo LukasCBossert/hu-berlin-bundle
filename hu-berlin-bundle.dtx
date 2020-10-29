@@ -1,6 +1,6 @@
 % \iffalse
 %<*internal|cls|sty>
-\def\Version{2020/10/22 v1.0.6}
+\def\Version{2020/10/29 v1.0.7}
 %</internal|cls|sty>
 %<*internal>
 \iffalse
@@ -303,6 +303,12 @@ This bundle is constantly updated. For hints, errors or suggestions use the GitH
 All notable changes to this project will be documented in the [README.md](https://github.com/LukasCBossert/hu-berlin-bundle/blob/master/README.md).
 This project **does not** adhere to [Semantic Versioning](http://semver.org/).
 The markdown syntax is inspired by the conventions proposed by [keepachangelog.com](http://keepachangelog.com/).
+
+### v1.0.7 (2020/10/29)
+* (letter) fixed missing `\removereffields`
+* (letter) added missing suffix for hu-logo (`.pdf`)
+
+
 
 ### v1.0.6 (2020-10-22)
 * (letter) changed address separator
@@ -1139,6 +1145,10 @@ Thank you very much for your letter.
   ,parskip       =half-
 }
 %    \end{macrocode}
+% Getting rid of all other fields and their default position.
+%    \begin{macrocode}
+\removereffields
+%    \end{macrocode}
 % Redefining length.
 %    \begin{macrocode}
 \setplength{refvpos}{110mm}
@@ -1160,7 +1170,7 @@ Thank you very much for your letter.
 % the corporate design guidlines.\fnurl{https://www.hu-berlin.de/de/hu-intern/design/basiselemente/leitfaden-corporate-design-hu.pdf}
 %    \begin{macrocode}
 \setkomavar{firsthead}{%
- \includegraphics[width=145mm]{hu-berlin-logo}%
+ \includegraphics[width=145mm]{hu-berlin-logo.pdf}%
 }
 %    \end{macrocode}
 %

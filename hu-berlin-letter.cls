@@ -15,7 +15,7 @@
 %% please consider and respect them carefully.
 %% ----------------------------------------------------------------
 %% 
-\def\Version{2020/10/22 v1.0.6}
+\def\Version{2020/10/29 v1.0.7}
 \NeedsTeXFormat{LaTeX2e}[2005/12/01]
 \ProvidesClass{hu-berlin-letter}
   [\Version\ Humboldt-Universit"at zu Berlin - letter documentclass]
@@ -200,6 +200,7 @@
   ,backaddress   =plain
   ,parskip       =half-
 }
+\removereffields
 \setplength{refvpos}{110mm}
 \setplength{refaftervskip}{0pt}
 \setplength{toaddrhpos}{25mm}
@@ -210,7 +211,7 @@
 \setplength{locwidth}{45mm}
 \setplength{locheight}{232mm}
 \setkomavar{firsthead}{%
- \includegraphics[width=145mm]{hu-berlin-logo}%
+ \includegraphics[width=145mm]{hu-berlin-logo.pdf}%
 }
 \setkomavar{backaddressseparator}{~\textbar~}
 \setkomavar{fromphone}{0000}
