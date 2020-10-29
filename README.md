@@ -67,6 +67,12 @@ All notable changes to this project will be documented in the [README.md](https:
 This project **does not** adhere to [Semantic Versioning](http://semver.org/).
 The markdown syntax is inspired by the conventions proposed by [keepachangelog.com](http://keepachangelog.com/).
 
+### v1.0.8 (2020/10/30)
+* (letter) replacing actual logo with a dummy text (due to possible copyright conflicts).
+  The correct logo has to be called `hu-berlin-logo.pdf`
+  and needs to be put somewhere in PATH so it will be found.
+  If such file cannot be found a dummy text will be taken instead (`Humboldt-Universität zu Berlin´)
+
 ### v1.0.7 (2020/10/29)
 * (letter) fixed missing `\removereffields`
 * (letter) added missing suffix for hu-logo (`.pdf`)

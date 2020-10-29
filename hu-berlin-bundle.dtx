@@ -1,6 +1,6 @@
 % \iffalse
 %<*internal|cls|sty>
-\def\Version{2020/10/29 v1.0.7a}
+\def\Version{2020/10/30 v1.0.8}
 %</internal|cls|sty>
 %<*internal>
 \iffalse
@@ -304,6 +304,13 @@ All notable changes to this project will be documented in the [README.md](https:
 This project **does not** adhere to [Semantic Versioning](http://semver.org/).
 The markdown syntax is inspired by the conventions proposed by [keepachangelog.com](http://keepachangelog.com/).
 
+### v1.0.8 (2020/10/30)
+* (letter) replacing actual logo with a dummy text (due to possible copyright conflicts). 
+  The correct logo has to be called `hu-berlin-logo.pdf` 
+  and needs to be put somewhere in PATH so it will be found.
+  If such file cannot be found a dummy text will be taken instead (`Humboldt-Universität zu Berlin´)
+
+
 ### v1.0.7 (2020/10/29)
 * (letter) fixed missing `\removereffields`
 * (letter) added missing suffix for hu-logo (`.pdf`)
@@ -407,7 +414,6 @@ You can easily pick up the basic file structure from \cref{hu-berlin:bundle-stru
 .2 hu-berlin-letter-template.latex \DTcomment{template for conversion}.
 .2 \huberlinFolder img\DTcomment{folder for images}.
 .3 texografie-logo.pdf\DTcomment{logo of maintainer}.
-.3 hu-berlin-logo.pdf\DTcomment{logo of HU}.
 .2 makefile\DTcomment{makefile to generate all required files}.
 .2 README.md\DTcomment{README file with information on installation}.
 }
@@ -1168,12 +1174,14 @@ Thank you very much for your letter.
 % Be sure that you have the right using it!
 % Everything regarding the logo is defined in
 % the corporate design guidlines.\fnurl{https://www.hu-berlin.de/de/hu-intern/design/basiselemente/leitfaden-corporate-design-hu.pdf}
-% You need to replace the dummy-file |hu-berlin-logo.pdf| with the 
-% actual logo of the Humboldt-Universität zu Berlin.
+% You need to have the actual logo of the Humboldt-Universität zu Berlin which has to be called |hu-berlin-logo.pdf|.
 % It can be downloaded here: \url{http://zope.hu-berlin.de/hu-intern/design/downloads/logo}
+% If this logo is not found a replacement text is shown instead.
 %    \begin{macrocode}
 \setkomavar{firsthead}{%
- \includegraphics[width=145mm]{hu-berlin-logo.pdf}%
+\IfFileExists{hu-berlin-logo.pdf}
+  {\includegraphics[width=145mm]{hu-berlin-logo.pdf}}
+  {{\vspace*{2em}\hfil\scshape [humboldt-universität zu berlin]}}%
 }
 %    \end{macrocode}
 %

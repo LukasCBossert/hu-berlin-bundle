@@ -15,7 +15,7 @@
 %% please consider and respect them carefully.
 %% ----------------------------------------------------------------
 %% 
-\def\Version{2020/10/29 v1.0.7a}
+\def\Version{2020/10/30 v1.0.8}
 \NeedsTeXFormat{LaTeX2e}[2005/12/01]
 \ProvidesClass{hu-berlin-letter}
   [\Version\ Humboldt-Universit"at zu Berlin - letter documentclass]
@@ -211,7 +211,9 @@
 \setplength{locwidth}{45mm}
 \setplength{locheight}{232mm}
 \setkomavar{firsthead}{%
- \includegraphics[width=145mm]{hu-berlin-logo.pdf}%
+\IfFileExists{hu-berlin-logo.pdf}
+  {\includegraphics[width=145mm]{hu-berlin-logo.pdf}}
+  {{\vspace*{2em}\hfil\scshape [humboldt-universität zu berlin]}}%
 }
 \setkomavar{backaddressseparator}{~\textbar~}
 \setkomavar{fromphone}{0000}
