@@ -1,6 +1,6 @@
 % \iffalse
 %<*internal|cls|sty>
-\def\Version{2020/10/30 v1.0.8}
+\def\Version{2021/01/10 v1.0.9}
 %</internal|cls|sty>
 %<*internal>
 \iffalse
@@ -304,6 +304,11 @@ All notable changes to this project will be documented in the [README.md](https:
 This project **does not** adhere to [Semantic Versioning](http://semver.org/).
 The markdown syntax is inspired by the conventions proposed by [keepachangelog.com](http://keepachangelog.com/).
 
+
+### v1.0.9 (2021/01/10)
+* (letter) making everything multi-lingual (at least German and English); German is default language. You can load English e.g. by `documentclass[english]{hu-berlin-letter}` (addresses [issue No. 3](https://github.com/LukasCBossert/hu-berlin-bundle/issues/3))
+
+
 ### v1.0.8 (2020/10/30)
 * (letter) replacing actual logo with a dummy text (due to possible copyright conflicts). 
   The correct logo has to be called `hu-berlin-logo.pdf` 
@@ -557,7 +562,7 @@ Philosophische Fakultät
 \setkomavar{institute.head.mail}{maike.musterfrau@hu-berlin.de}
 %    \end{macrocode}
 %    \begin{macrocode}
-\setkomavar{local}{%
+\setkomavar{office}{%
   Mohrenstraße 40/41\\
   Zimmer X\\
   D-10117 Berlin}
@@ -826,6 +831,17 @@ Thank you very much for your letter.
 %    \end{macrocode}
 % We load \pkg{scrlttr2} which is the documentclass for letters.
 % Furthermore we set up some options.
+% The default language is German. But all strings are also 
+% available for English. You can load English as option to the 
+% documentclass.
+%    \begin{macrocode}
+\DeclareOption*{\PassOptionsToClass{\CurrentOption}{scrlttr2}}
+\DeclareOption{english}{\PassOptionsToPackage{ngerman,main=english}{babel}}
+\DeclareOption{ngerman}{\PassOptionsToPackage{ngerman}{babel}}
+\ExecuteOptions{ngerman}
+\ProcessOptions\relax
+%    \end{macrocode}
+% Now the documentclass itself.
 %    \begin{macrocode}
 \LoadClass[%
   fontsize=10pt,
@@ -907,8 +923,35 @@ Thank you very much for your letter.
 \let\enclold\encl 
 \renewcommand\encl[1]{\vskip0ptplus1filll\enclold{#1}}
 %    \end{macrocode}
-% We define new |komavar|s.
-%
+% We define new |komavar|s and we make it for 
+% German and for English as well.
+%    \begin{macrocode}
+\providecaptionname{english}{\hubCCseparator}{Copy to}
+\providecaptionname{english}{\hubEnclSeparator}{Attachment}
+\providecaptionname{english}{\hubMyRef}{Reference:}
+\providecaptionname{english}{\hubFromName}{Clerk:}
+\providecaptionname{english}{\hubDate}{Date:}
+\providecaptionname{english}{\hubAddress}{Postal address:}
+\providecaptionname{english}{\hubConnections}{Public transport:}
+\providecaptionname{english}{\hubOffice}{Office:}
+\providecaptionname{english}{\hubBank}{Bank:}
+\providecaptionname{english}{\hubOfficeHours}{Consultation hours:}
+\providecaptionname{english}{\hubAccessibility}{Entrance:}
+%    \end{macrocode}
+% Now for German.
+%    \begin{macrocode}
+\providecaptionname{ngerman}{\hubCCseparator}{Kopie an}
+\providecaptionname{ngerman}{\hubEnclSeparator}{Anlage}
+\providecaptionname{ngerman}{\hubMyRef}{Geschäftszeichen:}
+\providecaptionname{ngerman}{\hubFromName}{Bearbeiter:}
+\providecaptionname{ngerman}{\hubDate}{Datum:}
+\providecaptionname{ngerman}{\hubAddress}{Postanschrift:}
+\providecaptionname{ngerman}{\hubConnections}{Verkehrsverbindungen:}
+\providecaptionname{ngerman}{\hubOffice}{Sitz:}
+\providecaptionname{ngerman}{\hubBank}{Bank:}
+\providecaptionname{ngerman}{\hubOfficeHours}{Sprechzeiten:}
+\providecaptionname{ngerman}{\hubAccessibility}{Eingang:}
+%    \end{macrocode}
 % First the possibility to name the faculty,
 %    \begin{macrocode}
 \newkomavar{faculty}
@@ -936,27 +979,27 @@ Thank you very much for your letter.
 %    \end{macrocode}
 % Since there are many buildings with offices we tell where to find the sender
 %    \begin{macrocode}
-\newkomavar{local}
-\setkomavar*{local}{Sitz:}
+\newkomavar{office}
+\setkomavar*{office}{\hubOffice}
 %    \end{macrocode}
 % and how to get there.
 %    \begin{macrocode}
 \newkomavar{connections}
-\setkomavar*{connections}{Verkehrsverbindungen:}
+\setkomavar*{connections}{\hubConnections}
 %    \end{macrocode}
 % Furthermore we inform about office hours
 %    \begin{macrocode}
 \newkomavar{officehours}
-\setkomavar*{officehours}{Sprechzeiten:}
+\setkomavar*{officehours}{\hubOfficeHours}
 %    \end{macrocode}
 % and if there is accessibility for wheelchairs etc.
 %    \begin{macrocode}
 \newkomavar{accessibility}
-\setkomavar*{accessibility}{{\large\reflectbox{\Wheelchair}} Eingang:}
+\setkomavar*{accessibility}{{\large\reflectbox{\Wheelchair}} \hubAccessibility}
 %    \end{macrocode}
 %    \begin{macrocode}
 \newkomavar{bank}
-\setkomavar*{bank}{Bankverbindung:}
+\setkomavar*{bank}{\hubBank}
 \setkomavar{bank}{Deutsche Bank PGK AG}
 \newkomavar{IBAN}
 \setkomavar{IBAN}{\mbox{IBAN DE95 1007 0848 0512 6206 01}}
@@ -1099,10 +1142,10 @@ Thank you very much for your letter.
 %    \end{macrocode}
 % Now the actual location of the sender
 %    \begin{macrocode}
-\Ifkomavarempty{local}
+\Ifkomavarempty{office}
   {}
-  {\textbf{\usekomavar*{local}}\\
-  \usekomavar{local}\par}
+  {\textbf{\usekomavar*{office}}\\
+  \usekomavar{office}\par}
 %    \end{macrocode}
 % The last information section should be pinned to the bottom.
 %    \begin{macrocode}
@@ -1200,7 +1243,7 @@ Thank you very much for your letter.
 %    \end{macrocode}
 %
 %    \begin{macrocode}
-\setkomavar*{fromaddress}{Postanschrift:}
+\setkomavar*{fromaddress}{\hubAddress}
 \setkomavar{fromaddress}{%
   Humboldt-Universität zu Berlin\\
   Unter den Linden 6\\
@@ -1215,21 +1258,21 @@ Thank you very much for your letter.
 %    \end{macrocode}
 %
 %    \begin{macrocode}
-\setkomavar*{date}{Datum:}
+\setkomavar*{date}{\hubDate}
 %    \end{macrocode}
 %
 %    \begin{macrocode}
-\setkomavar*{fromname}{Bearbeiter:}
+\setkomavar*{fromname}{\hubFromName}
 %    \end{macrocode}
 %
 %    \begin{macrocode}
-\setkomavar*{myref}{Geschäftszeichen:}
+\setkomavar*{myref}{\hubMyRef}
 %    \end{macrocode}
 %    \begin{macrocode}
-\setkomavar*{enclseparator}{Anlage}
+\setkomavar*{enclseparator}{\hubEnclSeparator}
 %    \end{macrocode}
 %    \begin{macrocode}
-\setkomavar*{ccseparator}{Kopie an} 
+\setkomavar*{ccseparator}{\hubCCseparator} 
 %    \end{macrocode}
 %    \begin{macrocode}
 % \RequirePackage{hyperref}

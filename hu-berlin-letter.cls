@@ -15,12 +15,17 @@
 %% please consider and respect them carefully.
 %% ----------------------------------------------------------------
 %% 
-\def\Version{2020/10/30 v1.0.8}
+\def\Version{2021/01/10 v1.0.9}
 \NeedsTeXFormat{LaTeX2e}[2005/12/01]
 \ProvidesClass{hu-berlin-letter}
   [\Version\ Humboldt-Universit"at zu Berlin - letter documentclass]
 \ClassInfo{hu-berlin}{* * * hu-berlin * * *\MessageBreak
     Part of the hu-berlin Bundle }
+\DeclareOption*{\PassOptionsToClass{\CurrentOption}{scrlttr2}}
+\DeclareOption{english}{\PassOptionsToPackage{ngerman,main=english}{babel}}
+\DeclareOption{ngerman}{\PassOptionsToPackage{ngerman}{babel}}
+\ExecuteOptions{ngerman}
+\ProcessOptions\relax
 \LoadClass[%
   fontsize=10pt,
   version=last,
@@ -72,6 +77,28 @@
 \def\stopletter{}
 \let\enclold\encl
 \renewcommand\encl[1]{\vskip0ptplus1filll\enclold{#1}}
+\providecaptionname{english}{\hubCCseparator}{Copy to}
+\providecaptionname{english}{\hubEnclSeparator}{Attachment}
+\providecaptionname{english}{\hubMyRef}{Reference:}
+\providecaptionname{english}{\hubFromName}{Clerk:}
+\providecaptionname{english}{\hubDate}{Date:}
+\providecaptionname{english}{\hubAddress}{Postal address:}
+\providecaptionname{english}{\hubConnections}{Public transport:}
+\providecaptionname{english}{\hubOffice}{Office:}
+\providecaptionname{english}{\hubBank}{Bank:}
+\providecaptionname{english}{\hubOfficeHours}{Consultation hours:}
+\providecaptionname{english}{\hubAccessibility}{Entrance:}
+\providecaptionname{ngerman}{\hubCCseparator}{Kopie an}
+\providecaptionname{ngerman}{\hubEnclSeparator}{Anlage}
+\providecaptionname{ngerman}{\hubMyRef}{Geschäftszeichen:}
+\providecaptionname{ngerman}{\hubFromName}{Bearbeiter:}
+\providecaptionname{ngerman}{\hubDate}{Datum:}
+\providecaptionname{ngerman}{\hubAddress}{Postanschrift:}
+\providecaptionname{ngerman}{\hubConnections}{Verkehrsverbindungen:}
+\providecaptionname{ngerman}{\hubOffice}{Sitz:}
+\providecaptionname{ngerman}{\hubBank}{Bank:}
+\providecaptionname{ngerman}{\hubOfficeHours}{Sprechzeiten:}
+\providecaptionname{ngerman}{\hubAccessibility}{Eingang:}
 \newkomavar{faculty}
 \newkomafont{faculty}{\bfseries\fontsize{8.5}{10}\selectfont}
 \newkomavar{institute}
@@ -80,16 +107,16 @@
 \newkomafont{institute.head}{\bfseries}
 \newkomavar{institute.head}%
 \newkomavar{institute.head.mail}%
-\newkomavar{local}
-\setkomavar*{local}{Sitz:}
+\newkomavar{office}
+\setkomavar*{office}{\hubOffice}
 \newkomavar{connections}
-\setkomavar*{connections}{Verkehrsverbindungen:}
+\setkomavar*{connections}{\hubConnections}
 \newkomavar{officehours}
-\setkomavar*{officehours}{Sprechzeiten:}
+\setkomavar*{officehours}{\hubOfficeHours}
 \newkomavar{accessibility}
-\setkomavar*{accessibility}{{\large\reflectbox{\Wheelchair}} Eingang:}
+\setkomavar*{accessibility}{{\large\reflectbox{\Wheelchair}} \hubAccessibility}
 \newkomavar{bank}
-\setkomavar*{bank}{Bankverbindung:}
+\setkomavar*{bank}{\hubBank}
 \setkomavar{bank}{Deutsche Bank PGK AG}
 \newkomavar{IBAN}
 \setkomavar{IBAN}{\mbox{IBAN DE95 1007 0848 0512 6206 01}}
@@ -169,10 +196,10 @@
 \Ifkomavarempty{fromurl}
   {}
   {\usekomavar{fromurl}\par}
-\Ifkomavarempty{local}
+\Ifkomavarempty{office}
   {}
-  {\textbf{\usekomavar*{local}}\\
-  \usekomavar{local}\par}
+  {\textbf{\usekomavar*{office}}\\
+  \usekomavar{office}\par}
 \vfill
 \Ifkomavarempty{connections}
   {}
@@ -220,7 +247,7 @@
 \setkomavar*{fromphone}{Telefon +49 [30] 2093–}
 \setkomavar{fromfax}{0000}
 \setkomavar*{fromfax}{Telefax +49 [30] 2093–}
-\setkomavar*{fromaddress}{Postanschrift:}
+\setkomavar*{fromaddress}{\hubAddress}
 \setkomavar{fromaddress}{%
   Humboldt-Universität zu Berlin\\
   Unter den Linden 6\\
@@ -229,11 +256,11 @@
   Humboldt-Universität zu Berlin\\
   UdL 6\\
   D-10099 Berlin}
-\setkomavar*{date}{Datum:}
-\setkomavar*{fromname}{Bearbeiter:}
-\setkomavar*{myref}{Geschäftszeichen:}
-\setkomavar*{enclseparator}{Anlage}
-\setkomavar*{ccseparator}{Kopie an}
+\setkomavar*{date}{\hubDate}
+\setkomavar*{fromname}{\hubFromName}
+\setkomavar*{myref}{\hubMyRef}
+\setkomavar*{enclseparator}{\hubEnclSeparator}
+\setkomavar*{ccseparator}{\hubCCseparator}
 %% 
 %% Copyright (C) 2019-2020
 %%
