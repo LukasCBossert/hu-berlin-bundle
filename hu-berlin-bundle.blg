@@ -1,18 +1,18 @@
 [0] Config.pm:311> INFO - This is Biber 2.16
 [0] Config.pm:314> INFO - Logfile is 'hu-berlin-bundle.blg'
-[62] biber-darwin:340> INFO - === Sun Jan 10, 2021, 22:00:31
-[76] Biber.pm:415> INFO - Reading 'hu-berlin-bundle.bcf'
-[154] Biber.pm:952> INFO - Found 9 citekeys in bib section 0
-[166] Biber.pm:4340> INFO - Processing section 0
-[176] Biber.pm:4531> INFO - Looking for bibtex format file 'hu-berlin-bundle-bibliography.bib' for section 0
-[177] bibtex.pm:1689> INFO - LaTeX decoding ...
-[180] bibtex.pm:1494> INFO - Found BibTeX data source 'hu-berlin-bundle-bibliography.bib'
-[210] Biber.pm:4531> INFO - Looking for bibtex format file 'hu-berlin-bundle-ctan.bib' for section 0
-[211] bibtex.pm:1689> INFO - LaTeX decoding ...
-[218] bibtex.pm:1494> INFO - Found BibTeX data source 'hu-berlin-bundle-ctan.bib'
-[256] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[256] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[256] Biber.pm:4168> INFO - Sorting list 'nty/global//global/global' of type 'entry' with template 'nty' and locale 'en-US'
-[256] Biber.pm:4174> INFO - No sort tailoring available for locale 'en-US'
-[267] bbl.pm:654> INFO - Writing 'hu-berlin-bundle.bbl' with encoding 'UTF-8'
+[64] biber-darwin:340> INFO - === Sun Jan 31, 2021, 12:16:16
+[79] Biber.pm:415> INFO - Reading 'hu-berlin-bundle.bcf'
+[161] Biber.pm:952> INFO - Found 9 citekeys in bib section 0
+[174] Biber.pm:4340> INFO - Processing section 0
+[183] Biber.pm:4531> INFO - Looking for bibtex format file 'hu-berlin-bundle-bibliography.bib' for section 0
+[184] bibtex.pm:1689> INFO - LaTeX decoding ...
+[187] bibtex.pm:1494> INFO - Found BibTeX data source 'hu-berlin-bundle-bibliography.bib'
+[212] Biber.pm:4531> INFO - Looking for bibtex format file 'hu-berlin-bundle-ctan.bib' for section 0
+[213] bibtex.pm:1689> INFO - LaTeX decoding ...
+[220] bibtex.pm:1494> INFO - Found BibTeX data source 'hu-berlin-bundle-ctan.bib'
+[254] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[254] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[254] Biber.pm:4168> INFO - Sorting list 'nty/global//global/global' of type 'entry' with template 'nty' and locale 'en-US'
+[254] Biber.pm:4174> INFO - No sort tailoring available for locale 'en-US'
+[266] bbl.pm:654> INFO - Writing 'hu-berlin-bundle.bbl' with encoding 'UTF-8'
 [271] bbl.pm:757> INFO - Output to hu-berlin-bundle.bbl

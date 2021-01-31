@@ -1,6 +1,6 @@
 % \iffalse
 %<*internal|cls|sty>
-\def\Version{2021/01/10 v1.0.9}
+\def\Version{2021/01/31 v1.1.0}
 %</internal|cls|sty>
 %<*internal>
 \iffalse
@@ -720,6 +720,12 @@ sender: hu-berlin-letter-example
 %    \begin{macrocode}
 subject: Short description
 %    \end{macrocode}
+% And if you want to have a different language, define it now. 
+% You can choose between German (default)
+% and English.
+%    \begin{macrocode}
+lang: english
+%    \end{macrocode}
 % The information for the addressee has to be written like this:
 %    \begin{macrocode}
 addressee:
@@ -1306,8 +1312,11 @@ Thank you very much for your letter.
 %    \begin{macrocode}
 %<*letter-md>
 %    \end{macrocode}
+% Defining the documentclass and the language, too.
 %    \begin{macrocode}
-\documentclass{hu-berlin-letter}
+\documentclass[
+$if(lang)$$lang$$endif$
+]{hu-berlin-letter}
 %    \end{macrocode}
 % We predefine two  variables.
 %    \begin{macrocode}

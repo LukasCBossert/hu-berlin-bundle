@@ -2,6 +2,7 @@
 documentclass: hu-berlin-letter
 sender: hu-berlin-letter-example
 subject: Short description
+lang: english
 addressee:
 - Alexander von Humboldt
 - Unter den Linden 6

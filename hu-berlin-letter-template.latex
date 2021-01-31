@@ -15,7 +15,9 @@
 %% please consider and respect them carefully.
 %% ----------------------------------------------------------------
 %% 
-\documentclass{hu-berlin-letter}
+\documentclass[
+$if(lang)$$lang$$endif$
+]{hu-berlin-letter}
 \newkomavar{opening}
 \newkomavar{closing}
 \setkomavar{opening}{Sehr geehrte Damen und Herren}
