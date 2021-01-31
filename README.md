@@ -67,6 +67,9 @@ All notable changes to this project will be documented in the [README.md](https:
 This project **does not** adhere to [Semantic Versioning](http://semver.org/).
 The markdown syntax is inspired by the conventions proposed by [keepachangelog.com](http://keepachangelog.com/).
 
+### v1.1.1 (2021/01/31)
+* (letter) fix for language switch when using markdown-pandoc-conversion workflow
+
 ### v1.1.0 (2021/01/31)
 * (letter) language option now available also for the markdown-pandoc-conversion-workflow.
 

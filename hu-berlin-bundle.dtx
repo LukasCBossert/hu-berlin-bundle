@@ -1,6 +1,6 @@
 % \iffalse
 %<*internal|cls|sty>
-\def\Version{2021/01/31 v1.1.0}
+\def\Version{2021/01/31 v1.1.1}
 %</internal|cls|sty>
 %<*internal>
 \iffalse
@@ -303,6 +303,10 @@ This bundle is constantly updated. For hints, errors or suggestions use the GitH
 All notable changes to this project will be documented in the [README.md](https://github.com/LukasCBossert/hu-berlin-bundle/blob/master/README.md).
 This project **does not** adhere to [Semantic Versioning](http://semver.org/).
 The markdown syntax is inspired by the conventions proposed by [keepachangelog.com](http://keepachangelog.com/).
+
+### v1.1.1 (2021/01/31)
+* (letter) fix for language switch when using markdown-pandoc-conversion workflow 
+
 
 ### v1.1.0 (2021/01/31)
 * (letter) language option now available also for the markdown-pandoc-conversion-workflow.
@@ -1317,7 +1321,7 @@ Thank you very much for your letter.
 % Defining the documentclass and the language, too.
 %    \begin{macrocode}
 \documentclass[
-$if(lang)$$lang$$endif$
+$if(lang)$$lang$$else$german$endif$
 ]{hu-berlin-letter}
 %    \end{macrocode}
 % We predefine two  variables.

@@ -16,7 +16,7 @@
 %% ----------------------------------------------------------------
 %% 
 \documentclass[
-$if(lang)$$lang$$endif$
+$if(lang)$$lang$$else$german$endif$
 ]{hu-berlin-letter}
 \newkomavar{opening}
 \newkomavar{closing}

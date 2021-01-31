@@ -30,7 +30,7 @@ examples: files
 	$(MAKE) letter
 	$(MAKE) md2pdf-letter
 
-md2pdf-letter: files
+md2pdf-letter:
 	pandoc --pdf-engine=lualatex --template hu-berlin-letter-template.latex -o hu-berlin-letter-example-markdown.pdf hu-berlin-letter-example-markdown.md
 
 letter: files
