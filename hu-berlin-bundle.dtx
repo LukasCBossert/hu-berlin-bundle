@@ -1740,14 +1740,14 @@ $for(include-after)$$include-after$$endfor$
   final
 }
 \RequirePackage{bookmark}
-
+\AtBeginDocument{%
 \RequirePackage[
   sort,
   nameinlink,
   compress,
   ngerman,english
 ]{cleveref}
-
+}
 
 %---- newcommands
 \newcommand{\TeXografie}{Lukas C. Bossert
@@ -1793,8 +1793,6 @@ $for(include-after)$$include-after$$endfor$
 	,tocentryformat=\textbf%
   %  ,toclinefill={\TOCLineLeaderFill}%\TOCLineLeaderFill[\textbf{.}]
 ]{chapter}
-
-
 
 
 \newtcolorbox{example}[1][]{
@@ -1924,6 +1922,7 @@ codecomment/.style={%
   #1
   }
 
+\AtBeginDocument{%
 \newtcblisting[%
   auto counter,
   crefname   = {example}{examples},
@@ -1942,7 +1941,7 @@ codecomment/.style={%
   use counter from=codetext,
   crefname={code example}{code examples},
   Crefname={Code example}{Code examples}%
-]{code}[2][]{%
+]{huberlincode}[2][]{%
   hu-berlinstyle,
   rounded corners=southeast,
   arc=6mm,
@@ -1964,7 +1963,7 @@ codecomment/.style={%
     listing style=hu-berlinlistingstyle,
   #1,
 }
-
+}
 %    \end{macrocode}
 %    \begin{macrocode}
 \makeatletter
